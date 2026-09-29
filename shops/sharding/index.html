@@ -5,13 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>سوپرمارکت شاردینگ</title>
   <!-- Week 1: put YOUR name here to claim this shop. The landing page shows it. -->
-  <meta name="author" content="">
+  <meta name="author" content="Alireza Arabshahi">
   <meta name="description" content="به‌زودی: بهترین میوه و سبزی محله!">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .card {
+      /* dimensions, border, spacing */
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+
+      /* background-color: blue; */
+    }
+    .card svg {
+      
+    }
+    .card-title {
+      /* typography */
+    }
+    .card-footer {
+      /* layout: price on one side, button on the other */
+    }
+    .badge {
+      /* position it in the top corner of the card */
+    }
+    .card button {
+      /* style the button, plus :hover and :focus */
+    }
+</style>
+
 </head>
 <body>
   <header>
-    <a href="../../index.html">→ بازگشت به دار و دسته چهل‌نفره</a>
+    <!-- <a href="../../index.html">→ بازگشت به دار و دسته چهل‌نفره</a> -->
+     <nav>
+       <a href="#">
+         <span>
+            <strong>شاردینگ</strong>
+         </span>
+       </a>
+     </nav>
     <h1>🍕 سلام دنیا!</h1>
   </header>
   <main>
@@ -20,6 +53,22 @@
       <h2>این اسم یعنی چه؟</h2>
       <p><bdi>Sharding</bdi> یعنی تقسیم یک پایگاه داده بزرگ به تکه‌ها (<bdi>shard</bdi>) روی چند سرور؛ مثل برش‌های پیتزا. مثلاً مشتری‌هایی که نامشان با «الف» تا «ژ» شروع می‌شود روی سرور ۱ و بقیه روی سرور ۲. هر سرور بار کمتری دارد، ولی انتخاب کلید تقسیم و جست‌وجو روی همه تکه‌ها سخت‌تر می‌شود.</p>
       <!-- Your turn: add what YOU found about this name, in your own words. -->
+
+      <article class="card">
+        <span class="badge">جدید</span>
+        <svg class="card-img" viewBox="0 0 240 140" role="img" aria-label="Three red apples">
+          <rect width="240" height="140" fill="#fdf1e4" />
+          <circle cx="80" cy="80" r="34" fill="#d62828" />
+          <circle cx="125" cy="72" r="36" fill="#e63946" />
+          <circle cx="168" cy="84" r="30" fill="#c1121f" />
+        </svg>
+        <h2 class="card-title">سیب های قرمز</h2>
+        <p>سیب تازه دماوندی.</p>
+        <div class="card-footer">
+          <strong>45,000 تومان</strong>
+          <button type="button">Add to cart</button>
+        </div>
+      </article>
     </section>
   </main>
   <footer>
