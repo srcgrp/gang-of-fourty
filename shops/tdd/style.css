@@ -6,8 +6,20 @@ body {
   line-height: 1.8;
   background: #f7faf5;
   color: #1f2a1c;
+  display: block;
 }
 
 h1 {
   color: #2e7d32;
+}
+
+img {
+  display: inline;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  padding: 20px;
+  height: 200px;
+
 }
