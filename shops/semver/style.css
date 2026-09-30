@@ -1,13 +1,73 @@
 /* Your shop's styles. Week 1: make it yours! */
 body {
-  font-family: Vazirmatn, Tahoma, sans-serif;
-  margin: 0;
-  padding: 1rem;
-  line-height: 1.8;
   background: #f7faf5;
-  color: #1f2a1c;
 }
 
 h1 {
   color: #2e7d32;
+}
+.produtc-cart{
+  width: 300px;
+  padding: 20px;
+  padding-top: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #c4cdd39b;
+  border-radius: 6px;
+  color:  rgb(39, 64, 80);
+  margin-top: 100px;
+  
+}
+.img-section{
+  background-color: rgb(248, 242, 234);
+  border-radius: 8px;
+  padding-top: 24px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+#img-product{
+  width: 300px;
+  text-align: center;
+  
+}
+.img-label{
+  margin: 12px;
+  border: 1px solid black;
+  border-radius: 50px;
+  display: inline;
+  padding: 6px 12px;
+  background-color: rgb(17, 39, 53);
+  color: #f7faf5;
+  
+
+}
+.buynow-btn{
+  padding: 12px 22px;
+  background-color: rgb(39, 64, 80);
+  color: #f7faf5;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  
+}
+.card-btn{
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items:center;
+}
+.price-label{
+  font-size: 20px;
+  font-weight:900;
+  
+
+}
+.discription-cart{
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+h4, h2{
+  margin: 0;
 }
