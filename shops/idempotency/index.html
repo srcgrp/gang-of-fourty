@@ -1,29 +1,35 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>سوپرمارکت خودتوانی</title>
-  <!-- Week 1: put YOUR name here to claim this shop. The landing page shows it. -->
-  <meta name="author" content="">
+  <title>Idempotency Market</title>
+  <meta name="author" content="Baran">
   <meta name="description" content="به‌زودی: بهترین میوه و سبزی محله!">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <a href="../../index.html">→ بازگشت به دار و دسته چهل‌نفره</a>
-    <h1>🔂 سلام دنیا!</h1>
-  </header>
   <main>
-    <p>اینجا سوپرمارکت <strong>خودتوانی</strong> است. به‌زودی باز می‌شود.</p>
-    <section>
-      <h2>این اسم یعنی چه؟</h2>
-      <p>عملیاتی <bdi>idempotent</bdi> (خودتوان) است که یک بار یا ده بار انجام دادنش نتیجه یکسان دارد. اگر مشتری دو بار روی «پرداخت» بزند، نباید دو بار پول کم شود. در <bdi>HTTP</bdi> متدهای <bdi>GET</bdi>، <bdi>PUT</bdi> و <bdi>DELETE</bdi> خودتوان‌اند ولی <bdi>POST</bdi> نیست.</p>
-      <!-- Your turn: add what YOU found about this name, in your own words. -->
-    </section>
+    <article class="card">
+    <section class="product">
+      <span class="badge">NEW</span>
+      <div class="image-box">
+         <img class="image" src="shopping-bag.JPG" alt="Market logo">
+      </div>
+      </section>
+      <p class="category">Farm Products</p>
+      <h2>Fresh Market Picks</h2>
+      <p class="description">  A colorful selection of fresh, everyday essentials,
+           carefully chosen for quality, flavor, and freshness.</p>
+      <div class="rating">
+        <span class="stars">★★★★★</span>
+        <span class="reviews">(3,278)</span>
+      </div>
+      <div class="card-footer">
+      <span class="price" lang="fa" dir="rtl">۵۰,۰۰۰ تومان</span>
+      <button class="add-button">Add to bag</button>
+      </div>
+    </article>
   </main>
-  <footer>
-    <p dir="ltr">slug: <code>idempotency</code></p>
-  </footer>
 </body>
 </html>
