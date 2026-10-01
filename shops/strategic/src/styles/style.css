@@ -654,3 +654,57 @@ main > * + * { margin-top: 2rem; }
 .banners a:nth-child(2) { --t: var(--t6); }
 
 
+
+/* ========== Footer ========== */
+.site-footer {
+  padding-block: 2.5rem 1rem;
+  background: var(--foot);
+  color: var(--foot-mute);
+}
+
+.site-footer :focus-visible { outline-color: #ffd166; }
+
+.foot-grid { display: grid; gap: 1.75rem; }
+
+.site-footer h2 {
+  margin-bottom: .5rem;
+  font-size: 1rem;
+  color: var(--foot-ink);
+}
+
+.site-footer address { font-style: normal; }
+
+.site-footer li {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+}
+
+.site-footer li a, .site-footer address a {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  min-height: 2.75rem;
+  color: var(--foot-ink);
+}
+
+.site-footer bdi { white-space: nowrap; }
+
+.foot-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 1rem;
+  margin-top: 2rem;
+  padding-top: .75rem;
+  border-top: 1px solid rgb(255 255 255 / .14);
+  font-size: .8125rem;
+}
+
+.foot-bar a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  color: #ffd166;
+  font-weight: 700;
+}
