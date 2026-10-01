@@ -1,19 +1,124 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>سوپرمارکت برنامه‌نویسی راهبردی</title>
-  <meta name="author" content="Armin Panahi">
-  <meta name="description" content="به‌زودی: بهترین میوه و سبزی محله!">
-  <link rel="stylesheet" href="./src/styles/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>سوپرمارکت آرمین</title>
+    <meta
+      name="description"
+      content="سوپرمارکت نمونه؛ میوه و سبزی تازه، لبنیات، نان داغ و پروتئین با قیمت منصفانه."
+    />
+    <meta name="theme-color" content="#1d7448" />
+    <link
+      rel="shortcut icon"
+      href="/assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/src/styles/style.css" />
+  </head>
+  <body id="top">
+    <a class="skip" href="#main">پرش به محتوای اصلی</a>
 
+    <header class="site-header">
+      <div class="banner" aria-label="اطلاعیه">
+        <span aria-hidden="true">🚚</span> ارسال رایگان برای خریدهای بالای ۵۰۰ هزار تومان
+      </div>
 
+      <div class="bar">
+        <a
+          class="logo"
+          href="#top"
+          aria-label="سوپرمارکت آرمین، بازگشت به بالای صفحه"
+        >
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <rect class="lg-bg" width="48" height="48" rx="14" />
+            <polyline class="lg-h" points="16,21 24,10 32,21" />
+            <circle class="lg-fruit" cx="24" cy="19" r="5" />
+            <polygon class="lg-w" points="9,21 39,21 35,38 13,38" />
+            <rect class="lg-w" x="7" y="18" width="34" height="5" rx="2.5" />
+            <line class="lg-weave" x1="19" y1="26" x2="19" y2="34" />
+            <line class="lg-weave" x1="24" y1="26" x2="24" y2="34" />
+            <line class="lg-weave" x1="29" y1="26" x2="29" y2="34" />
+          </svg>
+          <span>
+            <b>سوپرمارکت آرمین</b><small>همه‌چیز برای یک خرید خوب</small>
+          </span>
+        </a>
 
+        <div class="search" role="search">
+          <label class="sr-only" for="q">جستجوی کالا</label>
+          <span class="search-ico" aria-hidden="true">🔍</span>
+          <input
+            id="q"
+            type="search"
+            placeholder="جستجو در میان ۲٬۰۰۰ کالا…"
+            autocomplete="off"
+          />
+        </div>
 
+        <button class="cart" type="button" aria-label="سبد خرید، ۳ کالا">
+          <span aria-hidden="true">
+            🛒
+            <span class="cart-txt">سبد خرید</span>
+          </span>
+          <b aria-hidden="true">۳</b>
+        </button>
 
+        <input
+          class="sr-only menu-toggle"
+          type="checkbox"
+          id="menu-toggle"
+          aria-controls="primary-nav"
+        />
+        <label class="burger" for="menu-toggle"
+          ><span class="sr-only">باز و بسته کردن منوی اصلی</span
+          ><span class="bars"></span
+        ></label>
+        <label class="scrim" for="menu-toggle" aria-hidden="true"></label>
 
-</body>
+        <nav class="main-nav" id="primary-nav" aria-label="منوی اصلی">
+          <ul>
+            <li class="mega">
+              <a href="#categories"
+                ><span aria-hidden="true">☰</span> همه دسته‌ها</a
+              >
+              <ul class="mega-panel">
+                <li>
+                  <a href="#produce"
+                    ><span aria-hidden="true">🍎</span>میوه و سبزی</a
+                  >
+                </li>
+                <li>
+                  <a href="#dairy"><span aria-hidden="true">🥛</span>لبنیات</a>
+                </li>
+                <li>
+                  <a href="#bakery"
+                    ><span aria-hidden="true">🥖</span>نان و شیرینی</a
+                  >
+                </li>
+                <li>
+                  <a href="#protein"
+                    ><span aria-hidden="true">🍗</span>پروتئین</a
+                  >
+                </li>
+                <li>
+                  <a href="#drinks"
+                    ><span aria-hidden="true">🧃</span>نوشیدنی</a
+                  >
+                </li>
+                <li>
+                  <a href="#snacks"><span aria-hidden="true">🍪</span>تنقلات</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#deals">پیشنهاد ویژه</a></li>
+            <li><a href="#produce">میوه و سبزی</a></li>
+            <li><a href="#dairy">لبنیات</a></li>
+            <li><a href="#bakery">نان تازه</a></li>
+            <li><a href="#contact">تماس با ما</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </body>
 </html>
