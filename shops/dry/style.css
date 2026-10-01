@@ -1,4 +1,81 @@
-/* Your shop's styles. Week 1: make it yours! */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+:root {
+
+  --bg-color:#F7F4EE;
+  --surface-color:#FFFFFF;
+  --primary-color:#171717;
+  --secondary-color:#6B7280;
+  --accent-color:#C8A96A;
+  --border-color:#E5E1D8;
+
+}
+
+* {
+  box-sizing:border-box;
+}
+
+body {
+
+  font-family:
+  Vazirmatn,
+  sans-serif;
+
+  margin:0;
+
+  padding:24px;
+
+  background:
+  var(--bg-color);
+
+  color:
+  var(--primary-color);
+
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: white;
+
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.brand img {
+  width: 220px;
+  height: auto;
+}
+
+.brand h1 {
+  margin: 0;
+  color: #172033;
+  font-size: 32px;
+}
+
+.brand p{
+  margin: 0;
+  color: #666;
+}
+
+.back-link {
+  color: #172033;
+  text-decoration: none;
+}
+
+
+
+
+/* body */
 body {
   font-family: Vazirmatn, Tahoma, sans-serif;
   margin: 0;
@@ -8,6 +85,61 @@ body {
   color: #1f2a1c;
 }
 
-h1 {
-  color: #2e7d32;
+
+.chips {
+  width: 170px;
+  height: 170px;
+  border-radius: 8px;
+  object-fit: contain;
+  transition: 0.3s;
+  background-color: white;
+}
+.chips:hover {
+     transform: translateY(-3px) scale(1.05);
+}
+
+.card {
+  width: 250px;
+  margin: 30px 0 30px auto;
+  padding: 18px;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.card h3{
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.card p{
+  font-size: 14px;
+  margin: 15px 0 8px;
+}
+
+.card h4{
+  font-size: 16px;
+  margin: 8px 0 15px;
+}
+
+.card button{
+  width: 100%;
+  padding: 9px;
+
+  border: none;
+  border-radius: 7px;
+  background-color: #2e7d32;
+  color: whitesmoke;
+
+  font-family: inherit;
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.card button:hover{
+  background-color: #256428;
 }
