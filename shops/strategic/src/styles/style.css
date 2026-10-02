@@ -1,8 +1,7 @@
 /* Amirhossein (Armin) Panahi */
-/* Weak 1 - Strategic Supermarket */
+/* Week 1 - Strategic Supermarket */
 
-
-/* ========== Font (Vazirmatn) ========== */
+/* ========== Font (Vazirmatn, SIL OFL) ========== */
 @font-face {
   font-family: "Vazirmatn";
   src: url("../../assets/fonts/Vazirmatn-Variable.woff2") format("woff2");
@@ -33,11 +32,12 @@
   --radius: 1.125rem;
   --card-w: 9.75rem;
   --bar-h: 3.75rem;
-  --header-h: calc(var(--bar-h) + 1px);
+  --search-row: 3.25rem; /* search bar row on mobile (hidden from 40rem up) */
+  --header-h: calc(var(--bar-h) + var(--search-row) + 1px);
   --ease: cubic-bezier(.2, .7, .2, 1);
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
     --brand-ink: #86d9a9;
     --green-soft: #21402f;
@@ -58,10 +58,18 @@
 /* ========== Base ========== */
 *, *::before, *::after { box-sizing: border-box; }
 
-html {
-    -webkit-text-size-adjust: 100%;
-    scroll-padding-top: calc(var(--header-h) + .75rem);
+html { -webkit-text-size-adjust: 100%; }
+
+/* Offset for in-page jumps under the sticky header. It is set on the targets instead of
+   `scroll-padding-top` on html: that made the browser scroll the page whenever a control
+   inside the sticky header (search, cart, burger) received focus. */
+:is(main, .shelf, #categories, #contact) {
+  scroll-margin-top: calc(var(--header-h) + .75rem);
 }
+
+/* Cards live inside a clipping scroller (.rail), so their own scroll-margin is capped by
+   the rail's padding; the html-level padding is only needed while a card is the target. */
+html:has(.card:target) { scroll-padding-top: calc(var(--header-h) + .75rem); }
 
 @media (prefers-reduced-motion: no-preference) {
     html, .rail {scroll-behavior: smooth;}
@@ -143,10 +151,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 
 .bar {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: var(--bar-h) auto;
   align-items: center;
-  gap: .5rem;
-  height: var(--bar-h);
+  column-gap: .5rem;
   width: 100%;
   max-width: 75rem;
   margin-inline: auto;
@@ -159,7 +168,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
     gap: .6rem;
     min-width: 0;
     min-height: 2.75rem;
-    margin-inline-end: auto;
 }
 
 .logo svg { flex: none; width: 2.5rem; height: 2.5rem; }
@@ -198,7 +206,12 @@ button { font: inherit; color: inherit; cursor: pointer; }
     stroke-linecap: round;
 }
 
-.search { position: relative; display: none; }
+.search {
+  position: relative;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  padding-block-end: .5rem;
+}
 
 .search-ico {
     position: absolute;
@@ -226,8 +239,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   display: inline-flex;
   align-items: center;
   gap: .45rem;
-  min-height:
-  2.75rem;
+  min-height: 2.75rem;
   padding-inline: .9rem;
   border: 0;
   border-radius: 999px;
@@ -299,9 +311,12 @@ button { font: inherit; color: inherit; cursor: pointer; }
     transform: translateY(-6px) rotate(-45deg);
 }
 
+/* Starts exactly under the header, wherever the header is (banner height / scroll position) */
 .scrim {
-  position: fixed;
-  inset: calc(var(--header-h) + 34px) 0 0;
+  position: absolute;
+  inset-inline: 0;
+  top: calc(100% + 1px); /* below the header's 1px bottom border */
+  height: 100dvh;
   background: rgb(0 0 0 / .35);
   opacity: 0;
   visibility: hidden;
@@ -352,13 +367,15 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 .mega-panel { display: none; }
 
+body:has(#categories:target) .main-nav a[href="#categories"],
 body:has(#deals:target) .main-nav a[href="#deals"],
-
 body:has(#produce:target) .main-nav a[href="#produce"],
-
 body:has(#dairy:target) .main-nav a[href="#dairy"],
-
-body:has(#bakery:target) .main-nav a[href="#bakery"] {
+body:has(#bakery:target) .main-nav a[href="#bakery"],
+body:has(#protein:target) .main-nav a[href="#protein"],
+body:has(#drinks:target) .main-nav a[href="#drinks"],
+body:has(#snacks:target) .main-nav a[href="#snacks"],
+body:has(#contact:target) .main-nav a[href="#contact"] {
     background: var(--green-soft);
     color: var(--brand-ink);
     font-weight: 700;
@@ -435,6 +452,8 @@ main > * + * { margin-top: 2rem; }
 .hero-side .btn { margin-top: auto; }
 
 .sec-head {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     gap: .75rem;
@@ -443,7 +462,7 @@ main > * + * { margin-top: 2rem; }
 .sec-head h2 { margin-inline-end: auto; font-size: 1.25rem; line-height: 1.5; }
 
 .shelf:target h2::after, #categories:target h2::after {
-  content: "← اینجا هستید";
+  content: "→ اینجا هستید";
   margin-inline-start: .6rem;
   padding: .1rem .7rem;
   border-radius: 999px;
@@ -471,7 +490,7 @@ main > * + * { margin-top: 2rem; }
 
 
 /* ========== The Arrow Mirrors With The Page Direction ========== */
-.arr::before { content: "→"; transform: scaleX(var(--flip, 1)); }
+.arr::before { content: "→" / ""; transform: scaleX(var(--flip, 1)); }
 .arr--end { --flip: -1; }
 .arr:dir(ltr) { --flip: -1; }
 .arr--end:dir(ltr) { --flip: 1; }
@@ -529,8 +548,10 @@ main > * + * { margin-top: 2rem; }
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  margin: 0 calc(var(--gutter) * -1) -.75rem;
-  padding: .75rem var(--gutter) 1.5rem;
+  /* Extra top padding (cancelled by the negative margin) lets an arrow jump leave the
+     section title and arrows visible below the sticky header instead of hidden under it */
+  margin: -2.5rem calc(var(--gutter) * -1) -.75rem;
+  padding: 3.25rem var(--gutter) 1.5rem;
   scroll-padding-inline: var(--gutter);
 }
 
@@ -544,7 +565,7 @@ main > * + * { margin-top: 2rem; }
   border-radius: var(--radius);
   background: var(--surface);
   scroll-snap-align: start;
-  scroll-margin-block-start: 5rem;
+  scroll-margin-block-start: 4rem; /* limited by .rail's top padding */
   transition: transform .25s var(--ease);
 }
 
@@ -721,9 +742,9 @@ main > * + * { margin-top: 2rem; }
 
 
 /* ========== Responsive ========== */
-/* ========== Very Small Mobiles (up to 320px) ========== */
+/* ========== Very Small Mobiles (up to 360px) ========== */
 @media (max-width: 22.5rem) {
-  .bar { gap: .375rem; }
+  .bar { column-gap: .375rem; }
   .logo small { display: none; }
   .logo b { font-size: .9375rem; }
   .cart { padding-inline: .6rem; }
@@ -731,8 +752,9 @@ main > * + * { margin-top: 2rem; }
 
 /* ========== Tablet ========== */
 @media (min-width: 40rem) {
-  .logo { margin-inline-end: 0; }
-  .search { display: block; flex: 1; max-width: 32rem; margin-inline: auto; }
+  :root { --search-row: 0rem; }
+  .bar { display: flex; gap: .5rem; height: var(--bar-h); }
+  .search { grid-area: auto; flex: 1; max-width: 32rem; margin-inline: auto; padding-block-end: 0; }
   .cart-txt { display: inline; }
   .banners { grid-template-columns: 1fr 1fr; }
 }
