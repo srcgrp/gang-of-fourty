@@ -65,14 +65,198 @@
         </div>
       </div>
     </header>
-    .
+    <!-- Navbar -->
+    <nav class="navbar" aria-label="منوی اصلی">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
+
+      <div class="navbar-inner">
+        <!-- Mobile menu button -->
+        <label for="nav-toggle" class="burger-btn" aria-label="باز کردن منو">
+          <svg class="burger-icon burger-icon--open" aria-hidden="true">
+            <use href="./sprite.svg#hamburger-menu"></use>
+          </svg>
+
+          <svg class="burger-icon burger-icon--close" aria-hidden="true">
+            <use href="./sprite.svg#close"></use>
+          </svg>
+        </label>
+
+        <div class="navbar-content">
+          <ul class="nav-list">
+            <!-- Categories -->
+            <li class="has-dropdown">
+              <a href="#" class="nav-link is-active" aria-haspopup="true">
+                <svg class="icon">
+                  <use href="./sprite.svg#dropDown"></use>
+                </svg>
+
+                همه دسته‌ها
+              </a>
+
+              <ul class="dropdown">
+                <li>
+                  <a href="#" class="dropdown-item">
+                    <span class="emoji">🍎</span>
+                    میوه و سبزی
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="dropdown-item">
+                    <span class="emoji">🥛</span>
+                    لبنیات
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="dropdown-item">
+                    <span class="emoji">🥖</span>
+                    نان و شیرینی
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="dropdown-item">
+                    <span class="emoji">🍗</span>
+                    پروتئین
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="dropdown-item">
+                    <span class="emoji">🥤</span>
+                    نوشیدنی
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="dropdown-item">
+                    <span class="emoji">🍪</span>
+                    تنقلات
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="dropdown-item">
+                    <span class="emoji">🧻</span>
+                    شوینده و بهداشتی
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="dropdown-item">
+                    <span class="emoji">🥫</span>
+                    کنسرو و غذای آماده
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" class="nav-link">پیشنهاد ویژه</a>
+            </li>
+
+            <li>
+              <a href="#" class="nav-link">میوه و سبزی</a>
+            </li>
+
+            <li>
+              <a href="#" class="nav-link">لبنیات</a>
+            </li>
+
+            <li>
+              <a href="#" class="nav-link">نان تازه</a>
+            </li>
+
+            <li>
+              <a href="#" class="nav-link">تماس با ما</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Banner -->
+    <section class="banner">
+      <div class="banner__track">
+        <img src="images/banner/banner.png" alt="بنر" />
+      </div>
+    </section>
+    <!-- Categories -->
+    <section class="categories" aria-labelledby="categories-title">
+      <div class="categories__header">
+        <h2 id="categories-title" class="categories__title">دسته‌بندی‌ها</h2>
+
+        <a href="#" class="categories__link"> مشاهده همه </a>
+      </div>
+
+      <div class="categories__grid">
+        <a href="#" class="category-card">
+          <span class="category-card__image">
+            <img
+              src="./images/category/canned-food.png"
+              alt="کنسرو و غذای آماده"
+            />
+          </span>
+          <span class="category-card__title"> کنسرو و غذای آماده </span>
+        </a>
+
+        <a href="#" class="category-card">
+          <span class="category-card__image">
+            <img src="./images/category/cleaning.png" alt="شوینده و بهداشتی" />
+          </span>
+          <span class="category-card__title"> شوینده و بهداشتی </span>
+        </a>
+
+        <a href="#" class="category-card">
+          <span class="category-card__image">
+            <img src="./images/category/snacks.png" alt="تنقلات" />
+          </span>
+          <span class="category-card__title"> تنقلات </span>
+        </a>
+
+        <a href="#" class="category-card">
+          <span class="category-card__image">
+            <img src="./images/category/drinks.png" alt="نوشیدنی" />
+          </span>
+          <span class="category-card__title"> نوشیدنی </span>
+        </a>
+
+        <a href="#" class="category-card">
+          <span class="category-card__image">
+            <img src="./images/category/bakery.png" alt="نان و شیرینی" />
+          </span>
+          <span class="category-card__title"> نان و شیرینی </span>
+        </a>
+
+        <a href="#" class="category-card">
+          <span class="category-card__image">
+            <img src="./images/category/protein.png" alt="پروتئین" />
+          </span>
+          <span class="category-card__title"> پروتئین </span>
+        </a>
+
+        <a href="#" class="category-card">
+          <span class="category-card__image">
+            <img src="./images/category/dairy.png" alt="لبنیات" />
+          </span>
+          <span class="category-card__title"> لبنیات </span>
+        </a>
+
+        <a href="#" class="category-card">
+          <span class="category-card__image">
+            <img src="./images/category/fruits.png" alt="میوه و سبزی" />
+          </span>
+          <span class="category-card__title"> میوه و سبزی </span>
+        </a>
+      </div>
+    </section>
     <!-- Footer -->
-    <footer class="site-footer" dir="rtl">
+    <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-grid">
           <!-- Brand & About -->
           <div class="footer-col brand-col">
-            <h3 class="footer-heading brand-title">سوپرمارکت نمونه</h3>
+            <h3 class="footer-heading brand-title">سوپرمارکت یانگی</h3>
             <p class="brand-description">
               از سال ۱۴۰۵ کنار شما هستیم؛ کالای تازه با قیمت منصفانه.
             </p>

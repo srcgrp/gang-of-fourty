@@ -18,3 +18,8 @@ body {
   font-family: "Vazirmatn", sans-serif;
   min-height: 100vh;
 }
+
+/* HTML */
+html {
+  scroll-behavior: smooth;
+}
