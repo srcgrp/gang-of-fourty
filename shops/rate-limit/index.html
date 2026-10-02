@@ -51,7 +51,7 @@
         <div class="cart">
           <img id="cart-icon" src="images/shopping-cart.png">
           <span id="cart-text">سبد خرید</span>
-          <span id="cart-count">0</span>
+          <span id="cart-count">۰</span>
         </div>
 
       </header>
@@ -65,7 +65,7 @@
             </svg>
             <span>دسته بندی ها</span>
           </li>
-          <li id="special-offer">پیشنهاد ویژه 🔥</li>
+          <li id="special-offer-button">پیشنهاد ویژه 🔥</li>
           <li>میوه و سبزی</li>
           <li>لبنیات</li>
           <li>نان تازه</li>
@@ -85,41 +85,162 @@
     <div class="carousel">
       <section class="category-all">
         <h2 class="carousel-title">دسته بندی ها</h2>
-        <div class="category-list">
-          <div class="category-card">
+        <div class="carousel-list">
+          <div class="carousel-card">
             <img class="category-image" src="images/fruit.png" alt="میوه و سبزیجات">
             <h3 class="card-title">میوه و سبزیجات</h3>
           </div>
-          <div class="category-card">
+          <div class="carousel-card">
             <img class="category-image" src="images/dairy.png" alt="لبنیات">
             <h3 class="card-title">لبنیات</h3>
           </div>
-          <div class="category-card">
+          <div class="carousel-card">
             <img class="category-image" src="images/protein.png" alt="پروتئین">
             <h3 class="card-title">پروتئین</h3>
           </div>
-          <div class="category-card">
+          <div class="carousel-card">
             <img class="category-image" src="images/drink.png" alt="نوشیدنی">
             <h3 class="card-title">نوشیدنی</h3>
           </div>
-          <div class="category-card">
+          <div class="carousel-card">
             <img class="category-image" src="images/snacks.png" alt="تنقلات و خوراکی">
             <h3 class="card-title">تنقلات و خوراکی</h3>
           </div>
-          <div class="category-card">
+          <div class="carousel-card">
             <img class="category-image" src="images/bread.png" alt="نان و شیرینی">
             <h3 class="card-title">نان و شیرینی</h3>
           </div>
-          <div class="category-card">
+          <div class="carousel-card">
             <img class="category-image" src="images/nuts.png" alt="آجیل">
             <h3 class="card-title">آجیل</h3>
           </div>
-          <div class="category-card">
+          <div class="carousel-card">
             <img class="category-image" src="images/food.png" alt="مواد غذایی آماده">
             <h3 class="card-title">مواد غذایی آماده</h3>
           </div>
         </div>
       </section>
+
+      <section class="special-offer">
+        <h2 class="carousel-title">پیشنهاد ویژه 🔥</h2>
+        <div class="carousel-list">
+          <div class="carousel-card-sells">
+            <img class="carousel-image-sells" src="images/tomato.webp" alt="گوجه فرنگی رسمی">
+            <button class="add-to-cart">+</button>
+            <div class="price-row">
+            <del class="old-price">۱۳۵,۰۰۰ تومان</del>
+            <p class="price">۱۰۸,۰۰۰ تومان</p>
+          </div>
+            <p class="sell-amount">۱ کیلوگرم</p>
+            <h3 class="card-title-sells">کوچه فرنگی رسمی</h3>
+          </div>
+          <div class="carousel-card-sells">
+            <img class="carousel-image-sells" src="images/kiwi.webp" alt="کیوی">
+            <button class="add-to-cart">+</button>
+            <div class="price-row">
+            <del class="old-price">۴۲۰,۰۰۰ تومان</del>
+            <p class="price">۳۳۶,۰۰۰ تومان</p>
+          </div>
+            <p class="sell-amount">۱ کیلوگرم</p>
+            <h3 class="card-title-sells">کیوی</h3>
+          </div>
+          <div class="carousel-card-sells">
+            <img class="carousel-image-sells" src="images/sangak.webp" alt="نان سنگک ساده متوسط">
+            <button class="add-to-cart">+</button>
+            <div class="price-row">
+            <del class="old-price">۴۰,۰۰۰ تومان</del>
+            <p class="price">۳۲,۰۰۰ تومان</p>
+          </div>
+            <p class="sell-amount">۱ عدد</p>
+            <h3 class="card-title-sells">نان سنگک ساده متوسط</h3>
+          </div>
+          <div class="carousel-card-sells">
+            <img class="carousel-image-sells" src="images/shir-kam-rozane.webp" alt="شیر کم چرب روزانه">
+            <button class="add-to-cart">+</button>
+            <div class="price-row">
+            <del class="old-price">۱۰۱,۴۸۰ تومان</del>
+            <p class="price">۸۱,۱۸۴ تومان</p>
+          </div>
+            <p class="sell-amount">۱ لیتر</p>
+            <h3 class="card-title-sells">شیر کم چرب روزانه</h3>
+          </div>
+          <div class="carousel-card-sells">
+            <img class="carousel-image-sells" src="images/kare-shakeli.webp" alt="کره حیوانی پاستوریزه شکلی">
+            <button class="add-to-cart">+</button>
+            <div class="price-row">
+            <del class="old-price">۱۰,۰۰۰ تومان</del>
+            <p class="price">۸,۰۰۰ تومان</p>
+          </div>
+            <p class="sell-amount">۴۵۰ گرم</p>
+            <h3 class="card-title-sells">کره حیوانی پاستوریزه شکلی</h3>
+          </div>
+          <div class="carousel-card-sells">
+            <img class="carousel-image-sells" src="images/noshabe-zero.webp" alt="نوشابه زیرو کولا کوکاکولا">
+            <button class="add-to-cart">+</button>
+            <div class="price-row">
+            <del class="old-price">۹۷,۶۰۰ تومان</del>
+            <p class="price">۷۸,۰۸۰ تومان</p>
+          </div>
+            <p class="sell-amount">۱,۵ لیتر</p>
+            <h3 class="card-title-sells">نوشابه زیرو کولا کوکاکولا</h3>
+          </div>
+          <div class="carousel-card-sells">
+            <img class="carousel-image-sells" src="images/chips-mazmaz.webp" alt="چیپس نمکی مزمز">
+            <button class="add-to-cart">+</button>
+            <div class="price-row">
+            <del class="old-price">۷۷,۰۰۰ تومان</del>
+            <p class="price">۶۱,۶۰۰ تومان</p>
+          </div>
+            <p class="sell-amount">۱۱۴ گرم</p>
+            <h3 class="card-title-sells">چیپس نمکی مزمز</h3>
+          </div>
+          <div class="carousel-card-sells">
+            <img class="carousel-image-sells" src="images/marshmalo-shiba.webp" alt="مارشمالو طرح هندوانه شیبا">
+            <button class="add-to-cart">+</button>
+            <div class="price-row">
+            <del class="old-price">۸۳,۰۰۰ تومان</del>
+            <p class="price">۶۶,۴۰۰ تومان</p>
+          </div>
+            <p class="sell-amount">۱۰۰ گرم</p>
+            <h3 class="card-title-sells">مارشمالو طرح هندوانه شیبا</h3>
+          </div>
+          <div class="carousel-card-sells">
+            <img class="carousel-image-sells" src="images/khame-shakeli.webp" alt="خامه شکلی">
+            <button class="add-to-cart">+</button>
+            <div class="price-row">
+            <del class="old-price">۱۸,۸۶۰ تومان</del>
+            <p class="price">۱۵,۰۸۸ تومان</p>
+          </div>
+            <p class="sell-amount">۱۰۰ گرم</p>
+            <h3 class="card-title-sells">خامه شکلی</h3>
+          </div>
+          <div class="carousel-card-sells">
+            <img class="carousel-image-sells" src="images/bastani-mihan.webp" alt="بستنی ویفرنا زعفرانی میهن">
+            <button class="add-to-cart">+</button>
+            <div class="price-row">
+            <del class="old-price">۱۵,۴۰۰ تومان</del>
+            <p class="price">۱۲,۳۲۰ تومان</p>
+          </div>
+            <p class="sell-amount">۷۵ گرم</p>
+            <h3 class="card-title-sells">بستنی ویفرنا زعفرانی میهن</h3>
+          </div>
+          <div class="carousel-card-sells">
+            <img class="carousel-image-sells" src="images/nokhodchi-kishmish.webp" alt="نخودچی و کشمش سحرگل ممتازقهستان">
+            <button class="add-to-cart">+</button>
+            <div class="price-row">
+            <del class="old-price">۴۸۳,۰۰۰ تومان</del>
+            <p class="price">۳۸۶,۴۰۰ تومان</p>
+          </div>
+            <p class="sell-amount">۳۰۰ گرم</p>
+            <h3 class="card-title-sells">نخودچی و کشمش سحرگل ممتازقهستان</h3>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="ads">
+      <img class="ad-banner" src="images/dalis-banner.webp">
+      <img class="ad-banner" src="images/dono-banner.webp">
     </div>
   </body>
 </html>
