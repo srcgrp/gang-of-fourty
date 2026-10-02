@@ -355,11 +355,23 @@ nav li#special-offer-button {
   width: 100%;
   text-align: center;
   line-height: 1.6;
-  height: 48px;
+  min-height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+}
+
+.sell-amount-wrap {
+  min-height: 20px;
+  margin: 6px 0 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sell-amount-wrap .sell-amount {
+  margin: 0;
 }
 
 .discount-badge {
@@ -387,16 +399,22 @@ nav li#special-offer-button {
 }
 
 .price {
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: bold;
   color: #2e7d32;
 }
 
 .price-row {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
+  justify-content: flex-start;
   gap: 2px;
+  min-height: 47px;
+}
+
+.price-row .regular-price {
+  color: #2e7d32;
 }
 
 .old-price {
@@ -417,7 +435,7 @@ nav li#special-offer-button {
   background-color: #2d6a4f;
   color: white;
   border: none;
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: bold;
   cursor: pointer;
   display: flex;
@@ -439,7 +457,8 @@ nav li#special-offer-button {
 
 
 .category-all,
-.special-offer {
+.special-offer,
+.snacks {
   position: relative;
 }
 
@@ -700,7 +719,7 @@ html:dir(ltr) {
   }
 
   .price {
-    font-size: 0.9rem;
+    font-size: 14.4px;
   }
 
   .old-price {
@@ -711,7 +730,7 @@ html:dir(ltr) {
     top: 86px;
     width: 32px;
     height: 32px;
-    font-size: 1.25rem;
+    font-size: 20px;
   }
 
   .discount-badge {
