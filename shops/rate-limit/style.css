@@ -12,13 +12,18 @@
   top: 0;
   z-index: 1000;
 }
+
+body{
+  background-color: #f0faf7;
+}
+
 header {
   display: grid;
   grid-template-columns: auto auto 1fr auto;
   align-items: center;
   gap: 0 24px;
   padding: 16px;
-  background-color: #ffffff;
+  background-color: #f0faf7;
   border-bottom: 1px solid #e9ecef;
 }
 
@@ -63,7 +68,7 @@ header p {
 #search-bar {
   display: flex;
   align-items: center;
-  background-color: #f7f6f6;
+  background-color: #ffffff;
   border: 1.5px solid #e9ecef;
   border-radius: 50px;
   padding: 8px 16px;
@@ -86,7 +91,7 @@ header p {
 }
 
 #search-bar input::placeholder {
-  color: #607066;
+  color: #95a29a;
 }
 
 .cart {
@@ -270,7 +275,7 @@ nav li#special-offer {
   display: flex;
   gap: 20px;
   overflow-x: auto;
-  padding: 10px 0;
+  padding: 15px 0 20px;
   scrollbar-width: none;
 }
 
@@ -287,7 +292,7 @@ nav li#special-offer {
   border: 1px solid #e9ecef;
   border-radius: 16px;
   padding: 20px;
-  min-width: 140px;
+  min-width: 160px;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
   transition: all 0.3s ease;
