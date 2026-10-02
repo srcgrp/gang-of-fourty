@@ -1,35 +1,89 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Idempotency Market</title>
-  <meta name="author" content="Baran">
-  <meta name="description" content="به‌زودی: بهترین میوه و سبزی محله!">
+  <title>سوپر مارکت آنلاین | تازه خانه</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <main>
-    <article class="card">
-    <section class="product">
-      <span class="badge">NEW</span>
-      <div class="image-box">
-         <img class="image" src="shopping-bag.JPG" alt="Market logo">
+<body id="top">
+  <a class="skip-link" href="#main-content"> پرش به محتوای اصلی</a>
+  <header class="site-header">
+    <div class="top-bar"> 
+      <p>ارسال رایگان برای سفارش های بالای ۵۰۰ هزار تومان</p>
+    </div>
+    <div class="header-main">
+      <a class="brand" href="#top" aria-label="تازه‌خانه، بازگشت به بالای صفحه">
+      <span class="brand-name">تازه خانه</span>
+      </a>
+      <form class="search" role="search">
+        <label for="site-search">جستجو در تازه‌خانه</label>
+        <input type="search" placeholder="جستجوی محصولات..." id="site-search">
+      </form>
+      <a class="cart-link" href="#cart" aria-label="cart">سبد خرید<span aria-label="3 products"> ۳</span></a>
+    </div>
+    <nav class="main-nav" aria-label="منوی اصلی">
+      <a href="#categories">همه دسته‌ها</a>
+      <a href="#today-offers">پیشنهادهای امروز</a>
+      <a href="#best-sellers">پرفروش‌ها</a>
+      <a href="#about">درباره ما</a>
+      <a href="#contact">تماس با ما</a>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">تازگی، هر روز در خانه شما</h1>
+        <p>انتخابی تازه از محصولات روزمره با حال‌ و هوای ایرانی.</p>
+        <a href="#today-offers">مشاهده پیشنهادهای امروز</a>
       </div>
-      </section>
-      <p class="category">Farm Products</p>
-      <h2>Fresh Market Picks</h2>
-      <p class="description">  A colorful selection of fresh, everyday essentials,
-           carefully chosen for quality, flavor, and freshness.</p>
-      <div class="rating">
-        <span class="stars">★★★★★</span>
-        <span class="reviews">(3,278)</span>
-      </div>
-      <div class="card-footer">
-      <span class="price" lang="fa" dir="rtl">۵۰,۰۰۰ تومان</span>
-      <button class="add-button">Add to bag</button>
-      </div>
-    </article>
+    </section>
+    <section id="categories" class="categories" aria-labelledby="categories-title">
+      <h2 id="categories-title">دسته‌بندی‌ها</h2>
+    </section>
+    <section id="today-offers" class="product-section" aria-labelledby="today-title">
+      <h2 id="today-title">پیشنهادهای امروز</h2>
+    </section>
+    <section class="promo" aria-labelledby="پیشنهادهای ویژه تازه‌خانه"></section>
+    <section id="best-sellers" class="product-section" aria-labelledby="best-sellers-title">
+      <h2 id="best-sellers-title">پرفروش‌های تازه‌خانه</h2>
+    </section>
+    <section id="dairy-breakfast" class="category-section">
+      <h2>لبنیات و صبحانه</h2>
+    </section>
+
+    <section id="fruits-vegetables" class="category-section">
+      <h2>میوه و سبزیجات</h2>
+    </section>
+
+    <section id="drinks" class="category-section">
+      <h2>نوشیدنی</h2>
+    </section>
+    <section id="snacks-sweets" class="category-section">
+      <h2>تنقلات و شیرینی</h2>
+    </section>
+
+    <section id="nuts" class="category-section">
+      <h2>آجیل</h2>
+    </section>
+
+    <section id="protein" class="category-section">
+      <h2>پروتئین</h2>
+    </section>
   </main>
+  <footer class="site-footer">
+    <section id="about">
+      <h2>درباره تازه‌خانه</h2>
+      <p>
+        تازه‌خانه، فروشگاهی برای خرید ساده و تازه محصولات روزمره.
+      </p>
+    </section>
+    <section id="contact">
+      <h2>تماس با ما</h2>
+      <p>ساعات پاسخگویی: شنبه تا پنجشنبه، ۹ تا ۲۰</p>
+    </section>
+    <a href="#top">بازگشت به بالا</a>
+    <p> © ۱۴۰۵ تازه‌خانه</p>
+  </footer>
 </body>
 </html>
