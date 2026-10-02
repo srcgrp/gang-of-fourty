@@ -9,21 +9,30 @@
 </head>
 
 <body>
-  <a href="#main" class="skip"> بریم بالا</a>
+  <a href="#main" class="skip">پرش به محتوای اصلی</a>
 
-  <header >
-      <div class="top-bar">
-        <p>ارسال رایگان برای سفارش‌های بالای ۷۰۰ هزار تومان</p>
-         <span>•</span>
-        <p>تنها سوپرمارکت ۷/۲۴ در ایران</p>
+  <header>
+    <div class="top-bar">
+      <p>ارسال رایگان برای سفارش‌های بالای ۷۰۰ هزار تومان</p>
+      <span>•</span>
+      <p>تنها سوپرمارکت ۷/۲۴ در ایران</p>
     </div>
 
     <div class="header">
+
+      <input type="checkbox" id="menu" class="menu-input">
+
+      <label for="menu" class="menu-btn" aria-label="منوی اصلی">
+        <i></i>
+        <i></i>
+        <i></i>
+      </label>
+
       <a href="#top" class="logo" id="top">
-        <img src="./src/images/space-market-logo.svg" width="120" height="50">
+        <img src="./src/images/space-market-logo.svg" width="120" height="50" alt="اسپیس مارکت">
         <div>
           <strong>اسپیس مارکت</strong>
-          <small> هر روز و هر ساعت</small>
+          <small>هر روز و هر ساعت</small>
         </div>
       </a>
 
@@ -38,18 +47,22 @@
         <span>سبد خرید</span>
         <b>۳</b>
       </a>
-      
+
     </div>
 
-      <input type="checkbox" id="menu" class="menu-input">
-      <label for="menu" class="menu-btn" aria-label="منوی اصلی">
-        <i></i><i></i><i></i>
-      </label>
-    </Section>
     <nav>
       <div class="nav-inner">
-        <a class="active" href="#categories">دسته‌بندی‌ها</a>
-        <a href="#offers">پیشنهادهای امروز</a>
+        <div class="categories-menu">
+          <a class="active" href="#categories">دسته‌بندی‌ها</a>
+          <div class="categories-dropdown">
+            <a href="#dairy">🥛 لبنیات و تخم‌مرغ</a>
+            <a href="#vegtables">🥬 میوه و سبزیجات</a>
+            <a href="#bread">🍞 نان و غلات</a>
+            <a href="#snacks">🍪 تنقلات و شیرینی</a>
+            <a href="#drinks">🥤 نوشیدنی‌ها</a>
+            <a href="#cosmetics">🧴 آرایشی و بهداشتی</a>
+          </div>
+        </div>        <a href="#offers">پیشنهادهای امروز</a>
         <a href="#sales">تخفیف‌دار ها</a>
         <a href="#dairy">لبنیات</a>
         <a href="#snacks">تنقلات</a>
@@ -59,127 +72,475 @@
       </div>
     </nav>
   </header>
-  <main>
+
+  <main id="main">
+
+    <!-- hero banner -->
     <div class="banner01">
-      <img id="banner01" src="./src/images/banner01.png" alt="banner for showing the brand" >
-      <h1 class="banner01-content">تازه، سریع، <span > از خود فضا!</span></h1>
-      <p class="banner01-sub">خرید روزانه با طعم یک ماجراجویی فضایی</p>
+      <img id="banner01"
+           src="./src/images/banner01.png"
+           alt="بنر اسپیس مارکت"
+           width="1920"
+           height="600">
+
+      <h1 class="banner01-content">
+        تازه، سریع، <span>از خود فضا!</span>
+      </h1>
+
+      <p class="banner01-sub">
+        خرید روزانه با طعم یک ماجراجویی فضایی
+      </p>
     </div>
+
+    <!-- دسته‌بندی پرطرفدار -->
+    <section class="section" id="categories">
+
+      <h2 class="section-title">دسته‌بندی‌های پرطرفدار</h2>
+
+      <div class="popular-products" tabindex="0">
+
+        <article class="popular-products-items">
+          <a href="#milks">
+            <div class="popular-products-cards">
+              <img src="./src/images/dairy-eggs.png"
+                   width="60"
+                   height="90"
+                   alt="لبنیات و تخم مرغ"
+                   loading="lazy">
+              <p class="popular-products-tags">لبنیات و تخم‌مرغ</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="popular-products-items">
+          <a href="#vegtables">
+            <div class="popular-products-cards">
+              <img src="./src/images/fruit-vegetables.png"
+                   width="60"
+                   height="90"
+                   alt="میوه و سبزیجات"
+                   loading="lazy">
+              <p class="popular-products-tags">میوه و سبزیجات</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="popular-products-items">
+          <a href="#bread">
+            <div class="popular-products-cards">
+              <img src="./src/images/bread.png"
+                   width="60"
+                   height="90"
+                   alt="نان و غلات"
+                   loading="lazy">
+              <p class="popular-products-tags">نان و غلات</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="popular-products-items">
+          <a href="#snacks">
+            <div class="popular-products-cards">
+              <img src="./src/images/snacks-sweets.png"
+                   width="60"
+                   height="90"
+                   alt="تنقلات و شیرینی"
+                   loading="lazy">
+              <p class="popular-products-tags">تنقلات و شیرینی</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="popular-products-items">
+          <a href="#drinks">
+            <div class="popular-products-cards">
+              <img src="./src/images/drinks.png"
+                   width="60"
+                   height="90"
+                   alt="نوشیدنی‌ها"
+                  >
+              <p class="popular-products-tags">نوشیدنی‌ها</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="popular-products-items">
+          <a href="#cosmetics">
+            <div class="popular-products-cards">
+              <img src="./src/images/cosmetics.png"
+                   width="60"
+                   height="90"
+                   alt="آرایشی و بهداشتی">
+              <p class="popular-products-tags">آرایشی و بهداشتی</p>
+            </div>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- بنر تخفیف -->
+    <section class="banner02" id="sales">
+      <img src="./src/images/banner05.png" alt="تخفیف‌های اسپیس مارکت">
+    </section>
+
+    <section class="banner02-res">
+      <img src="./src/images/banner-02-res.png" alt="تخفیف‌های اسپیس مارکت">
+    </section>
+
+    <!-- پیشنهاد روز -->
     <section class="section" id="offers">
-        <div class="section-title">
-          <div>
-            <h2>دسته‌بندی‌های پرطرفدار</h2>
-          </div>
-          <div class="arrows">
-            <a href="#offer-last" aria-label="محصولات بعدی">→</a>
-            <a href="#offer-first" aria-label="محصولات قبلی">←</a>
-          </div>
-        </div>
-        <div class="popular-products" tabindex="0">
-          <article class="popular-products-items" >
-            <div class="popular-products-cards">
-              <img src="">
-              <p class="popular-products-tags" >لبنیات و تخم‌مرغ</p>
-            </div>
-          </article>
-          <article class="popular-products-items" >
-            <div class="popular-products-cards">
-              <img src="">
-              <p class="popular-products-tags" >میوه و سبزیجات</p>
-            </div>
-          </article>
-          <article class="popular-products-items" >
-            <div class="popular-products-cards">
-              <img src="">
-              <p class="popular-products-tags" >نان و غلات</p>
-            </div>
-          </article>
-          <article class="popular-products-items" >
-            <div class="popular-products-cards">
-              <img src="">
-              <p class="popular-products-tags" >تنقلات و شیرینی</p>
-            </div>
-          </article>
-          <article class="popular-products-items" >
-            <div class="popular-products-cards">
-              <img src="">
-              <p class="popular-products-tags" >نوشیدنی‌ها</p>
-            </div>
-          </article>
-          <article class="popular-products-items" >
-            <div class="popular-products-cards">
-              <img src="">
-              <p class="popular-products-tags" >آرایشی و بهداشتی</p>
-            </div>
-          </article>
-        </div>
-      </section>
-      <section class="banner02">
-        <img src="./src/images/Screenshot 2026-10-01 at 1.54.24 PM.png" >
-      </section>
-            <section class="section" id="offers">
-        <div class="section-title">
-          <div>
-            <span>انتخاب‌های امروز</span>
-            <h2>پیشنهادهای تازه</h2>
-          </div>
-          <div class="arrows">
-            <a href="#offer-last" aria-label="محصولات بعدی">←</a>
-            <a href="#offer-first" aria-label="محصولات قبلی">→</a>
-          </div>
+
+      <div class="section-title">
+        <div>
+          <h2>🔥پیشنهاد ویژه امروز</h2>
         </div>
 
-        <div class="products" tabindex="0">
-
-          <article class="product" id="offer-first">
-            <div class="product-image tomato">
-              <b>۱۲٪ تخفیف</b><span>🍅</span>
-            </div>
-            <div class="product-info">
-              <h3>گوجه‌فرنگی گلخانه‌ای</h3>
-              <p>۵۰۰ گرم</p>
-              <strong>۷۹٬۰۰۰ <small>تومان</small></strong>
-              <button aria-label="افزودن گوجه فرنگی">+</button>
-            </div>
-          </article>
-
-          <article class="product">
-            <div class="product-image milk"><b>جدید</b><span>🥛</span></div>
-            <div class="product-info">
-              <h3>شیر کم‌چرب تازه</h3><p>۱ لیتر</p>
-              <strong>۵۸٬۰۰۰ <small>تومان</small></strong>
-              <button aria-label="افزودن شیر">+</button>
-            </div>
-          </article>
-
-          <article class="product">
-            <div class="product-image banana"><b>۸٪ تخفیف</b><span>🍌</span></div>
-            <div class="product-info">
-              <h3>موز اکوادور</h3><p>۱ کیلوگرم</p>
-              <strong>۱۴۹٬۰۰۰ <small>تومان</small></strong>
-              <button aria-label="افزودن موز">+</button>
-            </div>
-          </article>
-
-          <article class="product">
-            <div class="product-image cucumber"><b>تازه</b><span>🥒</span></div>
-            <div class="product-info">
-              <h3>خیار سالادی</h3><p>۷۰۰ گرم</p>
-              <strong>۶۹٬۰۰۰ <small>تومان</small></strong>
-              <button aria-label="افزودن خیار">+</button>
-            </div>
-          </article>
-
-          <article class="product" id="offer-last">
-            <div class="product-image cheese"><b>۱۰٪ تخفیف</b><span>🧀</span></div>
-            <div class="product-info">
-              <h3>پنیر صبحانه</h3><p>۳۰۰ گرم</p>
-              <strong>۱۱۲٬۰۰۰ <small>تومان</small></strong>
-              <button aria-label="افزودن پنیر">+</button>
-            </div>
-          </article>
-
+        <div class="arrows">
+          <a href="#offer-last" aria-label="محصولات بعدی">→</a>
+          <a href="#offer-first" aria-label="محصولات قبلی">←</a>
         </div>
-      </section>
+      </div>
+
+      <div class="products" tabindex="0">
+
+        <article class="product" id="offer-first">
+          <div class="product-image pofak">
+            <b>۳۹٪ تخفیف</b>
+            <img src="./src/images/pofak.webp"
+                 width="120"
+                 height="120"
+                 alt="پفک لئو پنیری">
+          </div>
+
+          <div class="product-info">
+            <h3>پک ۳تایی اسنک لئو پنیری مزپف</h3>
+            <p>۹۰۰ گرم</p>
+
+            <div class="off-content">
+              <span class="off">۲۷۰،۰۰۰</span>
+              <strong>۱۶۷،۰۰۰ <small>تومان</small></strong>
+            </div>
+
+            <button aria-label="افزودن پفک">+</button>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-image rani">
+            <b>۳۶٪ تخفیف</b>
+            <img src="./src/images/rani.webp"
+                 width="120"
+                 height="120"
+                 alt="رانی">
+          </div>
+
+          <div class="product-info">
+            <h3>پک ۳تایی رانی</h3>
+            <p>۲۴۰ میلی لیتر</p>
+
+            <div class="off-content">
+              <span class="off">۲۸۵،۰۰۰</span>
+              <strong>۱۸۲،۰۰۰ <small>تومان</small></strong>
+            </div>
+
+            <button aria-label="افزودن رانی">+</button>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-image cookie">
+            <b>۲۶٪ تخفیف</b>
+            <img src="./src/images/weafer.webp"
+                 width="120"
+                 height="120"
+                 alt="ویفر">
+          </div>
+
+          <div class="product-info">
+            <h3>پک ۶تایی ویفر</h3>
+            <p>۵۰ گرمی</p>
+
+            <div class="off-content">
+              <span class="off">۲۸۵،۰۰۰</span>
+              <strong>۱۸۲،۰۰۰ <small>تومان</small></strong>
+            </div>
+
+            <button aria-label="افزودن ویفر">+</button>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-image chips">
+            <b>۱۰٪ تخفیف</b>
+            <img src="./src/images/chips.webp"
+                 width="120"
+                 height="120"
+                 alt="چیپس مزمز">
+          </div>
+
+          <div class="product-info">
+            <h3>پک ۳تایی چیپس مزمز</h3>
+            <p>۴۰۰ گرمی</p>
+
+            <div class="off-content">
+              <span class="off">۲۸۵،۰۰۰</span>
+              <strong>۱۸۲،۰۰۰ <small>تومان</small></strong>
+            </div>
+
+            <button aria-label="افزودن چیپس">+</button>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-image chips">
+            <b>۱۰٪ تخفیف</b>
+            <img src="./src/images/chips.webp"
+                 width="120"
+                 height="120"
+                 alt="چیپس مزمز">
+          </div>
+
+          <div class="product-info">
+            <h3>پک ۳تایی چیپس مزمز</h3>
+            <p>۴۰۰ گرمی</p>
+
+            <div class="off-content">
+              <span class="off">۲۸۵،۰۰۰</span>
+              <strong>۱۸۲،۰۰۰ <small>تومان</small></strong>
+            </div>
+
+            <button aria-label="افزودن چیپس">+</button>
+          </div>
+        </article>
+
+        <article class="product" id="offer-last">
+          <div class="product-image chips">
+            <b>۱۰٪ تخفیف</b>
+            <img src="./src/images/chips.webp"
+                 width="120"
+                 height="120"
+                 alt="چیپس مزمز">
+          </div>
+
+          <div class="product-info">
+            <h3>پک ۳تایی چیپس مزمز</h3>
+            <p>۴۰۰ گرمی</p>
+
+            <div class="off-content">
+              <span class="off">۲۸۵،۰۰۰</span>
+              <strong>۱۸۲،۰۰۰ <small>تومان</small></strong>
+            </div>
+
+            <button aria-label="افزودن چیپس">+</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- بنر تبلیغاتی -->
+    <section class="advertisment">
+
+      <img src="./src/images/banner07.png"
+           class="advertisment-banner"
+           alt="بنر تبلیغاتی اسپیس مارکت">
+
+      <img src="./src/images/banner08.png"
+           class="advertisment-banner"
+           alt="بنر تبلیغاتی اسپیس مارکت">
+
+    </section>
+
+    <!-- سکشن لبنیات -->
+    <section class="section" id="dairy">
+
+      <div class="section-title">
+        <div>
+          <h2>مزه‌ي کنار لازمت میشه</h2>
+        </div>
+
+        <div class="arrows">
+          <a href="#dairy-last" aria-label="محصولات بعدی">→</a>
+          <a href="#dairy-first" aria-label="محصولات قبلی">←</a>
+        </div>
+      </div>
+
+      <div class="products" tabindex="0">
+
+        <article class="product" id="dairy-first">
+          <div class="product-image maze">
+            <img src="./src/images/maze01.webp"
+                 width="120"
+                 height="120"
+                 alt="پنیر مخلوط کاله">
+          </div>
+
+          <div class="product-info">
+            <h3>پنیر مخلوط کاله</h3>
+            <p>۳۰۰ گرم</p>
+
+            <div class="off-content">
+              <strong>۶۹۳،۰۰۰ <small>تومان</small></strong>
+            </div>
+
+            <button aria-label="افزودن پنیر">+</button>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-image maze">
+            <img src="./src/images/yougert.webp"
+                 width="120"
+                 height="120"
+                 alt="ماست موسیر هراز">
+          </div>
+
+          <div class="product-info">
+            <h3>ماست موسیر هراز</h3>
+            <p>۳۰۰ گرم</p>
+
+            <div class="off-content">
+              <strong>۱۸۰،۰۰۰ <small>تومان</small></strong>
+            </div>
+
+            <button aria-label="افزودن ماست">+</button>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-image maze">
+            <img src="./src/images/mozerela.webp"
+                 width="120"
+                 height="120"
+                 alt="موزرلا مدادی">
+          </div>
+
+          <div class="product-info">
+            <h3>موزرلا مدادی</h3>
+            <p>۳۰۰ گرم</p>
+
+            <div class="off-content">
+              <strong>۱۸۰،۰۰۰ <small>تومان</small></strong>
+            </div>
+
+            <button aria-label="افزودن موزرلا">+</button>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-image maze">
+            <img src="./src/images/hallomi.webp"
+                 width="120"
+                 height="120"
+                 alt="پنیر کبابی">
+          </div>
+
+          <div class="product-info">
+            <h3>پنیر کبابی</h3>
+            <p>۳۰۰ گرم</p>
+
+            <div class="off-content">
+              <strong>۱۸۰،۰۰۰ <small>تومان</small></strong>
+            </div>
+
+            <button aria-label="افزودن پنیر کبابی">+</button>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-image maze">
+            <img src="./src/images/miveyi.webp"
+                 width="120"
+                 height="120"
+                 alt="ماست میوه‌ای">
+          </div>
+
+          <div class="product-info">
+            <h3>ماست میوه‌ایی</h3>
+            <p>۳۰۰ گرم</p>
+
+            <div class="off-content">
+              <strong>۱۸۰،۰۰۰ <small>تومان</small></strong>
+            </div>
+
+            <button aria-label="افزودن ماست میوه‌ای">+</button>
+          </div>
+        </article>
+
+        <article class="product" id="dairy-last">
+          <div class="product-image maze">
+            <img src="./src/images/sabo.webp"
+                 width="120"
+                 height="120"
+                 alt="ماست سبو">
+          </div>
+
+          <div class="product-info">
+            <h3>ماست سبو</h3>
+            <p>۳۰۰ گرم</p>
+
+            <div class="off-content">
+              <strong>۱۸۰،۰۰۰ <small>تومان</small></strong>
+            </div>
+
+            <button aria-label="افزودن ماست سبو">+</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
 
   </main>
+
+  <!-- فوتر -->
+
+  <footer id="footer">
+
+    <img src="./src/images/footer.PNG"
+         class="footer-bg"
+         alt="">
+
+    <div class="footer-inner">
+
+      <div>
+        <a href="#top" class="footer-logo">اسپیس مارکت</a>
+        <p>یک سوپرمارکت محلی برای خریدهای کوچک و بزرگ روزمره.</p>
+        <p>تهران، خیابان ولیعصر، کوچه ۲۴</p>
+      </div>
+
+      <div>
+        <h3>دسترسی سریع</h3>
+        <a href="#categories">دسته‌بندی‌ها</a>
+        <a href="#offers">پیشنهادهای امروز</a>
+        <a href="#dairy">لبنیات</a>
+        <a href="#produce">میوه و سبزی</a>
+      </div>
+
+      <div>
+        <h3>راهنما</h3>
+        <a href="#footer">شیوه ارسال</a>
+        <a href="#footer">پیگیری سفارش</a>
+        <a href="#footer">پرسش‌های متداول</a>
+        <a href="#footer">تماس با ما</a>
+      </div>
+
+      <div>
+        <h3>ساعت کاری</h3>
+        <p>شنبه تا پنجشنبه</p>
+        <b>۸:۰۰ تا ۲۳:۰۰</b>
+        <p>جمعه</p>
+        <b>۹:۰۰ تا ۲۰:۰۰</b>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© ۱۴۰۵ اسپس مارکت</span>
+      <a href="#top">بازگشت به بالا ↑</a>
+    </div>
+
+  </footer>
+
+</body>
+</html>
