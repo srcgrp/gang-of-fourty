@@ -519,7 +519,7 @@ main > * + * { margin-top: 2rem; }
   overflow-x: auto;
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
+  scrollbar-width: none;
   margin: 0 calc(var(--gutter) * -1) -.75rem;
   padding: .75rem var(--gutter) 1.5rem;
   scroll-padding-inline: var(--gutter);
@@ -737,32 +737,86 @@ main > * + * { margin-top: 2rem; }
 
 /* ========== Desktop ========== */
 @media (min-width: 60rem) {
-  :root { --gutter: 1.5rem; --card-w: 12.25rem; --bar-h: 4.5rem; --header-h: calc(var(--bar-h) + 3rem + 1px); }
-  .bar { display: grid; grid-template-columns: auto 1fr auto; grid-template-rows: var(--bar-h) 3rem; column-gap: 1.5rem; height: auto; }
+  :root {
+    --gutter: 1.5rem;
+    --card-w: 12.25rem;
+    --bar-h: 4.5rem;
+    --header-h: calc(var(--bar-h) + 3rem + 1px);
+  }
+  
+  .bar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: var(--bar-h) 3rem;
+    column-gap: 1.5rem; height: auto;
+  }
+  
   .search { width: 100%; max-width: none; margin-inline: 0; }
+  
   .menu-toggle, .burger, .scrim { display: none; }
+  
   .main-nav {
-    position: static; grid-column: 1 / -1; max-height: none; overflow: visible;
-    background: none; border-top: 1px solid var(--line); border-bottom: 0; box-shadow: none;
-    visibility: visible; opacity: 1; transform: none;
+    position: static;
+    grid-column: 1 / -1;
+    max-height: none;
+    overflow: visible;
+    background: none;
+    border-top: 1px solid var(--line);
+    border-bottom: 0;
+    box-shadow: none;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
   }
+  
   .main-nav > ul { display: flex; gap: .25rem; padding-block: 0; }
-  .main-nav a { min-height: 3rem; padding-inline: .9rem; border-radius: .6rem; }
-  .mega { position: relative; }
-  .mega-panel {
-    display: block; position: absolute; inset-inline-start: 0; top: 100%; z-index: 2; min-width: 14rem; padding: .5rem;
-    border: 1px solid var(--line); border-radius: 0 0 1rem 1rem; background: var(--surface);
-    box-shadow: 0 18px 40px -18px rgb(0 0 0 / .45);
-    visibility: hidden; opacity: 0; transform: translateY(-.5rem);
-    transition: opacity .2s, transform .2s var(--ease), visibility 0s .2s;
+  
+  .main-nav a {
+    min-height: 3rem;
+    padding-inline: .9rem;
+    border-radius: .6rem;
   }
-  .mega:hover .mega-panel, .mega:focus-within .mega-panel { visibility: visible; opacity: 1; transform: none; transition-delay: 0s; }
+  
+  .mega { position: relative; }
+  
+  .mega-panel {
+    display: block;
+    position: absolute;
+    inset-inline-start: 0;
+    top: 100%; z-index: 2;
+    min-width: 14rem;
+    padding: .5rem;
+    border: 1px solid var(--line);
+    border-radius: 0 0 1rem 1rem;
+    background: var(--surface);
+    box-shadow: 0 18px 40px -18px rgb(0 0 0 / .45);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-.5rem);
+    transition: opacity .2s,
+    transform .2s var(--ease),
+    visibility 0s .2s;
+  }
+  
+  .mega:hover .mega-panel, .mega:focus-within .mega-panel {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition-delay: 0s;
+  }
+  
   .mega-panel a { min-height: 2.75rem; }
+  
   .cart { justify-self: end; }
+  
   .foot-grid { grid-template-columns: 1.6fr 1fr 1fr 1fr; }
 }
 
 /* ========== Reduced motion: animations are disabled ========== */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { transition-duration: .01ms !important; animation: none !important; scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    transition-duration: .01ms !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
 }
