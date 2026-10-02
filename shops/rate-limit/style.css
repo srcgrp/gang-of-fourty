@@ -406,7 +406,7 @@ nav li#special-offer-button {
 
 .price-row {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   gap: 2px;
@@ -772,5 +772,113 @@ html:dir(ltr) {
 
   .banner-text {
     max-width: 85%;
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  background-color: #1e4731;
+  padding: 40px 30px 0;
+}
+
+.footer-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 14px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-title::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  right: 0;
+  width: 30px;
+  height: 3px;
+  background-color: #6f9e64;
+  border-radius: 2px;
+}
+
+.footer-text {
+  font-size: 14px;
+  line-height: 2;
+  color: #cfe3d6;
+}
+
+.footer-list {
+  list-style: none;
+}
+
+.footer-list li {
+  font-size: 14px;
+  line-height: 2.2;
+  color: #cfe3d6;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer-list li:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  grid-column: 1 / -1;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 18px 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-text {
+  font-size: 13px;
+  color: #a7c9b3;
+}
+
+.jump-to-up {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 8px 16px;
+  border-radius: 50px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.jump-to-up:hover {
+  background-color: rgba(255, 255, 255, 0.22);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 30px 16px 0;
+  }
+
+  .footer-bottom {
+    margin-top: 16px;
   }
 }
