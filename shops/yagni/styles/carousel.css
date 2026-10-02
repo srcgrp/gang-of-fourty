@@ -1,0 +1,27 @@
+.carousel {
+  overflow-x: auto;
+  direction: ltr;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.group {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  animation: spin 5s infinite linear;
+}
+.card {
+  height: 50px;
+  background-color: aqua;
+  flex: 0 0 20em;
+}
+
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
