@@ -906,8 +906,13 @@ footer {
   font-size: 9px;
 }
 
-.footer-bottom a {
-  color: #cbd5ce;
+
+.go-top{
+  background-color: var(--orang);
+  color: #fff;
+  border-radius: 16px;
+  font-size: 16px;
+  padding: 8px 16px ;
 }
 
 @media (max-width: 950px) {
