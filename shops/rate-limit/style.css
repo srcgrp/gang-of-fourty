@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap");
 
-*{
+* {
   font-family: vazirmatn, Tahoma, sans-serif;
   box-sizing: border-box;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -15,7 +15,7 @@ header {
   padding: 16px;
   background-color: #ffffff;
   border-bottom: 1px solid #e9ecef;
-  position: sticky
+  position: sticky;
 }
 
 #logo {
@@ -36,7 +36,7 @@ header h2 {
   margin: 0;
   font-size: 20px;
   font-weight: 800;
-  color: #1B4935;
+  color: #1b4935;
 }
 
 header p {
@@ -44,7 +44,7 @@ header p {
   grid-row: 2;
   margin: 0;
   font-size: 13.5px;
-  color: #678B60;
+  color: #678b60;
   font-weight: 500;
 }
 
@@ -59,13 +59,12 @@ header p {
 #search-bar {
   display: flex;
   align-items: center;
-  background-color: #F7F6F6;
+  background-color: #f7f6f6;
   border: 1.5px solid #e9ecef;
   border-radius: 50px;
   padding: 8px 16px;
   transition: all 0.3s ease;
 }
-
 
 #search-icon {
   width: 20px;
@@ -79,7 +78,7 @@ header p {
   outline: none;
   background: transparent;
   font-size: 14px;
-  color: #1B4935;
+  color: #1b4935;
 }
 
 #search-bar input::placeholder {
@@ -93,7 +92,7 @@ header p {
   display: flex;
   align-items: center;
   background-color: #d8f3dc;
-  color: #073D26;
+  color: #073d26;
   padding: 10px 20px;
   border-radius: 50px;
   cursor: pointer;
@@ -130,7 +129,7 @@ header p {
 }
 
 nav {
-  background-color: #1E4731;
+  background-color: #1e4731;
   position: sticky;
 }
 
@@ -140,8 +139,8 @@ nav ul {
   margin: 0;
   padding: 0;
   max-width: 1200px;
-  overflow-x:auto;
-  scrollbar-width: none;;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
 nav ul::-webkit-scrollbar {
@@ -154,7 +153,9 @@ nav li {
   font-weight: 500;
   color: #ffffff;
   cursor: pointer;
-  transition: background-color 0.2s ease, opacity 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    opacity 0.2s ease;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -162,74 +163,72 @@ nav li {
 }
 
 nav li:hover {
-background-color: rgba(255, 255, 255, 0.12);}
+  background-color: rgba(255, 255, 255, 0.12);
+}
 
-nav li.category {
+nav li.category-button {
   font-weight: 700;
   background-color: #143726;
   padding-inline-start: 20px;
   padding-inline-end: 16px;
-
 }
 
-nav li.category:hover {
+nav li.category-button:hover {
   background-color: #081c15;
 }
 
 nav li#special-offer {
-  color: #F0C947;
+  color: #f0c947;
 
   font-weight: 700;
 }
 
 .banner {
-    height: 400px;
-    margin: 30px;
-    border-radius: 20px;
-    background-image: url("images/banner2.png");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    padding: 50px;
+  height: 400px;
+  margin: 30px;
+  border-radius: 20px;
+  background-image: url("images/banner2.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 50px;
 }
 
 .banner-text {
-    text-align: right;
-    color: #ffffff;
-    margin-left: auto;
+  text-align: right;
+  color: #ffffff;
+  margin-left: auto;
 }
 
 .banner-text h1 {
-    font-size: 35px;
-    margin-bottom: 15px;
-    font-weight: 800;
-    line-height: 1;
+  font-size: 35px;
+  margin-bottom: 15px;
+  font-weight: 800;
+  line-height: 1;
 }
 
 .banner-text p {
-    font-size: 16px;
-    line-height: 1.8;
-    margin: 5px 0;
-    max-width: 300px;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 5px 0;
+  max-width: 300px;
 }
 
 .banner-text button {
-    margin-top: 20px;
-    padding: 12px 28px;
-    border: none;
-    border-radius: 10px;
-    background-color: #6F9E64;
-    color: white;
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
+  margin-top: 20px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  background-color: #6f9e64;
+  color: white;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .banner-text button:hover {
-    background-color: #528d4d;
+  background-color: #528d4d;
 }
-
-  
