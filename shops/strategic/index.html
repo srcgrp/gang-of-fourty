@@ -145,14 +145,14 @@
         <div class="hero-main">
           <h1>
             <span>سوپرمارکت آرمین،</span>
-            <span>تازه‌ترین‌ ها برای خرید روزانه</span>
+            <span>تازه‌ترین‌ها برای خرید روزانه</span>
           </h1>
           <p>مستقیم از باغ‌های اطراف شهر، تا دو ساعت بعد دم در خانه شما.</p>
           <a class="btn" href="#produce">خرید میوه و سبزی</a>
           <span class="art" aria-hidden="true">🍉</span>
         </div>
         <div class="hero-side">
-          <h2>۲۰٪ تخفیف لبنیات</h2>
+          <h2>تا ۲۰٪ تخفیف لبنیات</h2>
           <p>فقط تا پایان هفته</p>
           <span class="art" aria-hidden="true">🧀</span>
           <a class="btn btn--green" href="#dairy">دیدن محصولات</a>
@@ -344,10 +344,10 @@
       </section>
 
       <section class="banners" aria-label="پیشنهادهای تبلیغاتی">
-        <a href="#dairy"
+        <a class="banner" href="#dairy"
           >سبد صبحانه خانواده<span aria-hidden="true">🍳</span></a
         >
-        <a href="#bakery"
+        <a class="banner" href="#bakery"
           >نان داغ، هر روز ساعت ۷<span aria-hidden="true">🥐</span></a
         >
       </section>
@@ -588,6 +588,474 @@
                 class="add"
                 type="button"
                 aria-label="افزودن شیر کم‌چرب به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="shelf" id="bakery" aria-labelledby="bakery-t">
+        <div class="sec-head">
+          <h2 id="bakery-t"><span aria-hidden="true">🥖</span> نان و شیرینی</h2>
+          <div class="arrows">
+            <a
+              class="arr arr--start"
+              href="#bakery-start"
+              aria-label="رفتن به ابتدای نان و شیرینی"
+            ></a
+            ><a
+              class="arr arr--end"
+              href="#bakery-end"
+              aria-label="رفتن به انتهای نان و شیرینی"
+            ></a>
+          </div>
+        </div>
+        <ul class="rail">
+          <li class="card" id="bakery-start">
+            <div class="pic"><span aria-hidden="true">🫓</span></div>
+            <h3>نان سنگک</h3>
+            <p class="unit">۱ عدد</p>
+            <div class="buy">
+              <p class="price"><strong>۲۰٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن نان سنگک به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <div class="pic"><span aria-hidden="true">🥖</span></div>
+            <h3>باگت فرانسوی</h3>
+            <p class="unit">۱ عدد</p>
+            <div class="buy">
+              <p class="price"><strong>۳۵٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن باگت فرانسوی به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <div class="pic">
+              <span aria-hidden="true">🥐</span
+              ><span class="badge">۲۵٪<span class="sr-only"> تخفیف</span></span>
+            </div>
+            <h3>کروسان کره‌ای</h3>
+            <p class="unit">۴ عدد</p>
+            <div class="buy">
+              <p class="price">
+                <del><span class="sr-only">قیمت قبلی: </span>۱۲۰٬۰۰۰</del
+                ><strong>۹۰٬۰۰۰ تومان</strong>
+              </p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن کروسان کره‌ای به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <div class="pic"><span aria-hidden="true">🍞</span></div>
+            <h3>نان تست سبوس‌دار</h3>
+            <p class="unit">۵۰۰ گرم</p>
+            <div class="buy">
+              <p class="price"><strong>۴۸٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن نان تست سبوس‌دار به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <div class="pic"><span aria-hidden="true">🧁</span></div>
+            <h3>کاپ‌کیک وانیلی</h3>
+            <p class="unit">۶ عدد</p>
+            <div class="buy">
+              <p class="price"><strong>۱۱۰٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن کاپ‌کیک وانیلی به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card card--out" id="bakery-end">
+            <div class="pic">
+              <span aria-hidden="true">🍩</span
+              ><span class="badge badge--out">ناموجود</span>
+            </div>
+            <h3>دونات شکلاتی</h3>
+            <p class="unit">۳ عدد</p>
+            <div class="buy">
+              <p class="price"><strong>۸۸٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="دونات شکلاتی ناموجود است"
+                disabled
+              >
+                +
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="shelf" id="protein" aria-labelledby="protein-t">
+        <div class="sec-head">
+          <h2 id="protein-t"><span aria-hidden="true">🍗</span> پروتئین</h2>
+          <div class="arrows">
+            <a
+              class="arr arr--start"
+              href="#protein-start"
+              aria-label="رفتن به ابتدای پروتئین"
+            ></a
+            ><a
+              class="arr arr--end"
+              href="#protein-end"
+              aria-label="رفتن به انتهای پروتئین"
+            ></a>
+          </div>
+        </div>
+        <ul class="rail">
+          <li class="card" id="protein-start">
+            <div class="pic">
+              <span aria-hidden="true">🍗</span
+              ><span class="badge">۱۹٪<span class="sr-only"> تخفیف</span></span>
+            </div>
+            <h3>ران مرغ</h3>
+            <p class="unit">۹۰۰ گرم</p>
+            <div class="buy">
+              <p class="price">
+                <del><span class="sr-only">قیمت قبلی: </span>۲۶۰٬۰۰۰</del
+                ><strong>۲۱۰٬۰۰۰ تومان</strong>
+              </p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن ران مرغ به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <div class="pic"><span aria-hidden="true">🐔</span></div>
+            <h3>سینه مرغ</h3>
+            <p class="unit">۱ کیلوگرم</p>
+            <div class="buy">
+              <p class="price"><strong>۲۹۰٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن سینه مرغ به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <div class="pic"><span aria-hidden="true">🥩</span></div>
+            <h3>راسته گوساله</h3>
+            <p class="unit">۵۰۰ گرم</p>
+            <div class="buy">
+              <p class="price"><strong>۴۸۰٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن راسته گوساله به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <div class="pic"><span aria-hidden="true">🍖</span></div>
+            <h3>گوشت چرخ‌کرده</h3>
+            <p class="unit">۵۰۰ گرم</p>
+            <div class="buy">
+              <p class="price"><strong>۴۲۰٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن گوشت چرخ‌کرده به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <div class="pic"><span aria-hidden="true">🐟</span></div>
+            <h3>ماهی قزل‌آلا</h3>
+            <p class="unit">۱ کیلوگرم</p>
+            <div class="buy">
+              <p class="price"><strong>۳۵۰٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن ماهی قزل‌آلا به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card" id="protein-end">
+            <div class="pic"><span aria-hidden="true">🌭</span></div>
+            <h3>سوسیس</h3>
+            <p class="unit">۳۰۰ گرم</p>
+            <div class="buy">
+              <p class="price"><strong>۹۵٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن سوسیس به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="shelf" id="drinks" aria-labelledby="drinks-t">
+        <div class="sec-head">
+          <h2 id="drinks-t"><span aria-hidden="true">🧃</span> نوشیدنی</h2>
+          <div class="arrows">
+            <a
+              class="arr arr--start"
+              href="#drinks-start"
+              aria-label="رفتن به ابتدای نوشیدنی"
+            ></a
+            ><a
+              class="arr arr--end"
+              href="#drinks-end"
+              aria-label="رفتن به انتهای نوشیدنی"
+            ></a>
+          </div>
+        </div>
+        <ul class="rail">
+          <li class="card" id="drinks-start">
+            <div class="pic"><span aria-hidden="true">🧃</span></div>
+            <h3>آبمیوه پرتقال</h3>
+            <p class="unit">۱ لیتر</p>
+            <div class="buy">
+              <p class="price"><strong>۶۸٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن آبمیوه پرتقال به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <div class="pic"><span aria-hidden="true">💧</span></div>
+            <h3>آب معدنی</h3>
+            <p class="unit">۱٫۵ لیتر</p>
+            <div class="buy">
+              <p class="price"><strong>۱۲٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن آب معدنی به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <div class="pic">
+              <span aria-hidden="true">🥤</span
+              ><span class="badge">۲۰٪<span class="sr-only"> تخفیف</span></span>
+            </div>
+            <h3>نوشابه کولا</h3>
+            <p class="unit">۱٫۵ لیتر</p>
+            <div class="buy">
+              <p class="price">
+                <del><span class="sr-only">قیمت قبلی: </span>۵۰٬۰۰۰</del
+                ><strong>۴۰٬۰۰۰ تومان</strong>
+              </p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن نوشابه کولا به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <div class="pic"><span aria-hidden="true">🍵</span></div>
+            <h3>چای سیاه ممتاز</h3>
+            <p class="unit">۴۵۰ گرم</p>
+            <div class="buy">
+              <p class="price"><strong>۱۸۰٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن چای سیاه ممتاز به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <div class="pic"><span aria-hidden="true">☕</span></div>
+            <h3>قهوه فوری</h3>
+            <p class="unit">۱۰۰ گرم</p>
+            <div class="buy">
+              <p class="price"><strong>۱۵۵٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن قهوه فوری به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card" id="drinks-end">
+            <div class="pic"><span aria-hidden="true">🍒</span></div>
+            <h3>شربت آلبالو</h3>
+            <p class="unit">۱ لیتر</p>
+            <div class="buy">
+              <p class="price"><strong>۷۲٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن شربت آلبالو به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="shelf" id="snacks" aria-labelledby="snacks-t">
+        <div class="sec-head">
+          <h2 id="snacks-t"><span aria-hidden="true">🍪</span> تنقلات</h2>
+          <div class="arrows">
+            <a
+              class="arr arr--start"
+              href="#snacks-start"
+              aria-label="رفتن به ابتدای تنقلات"
+            ></a
+            ><a
+              class="arr arr--end"
+              href="#snacks-end"
+              aria-label="رفتن به انتهای تنقلات"
+            ></a>
+          </div>
+        </div>
+        <ul class="rail">
+          <li class="card" id="snacks-start">
+            <div class="pic"><span aria-hidden="true">🍪</span></div>
+            <h3>بیسکویت کره‌ای</h3>
+            <p class="unit">۲۰۰ گرم</p>
+            <div class="buy">
+              <p class="price"><strong>۴۲٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن بیسکویت کره‌ای به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <div class="pic"><span aria-hidden="true">🥔</span></div>
+            <h3>چیپس ساده</h3>
+            <p class="unit">۱۰۰ گرم</p>
+            <div class="buy">
+              <p class="price"><strong>۳۸٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن چیپس ساده به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <div class="pic"><span aria-hidden="true">🍿</span></div>
+            <h3>پاپ‌کورن</h3>
+            <p class="unit">۹۰ گرم</p>
+            <div class="buy">
+              <p class="price"><strong>۲۵٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن پاپ‌کورن به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <div class="pic">
+              <span aria-hidden="true">🍫</span
+              ><span class="badge">۲۰٪<span class="sr-only"> تخفیف</span></span>
+            </div>
+            <h3>شکلات تلخ</h3>
+            <p class="unit">۱۰۰ گرم</p>
+            <div class="buy">
+              <p class="price">
+                <del><span class="sr-only">قیمت قبلی: </span>۸۰٬۰۰۰</del
+                ><strong>۶۴٬۰۰۰ تومان</strong>
+              </p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن شکلات تلخ به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <div class="pic"><span aria-hidden="true">🥜</span></div>
+            <h3>بادام‌زمینی شور</h3>
+            <p class="unit">۲۵۰ گرم</p>
+            <div class="buy">
+              <p class="price"><strong>۶۰٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن بادام‌زمینی شور به سبد خرید"
+              >
+                +
+              </button>
+            </div>
+          </li>
+          <li class="card" id="snacks-end">
+            <div class="pic"><span aria-hidden="true">🍬</span></div>
+            <h3>آبنبات میوه‌ای</h3>
+            <p class="unit">۳۰۰ گرم</p>
+            <div class="buy">
+              <p class="price"><strong>۴۵٬۰۰۰ تومان</strong></p>
+              <button
+                class="add"
+                type="button"
+                aria-label="افزودن آبنبات میوه‌ای به سبد خرید"
               >
                 +
               </button>
