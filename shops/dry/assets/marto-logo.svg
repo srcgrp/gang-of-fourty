@@ -1,12 +1,12 @@
 <svg
-width="260"
+width="300"
 height="100"
-viewBox="0 0 260 100"
+viewBox="0 0 300 100"
 xmlns="http://www.w3.org/2000/svg">
 
 <text
-x="130"
-y="35"
+x="150"
+y="38"
 text-anchor="middle"
 font-family="Inter, sans-serif"
 font-size="32"
@@ -19,11 +19,11 @@ MARTO
 </text>
 
 <text
-x="130"
-y="60"
+x="150"
+y="65"
 text-anchor="middle"
 font-family="Vazirmatn, sans-serif"
-font-size="14"
+font-size="13"
 fill="#B8894A">
 
 مارتو | خرید روزمره، ساده‌تر
