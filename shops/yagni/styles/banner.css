@@ -2,37 +2,43 @@
   --banner-width: min(1240px, calc(100vw - 40px));
 
   width: var(--banner-width);
+  aspect-ratio: 1240 / 430;
+
   margin: 28px auto 0;
 
   overflow: hidden;
+
   direction: ltr;
 
   border-radius: 20px;
-  background: var(--surface);
+
+  background-color: var(--surface);
+
   box-shadow: 0 8px 30px rgb(0 0 0 / 6%);
 }
 
 .banner__track {
   display: flex;
   align-items: center;
+
   gap: 30px;
 
   width: max-content;
-  height: 430px;
+  height: 100%;
 
   animation: banner-scroll 24s linear infinite;
 }
 
 .banner_track-image {
   width: var(--banner-width);
-  height: 430px;
+  height: 100%;
 
   flex: 0 0 var(--banner-width);
 
   object-fit: cover;
+
   border-radius: 14px;
 }
-
 @keyframes banner-scroll {
   0%,
   20% {

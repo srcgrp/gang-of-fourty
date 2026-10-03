@@ -359,7 +359,7 @@
 
 @media (max-width: 600px) {
   .header {
-    padding: 10px 0;
+    padding: 0px;
   }
 
   .header__container {

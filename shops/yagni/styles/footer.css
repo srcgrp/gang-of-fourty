@@ -262,6 +262,9 @@ a {
 }
 
 @media (max-width: 430px) {
+  .site-footer {
+    margin-top: 25px;
+  }
   .footer-grid {
     grid-template-columns: 1fr;
   }

@@ -4,7 +4,7 @@
 
 .navbar {
   position: sticky;
-  top: 85px;
+  top: 86px;
   z-index: 900;
   width: 100%;
   background: var(--surface);
@@ -356,6 +356,11 @@
   }
 }
 
+@media (max-width: 600px) {
+  .navbar {
+    top: 64px;
+  }
+}
 /* ================================
    Small Mobile
 ================================ */
