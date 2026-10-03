@@ -150,6 +150,10 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 /* ========== Header ========== */
 .header-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
     padding: .4rem var(--gutter);
     background: var(--brand);
     color: #fff;
@@ -265,6 +269,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
   color: var(--brand-ink);
   font-weight: 700;
 }
+.cart > span { display: inline-flex; align-items: center; gap: .45rem; }
+
 .cart .icon { width: 1.375rem; height: 1.375rem; }
 
 .cart-txt { display: none; }
@@ -417,7 +423,7 @@ main:focus { outline: none; }
 
 main > * + * { margin-top: 2rem; }
 
-.hero { display: grid; gap: 1rem; }
+.hero { display: grid; grid-auto-rows: 1fr; gap: 1rem; }
 
 .hero-main {
   position: relative;
@@ -479,7 +485,14 @@ main > * + * { margin-top: 2rem; }
     gap: .75rem;
 }
 
-.sec-head h2 { margin-inline-end: auto; font-size: 1.25rem; line-height: 1.5; }
+.sec-head h2 {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-inline-end: auto;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
 
 .shelf:target h2::after, #categories:target h2::after {
   content: "اینجا هستید";
@@ -526,12 +539,12 @@ main > * + * { margin-top: 2rem; }
 
 
 /* ========== Soft Color Palette (icons and images) ========== */
-.cats li, .rail li, .banners a { --t: var(--t1); }
-.cats li:nth-child(6n+2), .rail li:nth-child(6n+2) { --t: var(--t2); }
-.cats li:nth-child(6n+3), .rail li:nth-child(6n+3) { --t: var(--t3); }
-.cats li:nth-child(6n+4), .rail li:nth-child(6n+4) { --t: var(--t4); }
-.cats li:nth-child(6n+5), .rail li:nth-child(6n+5) { --t: var(--t5); }
-.cats li:nth-child(6n+6), .rail li:nth-child(6n+6) { --t: var(--t6); }
+.cats li, .rail li, .offers__list li, .banners a { --t: var(--t1); }
+.cats li:nth-child(6n+2), .rail li:nth-child(6n+2), .offers__list li:nth-child(6n+2) { --t: var(--t2); }
+.cats li:nth-child(6n+3), .rail li:nth-child(6n+3), .offers__list li:nth-child(6n+3) { --t: var(--t3); }
+.cats li:nth-child(6n+4), .rail li:nth-child(6n+4), .offers__list li:nth-child(6n+4) { --t: var(--t4); }
+.cats li:nth-child(6n+5), .rail li:nth-child(6n+5), .offers__list li:nth-child(6n+5) { --t: var(--t5); }
+.cats li:nth-child(6n+6), .rail li:nth-child(6n+6), .offers__list li:nth-child(6n+6) { --t: var(--t6); }
 
 .cats {
     display: grid;
@@ -658,6 +671,13 @@ main > * + * { margin-top: 2rem; }
 
 .badge--out { background: var(--ink); color: var(--bg); }
 .card h3 {
+    /* Always two lines tall, text sits on the bottom edge: names, units and
+       prices line up across every card whatever the name length. */
+    display: flex;
+    flex-direction: column;
+    justify-content: safe flex-end;
+    height: 3.2em;
+    overflow: hidden;
     margin-top: .5rem;
     font-size: .9375rem;
     line-height: 1.6;
@@ -729,13 +749,12 @@ main > * + * { margin-top: 2rem; }
 .offers {
   --offers-pad: 1.5rem;
   --offers-intro-w: 8.75rem;
-  --offer-w: 10.75rem;
 }
 
 .offers__box {
   position: relative;
   overflow: hidden;
-  padding-inline: .25rem;
+  padding-inline: 1rem;
   border-radius: 1.5rem;
   background: var(--brand);
   color: #fff;
@@ -744,6 +763,7 @@ main > * + * { margin-top: 2rem; }
 
 .offers__scroller {
   display: flex;
+  gap: .75rem;
   overflow-x: auto;
   overscroll-behavior-x: contain;
   padding-block: var(--offers-pad);
@@ -774,7 +794,7 @@ main > * + * { margin-top: 2rem; }
 }
 
 .offers__title {
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   font-weight: 800;
   line-height: 1.5;
 }
@@ -786,7 +806,7 @@ main > * + * { margin-top: 2rem; }
 
 .offers__art {
   width: 100%;
-  max-width: 8rem;
+  max-width: 5.5rem;
   height: auto;
 }
 
@@ -802,89 +822,18 @@ main > * + * { margin-top: 2rem; }
 
 .offers__all:focus-visible { outline-color: #fff; }
 
-/* Cards */
-.offers__list { display: flex; }
+/* Cards: the regular .card, same size and structure as every other shelf */
+.offers__list { display: flex; gap: .75rem; }
 
-.offer-card {
-  flex: 0 0 var(--offer-w);
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-  padding: 1rem 1rem 1.25rem;
-  border-inline-start: .125rem solid var(--brand);
-  background: var(--surface);
+.offers .card {
   color: var(--ink);
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   scroll-margin-block-start: var(--offers-pad);
 }
 
-.offer-card:first-child {
-  border-inline-start: 0;
-  border-start-start-radius: .75rem;
-  border-end-start-radius: .75rem;
-}
-
-.offer-card__img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1;
-  object-fit: contain;
-}
-
-.offer-card__tag {
-  display: inline-flex;
-  align-items: center;
-  gap: .35rem;
-  align-self: flex-start;
-  padding: .25rem .75rem;
-  border-radius: 999px;
-  background: var(--brand);
-  color: #fff;
-  font-size: .75rem;
-  font-weight: 700;
-  line-height: 1.6;
-}
-
-.offer-card__prices {
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: space-between;
-  align-items: center;
-  row-gap: .5rem;
-}
-
-.offer-card__discount {
-  padding: 0 .6rem;
-  border-radius: 999px;
-  background: var(--red);
-  color: #fff;
-  font-size: .875rem;
-  font-weight: 800;
-  line-height: 1.75;
-}
-
-.offer-card__price {
-  display: flex;
-  align-items: baseline;
-  gap: .25rem;
-  line-height: 1.5;
-}
-
-.offer-card__price strong { font-size: 1.0625rem; font-weight: 800; }
-
-.offer-card__price small { font-size: .6875rem; color: var(--muted); }
-
-.offer-card__old {
-  grid-column: 2;
-  justify-self: center;
-  font-size: .8125rem;
-  color: var(--muted);
-}
+.offers .card:target { outline-color: #fff; }
 
 /* "See all" card at the end of the track */
-.offer-card--all {
+.card--all {
   align-items: center;
   justify-content: center;
 }
@@ -974,10 +923,11 @@ main > * + * { margin-top: 2rem; }
 @media (min-width: 40rem) {
   .offers {
     --offers-intro-w: 12rem;
-    --offer-w: 13.75rem;
   }
 
-  .offers__title { font-size: 1.75rem; }
+  .offers__title { font-size: 1.5rem; }
+
+  .offers__art { max-width: 6.5rem; }
 
   .offers__nav { width: 3rem; height: 3rem; }
 }
@@ -999,7 +949,18 @@ main > * + * { margin-top: 2rem; }
   color: var(--foot-ink);
 }
 
-.site-footer address { font-style: normal; }
+.site-footer address {
+  display: grid;
+  justify-items: start;
+  font-style: normal;
+}
+
+.site-footer address p {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  min-height: 2.75rem;
+}
 
 .site-footer li {
   display: flex;
@@ -1020,6 +981,7 @@ main > * + * { margin-top: 2rem; }
 .foot-bar {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   gap: 0 1rem;
   margin-top: 2rem;
