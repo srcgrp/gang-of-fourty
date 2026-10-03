@@ -5,28 +5,259 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>سوپرمارکت بیگ‌او</title>
   <!-- Week 1: put YOUR name here to claim this shop. The landing page shows it. -->
-  <meta name="author" content="">
+  <meta name="author" content="Fatemeh Tayebi Salar">
   <meta name="description" content="به‌زودی: بهترین میوه و سبزی محله!">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
-    <a href="../../index.html">→ بازگشت به دار و دسته چهل‌نفره</a>
-    <h1>سوپر مارکت big-O</h1>
-    <img src="https://img.magnific.com/free-vector/bird-colorful-gradient-design-vector_343694-2506.jpg?semt=ais_hybrid&w=740&q=80" alt="logo" id="logo-img">
+        <a href="#">
+          <img src="./assets/logo.svg" alt="سوپر مارکت نمونه">
+        </a>
+        <div class="title">
+          <h1>سوپر مارکت نمونه</h1>
+          <p>تازه، نزدیک، به صرفه</p>
+        </div>
+        <form>
+          <input
+          type="search"
+          id="search"
+          name="search"
+          placeholder="جستجو در میان ۲۰۰۰ کالا..."
+          >
+        </form>
+        
+        <a class="cart" href="#">
+          سبد خرید
+        </a>
+        
+        <nav>
+          <div >همه دسته ها</div> |
+          <a href="#">پیشنهاد ویژه</a> |
+          <a href="#">میوه و سبزی</a> |
+          <a href="#">لبنیات</a>
+          <a href="#">نان تازه</a> |
+          <a href="#">تماس با ما</a>
+        </nav> 
   </header>
-  <main>
-    <div class="product-cart">
-      <h2>Drymos</h2>
-      <p>Men Navy oxford shoe</p>
-      <img src="https://www.aldoshoes.com/cdn/shop/files/product_13618416_drymos_blue_410-002-031_main_sq_gy.jpg?v=1786940011&width=1946" alt="Men Axford Shoe" class="product-img"> 
-      <span>$110</span>
-      <button>Add to cart</button>
+  <main> 
+
+    <div class="banner">
+      <section   class="first-recommend" >
+        <h2>میوه های تازه، هر روز صبح</h2>
+        <p>مستقیم از باغ های اطراف شهر، تا دو ساعت بعد دم در خانه شما.</p>
+        <button>خرید میوه و سبزی</button>
+            
+      </section>
+      <section   class="second-recommend" >
+              <h2>۲۰٪ تخفیف لبنیات</h2>
+              <p>فقط تا پایان هفته</p>
+              <button>دیدن محصولات</button>
+      </section>
+    </div>
+    <section    class="categories">
+        <h2>دسته بندی ها</h2>
+        <ul>
+          <li>
+            <a href="#">
+              <img src="./assets/icons/fruit-icon.svg" aria-hidden="true" alt=""/>
+              <h3>میوه و سبزی</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/icons/dairy-icon.svg" aria-hidden="true" alt=""/>
+              <h3>لبنیات</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/icons/bakary-icon.svg" aria-hidden="true" alt=""/>
+              <h3>نان و شیرینی</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/icons/protein-logo.svg" aria-hidden="true" alt=""/>
+              <h3>پروتئین</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/icons/drink-icon.svg" aria-hidden="true" alt=""/>
+              <h3>نوشیدنی</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/icons/snack-icon.svg" aria-hidden="true" alt=""/>
+              <h3>تنقلات</h3>
+            </a>
+          </li>
+        </ul>
+    </section>
+    
+    <section   class="product-lists">
+      <h2>پیشنهاد ویژه امروز</h2>
+      <ul>
+        <li>
+          <article   class="product-card">
+            <img src="./assets/products/tomato.svg" />
+            <span>۲۵٪</span>
+            <h3>گوجه فرنگی گلخانه ای</h3>
+            <p>۱ کیلوگرم</p> 
+            <del>۶۰٬۰۰۰ تومان</del>
+            <strong>۴۵٬۰۰۰ تومان</strong>
+            <button>+</button>
+          </article>
+        </li>
+        <li>
+          <article   class="product-card">
+            <img src="./assets/products/milk.svg" />
+            <span>۱۵٪</span>
+            <h3>شیر کم چرب</h3>
+            <p>۱ لیتر</p> 
+            <del>۴۰٬۰۰۰ تومان</del>
+            <strong>۳۴٬۰۰۰ تومان</strong>
+            <button>+</button>
+          </article>
+        </li>
+        <li>
+          <article class="product-card">
+              <img src="./assets/products/banana.svg" />
+              <h3>موز اکوادور</h3>
+              <p>۱ کیلوگرم</p> 
+              <strong>۹۸٬۰۰۰ تومان</strong>
+              <button>+</button>
+          </article>
+        </li>
+        <li>
+          <article class="product-card">
+            <img src="./assets/products/cucumber.svg" />
+            <span>۳۰٪</span>
+            <h3> خیار سالادی</h3>
+            <p>۱ کیلوگرم</p> 
+            <del>۵۰٬۰۰۰ تومان</del>
+            <strong>۳۵٬۰۰۰ تومان</strong>
+            <button>+</button>
+          </article>
+        </li>
+        <li>
+          <article class="product-card">
+            <img src="./assets/products/chicken.svg" />
+            <h3> ران مرغ</h3>
+            <p>۹۰۰ گرم </p> 
+            <strong>۲۱۰٬۰۰۰ تومان</strong>
+            <button>+</button>
+          </article>
+        </li>
+      </ul>
+            
+    </section>
+    <div class="ads">
+      <aside aria-labelledby="breakfast-ad-title">
+          <h2 id="breakfast-ad-title">سبد صبحانه خانواده</h2>
+          <img/>
+      </aside>
+      <aside aria-labelledby="Fresh-bread-every-day-at-7">
+          <h2 id="Fresh-bread-every-day-at-7">نان داغ، هر روز ساعت ۷</h2>
+          <img/>
+      </aside>
     </div>
     
+    <section class="product-lists">
+      <h2>لبنیات</h2>
+      <ul>
+        <li>
+          <article   class="product-card">
+            <img src="./assets/products/egg.svg" alt="Egg image" />
+            <h3>تخم مرغ</h3>
+            <p>۱۲ عدد</p> 
+            <strong>۹۵٬۰۰۰ تومان</strong>
+            <button>+</button>
+          </article>
+        </li>
+        <li>
+          <article   class="product-card">
+            <img src="./assets/products/cheese.svg" alt="Cheese image" />
+            <h3>پنیر سفید</h3>
+            <p> ۲۰۰ گرم</p> 
+            <strong>۸۵٬۰۰۰ تومان</strong>
+            <button>+</button>
+          </article>
+        </li>
+        <li>
+          <article   class="product-card">
+            <img src="./assets/products/butter.svg" alt="Butter image" />
+            <h3> کره حیوانی</h3>
+            <p>۱۰۰ گرم</p>
+            <strong>۵۶٬۰۰۰ تومان</strong> 
+            <button>+</button>
+          </article>
+        </li>
+        <li>
+          <article class="product-card">
+            <img src="./assets/products/yogurt.svg" alt="Full-fate yogurt image" />
+            <h3> ماست پر چرب</h3>
+            <p> ۹۰۰ گرم</p> 
+            <strong>۶۲٬۰۰۰ تومان</strong>
+            <button>+</button>
+          </article>
+        </li>
+        <li>
+          <article class="product-card">
+            <img src="./assets/products/icecream.svg" alt="Vanilla ice cream image" />
+            <h3>  بستنی وانیلی</h3>
+            <p> ۱ لیتر </p> 
+            <strong>۱۱۰٬۰۰۰ تومان</strong>
+            <button>+</button>
+          </article>
+        </li>
+      </ul>  
+    </section>
+   
   </main>
   <footer>
-    <p dir="ltr">slug: <code>big-o</code></p>
+   <section>
+    <h2>سوپر مارکت نمونه</h2>
+
+    <p>از سال ۱۴۰۵ کنار شما هستیم؛ کالای تازه با قیمت منصفانه.</p>
+
+    <address>
+      <p>تهران، خیابان نمونه، پلاک ۴۰</p>
+      <a href="tel:+982101234567">02101234567</a>
+    </address>
+  </section>
+  
+  <nav aria-label="Quick-links">
+    <h2>دسته ها</h2>
+    <ul>
+      <li><a href="#">میوه و سبزی</a></li>
+      <li><a href="#">لبنیات</a></li>
+      <li><a href="#">نان و شیرینی</a></li>
+      <li><a href="#">پروتئین</a></li>
+    </ul>
+  </nav>
+  <section>
+    <h2>راهنما</h2>
+    <ul>
+      <li><a href="#">شیوه ارسال</a></li>
+      <li><a href="#">بازگشت کالا</a></li>
+      <li><a href="#">پرسش های پرتکرار</a></li>
+    </ul>
+  </section>
+  <section>
+    <h2>ساعت کاری</h2>
+    <p>شنبه تا پنجشنبه : ۸ تا ۲۲ </p>
+    <p>جمعه : ۹ تا ۱۴</p>
+  </section>
+  <div class="footer-bottom">
+    <p><small>© ۱۴۰۵ سوپرمارکت نمونه · عضو دار و دسته چهل‌نفره</small></p>
+    <a href="#">بازگشت به بالا</a>
+  </div>  
+   
   </footer>
+
 </body>
 </html>
