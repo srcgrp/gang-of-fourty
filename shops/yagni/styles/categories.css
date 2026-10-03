@@ -68,7 +68,7 @@
 
   padding: 14px 8px;
 
-  border: 1px solid transparent;
+  border: 1px solid var(--border);
   border-radius: 16px;
 
   background: var(--surface);
@@ -109,8 +109,6 @@
 
   border-radius: 50%;
 
-  background: color-mix(in srgb, var(--primary) 8%, var(--background));
-
   transition:
     transform 0.2s ease,
     background-color 0.2s ease;
@@ -118,8 +116,6 @@
 
 .category-card:hover .category-card__image {
   transform: scale(1.05);
-
-  background: color-mix(in srgb, var(--primary) 13%, var(--background));
 }
 
 .category-card__image img {
