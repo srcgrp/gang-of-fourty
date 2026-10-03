@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>سوپر مارکت آنلاین | تازه خانه</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body id="top">
   <a class="skip-link" href="#main-content"> پرش به محتوای اصلی</a>
@@ -62,7 +62,7 @@
       <div class="cart-summary" aria-label="سبد خرید، ۳ کالا">
          <img class="cart-icon" src="./asset/icons/cart.svg" alt="" aria-hidden="true"><span>سبد خرید</span><span class="cart-count" aria-hidden="true"> ۳</span></div>
     </div>
-    <nav class="main-nav" aria-label="منوی اصلی">
+    <nav class="main-nav desktop-nav" aria-label="منوی اصلی">
       <div class="nav-dropdown">
         <a class="categories-link" href="#categories">همه دسته ها</a>
         <div class="dropdown-menu">
@@ -79,6 +79,17 @@
       <a href="#about">درباره ما</a>
       <a href="#contact">تماس با ما</a>
     </nav>
+    <details class="mobile-nav">
+  <summary>☰ منو</summary>
+
+  <nav class="mobile-nav-menu" aria-label="منوی موبایل">
+    <a href="#categories">همه دسته‌ها</a>
+    <a href="#today-offers">پیشنهادهای امروز</a>
+    <a href="#best-sellers">پرفروش‌ها</a>
+    <a href="#about">درباره ما</a>
+    <a href="#contact">تماس با ما</a>
+  </nav>
+</details>
   </header>
   <main id="main-content">
     <section class="hero" aria-labelledby="hero-title">
@@ -336,7 +347,7 @@
     </article>
 
     <article class="product-card">
-      <img src="./asset/categories/nuts.png" alt="بادام">
+      <img src="./asset/best-sellers/almonds.png" alt="بادام">
       <h3>بادام</h3>
       <p class="product-price">۲۸۵٬۰۰۰ تومان</p>
       <button type="button">افزودن به سبد</button>

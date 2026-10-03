@@ -295,6 +295,8 @@ body{
   margin-inline: auto;
   overflow-x: auto;
   padding: 6px 0 12px;
+  scroll-snap-type: x mandatory;
+
 }
 .site-footer{
   margin-top: 48px;
@@ -354,6 +356,7 @@ body{
 }
 .product-card{
   flex: 0 0 220px;
+  scroll-snap-align: start;
   padding: 16px;
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -446,6 +449,43 @@ body{
 .promo-ornament-bottom {
   transform: rotate(180deg);
 }
+.mobile-nav{
+  display: none;
+}
+.product-card button,
+.hero-button,
+.promo-button,
+.mobile-nav summary {
+  min-height: 44px;
+}
+
+.hero-button,
+.promo-button,
+.mobile-nav summary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-nav-menu a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.skip-link {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 10px 14px;
+  background-color: var(--color-deep);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transform: translateY(-150%);
+  z-index: 1000;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
 @media (max-width: 900px) {
   .category-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -492,11 +532,48 @@ body{
     height: auto;
   }
 
-  .main-nav {
-    flex-wrap: wrap;
-    gap: 16px;
-    padding: 10px 16px;
-  }
+.desktop-nav {
+  display: none;
+}
+
+.mobile-nav {
+  display: block;
+  position: relative;
+
+  padding: 10px 16px;
+
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobile-nav summary {
+  width: max-content;
+  padding: 8px 12px;
+
+  color: var(--color-primary);
+  font-weight: 700;
+
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.mobile-nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  padding-top: 10px;
+}
+
+.mobile-nav-menu a {
+  padding: 10px 8px;
+
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+}
 }
 
 @media (max-width: 520px) {
@@ -563,18 +640,21 @@ body{
   }
 
   .category-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
 
   .category-card {
-    padding: 12px 8px;
+    padding: 10px 4px;
   }
 
   .category-card img {
-    width: 76px;
-    height: 76px;
+    width: 64px;
+    height: 64px;
   }
+  .category-card span {
+  font-size: 12px;
+}
   .product-section {
     padding: 28px 16px;
   }
