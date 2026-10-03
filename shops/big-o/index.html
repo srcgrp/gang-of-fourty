@@ -19,7 +19,8 @@
           <h1>سوپر مارکت نمونه</h1>
           <p>تازه، نزدیک، به صرفه</p>
         </div>
-        <form>
+        <form class="search-bar">
+          <label for="search">جستجو در محصولات</label>
           <input
           type="search"
           id="search"
@@ -32,64 +33,64 @@
           سبد خرید
         </a>
         
-        <nav>
+        <nav class="navbar">
           <div >همه دسته ها</div> |
-          <a href="#">پیشنهاد ویژه</a> |
+          <a href="#special-products">پیشنهاد ویژه</a> |
           <a href="#">میوه و سبزی</a> |
-          <a href="#">لبنیات</a>
+          <a href="#dairy">لبنیات</a>
           <a href="#">نان تازه</a> |
           <a href="#">تماس با ما</a>
         </nav> 
   </header>
-  <main> 
+  <main id="main-content"> 
 
     <div class="banner">
-      <section   class="first-recommend" >
+      <section class="first-recommend" >
         <h2>میوه های تازه، هر روز صبح</h2>
         <p>مستقیم از باغ های اطراف شهر، تا دو ساعت بعد دم در خانه شما.</p>
         <button>خرید میوه و سبزی</button>
             
       </section>
-      <section   class="second-recommend" >
+      <section class="second-recommend" >
               <h2>۲۰٪ تخفیف لبنیات</h2>
               <p>فقط تا پایان هفته</p>
               <button>دیدن محصولات</button>
       </section>
     </div>
-    <section    class="categories">
+    <section class="categories">
         <h2>دسته بندی ها</h2>
         <ul>
-          <li>
+          <li class="category-item">
             <a href="#">
               <img src="./assets/icons/fruit-icon.svg" aria-hidden="true" alt=""/>
               <h3>میوه و سبزی</h3>
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="category-item">
+            <a href="#dairy">
               <img src="./assets/icons/dairy-icon.svg" aria-hidden="true" alt=""/>
               <h3>لبنیات</h3>
             </a>
           </li>
-          <li>
+          <li class="category-item">
             <a href="#">
               <img src="./assets/icons/bakary-icon.svg" aria-hidden="true" alt=""/>
               <h3>نان و شیرینی</h3>
             </a>
           </li>
-          <li>
+          <li class="category-item">
             <a href="#">
               <img src="./assets/icons/protein-logo.svg" aria-hidden="true" alt=""/>
               <h3>پروتئین</h3>
             </a>
           </li>
-          <li>
+          <li class="category-item">
             <a href="#">
               <img src="./assets/icons/drink-icon.svg" aria-hidden="true" alt=""/>
               <h3>نوشیدنی</h3>
             </a>
           </li>
-          <li>
+          <li class="category-item">
             <a href="#">
               <img src="./assets/icons/snack-icon.svg" aria-hidden="true" alt=""/>
               <h3>تنقلات</h3>
@@ -98,12 +99,12 @@
         </ul>
     </section>
     
-    <section   class="product-lists">
+    <section  class="product-carousel" id="special-products">
       <h2>پیشنهاد ویژه امروز</h2>
       <ul>
         <li>
           <article   class="product-card">
-            <img src="./assets/products/tomato.svg" />
+            <img src="./assets/products/tomato.svg" alt=""/>
             <span>۲۵٪</span>
             <h3>گوجه فرنگی گلخانه ای</h3>
             <p>۱ کیلوگرم</p> 
@@ -114,7 +115,7 @@
         </li>
         <li>
           <article   class="product-card">
-            <img src="./assets/products/milk.svg" />
+            <img src="./assets/products/milk.svg" alt="" />
             <span>۱۵٪</span>
             <h3>شیر کم چرب</h3>
             <p>۱ لیتر</p> 
@@ -125,7 +126,7 @@
         </li>
         <li>
           <article class="product-card">
-              <img src="./assets/products/banana.svg" />
+              <img src="./assets/products/banana.svg" alt=""/>
               <h3>موز اکوادور</h3>
               <p>۱ کیلوگرم</p> 
               <strong>۹۸٬۰۰۰ تومان</strong>
@@ -134,7 +135,7 @@
         </li>
         <li>
           <article class="product-card">
-            <img src="./assets/products/cucumber.svg" />
+            <img src="./assets/products/cucumber.svg" alt=""/>
             <span>۳۰٪</span>
             <h3> خیار سالادی</h3>
             <p>۱ کیلوگرم</p> 
@@ -145,7 +146,7 @@
         </li>
         <li>
           <article class="product-card">
-            <img src="./assets/products/chicken.svg" />
+            <img src="./assets/products/chicken.svg" alt="" />
             <h3> ران مرغ</h3>
             <p>۹۰۰ گرم </p> 
             <strong>۲۱۰٬۰۰۰ تومان</strong>
@@ -160,17 +161,17 @@
           <h2 id="breakfast-ad-title">سبد صبحانه خانواده</h2>
           <img/>
       </aside>
-      <aside aria-labelledby="Fresh-bread-every-day-at-7">
-          <h2 id="Fresh-bread-every-day-at-7">نان داغ، هر روز ساعت ۷</h2>
+      <aside aria-labelledby="bread-ad-title">
+          <h2 id="bread-ad-title">نان داغ، هر روز ساعت ۷</h2>
           <img/>
       </aside>
     </div>
     
-    <section class="product-lists">
+    <section class="product-carousel" id="dairy">
       <h2>لبنیات</h2>
       <ul>
         <li>
-          <article   class="product-card">
+          <article class="product-card">
             <img src="./assets/products/egg.svg" alt="Egg image" />
             <h3>تخم مرغ</h3>
             <p>۱۲ عدد</p> 
@@ -219,43 +220,43 @@
    
   </main>
   <footer>
-   <section>
-    <h2>سوپر مارکت نمونه</h2>
+    <section class="address-section">
+      <h2>سوپر مارکت نمونه</h2>
 
-    <p>از سال ۱۴۰۵ کنار شما هستیم؛ کالای تازه با قیمت منصفانه.</p>
+      <p>از سال ۱۴۰۵ کنار شما هستیم؛ کالای تازه با قیمت منصفانه.</p>
 
-    <address>
-      <p>تهران، خیابان نمونه، پلاک ۴۰</p>
-      <a href="tel:+982101234567">02101234567</a>
-    </address>
-  </section>
-  
-  <nav aria-label="Quick-links">
-    <h2>دسته ها</h2>
-    <ul>
-      <li><a href="#">میوه و سبزی</a></li>
-      <li><a href="#">لبنیات</a></li>
-      <li><a href="#">نان و شیرینی</a></li>
-      <li><a href="#">پروتئین</a></li>
-    </ul>
-  </nav>
-  <section>
-    <h2>راهنما</h2>
-    <ul>
-      <li><a href="#">شیوه ارسال</a></li>
-      <li><a href="#">بازگشت کالا</a></li>
-      <li><a href="#">پرسش های پرتکرار</a></li>
-    </ul>
-  </section>
-  <section>
-    <h2>ساعت کاری</h2>
-    <p>شنبه تا پنجشنبه : ۸ تا ۲۲ </p>
-    <p>جمعه : ۹ تا ۱۴</p>
-  </section>
-  <div class="footer-bottom">
-    <p><small>© ۱۴۰۵ سوپرمارکت نمونه · عضو دار و دسته چهل‌نفره</small></p>
-    <a href="#">بازگشت به بالا</a>
-  </div>  
+      <address>
+        <p>تهران، خیابان نمونه، پلاک ۴۰</p>
+        <a href="tel:+982101234567">02101234567</a>
+      </address>
+    </section>
+    
+    <nav aria-label="Quick-links">
+      <h2>دسته ها</h2>
+      <ul>
+        <li><a href="#">میوه و سبزی</a></li>
+        <li><a href="#dairy">لبنیات</a></li>
+        <li><a href="#">نان و شیرینی</a></li>
+        <li><a href="#">پروتئین</a></li>
+      </ul>
+    </nav>
+    <section class="guide">
+      <h2>راهنما</h2>
+      <ul>
+        <li><a href="#">شیوه ارسال</a></li>
+        <li><a href="#">بازگشت کالا</a></li>
+        <li><a href="#">پرسش های پرتکرار</a></li>
+      </ul>
+    </section>
+    <section class="info">
+      <h2>ساعت کاری</h2>
+      <p>شنبه تا پنجشنبه : ۸ تا ۲۲ </p>
+      <p>جمعه : ۹ تا ۱۴</p>
+    </section>
+    <div class="footer-bottom">
+      <p><small>© ۱۴۰۵ سوپرمارکت نمونه · عضو دار و دسته چهل‌نفره</small></p>
+      <a href="#">بازگشت به بالا</a>
+    </div>  
    
   </footer>
 
