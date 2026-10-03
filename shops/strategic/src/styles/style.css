@@ -128,6 +128,27 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 
 
+/* ========== Icons (inline SVG sprite, colored via currentColor) ========== */
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.icon {
+  flex: none;
+  width: 1.25em;
+  height: 1.25em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: -.25em;
+}
+
+.icon--mirror:dir(rtl) { transform: scaleX(-1); }
+
+.icon--cat { color: var(--brand); }
+
+.icon--flame { color: var(--red); }
+
 /* ========== Header ========== */
 .header-banner {
     padding: .4rem var(--gutter);
@@ -214,8 +235,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
     inset-inline-start: 1rem;
     display: grid;
     place-items: center;
+    color: var(--muted);
     pointer-events: none;
 }
+
+.search-ico .icon { width: 1.25rem; height: 1.25rem; }
 
 .search input {
   width: 100%;
@@ -242,6 +266,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
   color: var(--brand-ink);
   font-weight: 700;
 }
+.cart .icon { width: 1.375rem; height: 1.375rem; }
+
 .cart-txt { display: none; }
 
 .cart b {
@@ -421,8 +447,8 @@ main > * + * { margin-top: 2rem; }
     position: absolute;
     inset-inline-end: 1rem;
     bottom: .25rem;
-    font-size: 4.5rem;
-    line-height: 1;
+    width: clamp(5rem, 20vw, 10rem);
+    height: auto;
 }
 
 .hero-side {
@@ -440,8 +466,8 @@ main > * + * { margin-top: 2rem; }
 .hero-side .art {
     align-self: center;
     margin-block: .5rem;
-    font-size: 3.5rem;
-    line-height: 1.2;
+    width: clamp(4.5rem, 16vw, 7rem);
+    height: auto;
 }
 
 .hero-side .btn { margin-top: auto; }
@@ -457,11 +483,16 @@ main > * + * { margin-top: 2rem; }
 .sec-head h2 { margin-inline-end: auto; font-size: 1.25rem; line-height: 1.5; }
 
 .shelf:target h2::after, #categories:target h2::after {
-  content: "→ اینجا هستید";
+  content: "اینجا هستید";
   margin-inline-start: .6rem;
   padding: .1rem .7rem;
+  padding-inline-start: 1.9rem;
   border-radius: 999px;
-  background: var(--gold);
+  background-color: var(--gold);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232b2100' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0'/%3E%3Ccircle cx='12' cy='10' r='3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right .55rem center;
+  background-size: .9rem;
   color: #2b2100;
   font-size: .75rem;
   font-weight: 700;
@@ -478,14 +509,17 @@ main > * + * { margin-top: 2rem; }
   border-radius: 50%;
   border: 1px solid var(--line);
   background: var(--surface);
-  font-size: 1.15rem;
-  font-weight: 700;
+}
+
+.arr .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  transform: scaleX(var(--flip, 1));
 }
 
 
 
 /* ========== The Arrow Mirrors With The Page Direction ========== */
-.arr::before { content: "→" / ""; transform: scaleX(var(--flip, 1)); }
 .arr--end { --flip: -1; }
 .arr:dir(ltr) { --flip: -1; }
 .arr--end:dir(ltr) { --flip: 1; }
@@ -530,10 +564,16 @@ main > * + * { margin-top: 2rem; }
     height: 2.75rem;
     border-radius: 50%;
     background: var(--t);
-    font-size: 1.4rem;
+    color: var(--brand-ink);
 }
 
+.ico .icon { width: 1.5rem; height: 1.5rem; }
 
+
+
+.shelf:target h2:dir(ltr)::after, #categories:target h2:dir(ltr)::after {
+  background-position: left .55rem center;
+}
 
 /* Carousel */
 .rail {
@@ -594,7 +634,14 @@ main > * + * { margin-top: 2rem; }
     aspect-ratio: 1.15;
     border-radius: .8rem;
     background: var(--t);
-    font-size: 3.25rem;
+    overflow: hidden;
+}
+
+.pic > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .badge {
@@ -652,7 +699,7 @@ main > * + * { margin-top: 2rem; }
 
 .add:disabled { background: var(--line); color: var(--muted); cursor: not-allowed; }
 
-.card--out .pic > span:first-child { opacity: .4; filter: grayscale(1); }
+.card--out .pic > img:first-child { opacity: .4; filter: grayscale(1); }
 
 .card--out .price strong { color: var(--muted); }
 
@@ -671,7 +718,7 @@ main > * + * { margin-top: 2rem; }
   font-weight: 700;
 }
 
-.banner span { font-size: 2.5rem; line-height: 1; }
+.banner img { flex: none; width: 3.5rem; height: 3.5rem; object-fit: contain; }
 
 .banners a:nth-child(1) { --t: var(--t4); }
 .banners a:nth-child(2) { --t: var(--t6); }
@@ -727,6 +774,7 @@ main > * + * { margin-top: 2rem; }
 .foot-bar a {
   display: inline-flex;
   align-items: center;
+  gap: .35rem;
   min-height: 2.75rem;
   color: #ffd166;
   font-weight: 700;
