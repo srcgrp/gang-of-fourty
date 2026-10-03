@@ -1,0 +1,36 @@
+<svg
+width="300"
+height="250"
+viewBox="0 0 300 250"
+xmlns="http://www.w3.org/2000/svg"
+>
+    <path
+    d="M 50 70 H 75 L 95 160 H 220 L 245 90 H 80"
+    fill="none"
+    stroke="black"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    />
+    <circle
+    cx="115"
+    cy="185"
+    r="12"
+    fill="black"
+    />
+
+    <circle
+    cx="205"
+    cy="185"
+    r="12"
+    fill="black"
+    />
+    <circle
+    cx="160"
+    cy="125"
+    r="30"
+    fill="none"
+    stroke="green"
+    stroke-width="10"
+    />
+</svg>
