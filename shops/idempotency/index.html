@@ -14,16 +14,66 @@
     </div>
     <div class="header-main">
       <a class="brand" href="#top" aria-label="تازه‌خانه، بازگشت به بالای صفحه">
+        <svg class="brand-logo" viewBox="0 0 64 64" role="img" aria-labelledby="logo-title">
+          <title id="logo-title">لوگوی تازه‌خانه</title>
+          <path class="logo-arch" d="M 12 50
+          V 30
+          Q 12 20 22 20
+          Q 24 12 32 8
+          Q 40 12 42 20
+          Q 52 20 52 30
+          V 50">
+          </path>
+          <path class="logo-house" d="M 22 34
+          L 32 25 
+          L 43 34
+          V 48
+          H 22
+          Z">
+          </path>
+          <rect class="logo-door" x="29"
+            y="38"
+            width="6"
+            height="12"
+            rx="1" >
+          </rect>
+          <ellipse class="logo-leaf-bottom" cx="35"
+          cy="22"
+          rx="4"
+          ry="2.5"
+          transform="rotate(-35 39 19)"
+          ></ellipse>
+          <ellipse class="logo-leaf-top" cx="38"
+          cy="13"
+          rx="4"
+          ry="2.5"
+          transform="rotate(-100 39 19)"
+          ></ellipse>
+        </svg>
       <span class="brand-name">تازه خانه</span>
       </a>
       <form class="search" role="search">
         <label for="site-search">جستجو در تازه‌خانه</label>
+        <div class="search-box">
         <input type="search" placeholder="جستجوی محصولات..." id="site-search">
+        <img class="search-icon" src="./asset/icons/search.svg" alt="" aria-hidden="true">
+        </div>
       </form>
-      <a class="cart-link" href="#cart" aria-label="cart">سبد خرید<span aria-label="3 products"> ۳</span></a>
+      <div class="cart-summary" aria-label="سبد خرید، ۳ کالا">
+         <img class="cart-icon" src="./asset/icons/cart.svg" alt="" aria-hidden="true"><span>سبد خرید</span><span class="cart-count" aria-hidden="true"> ۳</span></div>
     </div>
     <nav class="main-nav" aria-label="منوی اصلی">
-      <a href="#categories">همه دسته‌ها</a>
+      <div class="nav-dropdown">
+        <a class="categories-link" href="#categories">همه دسته ها</a>
+        <div class="dropdown-menu">
+              <a href="#dairy-breakfast">لبنیات و صبحانه</a>
+              <a href="#fruits-vegetables">میوه و سبزیجات</a>
+              <a href="#drinks">نوشیدنی</a>
+              <a href="#snacks-sweets">تنقلات و شیرینی</a>
+              <a href="#nuts">آجیل</a>
+              <a href="#protein">پروتئین</a>
+  </div>
+</div>
       <a href="#today-offers">پیشنهادهای امروز</a>
       <a href="#best-sellers">پرفروش‌ها</a>
       <a href="#about">درباره ما</a>
@@ -44,7 +94,7 @@
     <section id="today-offers" class="product-section" aria-labelledby="today-title">
       <h2 id="today-title">پیشنهادهای امروز</h2>
     </section>
-    <section class="promo" aria-labelledby="پیشنهادهای ویژه تازه‌خانه"></section>
+    <section class="promo" aria-labelledby="پیشنهاد ویژه تازه‌خانه"></section>
     <section id="best-sellers" class="product-section" aria-labelledby="best-sellers-title">
       <h2 id="best-sellers-title">پرفروش‌های تازه‌خانه</h2>
     </section>
