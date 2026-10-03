@@ -65,9 +65,6 @@
       <path d="M4 12h16" />
       <path d="M4 19h16" />
       </symbol>
-      <symbol id="i-flame" viewBox="0 0 24 24">
-      <path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4" />
-      </symbol>
       <symbol id="i-pin" viewBox="0 0 24 24">
       <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
       <circle cx="12" cy="10" r="3" />
@@ -119,6 +116,9 @@
       <path d="M21 8h.01" />
       <path d="M7 14h.01" />
       <path d="M9 8h.01" />
+      </symbol>
+      <symbol id="i-chevron-right" viewBox="0 0 24 24">
+      <path d="m9 18 6-6-6-6" />
       </symbol>
     </svg>
     <a class="skip" href="#main">پرش به محتوای اصلی</a>
@@ -277,152 +277,86 @@
         </ul>
       </section>
 
-      <section class="shelf" id="deals" aria-labelledby="deals-t">
-        <div class="sec-head">
-          <h2 id="deals-t">
-            <svg class="icon icon--flame" aria-hidden="true" focusable="false"><use href="#i-flame" /></svg> پیشنهاد ویژه امروز
-          </h2>
-          <div class="arrows">
-            <a
-              class="arr arr--start"
-              href="#deals-start"
-              aria-label="رفتن به ابتدای پیشنهاد ویژه امروز"
-            ><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right" /></svg></a><a
-              class="arr arr--end"
-              href="#deals-end"
-              aria-label="رفتن به انتهای پیشنهاد ویژه امروز"
-            ><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right" /></svg></a>
+      <section class="shelf offers" id="deals" aria-labelledby="deals-t">
+      <div class="offers__box">
+        <div class="offers__scroller">
+          <div class="offers__intro" id="deals-start">
+            <h2 class="offers__title" id="deals-t">
+              <span>پیشنهاد</span> <span>ویژه</span> <span>امروز</span>
+            </h2>
+            <img class="offers__art" src="./assets/images/offers/deals-art.png" alt="" width="320" height="280" loading="lazy" decoding="async" />
+            <a class="offers__all" href="./offers.html">مشاهده همه <svg class="icon icon--mirror" aria-hidden="true" focusable="false"><use href="#i-chevron-right" /></svg></a>
           </div>
+          <ul class="offers__list">
+        <li class="offer-card">
+          <img class="offer-card__img" src="./assets/images/products/tomato.webp" alt="" width="460" height="400" loading="lazy" decoding="async" />
+          <h3 class="sr-only">گوجه‌فرنگی گلخانه‌ای، ۱ کیلوگرم</h3>
+          <p class="offer-card__tag"><svg class="icon icon--mirror" aria-hidden="true" focusable="false"><use href="#i-truck" /></svg> ارسال فوری</p>
+          <div class="offer-card__prices">
+            <span class="offer-card__discount">۲۵٪<span class="sr-only"> تخفیف</span></span>
+            <p class="offer-card__price"><strong>۴۵٬۰۰۰</strong> <small>تومان</small></p>
+            <del class="offer-card__old"><span class="sr-only">قیمت قبلی: </span>۶۰٬۰۰۰</del>
+          </div>
+        </li>
+        <li class="offer-card">
+          <img class="offer-card__img" src="./assets/images/products/low-fat-milk.webp" alt="" width="460" height="400" loading="lazy" decoding="async" />
+          <h3 class="sr-only">شیر کم‌چرب، ۱ لیتر</h3>
+          <div class="offer-card__prices">
+            <span class="offer-card__discount">۱۵٪<span class="sr-only"> تخفیف</span></span>
+            <p class="offer-card__price"><strong>۳۴٬۰۰۰</strong> <small>تومان</small></p>
+            <del class="offer-card__old"><span class="sr-only">قیمت قبلی: </span>۴۰٬۰۰۰</del>
+          </div>
+        </li>
+        <li class="offer-card">
+          <img class="offer-card__img" src="./assets/images/products/cucumber.webp" alt="" width="460" height="400" loading="lazy" decoding="async" />
+          <h3 class="sr-only">خیار سالادی، ۱ کیلوگرم</h3>
+          <p class="offer-card__tag"><svg class="icon icon--mirror" aria-hidden="true" focusable="false"><use href="#i-truck" /></svg> ارسال فوری</p>
+          <div class="offer-card__prices">
+            <span class="offer-card__discount">۳۰٪<span class="sr-only"> تخفیف</span></span>
+            <p class="offer-card__price"><strong>۳۵٬۰۰۰</strong> <small>تومان</small></p>
+            <del class="offer-card__old"><span class="sr-only">قیمت قبلی: </span>۵۰٬۰۰۰</del>
+          </div>
+        </li>
+        <li class="offer-card">
+          <img class="offer-card__img" src="./assets/images/products/butter.webp" alt="" width="460" height="400" loading="lazy" decoding="async" />
+          <h3 class="sr-only">کره حیوانی، ۱۰۰ گرم</h3>
+          <div class="offer-card__prices">
+            <span class="offer-card__discount">۲۰٪<span class="sr-only"> تخفیف</span></span>
+            <p class="offer-card__price"><strong>۵۶٬۰۰۰</strong> <small>تومان</small></p>
+            <del class="offer-card__old"><span class="sr-only">قیمت قبلی: </span>۷۰٬۰۰۰</del>
+          </div>
+        </li>
+        <li class="offer-card">
+          <img class="offer-card__img" src="./assets/images/products/strawberry.webp" alt="" width="460" height="400" loading="lazy" decoding="async" />
+          <h3 class="sr-only">توت‌فرنگی، ۵۰۰ گرم</h3>
+          <p class="offer-card__tag"><svg class="icon icon--mirror" aria-hidden="true" focusable="false"><use href="#i-truck" /></svg> ارسال فوری</p>
+          <div class="offer-card__prices">
+            <span class="offer-card__discount">۲۵٪<span class="sr-only"> تخفیف</span></span>
+            <p class="offer-card__price"><strong>۱۲۰٬۰۰۰</strong> <small>تومان</small></p>
+            <del class="offer-card__old"><span class="sr-only">قیمت قبلی: </span>۱۶۰٬۰۰۰</del>
+          </div>
+        </li>
+        <li class="offer-card">
+          <img class="offer-card__img" src="./assets/images/products/chicken-thigh.webp" alt="" width="460" height="400" loading="lazy" decoding="async" />
+          <h3 class="sr-only">ران مرغ، ۹۰۰ گرم</h3>
+          <div class="offer-card__prices">
+            <span class="offer-card__discount">۱۹٪<span class="sr-only"> تخفیف</span></span>
+            <p class="offer-card__price"><strong>۲۱۰٬۰۰۰</strong> <small>تومان</small></p>
+            <del class="offer-card__old"><span class="sr-only">قیمت قبلی: </span>۲۶۰٬۰۰۰</del>
+          </div>
+        </li>
+        <li class="offer-card offer-card--all" id="deals-end">
+          <a class="offer-all" href="./offers.html">
+            <span class="offer-all__circle"><svg class="icon icon--mirror" aria-hidden="true" focusable="false"><use href="#i-arrow-right" /></svg></span>
+            <span class="offer-all__text">مشاهده همه</span>
+          </a>
+        </li>
+          </ul>
         </div>
-        <ul class="rail">
-          <li class="card" id="deals-start">
-            <div class="pic">
-              <img src="./assets/images/products/tomato.webp" alt="" width="460" height="400" loading="lazy" decoding="async" />
-              <span class="badge">۲۵٪<span class="sr-only"> تخفیف</span></span>
-            </div>
-            <h3>گوجه‌فرنگی گلخانه‌ای</h3>
-            <p class="unit">۱ کیلوگرم</p>
-            <div class="buy">
-              <p class="price">
-                <del><span class="sr-only">قیمت قبلی: </span>۶۰٬۰۰۰</del
-                ><strong>۴۵٬۰۰۰ تومان</strong>
-              </p>
-              <button
-                class="add"
-                type="button"
-                aria-label="افزودن گوجه‌فرنگی گلخانه‌ای به سبد خرید"
-              >
-                +
-              </button>
-            </div>
-          </li>
-          <li class="card">
-            <div class="pic">
-              <img src="./assets/images/products/low-fat-milk.webp" alt="" width="460" height="400" loading="lazy" decoding="async" />
-              <span class="badge">۱۵٪<span class="sr-only"> تخفیف</span></span>
-            </div>
-            <h3>شیر کم‌چرب</h3>
-            <p class="unit">۱ لیتر</p>
-            <div class="buy">
-              <p class="price">
-                <del><span class="sr-only">قیمت قبلی: </span>۴۰٬۰۰۰</del
-                ><strong>۳۴٬۰۰۰ تومان</strong>
-              </p>
-              <button
-                class="add"
-                type="button"
-                aria-label="افزودن شیر کم‌چرب به سبد خرید"
-              >
-                +
-              </button>
-            </div>
-          </li>
-          <li class="card">
-            <div class="pic">
-              <img src="./assets/images/products/cucumber.webp" alt="" width="460" height="400" loading="lazy" decoding="async" />
-              <span class="badge">۳۰٪<span class="sr-only"> تخفیف</span></span>
-            </div>
-            <h3>خیار سالادی</h3>
-            <p class="unit">۱ کیلوگرم</p>
-            <div class="buy">
-              <p class="price">
-                <del><span class="sr-only">قیمت قبلی: </span>۵۰٬۰۰۰</del
-                ><strong>۳۵٬۰۰۰ تومان</strong>
-              </p>
-              <button
-                class="add"
-                type="button"
-                aria-label="افزودن خیار سالادی به سبد خرید"
-              >
-                +
-              </button>
-            </div>
-          </li>
-          <li class="card">
-            <div class="pic">
-              <img src="./assets/images/products/butter.webp" alt="" width="460" height="400" loading="lazy" decoding="async" />
-              <span class="badge">۲۰٪<span class="sr-only"> تخفیف</span></span>
-            </div>
-            <h3>کره حیوانی</h3>
-            <p class="unit">۱۰۰ گرم</p>
-            <div class="buy">
-              <p class="price">
-                <del><span class="sr-only">قیمت قبلی: </span>۷۰٬۰۰۰</del
-                ><strong>۵۶٬۰۰۰ تومان</strong>
-              </p>
-              <button
-                class="add"
-                type="button"
-                aria-label="افزودن کره حیوانی به سبد خرید"
-              >
-                +
-              </button>
-            </div>
-          </li>
-          <li class="card">
-            <div class="pic">
-              <img src="./assets/images/products/strawberry.webp" alt="" width="460" height="400" loading="lazy" decoding="async" />
-              <span class="badge">۲۵٪<span class="sr-only"> تخفیف</span></span>
-            </div>
-            <h3>توت‌فرنگی</h3>
-            <p class="unit">۵۰۰ گرم</p>
-            <div class="buy">
-              <p class="price">
-                <del><span class="sr-only">قیمت قبلی: </span>۱۶۰٬۰۰۰</del
-                ><strong>۱۲۰٬۰۰۰ تومان</strong>
-              </p>
-              <button
-                class="add"
-                type="button"
-                aria-label="افزودن توت‌فرنگی به سبد خرید"
-              >
-                +
-              </button>
-            </div>
-          </li>
-          <li class="card" id="deals-end">
-            <div class="pic">
-              <img src="./assets/images/products/chicken-thigh.webp" alt="" width="460" height="400" loading="lazy" decoding="async" />
-              <span class="badge">۱۹٪<span class="sr-only"> تخفیف</span></span>
-            </div>
-            <h3>ران مرغ</h3>
-            <p class="unit">۹۰۰ گرم</p>
-            <div class="buy">
-              <p class="price">
-                <del><span class="sr-only">قیمت قبلی: </span>۲۶۰٬۰۰۰</del
-                ><strong>۲۱۰٬۰۰۰ تومان</strong>
-              </p>
-              <button
-                class="add"
-                type="button"
-                aria-label="افزودن ران مرغ به سبد خرید"
-              >
-                +
-              </button>
-            </div>
-          </li>
-        </ul>
-      </section>
+        <a class="offers__nav offers__nav--prev" href="#deals-start" aria-label="رفتن به ابتدای پیشنهاد ویژه امروز"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-right" /></svg></a>
+        <a class="offers__nav offers__nav--next" href="#deals-end" aria-label="رفتن به انتهای پیشنهاد ویژه امروز"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-right" /></svg></a>
+      </div>
+    </section>
 
       <section class="banners" aria-label="پیشنهادهای تبلیغاتی">
         <a class="banner" href="#dairy"

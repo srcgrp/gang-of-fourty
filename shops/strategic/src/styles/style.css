@@ -64,7 +64,7 @@ html { -webkit-text-size-adjust: 100%; }
   scroll-margin-top: calc(var(--header-h) + .75rem);
 }
 
-html:has(.card:target) { scroll-padding-top: calc(var(--header-h) + .75rem); }
+html:has(.card:target, .offers :target) { scroll-padding-top: calc(var(--header-h) + .75rem); }
 
 @media (prefers-reduced-motion: no-preference) {
     html, .rail {scroll-behavior: smooth;}
@@ -147,7 +147,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 .icon--cat { color: var(--brand); }
 
-.icon--flame { color: var(--red); }
 
 /* ========== Header ========== */
 .header-banner {
@@ -598,6 +597,7 @@ main > * + * { margin-top: 2rem; }
   border-radius: var(--radius);
   background: var(--surface);
   scroll-snap-align: start;
+  scroll-snap-stop: always;
   scroll-margin-block-start: 4rem;
   transition: transform .25s var(--ease);
 }
@@ -724,6 +724,263 @@ main > * + * { margin-top: 2rem; }
 .banners a:nth-child(2) { --t: var(--t6); }
 
 
+
+/* ========== Offers carousel (green box: intro panel + cards + "see all") ========== */
+.offers {
+  --offers-pad: 1.5rem;
+  --offers-intro-w: 8.75rem;
+  --offer-w: 10.75rem;
+}
+
+.offers__box {
+  position: relative;
+  overflow: hidden;
+  padding-inline: .25rem;
+  border-radius: 1.5rem;
+  background: var(--brand);
+  color: #fff;
+  timeline-scope: --offers-scroll;
+}
+
+.offers__scroller {
+  display: flex;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding-block: var(--offers-pad);
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scroll-timeline: --offers-scroll inline;
+}
+
+.offers__scroller::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .offers__scroller { scroll-behavior: smooth; }
+}
+
+/* Intro panel (scrolls away with the cards) */
+.offers__intro {
+  flex: 0 0 var(--offers-intro-w);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-inline: .5rem;
+  text-align: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  scroll-margin-block-start: var(--offers-pad);
+}
+
+.offers__title {
+  font-size: 1.375rem;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.offers__title span { display: block; }
+
+/* No "you are here" badge on this box: it would change the box height. */
+.offers:target .offers__title::after { content: none; }
+
+.offers__art {
+  width: 100%;
+  max-width: 8rem;
+  height: auto;
+}
+
+.offers__all {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  min-height: 2.75rem;
+  color: #fff;
+  font-size: .9375rem;
+  font-weight: 800;
+}
+
+.offers__all:focus-visible { outline-color: #fff; }
+
+/* Cards */
+.offers__list { display: flex; }
+
+.offer-card {
+  flex: 0 0 var(--offer-w);
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 1rem 1rem 1.25rem;
+  border-inline-start: .125rem solid var(--brand);
+  background: var(--surface);
+  color: var(--ink);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  scroll-margin-block-start: var(--offers-pad);
+}
+
+.offer-card:first-child {
+  border-inline-start: 0;
+  border-start-start-radius: .75rem;
+  border-end-start-radius: .75rem;
+}
+
+.offer-card__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.offer-card__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  align-self: flex-start;
+  padding: .25rem .75rem;
+  border-radius: 999px;
+  background: var(--brand);
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.offer-card__prices {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: .5rem;
+}
+
+.offer-card__discount {
+  padding: 0 .6rem;
+  border-radius: 999px;
+  background: var(--red);
+  color: #fff;
+  font-size: .875rem;
+  font-weight: 800;
+  line-height: 1.75;
+}
+
+.offer-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: .25rem;
+  line-height: 1.5;
+}
+
+.offer-card__price strong { font-size: 1.0625rem; font-weight: 800; }
+
+.offer-card__price small { font-size: .6875rem; color: var(--muted); }
+
+.offer-card__old {
+  grid-column: 2;
+  justify-self: center;
+  font-size: .8125rem;
+  color: var(--muted);
+}
+
+/* "See all" card at the end of the track */
+.offer-card--all {
+  align-items: center;
+  justify-content: center;
+}
+
+.offer-all {
+  display: grid;
+  justify-items: center;
+  gap: .75rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.offer-all__circle {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 2px solid var(--brand-ink);
+  border-radius: 50%;
+  color: var(--brand-ink);
+}
+
+.offer-all__circle .icon { width: 1.5rem; height: 1.5rem; }
+
+/* Round arrow buttons over the track edges */
+.offers__nav {
+  --flip: 1;
+  position: absolute;
+  inset-block-start: 45%;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  translate: 0 -50%;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 2px 10px rgb(0 0 0 / .25);
+}
+
+.offers__nav .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: scaleX(var(--flip));
+}
+
+.offers__nav--prev { inset-inline-start: .75rem; }
+
+.offers__nav--next { inset-inline-end: .75rem; --flip: -1; }
+
+.offers__nav:dir(ltr) { --flip: -1; }
+
+.offers__nav--next:dir(ltr) { --flip: 1; }
+
+.offers__nav:focus-visible {
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--surface);
+}
+
+/* Show only the arrow that still makes sense (needs scroll-driven animations;
+   without support both arrows simply stay visible). */
+@supports (animation-timeline: scroll()) {
+  .offers__nav {
+    animation: offers-nav linear both;
+    animation-timeline: --offers-scroll;
+  }
+
+  .offers__nav--prev { animation-range: 0 4rem; }
+
+  .offers__nav--next {
+    animation-direction: reverse;
+    animation-range: calc(100% - 4rem) 100%;
+  }
+}
+
+@keyframes offers-nav {
+  from { opacity: 0; visibility: hidden; }
+  to   { opacity: 1; visibility: visible; }
+}
+
+@media (hover: hover) {
+  .offers__nav:hover { border-color: var(--brand); }
+}
+
+@media (min-width: 40rem) {
+  .offers {
+    --offers-intro-w: 12rem;
+    --offer-w: 13.75rem;
+  }
+
+  .offers__title { font-size: 1.75rem; }
+
+  .offers__nav { width: 3rem; height: 3rem; }
+}
 
 /* ========== Footer ========== */
 .site-footer {
