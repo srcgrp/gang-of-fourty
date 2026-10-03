@@ -11,15 +11,14 @@
 </head>
 
 <body>
-
   <div class="sticky-header">
     <header>
-      <svg id="logo" version="1.1" xmlns="http://www.w3.org/2000/svg"
+      <svg id="logo" alt="rate-limit supermarket logo" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-143.36 -143.36 798.72 798.72" xml:space="preserve"
         fill="#2d6a4f">
         <g id="SVGRepo_bgCarrier" stroke-width="0"
           transform="translate(20.47999999999999,20.47999999999999), scale(0.92)">
-          <rect x="-143.36" y="-143.36" width="798.72" height="798.72" rx="399.36" fill="#d8f3dc" stroke-width="0">
+          <rect x="-143.36" y="-143.36" width="798.72" height="798.72" rx="399.36" fill="#d8f3dc" strokewidth="0">
           </rect>
         </g>
         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
@@ -40,41 +39,45 @@
           </g>
         </g>
       </svg>
+
       <h2>محدودیت نرخ</h2>
       <p>طراوت هر روز، نزدیک شما</p>
+
       <div class="search">
         <section id="search-bar">
-          <img id="search-icon" src="images/magnify.png" alt="جستجو">
+          <img id="search-icon" src="images/magnify.png">
           <input type="text" placeholder="جستجو در میان محصولات...">
         </section>
       </div>
 
       <div class="cart">
-        <img id="cart-icon" src="images/shopping-cart.png" alt="سبد خرید">
+        <img id="cart-icon" src="images/shopping-cart.png">
         <span id="cart-text">سبد خرید</span>
         <span id="cart-count">۰</span>
       </div>
 
-      <button class="menu-button" type="button" aria-label="دسته بندی ها">
+      <label class="menu-button" for="category-toggle" aria-label="دسته بندی ها">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round">
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <line x1="3" y1="18" x2="21" y2="18"></line>
         </svg>
-      </button>
+      </label>
     </header>
+    <input type="checkbox" class="category-toggle" id="category-toggle">
 
     <nav>
       <ul>
-        <li class="category-button">
-          <svg width="18" height="18" viewBox="0 0 24 24" ill="none" stroke="currentColor" stroke-width="2"
-            aria-hidden="true">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-          <span>دسته بندی ها</span>
+        <li class="category-item">
+          <label class="category-button" for="category-toggle">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <span>دسته بندی ها</span>
+          </label>
         </li>
         <li id="special-offer-button">پیشنهاد ویژه 🔥</li>
         <li>میوه و سبزی</li>
@@ -83,57 +86,61 @@
         <li>تماس با ما</li>
       </ul>
     </nav>
-  </div>
 
+    <label class="menu-close-overlay" for="category-toggle" aria-hidden="true"></label>
+
+    <div class="category-dropdown">
+      <a href="#">میوه و سبزیجات</a>
+      <a href="#">لبنیات</a>
+      <a href="#">پروتئین</a>
+      <a href="#">نوشیدنی</a>
+      <a href="#">تنقلات و خوراکی</a>
+      <a href="#">نان و شیرینی</a>
+      <a href="#">آجیل</a>
+      <a href="#">مواد غذایی آماده</a>
+    </div>
+  </div>
   <div class="banner">
     <div class="banner-text">
       <h1>طبیعتی سالم،</h1>
       <h1>زندگی‌ای بهتر</h1>
       <p>محصولات ارگانیک و سالم را با اطمینان خاطر از ما تهیه کنید و طعم واقعی طبیعت را بچشید.</p>
-      <button type="button">همین حالا خرید کنید</button>
+      <button>همین حالا خرید کنید</button>
     </div>
   </div>
 
   <div class="carousel">
     <section class="category-all">
       <h2 class="carousel-title">دسته بندی ها</h2>
-
       <div class="carousel-list">
         <div class="carousel-card">
           <img class="category-image" src="images/fruit.png" alt="میوه و سبزیجات">
           <h3 class="card-title">میوه و سبزیجات</h3>
         </div>
-
         <div class="carousel-card">
           <img class="category-image" src="images/dairy.png" alt="لبنیات">
           <h3 class="card-title">لبنیات</h3>
         </div>
-
         <div class="carousel-card">
           <img class="category-image" src="images/protein.png" alt="پروتئین">
           <h3 class="card-title">پروتئین</h3>
         </div>
-
         <div class="carousel-card">
           <img class="category-image" src="images/drink.png" alt="نوشیدنی">
           <h3 class="card-title">نوشیدنی</h3>
         </div>
-
         <div class="carousel-card">
           <img class="category-image" src="images/snacks.png" alt="تنقلات و خوراکی">
           <h3 class="card-title">تنقلات و خوراکی</h3>
         </div>
-
         <div class="carousel-card">
           <img class="category-image" src="images/bread.png" alt="نان و شیرینی">
           <h3 class="card-title">نان و شیرینی</h3>
         </div>
-
         <div class="carousel-card">
           <img class="category-image" src="images/nuts.png" alt="آجیل">
           <h3 class="card-title">آجیل</h3>
         </div>
-
         <div class="carousel-card">
           <img class="category-image" src="images/food.png" alt="مواد غذایی آماده">
           <h3 class="card-title">مواد غذایی آماده</h3>
@@ -142,17 +149,15 @@
     </section>
 
     <section class="special-offer">
-      <h2 class="carousel-title">پیشنهاد ویژه ۲۰ درصدی 🔥</h2>
-
+      <h2 class="carousel-title">پیشنهاد ویژه ۲۰ درصدی🔥</h2>
       <div class="carousel-list">
-
         <div class="carousel-card-sells">
           <span class="discount-badge">٪۲۰</span>
           <img class="carousel-image-sells"
             src="https://static.snapp.express/product-hub/2aaa7c60_66fa916b1a4ee.jpg?width=420&height=420"
             alt="گوجه فرنگی رسمی">
-          <button class="add-to-cart" type="button">+</button>
-          <h3 class="card-title-sells">گوجه فرنگی رسمی</h3>
+          <button class="add-to-cart">+</button>
+          <h3 class="card-title-sells">کوچه فرنگی رسمی</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۱ کیلوگرم</p>
           </div>
@@ -161,12 +166,11 @@
             <del class="old-price">۱۳۵,۰۰۰ تومان</del>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <span class="discount-badge">٪۲۰</span>
           <img class="carousel-image-sells"
             src="https://static.snapp.express/product-hub/faef7b7b_62b2b4af07ef6.jpg?width=420&height=420" alt="کیوی">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">کیوی</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۱ کیلوگرم</p>
@@ -176,13 +180,12 @@
             <del class="old-price">۴۲۰,۰۰۰ تومان</del>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <span class="discount-badge">٪۲۰</span>
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/jet-public/cff3334cd55432f7374e1d06812dad009a00b587_1751977487.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="نان سنگک ساده متوسط">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">نان سنگک ساده متوسط</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۱ عدد</p>
@@ -192,13 +195,12 @@
             <del class="old-price">۴۰,۰۰۰ تومان</del>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <span class="discount-badge">٪۲۰</span>
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/digikala-products/3520506.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="شیر کم چرب روزانه">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">شیر کم چرب روزانه</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۱ لیتر</p>
@@ -208,13 +210,12 @@
             <del class="old-price">۱۰۱,۴۸۰ تومان</del>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <span class="discount-badge">٪۲۰</span>
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/digikala-products/111946792.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="کره حیوانی پاستوریزه شکلی">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">کره حیوانی پاستوریزه شکلی</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۴۵۰ گرم</p>
@@ -224,13 +225,12 @@
             <del class="old-price">۱۰,۰۰۰ تومان</del>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <span class="discount-badge">٪۲۰</span>
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/jet-public/bda9a7802e21100a480fe47db310f283486be81d_1727696831.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="نوشابه زیرو کولا کوکاکولا">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">نوشابه زیرو کولا کوکاکولا</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۱,۵ لیتر</p>
@@ -240,13 +240,12 @@
             <del class="old-price">۹۷,۶۰۰ تومان</del>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <span class="discount-badge">٪۲۰</span>
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/digikala-products/dc708a1f0f55837640693d0b96b882d02c9482ab_1613480688.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="چیپس نمکی مزمز">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">چیپس نمکی مزمز</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۱۱۴ گرم</p>
@@ -256,13 +255,12 @@
             <del class="old-price">۷۷,۰۰۰ تومان</del>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <span class="discount-badge">٪۲۰</span>
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/digikala-products/1de1aaaa860a33cda706fd2f9b570cbdf811afaf_1740399757.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="مارشمالو طرح هندوانه شیبا">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">مارشمالو طرح هندوانه شیبا</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۱۰۰ گرم</p>
@@ -272,29 +270,27 @@
             <del class="old-price">۸۳,۰۰۰ تومان</del>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <span class="discount-badge">٪۲۰</span>
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/digikala-products/111261410.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="خامه شکلی">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">خامه شکلی</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۱۰۰ گرم</p>
           </div>
           <div class="price-row">
             <p class="price">۱۵,۰۸۸ تومان</p>
-            <del class="old-price">۱۸,۸۶۰ تومان</del>
+            <del class="old-price">۱۸,۸۶۰ تومان</del>          
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <span class="discount-badge">٪۲۰</span>
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/jet-public/61b5f291d571047eea5ab0d1876cddb801c0d961_1747737552.png?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="بستنی انبه سه بعدی میهن">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">بستنی انبه سه بعدی میهن</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۶۰ گرم</p>
@@ -304,13 +300,12 @@
             <del class="old-price">۲۰۰,۰۰۰ تومان</del>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <span class="discount-badge">٪۲۰</span>
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/jet-public/f44effcea0c09466ad0c339652c2ae72bf675f01_1778666021.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="نخودچی و کشمش">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">نخودچی و کشمش</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۲۵۰ گرم</p>
@@ -320,27 +315,24 @@
             <del class="old-price">۲۵۰,۰۰۰ تومان</del>
           </div>
         </div>
-
       </div>
     </section>
   </div>
 
   <div class="ads">
-    <img class="ad-banner" src="images/dalis-banner.webp" alt="تبلیغ دالیس">
-    <img class="ad-banner" src="images/dono-banner.webp" alt="تبلیغ دونُو">
+    <img class="ad-banner" src="images/dalis-banner.webp">
+    <img class="ad-banner" src="images/dono-banner.webp">
   </div>
 
   <div class="carousel">
     <section class="snacks">
       <h2 class="carousel-title">تنقلات و خوراکی</h2>
-
       <div class="carousel-list">
-
         <div class="carousel-card-sells">
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/digikala-firebolt-product-image/e09cff4347885898af75f8bad188f0d170846def_1640698112.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="تافیس با مغز کاکائویی توفیس شومیز">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">تافیس با مغز کاکائویی توفیس شومیز</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۱۰۰۰ گرم</p>
@@ -349,13 +341,12 @@
             <p class="price regular-price">۶۰۰,۰۰۰ تومان</p>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <span class="discount-badge">٪۵</span>
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/digikala-products/20943e8944af92f76a46b42befe0041068a1bd7d_1701028632.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="ویفر نارگیلی سلامت وزن">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">ویفر نارگیلی سلامت وزن</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۱۶۰ گرم</p>
@@ -365,12 +356,11 @@
             <del class="old-price">۱۲۰,۰۰۰ تومان</del>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/digikala-products/cb625ac432ec70bc6b754af93aeac3d5ba3bf8b6_1698216509.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="شکلات تلخ ۸۴ درصد پارمیدا">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">شکلات تلخ ۸۴ درصد پارمیدا</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۷۰ گرم</p>
@@ -379,12 +369,11 @@
             <p class="price regular-price">۳۹۰,۰۰۰ تومان</p>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/jet-public/19549ca5272ce5906037881c82f00eca92b044b9_1720955097.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="میوه خشک میکس بری برند مانی">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">میوه خشک میکس بری برند مانی</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۶۰ گرم</p>
@@ -393,13 +382,12 @@
             <p class="price regular-price">۲۲۰,۰۰۰ تومان</p>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <span class="discount-badge">٪۵</span>
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/digikala-firebolt-product-image/b11da3c73bd7345e0091cbbacf509b23d282458b_1640730316.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="اسنک پنیری کیکوتک">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">اسنک پنیری کیکوتک</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۶۰ گرم</p>
@@ -409,13 +397,12 @@
             <del class="old-price">۱۵۰,۰۰۰ تومان</del>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <span class="discount-badge">٪۵</span>
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/jet-public/439830195e9c014105cc386cc5a0b20158d25dde_1684739234.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="آدامس توت فرنگی ریلکس">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">آدامس توت فرنگی ریلکس</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۲۱ گرم</p>
@@ -425,13 +412,12 @@
             <del class="old-price">۱۶۵,۰۰۰ تومان</del>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <span class="discount-badge">٪۵</span>
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/digikala-products/87c2e0a9c4980d95621e5a61bb78698fbac6fb1e_1666426056.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="کروسان پچ پچ">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">کروسان پچ پچ</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۵۵ گرم ۶ عدد</p>
@@ -441,12 +427,11 @@
             <del class="old-price">۲۹۴,۰۰۰ تومان</del>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/digikala-firebolt-product-image/90ed65f1bff73d9257057c95e42556f2e3eb0710_1640713392.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="شکلات ۷۰ درصد دارک کیت کت نستله">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">شکلات ۷۰ درصد دارک کیت کت نستله</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۴۱ گرم</p>
@@ -455,12 +440,11 @@
             <p class="price regular-price">۲۴۵,۰۰۰ تومان</p>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <img class="carousel-image-sells"
-            src="https://dkstatics-public.digikala.com/digikala-products/b2fafb9803f5a140233bdef036aecd38f3741654_1712669070.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
+          src="https://dkstatics-public.digikala.com/digikala-products/b2fafb9803f5a140233bdef036aecd38f3741654_1712669070.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="کیک هات کول شکلاتی درنا">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">کیک هات کول شکلاتی درنا</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۶۵ گرم</p>
@@ -469,13 +453,12 @@
             <p class="price regular-price">۷۰,۰۰۰ تومان</p>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/digikala-products/114956829.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
-            alt="پفک پنیری سوپر گرد لینا">
-          <button class="add-to-cart" type="button">+</button>
-          <h3 class="card-title-sells">پفک پنیری سوپر گرد لینا</h3>
+            alt="پغک پنیری سوپر گرد لینا">
+          <button class="add-to-cart">+</button>
+          <h3 class="card-title-sells">پغک پنیری سوپر گرد لینا</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۵۸ گرم</p>
           </div>
@@ -483,13 +466,12 @@
             <p class="price regular-price">۷۵,۰۰۰ تومان</p>
           </div>
         </div>
-
         <div class="carousel-card-sells">
           <span class="discount-badge">٪۵</span>
           <img class="carousel-image-sells"
             src="https://dkstatics-public.digikala.com/digikala-products/3351827.jpg?x-oss-process=image/resize,m_lfit,h_400,w_400/quality,q_90/format,webp"
             alt="بیسکوئیت پذیرایی زعفرانی فرحنده">
-          <button class="add-to-cart" type="button">+</button>
+          <button class="add-to-cart">+</button>
           <h3 class="card-title-sells">بیسکوئیت پذیرایی زعفرانی فرحنده</h3>
           <div class="sell-amount-wrap">
             <p class="sell-amount">۸۵۰ گرم</p>
@@ -499,10 +481,10 @@
             <del class="old-price">۴۴۹,۵۰۰ تومان</del>
           </div>
         </div>
-
       </div>
     </section>
   </div>
+
   <footer>
     <section class="footer-sections">
       <p class="footer-title">سوپر مارکت محدودیت نرخ</p>
@@ -543,7 +525,6 @@
       <a href="#" class="jump-to-up">پرش به بالا 🡩</a>
     </div>
   </footer>
-
 </body>
 
 </html>
