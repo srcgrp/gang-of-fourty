@@ -310,7 +310,7 @@ body {
 }
 
 .promo-content button:hover {
-  background:var(--accent-color);‍
+  background:var(--accent-color);
 }
 
 .promo-content h3 {
@@ -331,5 +331,54 @@ body {
   color:white;
   font-family:inherit;
   cursor: pointer;
+  transition: .2s;
 }
 
+.blog {
+  margin-top:40px;
+}
+
+.section-title {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+}
+
+.section-title h2 {
+  font-size:28px;
+}
+
+.section-title a {
+  color:var(--primary-color);
+  text-decoration:none;
+}
+
+.blog-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.blog-card {
+  background:var(--surface-color);
+  border:1px solid var(--border-color);
+  border-radius:20px;
+  overflow:hidden;
+  padding-bottom:20px;
+}
+
+.blog-image {
+  height:140px;
+  background:#f3eee5;
+}
+
+.blog-card h3 {
+  padding:0 20px;
+  margin-top:15px;
+}
+
+.blog-card p {
+  padding:0 20px;
+  color:var(--secondary-color);
+}
