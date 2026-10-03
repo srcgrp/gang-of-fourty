@@ -60,6 +60,7 @@
   flex-direction: column;
   gap: 5px;
   padding: 16px 16px 10px;
+  direction: rtl;
 }
 .product-name {
   overflow: hidden;
@@ -81,6 +82,7 @@
   justify-content: space-between;
   gap: 10px;
   padding: 10px 16px 16px;
+  direction: rtl;
 } /* ======================================== Add Button ======================================== */
 .add-btn {
   width: 38px;

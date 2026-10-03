@@ -106,7 +106,7 @@
 
   padding: 4px 2px 14px;
 
-  direction: ltr;
+  direction: rtl;
 
   scroll-behavior: smooth;
 
@@ -115,8 +115,6 @@
   scrollbar-width: none;
 
   -webkit-overflow-scrolling: touch;
-
-  touch-action: pan-x;
 
   outline: none;
 }
