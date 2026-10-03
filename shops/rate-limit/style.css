@@ -261,7 +261,6 @@ nav li.category-item .category-button:hover {
   display: block;
 }
 
-
 nav li#special-offer-button {
   color: #f0c947;
   font-weight: 700;
@@ -985,3 +984,30 @@ footer {
     background-color: #d8f3dc;
   }
 }
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  right: 20px;
+
+  background-color: #222;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+
+  text-decoration: none;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  top: 20px;
+}
+
+#snacks {
+  scroll-margin-top: 150px;
+}
+
+#main-content {
+  scroll-margin-top: 150px;
+}
+
