@@ -1,7 +1,7 @@
 /* Amirhossein (Armin) Panahi */
 /* Week 1 - Strategic Supermarket */
 
-/* ========== Font (Vazirmatn, SIL OFL) ========== */
+/* ========== Font (Vazirmatn) ========== */
 @font-face {
   font-family: "Vazirmatn";
   src: url("../../assets/fonts/Vazirmatn-Variable.woff2") format("woff2");
@@ -60,15 +60,10 @@
 
 html { -webkit-text-size-adjust: 100%; }
 
-/* Offset for in-page jumps under the sticky header. It is set on the targets instead of
-   `scroll-padding-top` on html: that made the browser scroll the page whenever a control
-   inside the sticky header (search, cart, burger) received focus. */
 :is(main, .shelf, #categories, #contact) {
   scroll-margin-top: calc(var(--header-h) + .75rem);
 }
 
-/* Cards live inside a clipping scroller (.rail), so their own scroll-margin is capped by
-   the rail's padding; the html-level padding is only needed while a card is the target. */
 html:has(.card:target) { scroll-padding-top: calc(var(--header-h) + .75rem); }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -311,7 +306,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
     transform: translateY(-6px) rotate(-45deg);
 }
 
-/* Starts exactly under the header, wherever the header is (banner height / scroll position) */
+/* banner height / scroll position */
 .scrim {
   position: absolute;
   inset-inline: 0;
@@ -540,7 +535,7 @@ main > * + * { margin-top: 2rem; }
 
 
 
-/* Carousel: CSS-only (scroll-snap) + fragment links for start/end */
+/* Carousel */
 .rail {
   display: flex;
   gap: .75rem;
@@ -548,8 +543,6 @@ main > * + * { margin-top: 2rem; }
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  /* Extra top padding (cancelled by the negative margin) lets an arrow jump leave the
-     section title and arrows visible below the sticky header instead of hidden under it */
   margin: -2.5rem calc(var(--gutter) * -1) -.75rem;
   padding: 3.25rem var(--gutter) 1.5rem;
   scroll-padding-inline: var(--gutter);
@@ -565,13 +558,13 @@ main > * + * { margin-top: 2rem; }
   border-radius: var(--radius);
   background: var(--surface);
   scroll-snap-align: start;
-  scroll-margin-block-start: 4rem; /* limited by .rail's top padding */
+  scroll-margin-block-start: 4rem;
   transition: transform .25s var(--ease);
 }
 
 
 
-/* Shadow is applied to the pseudo-element and animated only via opacity → Composite stage */
+/* Shadow / Composite stage */
 .card::after {
   content: "";
   position: absolute;
@@ -742,7 +735,7 @@ main > * + * { margin-top: 2rem; }
 
 
 /* ========== Responsive ========== */
-/* ========== Very Small Mobiles (up to 360px) ========== */
+/* ========== Very Small Mobiles ========== */
 @media (max-width: 22.5rem) {
   .bar { column-gap: .375rem; }
   .logo small { display: none; }
