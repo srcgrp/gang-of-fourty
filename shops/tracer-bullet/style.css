@@ -188,7 +188,7 @@ header > p {
   font-weight: 500;
 }
 
-/* ===== dropdown menu ===== */
+/* dropdown menu */
 
 .dropdown {
   position: relative;
@@ -240,7 +240,7 @@ header > p {
   }
 }
 
-/* ===== 3d: page container, hero, promo ===== */
+/* page container, hero, promo */
 
 main {
   max-width: 72rem;
@@ -313,8 +313,7 @@ main {
   }
 }
 
-/* ===== 3e: sections, categories, cards ===== */
-
+/* sections */
 main > section {
   margin-block-end: var(--space-l);
 }
@@ -436,7 +435,7 @@ main h2 {
   scroll-snap-align: start;
 }
 
-/* discount strip: a plain grid, not a carousel */
+/* discount strip: a plain grid */
 .strip {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
@@ -476,8 +475,7 @@ main h2 {
   }
 }
 
-/* ===== 3f: footer ===== */
-
+/* footer */
 footer {
   margin-block-start: var(--space-l);
   padding: var(--space-l) var(--space-m) var(--space-m);
@@ -577,7 +575,7 @@ footer li a {
   }
 }
 
-/* ===== Phase 4: carousel controls ===== */
+/* carousel controls */
 
 :root {
   --header-offset: 10rem;
@@ -625,7 +623,7 @@ footer li a {
   }
 }
 
-/* ===== Phase 5a: mobile menu ===== */
+/* mobile menu */
 
 .menu-button {
   grid-column: 3;
@@ -716,7 +714,7 @@ footer li a {
   }
 }
 
-/* ===== Phase 5b: landing on a section ===== */
+/* landing on a section */
 
 section[id] {
   scroll-margin-block-start: calc(var(--header-offset) + var(--space-m));
@@ -732,7 +730,7 @@ footer section:target {
   outline-color: var(--color-soft);
 }
 
-/* ===== Phase 5c: hover, focus, reduced motion ===== */
+/* hover, focus, reduced motion */
 
 .carousel > li,
 .strip > li {
@@ -773,7 +771,7 @@ footer section:target {
   }
 }
 
-/* ===== Phase 6: responsive fixes ===== */
+/* responsive fixes */
 
 /* header row at 320px: let the logo shrink and wrap */
 .logo,
@@ -803,7 +801,7 @@ footer section:target {
   flex: 1;
 }
 
-/* ===== Phase 7: accessibility ===== */
+/* accessibility */
 
 /* the skip link appears over the accent announcement bar, so it must not share its color */
 .skip-link {
@@ -833,3 +831,32 @@ html:dir(ltr) .carousel-nav a span[aria-hidden] {
   font-size: 0.75rem;
   font-weight: 400;
 }
+
+/* out of stock */
+
+:root {
+  --color-muted: #686161;
+  --color-on-muted: #FFFFFF;
+}
+
+.out-of-stock img {
+  opacity: 0.45;
+  filter: grayscale(1);
+}
+
+.out-of-stock .badge {
+  background: var(--color-muted);
+  color: var(--color-on-muted);
+}
+
+button:disabled {
+  background: var(--color-muted);
+  color: var(--color-on-muted);
+  cursor: not-allowed;
+}
+
+.carousel button:disabled:hover,
+.strip button:disabled:hover {
+  transform: none;
+}
+
