@@ -48,6 +48,25 @@ img {
   display: none;
 }
 
+.announcement {
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .75rem;
+  gap: 0.4rem;
+  background-color: var(--color-primary);
+  padding-block:0.3rem;
+}
+
+.announcement p {
+  margin: 0;
+}
+
+.announcement img {
+  width: 16px;
+}
+
 .header-row {
   display: flex;
   align-items: center;
