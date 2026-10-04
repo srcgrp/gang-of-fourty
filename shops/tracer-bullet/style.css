@@ -860,3 +860,56 @@ button:disabled {
   transform: none;
 }
 
+/* dark mode */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-bg: #1F0E16;
+    --color-surface: #792E4C;
+    --color-text: #FEC3DB;
+    --color-accent: #FEC3DB;
+    --color-soft: #A3728E;
+    --color-muted: #ACB8BE;
+    --color-on-muted: #1F0E16;
+    --on-dark: #1F0E16;
+  }
+
+  button,
+  header > p,
+  .promo,
+  .hero,
+  .hero a,
+  .badge,
+  .menu-button,
+  .banners a:first-child {
+    color: var(--on-dark, #FFFFFF);
+  }
+
+  .hero :focus-visible,
+  .banners a:first-child:focus-visible {
+    outline-color: var(--on-dark, #BB3168);
+  }
+
+  footer {
+    background: var(--color-surface);
+    color: var(--color-text);
+  }
+
+  footer a,
+  footer h2,
+  .footer-brand,
+  .footer-bottom a {
+    color: var(--color-text);
+  }
+
+  footer :focus-visible,
+  footer section:target {
+    outline-color: var(--color-text);
+  }
+
+  .search input::placeholder {
+    color: var(--color-text);
+    opacity: 0.85;
+  }
+}
