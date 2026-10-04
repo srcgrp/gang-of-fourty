@@ -1,7 +1,37 @@
 /* Your shop's styles. Week 1: make it yours! */
 
 
-* { outline: 1px solid red; }
+* { 
+  outline: 1px solid red;
+  box-sizing: border-box;
+ }
 
+:root {
+  --color-text : rgb(17 24 17);
+  --color-text-muted : rgb(93 102 93);
+  --color-sale : rgb(204 70 34);
+  --color-accent : rgb(246 195 67);
+  --color-primary: rgb(69 123 83);
+  --color-footer-bg: rgb(33 42 32);
+  --color-primary-soft  : rgb(230 241 232);
+  --color-surface: rgb(255 255 255);
+  --color-page-bg: rgb(251 248 242);
+  --tint-red: rgb(249 228 221);
+  --tint-blue: rgb(228 238 251);
+  --tint-yellow: rgb(251 240 207);
+  --tint-green: rgb(228 244 239);
+  --tint-pink: rgb(247 225 230);
+  --tint-purple: rgb(239 230 249);
+}
 
+body {
+  margin: 0px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--color-page-bg);
+  color: var(--color-text);
+}
 
+img {
+  max-width: 100%;
+  height: auto;
+}
