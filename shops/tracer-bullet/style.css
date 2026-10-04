@@ -913,3 +913,87 @@ button:disabled {
     opacity: 0.85;
   }
 }
+
+/* align quantity, price and button at the bottom of every card */
+.carousel .meta,
+.strip .meta {
+  margin-block-start: auto;
+}
+
+.carousel button,
+.strip button {
+  margin-block-start: 0;
+}
+
+/* ===== fluid font sizes (logo and footer) ===== */
+
+/* logo name: 15px at 320px wide, growing to 20px at 480px and up */
+.logo-text {
+  min-width: 0;
+}
+
+.logo-text span {
+  font-size: clamp(0.9375rem, 0.3125rem + 3.125vw, 1.25rem);
+  white-space: nowrap;
+}
+
+/* slogan: 11px at 320px wide, growing to 12px at 480px and up */
+.logo-text small {
+  font-size: clamp(0.6875rem, 0.5625rem + 0.625vw, 0.75rem);
+}
+
+/* a little room back on phones, without touching the cart or the page margins */
+@media (max-width: 47.99rem) {
+  header {
+    column-gap: var(--space-s);
+  }
+
+  .logo a {
+    gap: 0.375rem;
+  }
+
+  .logo svg {
+    width: 2.25rem;
+  }
+}
+
+/* footer */
+.footer-brand {
+  font-size: clamp(1.25rem, 0.75rem + 2.5vw, 1.5rem);
+}
+
+footer h2 {
+  font-size: clamp(1rem, 0.75rem + 1.25vw, 1.125rem);
+}
+
+@media (max-width: 47.99rem) {
+  .footer-columns {
+    gap: var(--space-m);
+  }
+}
+/* below line does not work on older browsers. */
+.logo-text small {
+  text-wrap: balance;
+} 
+/* make both footer contact links comfortable to tap */
+footer address a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+}
+
+/* PNG icons */
+
+/* search button icon */
+.search button img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* icons that sit inline with text, such as in a heading */
+.icon-inline {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+}
