@@ -9,6 +9,7 @@
   --background: #ebf5ff;
   --white: #FFFFFF;
   --text: #172033;
+  --white-text: #e2f1ff;
   --muted: #737d92;
   --fade: #a5adb7;
   --border: #C9D8E8;
@@ -20,12 +21,12 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Vazirmatn, Tahoma, sans-serif;
-  color: var(--text);
-}
-
 header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -164,6 +165,12 @@ header {
   transform: translate(50%,-80%);
 }
 
+body {
+  font-family: Vazirmatn, Tahoma, sans-serif;
+  color: var(--text);
+  margin-top: 100px;
+}
+
 main h2 {
   color: #003980;
   margin: 10px;
@@ -201,4 +208,99 @@ main h2 {
 
 .item-description {
   color: #53575d;
+}
+
+footer{
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px 4rem;
+  background: var(--navy);
+  color: var(--white-text);
+}
+
+.upper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 100px;
+  width: 100%;
+  margin-bottom: 16px;
+  margin-top: 2px;
+}
+
+.upper-titles {
+  margin-bottom: 12px;
+  color: var(--yellow);
+}
+
+.about-details,
+.hours-details{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: smaller;
+}
+
+.address,
+.phone-number {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.address-icon, 
+.phone-icon,
+.up-icon,
+.copyright-icon{
+  width: 16px;
+  height: auto;
+  color: currentColor;
+}
+
+.address-icon{
+  width: 20px;
+}
+
+
+.links-link {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(4, auto);
+  gap: 4px 20px;
+  font-size: smaller;
+}
+
+.links-link a{
+  text-decoration:underline;
+  color: var(--white-text);
+}
+
+
+.down {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-top: solid 2px #c2e1ff66;
+  padding-top: 10px;
+  font-size: small;
+  color: var(--yellow);
+}
+
+
+.copyright p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+}
+
+
+.up{
+  text-decoration: none;
+  color: var(--yellow);
 }
