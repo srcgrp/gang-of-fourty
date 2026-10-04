@@ -35,6 +35,19 @@ img {
   height: auto;
 }
 
+.skip-link {
+  background-color: rgb(47, 46, 46);
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 10px;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  border-radius: 0.5rem;
+  display: none;
+}
+
 .header-row {
   display: flex;
   align-items: center;
