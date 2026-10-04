@@ -126,6 +126,12 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 .btn--green { background: var(--brand); color: #fff; }
 
+.btn--outline {
+  background: transparent;
+  color: inherit;
+  box-shadow: inset 0 0 0 2px currentColor;
+}
+
 
 
 /* ========== Icons (inline SVG sprite, colored via currentColor) ========== */
@@ -423,59 +429,211 @@ main:focus { outline: none; }
 
 main > * + * { margin-top: 2rem; }
 
-.hero { display: grid; grid-auto-rows: 1fr; gap: 1rem; }
+/* ========== Hero ========== */
+.hero { display: grid; gap: 1rem; }
 
-.hero-main {
+/* Feature panel: fixed brand colors so it keeps its identity in dark mode too */
+.hero__feature {
+  --hero-bg: #14532f;
+  --hero-disc: #1d7448;
+  --hero-soft: #d3ecdc;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  gap: .75rem;
+  padding: 1rem 1.25rem 0;
+  border-radius: calc(var(--radius) * 1.5);
+  color: #fff;
+  background: var(--hero-bg);
+}
+
+.hero__feature :focus-visible { outline-color: #fff; }
+
+.hero__title { display: grid; gap: .25rem; }
+
+.hero__brand {
+  font-size: .9375rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--hero-soft);
+}
+
+.hero__headline {
+  font-size: clamp(1.75rem, 7.4vw, 2.75rem);
+  font-weight: 900;
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+.hero__lead {
+  margin-block: .5rem 1rem;
+  max-width: 24rem;
+  color: var(--hero-soft);
+  font-size: .9375rem;
+  line-height: 1.8;
+}
+
+.hero__actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+
+.hero__actions .btn { min-height: 2.75rem; padding-inline: 1rem; font-size: .9375rem; }
+
+/* Stage: produce rising from the bottom edge of the panel */
+.hero__stage {
+  position: relative;
+  width: 100%;
+  max-width: 16.5rem;
+  margin-inline: auto;
+  margin-bottom: -.75rem;
+  aspect-ratio: 1 / .78;
+  container-type: inline-size;
+}
+
+.hero__disc {
+  position: absolute;
+  left: 4%;
+  top: -2%;
+  width: 92%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--hero-disc);
+  box-shadow: 0 0 0 clamp(.5rem, 2.4vw, 1.1rem) rgb(255 255 255 / .06);
+}
+
+.hero__item {
+  --d: 0s;
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  z-index: var(--z);
+  width: var(--w);
+  height: auto;
+  rotate: var(--r);
+  filter: drop-shadow(0 .7rem .8rem rgb(0 0 0 / .28));
+}
+
+.hero__item--broccoli   { --x: 8%;  --y: 4%;  --w: 31%; --r: -10deg; --z: 2; --d: .05s; }
+.hero__item--carrot     { --x: 60%; --y: -3%; --w: 15%; --r: 24deg;  --z: 1; --d: .1s; }
+.hero__item--pepper     { --x: 66%; --y: 20%; --w: 27%; --r: 12deg;  --z: 3; --d: .16s; }
+.hero__item--tomato     { --x: 26%; --y: 20%; --w: 46%; --r: -5deg;  --z: 4; --d: .22s; }
+.hero__item--strawberry { --x: 3%;  --y: 60%; --w: 23%; --r: -12deg; --z: 5; --d: .3s; }
+.hero__item--orange     { --x: 62%; --y: 58%; --w: 36%; --r: 8deg;   --z: 5; --d: .38s; }
+
+/* Price tag hanging on the tomato; links to the matching deal */
+.hero__tag {
+  position: absolute;
+  left: 25%;
+  top: 66%;
+  z-index: 6;
+  display: grid;
+  gap: .125rem;
+  padding: 1.1rem .85rem .6rem;
+  border-radius: .75rem;
+  background: #fff;
+  color: #17211b;
+  font-size: clamp(.6875rem, 3.5cqw, .875rem);
+  line-height: 1.5;
+  box-shadow: 0 .6rem 1.25rem rgb(0 0 0 / .28);
+  rotate: -5deg;
+  transform-origin: 50% 0;
+}
+
+.hero__tag::before {
+  content: "";
+  position: absolute;
+  top: .42rem;
+  left: 50%;
+  width: .5rem;
+  height: .5rem;
+  margin-left: -.25rem;
+  border-radius: 50%;
+  background: var(--hero-bg);
+}
+
+.hero__tag-name { font-weight: 500; color: #3f4d44; }
+
+.hero__tag-row { display: flex; align-items: baseline; gap: .5rem; }
+
+.hero__tag del { color: #5f6b64; font-size: .85em; }
+
+.hero__tag strong { font-size: 1.1em; font-weight: 800; }
+
+.hero__tag-off {
+  position: absolute;
+  top: -.6rem;
+  inset-inline-end: -.6rem;
+  padding: 0 .5rem;
+  border-radius: 999px;
+  background: var(--red);
+  color: #fff;
+  font-size: .8em;
+  font-weight: 700;
+  line-height: 1.6;
+  rotate: 8deg;
+}
+
+/* Promo panel */
+.hero__promo {
   position: relative;
   overflow: hidden;
-  padding: 1.5rem 1.25rem;
-  border-radius: var(--radius);
-  color: #fff;
-  background: linear-gradient(135deg, #1f7d4e, #14532f);
-}
-
-.hero-main h1 {
-    font-size: clamp(1.6rem, 6.5vw, 2.6rem);
-    line-height: 1.4;
-    font-weight: 800;
-}
-
-.hero-main h1 span { display: block; }
-
-.hero-main p {
-    margin-block: .5rem 1.25rem;
-    max-width: 30rem;
-    color: #e9f6ee;
-}
-
-.hero-main .art {
-    position: absolute;
-    inset-inline-end: 1rem;
-    bottom: .25rem;
-    width: clamp(5rem, 20vw, 10rem);
-    height: auto;
-}
-
-.hero-side {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: .25rem;
-  padding: 1.25rem;
-  border-radius: var(--radius);
+  display: grid;
+  grid-template-columns: 1fr 38%;
+  align-items: center;
+  gap: .5rem;
+  padding: 1rem 1.25rem;
+  border-radius: calc(var(--radius) * 1.5);
   background: var(--cream);
+  color: var(--ink);
 }
 
-.hero-side h2 { font-size: 1.25rem; line-height: 1.5; }
+.hero__promo-copy { display: grid; justify-items: start; gap: .25rem; }
 
-.hero-side .art {
-    align-self: center;
-    margin-block: .5rem;
-    width: clamp(4.5rem, 16vw, 7rem);
-    height: auto;
+.hero__promo-title { font-size: 1.125rem; font-weight: 800; line-height: 1.5; }
+
+.hero__promo-note { margin-bottom: .5rem; color: var(--muted); font-size: .9375rem; }
+
+.hero__promo-art {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.hero-side .btn { margin-top: auto; }
+/* Phones: shorter feature panel, one row of buttons */
+@media (max-width: 39.99rem) {
+  .hero__lead { display: none; }
+  .hero__actions { flex-wrap: nowrap; margin-top: 1rem; }
+  .hero__actions .btn {
+    flex: 1 1 0;
+    min-width: 0;
+    justify-content: center;
+    padding-inline: .5rem;
+    font-size: .875rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .hero__stage { max-width: 14.5rem; margin-bottom: 0; }
+  .hero__tag { top: 58%; }
+}
+
+/* One orchestrated entrance, only when motion is welcome */
+@media (prefers-reduced-motion: no-preference) {
+  .hero__disc { animation: hero-grow .8s var(--ease) backwards; }
+  .hero__item { animation: hero-rise .75s var(--ease) var(--d) backwards; }
+  .hero__tag { animation: hero-swing 1.1s var(--ease) .6s backwards; }
+}
+
+@keyframes hero-rise {
+  from { opacity: 0; translate: 0 2.5rem; scale: .9; }
+}
+
+@keyframes hero-grow {
+  from { opacity: 0; scale: .8; }
+}
+
+@keyframes hero-swing {
+  from { opacity: 0; rotate: -22deg; }
+  45% { opacity: 1; rotate: 6deg; }
+}
 
 .sec-head {
     position: relative;
@@ -539,12 +697,12 @@ main > * + * { margin-top: 2rem; }
 
 
 /* ========== Soft Color Palette (icons and images) ========== */
-.cats li, .rail li, .offers__list li, .banners a { --t: var(--t1); }
-.cats li:nth-child(6n+2), .rail li:nth-child(6n+2), .offers__list li:nth-child(6n+2) { --t: var(--t2); }
-.cats li:nth-child(6n+3), .rail li:nth-child(6n+3), .offers__list li:nth-child(6n+3) { --t: var(--t3); }
-.cats li:nth-child(6n+4), .rail li:nth-child(6n+4), .offers__list li:nth-child(6n+4) { --t: var(--t4); }
-.cats li:nth-child(6n+5), .rail li:nth-child(6n+5), .offers__list li:nth-child(6n+5) { --t: var(--t5); }
-.cats li:nth-child(6n+6), .rail li:nth-child(6n+6), .offers__list li:nth-child(6n+6) { --t: var(--t6); }
+.rail li, .offers__list li, .banners a { --t: var(--t1); }
+.rail li:nth-child(6n+2), .offers__list li:nth-child(6n+2) { --t: var(--t2); }
+.rail li:nth-child(6n+3), .offers__list li:nth-child(6n+3) { --t: var(--t3); }
+.rail li:nth-child(6n+4), .offers__list li:nth-child(6n+4) { --t: var(--t4); }
+.rail li:nth-child(6n+5), .offers__list li:nth-child(6n+5) { --t: var(--t5); }
+.rail li:nth-child(6n+6), .offers__list li:nth-child(6n+6) { --t: var(--t6); }
 
 .cats {
     display: grid;
@@ -558,9 +716,9 @@ main > * + * { margin-top: 2rem; }
   display: grid;
   justify-items: center;
   align-content: center;
-  gap: .4rem;
-  min-height: 5.75rem;
-  padding: .75rem .25rem;
+  gap: .5rem;
+  min-height: 7.25rem;
+  padding: .875rem .25rem;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
@@ -569,17 +727,12 @@ main > * + * { margin-top: 2rem; }
   text-align: center;
 }
 
-.ico {
-    display: grid;
-    place-items: center;
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 50%;
-    background: var(--t);
-    color: var(--brand-ink);
+.cat__icon {
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
 }
-
-.ico .icon { width: 1.5rem; height: 1.5rem; }
 
 
 
@@ -1017,17 +1170,45 @@ main > * + * { margin-top: 2rem; }
   .search { grid-area: auto; flex: 1; max-width: 32rem; margin-inline: auto; padding-block-end: 0; }
   .cart-txt { display: inline; }
   .banners { grid-template-columns: 1fr 1fr; }
+
+  /* Hero: copy beside the stage, promo becomes a wide row */
+  .hero__feature {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.75rem 2rem 0;
+  }
+  .hero__copy { padding-bottom: 1.75rem; }
+  .hero__stage { align-self: end; margin-inline: 0; margin-left: -6%; margin-bottom: -1rem; max-width: 20rem; }
+  .hero__headline { font-size: 2.25rem; }
+  .hero__promo {
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem 2rem;
+  }
+  .hero__promo-art { width: 62%; margin-inline: auto; }
 }
 @media (min-width: 48rem) {
   :root { --card-w: 11.5rem; }
-  .hero { grid-template-columns: 2fr 1fr; }
-  .hero-main { min-height: 16rem; padding: 2rem; }
   .cats { grid-template-columns: repeat(6, 1fr); }
+  .cat { min-height: 8rem; gap: .625rem; }
+  .cat__icon { width: 4.25rem; height: 4.25rem; }
   .foot-grid { grid-template-columns: 1fr 1fr; }
 }
 
 /* ========== Desktop ========== */
 @media (min-width: 60rem) {
+  .hero { grid-template-columns: 3fr 1fr; }
+  .hero__feature { grid-template-columns: 1fr 1fr; padding: 2rem 1.5rem 0 3rem; gap: .5rem; }
+  .hero__stage { margin-left: 0; margin-bottom: -1.5rem; max-width: 23rem; }
+  .hero__copy { padding-bottom: 2rem; }
+  .hero__headline { font-size: clamp(2.25rem, 3.4vw, 2.75rem); }
+  .hero__lead { font-size: 1rem; margin-block: .75rem 1.25rem; }
+  .hero__promo {
+    grid-template-columns: 1fr;
+    align-content: space-between;
+    padding: 2.25rem 1.75rem 0;
+  }
+  .hero__promo-art { width: 122%; max-width: none; margin-inline: -11%; margin-bottom: -.75rem; }
   :root {
     --gutter: 1.5rem;
     --card-w: 12.25rem;
