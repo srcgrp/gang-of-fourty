@@ -478,7 +478,7 @@ main > * + * { margin-top: 2rem; }
 
 .hero__actions .btn { min-height: 2.75rem; padding-inline: 1rem; font-size: .9375rem; }
 
-/* Stage: produce rising from the bottom edge of the panel */
+/* ========== Hero Stage ========== */
 .hero__stage {
   position: relative;
   width: 100%;
