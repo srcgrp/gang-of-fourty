@@ -2,7 +2,6 @@
 
 
 * { 
-  outline: 1px solid red;
   box-sizing: border-box;
  }
 
@@ -34,4 +33,90 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding-inline: 10px;
+  background-color: var(--color-surface);
+}
+
+.logo-img {
+  width: 40px;
+}
+
+.title {
+  flex-grow: 1;
+  margin: 0;
+}
+.title h1 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  
+}
+.title p {
+  color: var(--color-text-muted);
+  font-size: .75rem;
+  margin: 0;
+}
+
+.cart {
+  background-color: var(--tint-green);
+  padding-inline: 0.5rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 24px;
+}
+
+.product-counter {
+  font-size:.75rem;
+  color: white;
+  background-color: var(--color-sale);
+  padding-inline: 0.5rem;
+  border-radius: 10rem;
+}
+
+
+.navbar {
+  display: none;
+  
+}
+
+#hamburger-menu:checked ~ .navbar { display: block; }
+#hamburger-menu:focus-visible ~ .header-row .menu-button {
+  outline: 2px solid var(--color-primary);
+}
+
+.visually-hidden {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  color: var(--color-text);
+  cursor: pointer;
+  border: 0.5px solid var(--color-text-muted);
+  border-radius: 5px;
+}
+
+.search-bar {
+  display: none;
 }

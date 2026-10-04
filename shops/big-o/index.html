@@ -12,49 +12,58 @@
 <body>
   <a href="#main-content" >پرش به محتوای اصلی</a>
   <header>
-    <div>
+    <div class="announcement">
       <img src="./assets/icons/delivery-icon.svg" alt=""/>
       <p>ارسال رایگان برای خریدهای بالای ۵۰۰ هزار تومان</p>
     </div>
-    <a href="#">
-      <img src="./assets/logo.svg" alt="سوپر مارکت نمونه">
-    </a>
-    <div class="title">
-      <h1>سوپر مارکت نمونه</h1>
-      <p>تازه، نزدیک، به صرفه</p>
+    <input
+      type="checkbox"
+      id="hamburger-menu"
+      class="visually-hidden"
+      />
+    <div class="header-row">
+      <a href="#">
+      <img src="./assets/logo.svg" alt="سوپر مارکت نمونه" class="logo-img">
+      </a>
+      <div class="title">
+        <h1>سوپر مارکت نمونه</h1>
+        <p>تازه، نزدیک، به صرفه</p>
+      </div>
+      <form class="search-bar">
+        <label for="search" class="visually-hidden">جستجو در محصولات</label>
+        <input
+        type="search"
+        id="search"
+        name="search"
+        placeholder="جستجو در میان ۲۰۰۰ کالا..."
+        >
+      </form>
+      
+      <a class="cart" href="#">
+        <span class="visually-hidden">سبد خرید</span>
+        <img src="./assets/icons/cart.svg" alt=""/>
+        <span class="product-counter">۳</span> 
+      </a>
+      <label for="hamburger-menu" class="menu-button">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="6" x2="20" y2="6" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="18" x2="20" y2="18" />
+        </svg>
+        <span class="visually-hidden">منو</span>
+      </label>
+      
     </div>
-    <form class="search-bar">
-      <label for="search">جستجو در محصولات</label>
-      <input
-      type="search"
-      id="search"
-      name="search"
-      placeholder="جستجو در میان ۲۰۰۰ کالا..."
-      >
-    </form>
-    
-    <a class="cart" href="#">
-      سبد خرید
-    </a>
-    
     <nav class="navbar">
-      <details>
-        <summary>همه دسته‌ها</summary>
-        <ul>
-          <li><a href="#">میوه و سبزی</a></li>
-          <li><a href="#dairy">لبنیات</a></li>
-          <li><a href="#">نان و شیرینی</a></li>
-          <li><a href="#">پروتئین</a></li>
-          <li><a href="#">نوشیدنی</a></li>
-          <li><a href="#">تنقلات</a></li>
-        </ul>
-      </details>
-      <a href="#special-products">پیشنهاد ویژه</a> 
-      <a href="#">میوه و سبزی</a> 
-      <a href="#dairy">لبنیات</a>
-      <a href="#">نان تازه</a> 
-      <a href="#">تماس با ما</a>
-    </nav> 
+        <a href="#">همه دسته ها |||</a>
+        <a href="#special-products">پیشنهاد ویژه</a> 
+        <a href="#">میوه و سبزی</a> 
+        <a href="#dairy">لبنیات</a>
+        <a href="#">نان تازه</a> 
+        <a href="#">تماس با ما</a>
+      </nav> 
+    
   </header>
   <main id="main-content"> 
 
