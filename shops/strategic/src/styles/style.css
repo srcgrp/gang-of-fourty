@@ -151,8 +151,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 .icon--mirror:dir(rtl) { transform: scaleX(-1); }
 
-.icon--cat { color: var(--brand); }
-
 
 /* ========== Header ========== */
 .header-banner {
@@ -734,6 +732,11 @@ main > * + * { margin-top: 2rem; }
   object-fit: contain;
 }
 
+/* Same artwork, smaller: next to shelf titles and in the mega menu */
+.cat__icon--head { width: 2rem; height: 2rem; flex: none; }
+
+.cat__icon--menu { width: 2rem; height: 2rem; flex: none; }
+
 
 
 .shelf:target h2:dir(ltr)::after, #categories:target h2:dir(ltr)::after {
@@ -1253,7 +1256,7 @@ main > * + * { margin-top: 2rem; }
   :root { --card-w: 11.5rem; }
   .cats { grid-template-columns: repeat(6, 1fr); }
   .cat { min-height: 8rem; gap: .625rem; }
-  .cat__icon { width: 4.25rem; height: 4.25rem; }
+  .cat .cat__icon { width: 4.25rem; height: 4.25rem; }
   .foot-grid { grid-template-columns: 1fr 1fr; }
 }
 
