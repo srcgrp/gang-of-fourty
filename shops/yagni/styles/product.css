@@ -133,7 +133,7 @@
     flex-basis: 200px;
   }
   .product-thumb {
-    height: 170px;
+    height: 180px;
   }
   .product-thumb img {
     padding: 15px;
@@ -141,11 +141,10 @@
 }
 @media (max-width: 600px) {
   .product-card {
-    min-height: 0;
+    flex-basis: 150px;
   }
-
   .product-thumb {
-    height: 125px;
+    height: 140px;
   }
   .product-thumb img {
     padding: 12px;
@@ -179,7 +178,7 @@
     flex-basis: 150px;
   }
   .product-thumb {
-    height: 130px;
+    height: 140px;
   }
   .product-thumb img {
     padding: 10px;

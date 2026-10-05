@@ -23,10 +23,10 @@
             </svg>
           </span>
 
-          <span class="header__brand">
-            <strong>یاگنی</strong>
+          <div class="header__brand">
+            <h1>یاگنی</h1>
             <small>خرید تازه، زندگی بهتر</small>
-          </span>
+          </div>
         </a>
 
         <!-- Search -->
@@ -53,7 +53,7 @@
         <!-- Header Actions -->
         <div>
           <!-- Cart -->
-          <a href="/cart" class="header__cart">
+          <a href="/#" class="header__cart">
             <span class="header__cart-icon">
               <svg>
                 <use href="./sprite.svg#basket"></use>
@@ -76,7 +76,7 @@
 
       <div class="navbar-inner">
         <!-- Mobile menu button -->
-        <label for="nav-toggle" class="burger-btn" aria-label="باز کردن منو">
+        <label for="nav-toggle" class="burger-btn">
           <svg class="burger-icon burger-icon--open" aria-hidden="true">
             <use href="./sprite.svg#hamburger-menu"></use>
           </svg>
@@ -158,7 +158,7 @@
             </li>
 
             <li>
-              <a href="#" class="nav-link">پیشنهاد ویژه</a>
+              <a href="#suggestions" class="nav-link">پیشنهاد ویژه</a>
             </li>
 
             <li>
@@ -166,7 +166,7 @@
             </li>
 
             <li>
-              <a href="#" class="nav-link">لبنیات</a>
+              <a href="#dairy" class="nav-link">لبنیات</a>
             </li>
 
             <li>
@@ -254,7 +254,7 @@
           <a href="#" class="category-card">
             <span class="category-card__image">
               <img
-                src="./images/category/canned-food.webp"
+                src="images/category/canned-food.webp"
                 alt="کنسرو و غذای آماده"
               />
             </span>
@@ -263,52 +263,49 @@
 
           <a href="#" class="category-card">
             <span class="category-card__image">
-              <img
-                src="./images/category/cleaning.webp"
-                alt="شوینده و بهداشتی"
-              />
+              <img src="images/category/cleaning.webp" alt="شوینده و بهداشتی" />
             </span>
             <span class="category-card__title"> شوینده و بهداشتی </span>
           </a>
 
           <a href="#" class="category-card">
             <span class="category-card__image">
-              <img src="./images/category/snacks.webp" alt="تنقلات" />
+              <img src="images/category/snacks.webp" alt="تنقلات" />
             </span>
             <span class="category-card__title"> تنقلات </span>
           </a>
 
           <a href="#" class="category-card">
             <span class="category-card__image">
-              <img src="./images/category/drinks.webp" alt="نوشیدنی" />
+              <img src="images/category/drinks.webp" alt="نوشیدنی" />
             </span>
             <span class="category-card__title"> نوشیدنی </span>
           </a>
 
           <a href="#" class="category-card">
             <span class="category-card__image">
-              <img src="./images/category/bakery.webp" alt="نان و شیرینی" />
+              <img src="images/category/bakery.webp" alt="نان و شیرینی" />
             </span>
             <span class="category-card__title"> نان و شیرینی </span>
           </a>
 
           <a href="#" class="category-card">
             <span class="category-card__image">
-              <img src="./images/category/protein.webp" alt="پروتئین" />
+              <img src="images/category/protein.webp" alt="پروتئین" />
             </span>
             <span class="category-card__title"> پروتئین </span>
           </a>
 
           <a href="#" class="category-card">
             <span class="category-card__image">
-              <img src="./images/category/dairy.webp" alt="لبنیات" />
+              <img src="images/category/dairy.webp" alt="لبنیات" />
             </span>
             <span class="category-card__title"> لبنیات </span>
           </a>
 
           <a href="#" class="category-card">
             <span class="category-card__image">
-              <img src="./images/category/fruits.webp" alt="میوه و سبزی" />
+              <img src="images/category/fruits.webp" alt="میوه و سبزی" />
             </span>
             <span class="category-card__title"> میوه و سبزی </span>
           </a>
@@ -321,27 +318,34 @@
             <span>پیشنهاد ویژه امروز</span>
             <span aria-hidden="true">🔥</span>
           </h2>
+
           <div class="nav-controls">
-            <button class="nav-btn" type="button" aria-label="قبلی">
+            <!-- Go to start -->
+            <a
+              href="#carousel-start"
+              class="nav-btn"
+              aria-label="ابتدای محصولات"
+            >
               <svg aria-hidden="true">
                 <use href="./sprite.svg#chevron-right"></use>
               </svg>
-            </button>
+            </a>
 
-            <button class="nav-btn" type="button" aria-label="بعدی">
+            <!-- Go to end -->
+            <a href="#carousel-end" class="nav-btn" aria-label="انتهای محصولات">
               <svg aria-hidden="true">
                 <use href="./sprite.svg#chevron-left"></use>
               </svg>
-            </button>
+            </a>
           </div>
         </div>
 
         <div class="carousel-track">
           <!-- Product 1 -->
-          <article class="product-card">
+          <div class="product-card">
             <div class="product-thumb">
               <span class="badge-discount">۲۵٪</span>
-              <img src="./images/product/tomato.webp" alt="" />
+              <img src="images/product/tomato.webp" alt="" />
             </div>
 
             <div class="product-info">
@@ -354,17 +358,18 @@
                 <span class="old-price">۶۰,۰۰۰</span>
                 <span class="current-price">۴۵,۰۰۰ تومان</span>
               </div>
+
               <button class="add-btn" type="button" aria-label="افزودن به سبد">
                 +
               </button>
             </div>
-          </article>
+          </div>
 
           <!-- Product 2 -->
-          <article class="product-card">
+          <div class="product-card">
             <div class="product-thumb">
               <span class="badge-discount">۱۵٪</span>
-              <img src="./images/product/milk.webp" alt="" />
+              <img src="images/product/milk.webp" alt="" />
             </div>
 
             <div class="product-info">
@@ -377,16 +382,17 @@
                 <span class="old-price">۴۰,۰۰۰</span>
                 <span class="current-price">۳۴,۰۰۰ تومان</span>
               </div>
+
               <button class="add-btn" type="button" aria-label="افزودن به سبد">
                 +
               </button>
             </div>
-          </article>
+          </div>
 
           <!-- Product 3 -->
-          <article class="product-card">
+          <div class="product-card">
             <div class="product-thumb">
-              <img src="./images/product/banana.webp" alt="" />
+              <img src="images/product/banana.webp" alt="" />
             </div>
 
             <div class="product-info">
@@ -398,17 +404,18 @@
               <div class="product-pricing">
                 <span class="current-price">۹۸,۰۰۰ تومان</span>
               </div>
+
               <button class="add-btn" type="button" aria-label="افزودن به سبد">
                 +
               </button>
             </div>
-          </article>
+          </div>
 
           <!-- Product 4 -->
-          <article class="product-card">
+          <div class="product-card">
             <div class="product-thumb">
               <span class="badge-discount">۳۰٪</span>
-              <img src="./images/product/cucamber.webp" alt="" />
+              <img src="images/product/cucamber.webp" alt="" />
             </div>
 
             <div class="product-info">
@@ -421,16 +428,17 @@
                 <span class="old-price">۵۰,۰۰۰</span>
                 <span class="current-price">۳۵,۰۰۰ تومان</span>
               </div>
+
               <button class="add-btn" type="button" aria-label="افزودن به سبد">
                 +
               </button>
             </div>
-          </article>
+          </div>
 
           <!-- Product 5 -->
-          <article class="product-card">
+          <div class="product-card">
             <div class="product-thumb">
-              <img src="./images/product/hen.webp" alt="" />
+              <img src="images/product/hen.webp" alt="" />
             </div>
 
             <div class="product-info">
@@ -442,15 +450,17 @@
               <div class="product-pricing">
                 <span class="current-price">۲۱۰,۰۰۰ تومان</span>
               </div>
+
               <button class="add-btn" type="button" aria-label="افزودن به سبد">
                 +
               </button>
             </div>
-          </article>
+          </div>
+
           <!-- Product 6 -->
-          <article class="product-card">
+          <div class="product-card">
             <div class="product-thumb">
-              <img src="./images/product/orange-juice.webp" alt="" />
+              <img src="images/product/orange-juice.webp" alt="" />
             </div>
 
             <div class="product-info">
@@ -462,21 +472,22 @@
               <div class="product-pricing">
                 <span class="current-price">۵۰,۰۰۰ تومان</span>
               </div>
+
               <button class="add-btn" type="button" aria-label="افزودن به سبد">
                 +
               </button>
             </div>
-          </article>
+          </div>
         </div>
       </section>
       <!-- Advertisement -->
       <section
         class="advertisement anchor-section"
-        id="advertisement"
+        id="advertisement-1"
         aria-label="تبلیغات"
       >
         <a href="#">
-          <img src="./images/ad/Advertisement-1.png" alt="پیشنهاد ویژه یانگی" />
+          <img src="images/ad/Advertisemnet-1.png" alt="پیشنهاد ویژه یانگی" />
         </a>
       </section>
       <!-- dairy -->
@@ -503,10 +514,10 @@
 
         <div class="carousel-track">
           <!-- Product 1 -->
-          <article class="product-card">
+          <div class="product-card">
             <div class="product-thumb">
               <span class="badge-discount">۲۰٪</span>
-              <img src="./images/dairy/milk.webp" alt="" />
+              <img src="images/dairy/milk.webp" alt="" />
             </div>
             <div class="product-info">
               <span class="product-name">شیر کم‌چرب</span>
@@ -521,12 +532,12 @@
                 +
               </button>
             </div>
-          </article>
+          </div>
           <!-- Product 2 -->
-          <article class="product-card">
+          <div class="product-card">
             <div class="product-thumb">
               <span class="badge-discount">۱۵٪</span>
-              <img src="./images/dairy/yogurt.webp" alt="" />
+              <img src="images/dairy/yogurt.webp" alt="" />
             </div>
             <div class="product-info">
               <span class="product-name">ماست پرچرب</span>
@@ -541,11 +552,11 @@
                 +
               </button>
             </div>
-          </article>
+          </div>
           <!-- Product 3 -->
-          <article class="product-card">
+          <div class="product-card">
             <div class="product-thumb">
-              <img src="./images/dairy/cheese.webp" alt="" />
+              <img src="images/dairy/cheese.webp" alt="" />
             </div>
             <div class="product-info">
               <span class="product-name">پنیر سفید</span>
@@ -559,12 +570,12 @@
                 +
               </button>
             </div>
-          </article>
+          </div>
           <!-- Product 4 -->
-          <article class="product-card">
+          <div class="product-card">
             <div class="product-thumb">
               <span class="badge-discount">۲۵٪</span>
-              <img src="./images/dairy/butter.webp" alt="" />
+              <img src="images/dairy/butter.webp" alt="" />
             </div>
             <div class="product-info">
               <span class="product-name">کره پاستوریزه</span>
@@ -579,11 +590,11 @@
                 +
               </button>
             </div>
-          </article>
+          </div>
           <!-- Product 5 -->
-          <article class="product-card">
+          <div class="product-card">
             <div class="product-thumb">
-              <img src="./images/dairy/cream.webp" alt="" />
+              <img src="images/dairy/cream.webp" alt="" />
             </div>
             <div class="product-info">
               <span class="product-name">خامه صبحانه</span>
@@ -597,12 +608,12 @@
                 +
               </button>
             </div>
-          </article>
+          </div>
           <!-- Product 6 -->
-          <article class="product-card">
+          <div class="product-card">
             <div class="product-thumb">
               <span class="badge-discount">۱۰٪</span>
-              <img src="./images/dairy/doogh.webp" alt="" />
+              <img src="images/dairy/doogh.webp" alt="" />
             </div>
             <div class="product-info">
               <span class="product-name">دوغ نعناعی</span>
@@ -617,17 +628,17 @@
                 +
               </button>
             </div>
-          </article>
+          </div>
         </div>
       </section>
       <!-- Advertisement -->
       <section
         class="advertisement anchor-section"
-        id="advertisement"
+        id="advertisement-2"
         aria-label="تبلیغات"
       >
         <a href="#">
-          <img src="./images/ad/Advertisemnet-2.png" alt="پیشنهاد ویژه یانگی" />
+          <img src="images/ad/Advertisemnet-2.png" alt="پیشنهاد ویژه یانگی" />
         </a>
       </section>
       <!-- Support -->

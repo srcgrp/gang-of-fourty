@@ -129,22 +129,13 @@
 .carousel-track > * {
   direction: ltr;
 
-  /*
-   * Prevent cards from shrinking.
-   */
   flex-shrink: 0;
 }
 
-/*
- * Snap cards into position.
- */
 .carousel-track > * {
   scroll-snap-align: start;
 }
 
-/*
- * Keyboard users can focus the carousel.
- */
 .carousel-track:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 4px;
