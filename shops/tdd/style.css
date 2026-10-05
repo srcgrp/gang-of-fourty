@@ -1,25 +1,196 @@
-/* Your shop's styles. Week 1: make it yours! */
+:root {
+  color-scheme: light;
+  --ink: #17322a;
+  --paper: #fffdf8;
+  --green: #174b3a;
+  --line: #dfe4dc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+}
+
 body {
-  font-family: Vazirmatn, Tahoma, sans-serif;
   margin: 0;
-  padding: 1rem;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Tahoma, Arial, sans-serif;
   line-height: 1.8;
-  background: #f7faf5;
-  color: #1f2a1c;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+svg {
   display: block;
+  max-width: 100%;
 }
 
-h1 {
-  color: #2e7d32;
+:focus-visible {
+  outline: 3px solid #f0a340;
+  outline-offset: 4px;
 }
 
-img {
-  display: inline;
+.skip-link {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  padding: .6rem 1rem;
+  color: white;
+  background: #101d18;
+  transform: translateY(-180%);
+}
 
-  margin-right: auto;
-  margin-left: auto;
+.skip-link:focus {
+  transform: translateY(0);
+}
 
-  padding: 20px;
-  height: 200px;
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
 
+.announcement {
+  margin: 0;
+  padding: .35rem 1rem;
+  color: white;
+  background: var(--green);
+  text-align: center;
+}
+
+.header-content,
+.primary-navigation,
+main,
+footer {
+  width: min(100% - 2rem, 75rem);
+  margin-inline: auto;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  color: var(--green);
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 3rem;
+}
+
+.brand span {
+  display: grid;
+}
+
+.search {
+  display: flex;
+  align-items: end;
+  gap: .5rem;
+}
+
+.search label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.search input,
+.search button {
+  min-height: 2.75rem;
+  padding-inline: .8rem;
+  font: inherit;
+}
+
+.primary-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-block: .65rem;
+}
+
+main {
+  padding-block: 3rem 6rem;
+}
+
+main section {
+  padding-block: 3rem;
+}
+
+.hero {
+  min-height: 25rem;
+}
+
+.hero h1 {
+  max-width: 15ch;
+  margin-block: .5rem;
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  line-height: 1.2;
+}
+
+.eyebrow {
+  color: #28795a;
+}
+
+footer {
+  padding-block: 3rem;
+  border-top: 1px solid var(--line);
+}
+
+footer address {
+  font-style: normal;
+}
+
+footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-block: 2rem;
+}
+
+@media (max-width: 45rem) {
+  .header-content {
+    flex-wrap: wrap;
+  }
+
+  .search {
+    order: 3;
+    width: 100%;
+  }
+
+  .search input {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .primary-navigation {
+    justify-content: start;
+    overflow-x: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

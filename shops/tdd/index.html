@@ -3,50 +3,94 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>سوپرمارکت TDD</title>
-  <!-- Week 1: put YOUR name here to claim this shop. The landing page shows it. -->
   <meta name="author" content="Sam">
-  <meta name="description" content="به‌زودی: بهترین میوه و سبزی محله!">
+  <meta name="description" content="تازه‌بار؛ سوپرمارکت آنلاین محصولات تازه و روزمره با ارسال سریع.">
+  <meta name="theme-color" content="#174b3a">
+  <title>تازه‌بار | خرید روزانه، تازه‌تر از همیشه</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <a href="../../index.html">→ بازگشت به دار و دسته چهل‌نفره</a>
-    <h1>✅ سلام دنیا!</h1>
+<body id="top">
+  <a class="skip-link" href="#main-content">پرش به محتوای اصلی</a>
+
+  <header class="site-header">
+    <p class="announcement">ارسال رایگان برای خریدهای بالای ۵۰۰ هزار تومان</p>
+
+    <div class="header-content">
+      <a class="brand" href="#top" aria-label="تازه‌بار؛ بازگشت به بالای صفحه">
+        <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-labelledby="logo-title logo-description">
+          <title id="logo-title">لوگوی تازه‌بار</title>
+          <desc id="logo-description">سبدی پر از برگ‌های تازه</desc>
+          <path d="M14 27h36l-4 24H18L14 27Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M23 27c1-9 7-15 16-17-1 9-7 15-16 17Z" fill="currentColor"/>
+          <path d="M39 12c5 2 8 6 9 12-6 0-10-3-12-8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          <path d="M25 36v7M32 36v7M39 36v7" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span>
+          <strong>تازه‌بار</strong>
+          <small>هر روز، تازه و نزدیک</small>
+        </span>
+      </a>
+
+      <form class="search" role="search" action="#main-content">
+        <label for="site-search">جست‌وجوی محصولات</label>
+        <input id="site-search" name="q" type="search" placeholder="دنبال چه محصولی هستید؟">
+        <button type="submit">جست‌وجو</button>
+      </form>
+
+      <a class="cart" href="#main-content" aria-label="سبد خرید، ۲ کالا">
+        سبد خرید <strong>۲</strong>
+      </a>
+    </div>
+
+    <nav class="primary-navigation" aria-label="منوی اصلی">
+      <a href="#special-offers">پیشنهادهای ویژه</a>
+      <a href="#categories">دسته‌بندی‌ها</a>
+      <a href="#about">درباره تازه‌بار</a>
+      <a href="#contact">تماس با ما</a>
+    </nav>
   </header>
-  <main>
-    <p>اینجا سوپرمارکت <strong>TDD</strong> است. به‌زودی باز می‌شود.</p>
-    <section>
-      <h2>این اسم یعنی چه؟</h2>
-      <p><bdi>Test-Driven Development</bdi> یعنی «توسعه تست‌محور». کنت بک آن را معرفی کرد. چرخه‌اش سه قدم دارد: قرمز (اول تستی بنویس که شکست بخورد)، سبز (کمترین کد را بنویس تا تست پاس شود)، ریفکتور (کد را تمیز کن).</p>
-      <!-- Your turn: add what YOU found about this name, in your own words. -->
+
+  <main id="main-content" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">از مزرعه تا خانه، بی‌واسطه</p>
+      <h1 id="hero-title">حال خوب، از یک سبد تازه شروع می‌شود.</h1>
+      <p>محصولات روز را با انتخاب دقیق، بسته‌بندی دوست‌دار زمین و ارسال سریع به دستتان می‌رسانیم.</p>
+      <a href="#special-offers">مشاهده محصولات تازه</a>
     </section>
 
-    <section>
-      
-      <h2>
-        تازه ترین میوه های پاییزی
-      </h2>
+    <section id="special-offers" aria-labelledby="offers-title">
+      <h2 id="offers-title">پیشنهادهای ویژه</h2>
+      <p>محصولات منتخب امروز در مرحله بعد به این بخش اضافه می‌شوند.</p>
+    </section>
 
+    <section id="categories" aria-labelledby="categories-title">
+      <h2 id="categories-title">دسته‌بندی‌ها</h2>
+      <p>دسته‌بندی‌های فروشگاه در مرحله بعد تکمیل می‌شوند.</p>
+    </section>
 
-      <img src="1.jpg">
-      <img src="2.jpg">
-
-      <h3>
-        نارنگی رسیده و آبدار
-      </h3>
-
-      <p>
-        قیمت: 100 هزار تومان برای هر کیلوگرم
-      </p>
-
-      <button>
-        افزودن به سبد خرید
-      </button>
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">درباره تازه‌بار</h2>
+      <p>با تولیدکننده‌های محلی همکاری می‌کنیم تا محصولات تازه با کمترین فاصله به خانه شما برسند.</p>
     </section>
   </main>
-  <footer>
-    <p dir="ltr">slug: <code>tdd</code></p>
+
+  <footer id="contact">
+    <section aria-labelledby="footer-about">
+      <h2 id="footer-about">تازه‌بار</h2>
+      <p>بازار آنلاین محصولات روز؛ تازه، مسئولانه و نزدیک به شما.</p>
+      <address>
+        تهران، خیابان بهار، پلاک ۲۰<br>
+        <a dir="ltr" href="tel:+982188887777">۰۲۱-۸۸۸۸۷۷۷۷</a>
+      </address>
+    </section>
+
+    <nav aria-label="پیوندهای پایین صفحه">
+      <a href="#categories">دسته‌بندی‌ها</a>
+      <a href="#about">درباره ما</a>
+      <a href="#top">بازگشت به بالا</a>
+    </nav>
+
+    <p>© ۱۴۰۵ تازه‌بار؛ با احترام به زمین و سفره شما.</p>
   </footer>
 </body>
 </html>
