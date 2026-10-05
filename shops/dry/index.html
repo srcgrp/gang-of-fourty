@@ -12,6 +12,7 @@
 
 <body>
 
+  <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
   <header class="header"> 
 
     <div class="brand">
@@ -46,6 +47,8 @@
   </nav>
 
   <section class="hero">
+    <img class="hero-bg" src="./assets/banners/Hero-image.png" alt="محصولات MARTO">
+
     <div class="hero-content">
       <h1>
         محصولات تازه
@@ -61,10 +64,6 @@
         مشاهده محصولات
       </button>
 
-    </div>
-
-    <div class="hero-image">
-      <img src="./assets/marto-logo.svg" alt="محصولات MARTO">
     </div>
     
   </section>
@@ -111,15 +110,21 @@
 
 
 
-  <main>
+  <main id="main">
 
 <section class="products">
 
+  <div class="section-title">
   <h2>پیشنهادهای ویژه</h2>
+  <div class="carousel-nav">
+    <a href="#offer-1" aria-label="ابتدای کاروسل">→</a>
+    <a href="#offer-6" aria-label="انتهای کاروسل">←</a>
+  </div>
+</div>
 
-  <div class="product-grid">
+  <div class="carousel" role="region" aria-label="پیشنهادهای ویژه" tabindex="0">
 
-    <div class="product-card">
+    <div class="product-card" id="offer-1">
 
       <span class="discount">20%</span>
 
@@ -140,7 +145,7 @@
 
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="offer-2">
 
       <span class="discount">15%</span>
 
@@ -161,7 +166,7 @@
 
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="offer-3">
 
       <span class="discount">10%</span>
 
@@ -182,7 +187,7 @@
 
     </div>
 
-    <div class="product-card">
+    <div class="product-card" id="offer-4">
 
       <span class="discount">5%</span>
 
@@ -197,6 +202,48 @@
       <div class="price">
         <span class="old-price">1,500,000 تومان</span>
         <span>1,350,000 تومان</span>
+      </div>
+
+      <button class="add-btn">+</button>
+
+    </div>
+
+  <div class="product-card" id="offer-5">
+
+      <span class="discount">5%</span>
+
+      <button class="favorite">♡</button>
+
+      <img src="./assets/products/honey.png" alt="عسل طبیعی">
+
+      <h3>عسل طبیعی</h3>
+
+      <p class="product-brand">پروتئینی مارتو</p>
+
+      <div class="price">
+        <span class="old-price">1,000,000 تومان</span>
+        <span>800,000 تومان</span>
+      </div>
+
+      <button class="add-btn">+</button>
+
+    </div>
+
+        <div class="product-card" id="offer-6">
+
+      <span class="discount">5%</span>
+
+      <button class="favorite">♡</button>
+
+      <img src="./assets/products/orange.png" alt="پرتقال تامسون">
+
+      <h3>پرتقال تامسون</h3>
+
+      <p class="product-brand">پروتئینی مارتو</p>
+
+      <div class="price">
+        <span class="old-price">350,000 تومان</span>
+        <span>210,000 تومان</span>
       </div>
 
       <button class="add-btn">+</button>
@@ -242,7 +289,9 @@
 
     <article class="blog-card">
 
-      <div class="blog-image"></div>
+      <div class="blog-image">
+        <img src="./assets/banners/ghazaye-salem.png" alt="غذای سالم">
+      </div>
 
       <h3>۱۰ دستور پخت سریع و سالم</h3>
 
@@ -254,7 +303,9 @@
 
     <article class="blog-card">
 
-      <div class="blog-image"></div>
+      <div class="blog-image">
+        <img src="./assets/banners/morgh-gril.png" alt="مرغ گریل شده">
+      </div>
 
       <h3>طرز تهیه مرغ گریل شده</h3>
 
@@ -266,7 +317,9 @@
 
     <article class="blog-card">
 
-      <div class="blog-image"></div>
+      <div class="blog-image">
+        <img src="./assets/banners/ghazaye-khanevade.png" alt="غذای مناسب خانواده">
+      </div>
 
       <h3>غذاهای مناسب خانواده</h3>
 
