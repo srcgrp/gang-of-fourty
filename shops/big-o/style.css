@@ -13,7 +13,7 @@
   --color-primary: rgb(69 123 83);
   --color-footer-bg: rgb(33 42 32);
   --color-primary-soft  : rgb(230 241 232);
-  --color-surface: rgb(255 255 255);
+  --color-surface: rgb(255, 255, 255);
   --color-page-bg: rgb(251 248 242);
   --tint-red: rgb(249 228 221);
   --tint-blue: rgb(228 238 251);
@@ -98,7 +98,7 @@ img {
 }
 .title p {
   color: var(--color-text-muted);
-  font-size: .75rem;
+  font-size: 0.75rem;
   margin: 0;
 }
 
@@ -259,6 +259,38 @@ main {
 }
 
 
+.categories h2 {
+  font-size: 1rem;
+}
+.categories ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr); 
+  gap: 0.5rem;
+}
+
+.category-item a{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-surface);
+  padding: 2px;
+  color: inherit;
+  border: 1px solid rgb(236, 230, 230);
+  border-radius: 0.9rem;
+  height: 100%;
+}
+
+.category-item h3 {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+
 
 
 
@@ -274,7 +306,7 @@ footer {
 }
 
 footer h2 {
-  font-size: 0.875rem;
+  font-size: 1rem;
   margin: 0;
   color: aliceblue;
 }
