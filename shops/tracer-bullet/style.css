@@ -925,7 +925,7 @@ button:disabled {
   margin-block-start: 0;
 }
 
-/* ===== fluid font sizes (logo and footer) ===== */
+/* fluid font sizes (logo and footer) */
 
 /* logo name: 15px at 320px wide, growing to 20px at 480px and up */
 .logo-text {
