@@ -3,7 +3,7 @@
   flex: 0 0 220px;
   display: flex;
   flex-direction: column;
-  /* min-height: 320px; */
+
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: 18px;
@@ -21,7 +21,6 @@
 } /* ======================================== Product Image ======================================== */
 .product-thumb {
   position: relative;
-  /* height: 190px; */
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -33,7 +32,7 @@
   height: 100%;
   display: block;
   object-fit: contain;
-  padding: 18px;
+  padding: 5px;
   transition: transform 0.25s ease;
 }
 .product-card:hover .product-thumb img {
@@ -132,7 +131,6 @@
 @media (max-width: 900px) {
   .product-card {
     flex-basis: 200px;
-    /* min-height: 300px; */
   }
   .product-thumb {
     height: 170px;

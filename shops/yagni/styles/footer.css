@@ -259,6 +259,12 @@ a {
   .back-to-top {
     align-self: flex-end;
   }
+  .footer-col {
+    padding-inline: 10px;
+  }
+  .footer-links {
+    padding-inline: 10px;
+  }
 }
 
 @media (max-width: 430px) {
