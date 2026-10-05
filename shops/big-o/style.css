@@ -164,6 +164,11 @@ main {
   padding-block: 1rem;
 }
 
+.banner {
+  display: grid;
+  gap: 0.5rem;
+}
+
 .banner h2 {
   font-size: 1rem;
   margin: 0;
@@ -175,6 +180,11 @@ main {
   margin: 0;
 }
 
+.banner img {
+  max-width: 100%;
+  width: 60px;
+}
+
 .first-banner {
   color: aliceblue;
   background-color: var(--color-primary);
@@ -182,6 +192,7 @@ main {
   padding-block: 1rem;
   line-height: 1.3rem;
   border-radius: 15px;
+  
 }
 
 .first-banner p {
@@ -190,16 +201,29 @@ main {
   padding-block-start: 5px;
 }
 
-.first-banner button {
+
+.first-banner-link a {
   background-color: var(--color-accent);
   color: var(--color-text);
-  margin-block-start: 1rem;
+  margin-block-start: 0.5rem;
   border: none;
   border-radius: 50px;
   font-weight: bold;
   padding-inline: 10px;
   padding-block: 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: .75rem;
+  min-height: 24px;
 }
+
+.first-banner-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+
 
 .second-banner {
   color: var(--color-text);
@@ -215,17 +239,27 @@ main {
   padding-block-start: 5px;
 }
 
-.second-banner button {
-/*changing display of button to get the whole amount of its parent's width */
+.second-banner-link {
+  display: flex;
+  flex-direction: column;
+}
+.second-banner-link a {
   background-color: var(--color-primary);
   color: aliceblue;
-  margin-block-start: 1rem;
+  margin-block-start: 0.5rem;
   border: none;
   border-radius: 50px;
   font-weight: bold;
   padding-inline: 10px;
   padding-block: 5px;
+  text-decoration: none;
+  display: block;
+  font-size: .75rem;
+  min-height: 24px;
 }
+
+
+
 
 
 
