@@ -137,6 +137,24 @@ main section {
   padding-block: 3rem;
 }
 
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading h2,
+.story h2 {
+  margin: 0;
+  font-size: clamp(1.7rem, 4vw, 2.7rem);
+}
+
+.section-heading p {
+  margin-block: 0;
+}
+
 .hero {
   min-height: 25rem;
 }
@@ -150,6 +168,115 @@ main section {
 
 .eyebrow {
   color: #28795a;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: .8rem;
+}
+
+.category-grid a {
+  display: grid;
+  justify-items: center;
+  padding: 1.25rem .5rem;
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+}
+
+.category-grid span {
+  font-size: 2rem;
+}
+
+.category-grid small {
+  color: #64766f;
+}
+
+.promo-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 1rem;
+}
+
+.promo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 12rem;
+  padding: 2rem;
+  border-radius: 1.5rem;
+}
+
+.promo h2,
+.promo p {
+  margin-block: .25rem;
+}
+
+.promo > span {
+  font-size: 5rem;
+}
+
+.promo-primary {
+  color: white;
+  background: var(--green);
+}
+
+.promo-secondary {
+  background: #f5d7a8;
+}
+
+.story {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.story-image {
+  position: relative;
+}
+
+.story-image img {
+  width: 100%;
+  min-height: 20rem;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.story-image span {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  padding: .4rem .8rem;
+  color: white;
+  background: var(--green);
+  border-radius: 999px;
+}
+
+.store-sections {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.store-sections article {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+}
+
+.store-sections article > span {
+  font-size: 2rem;
+}
+
+.store-sections h2,
+.store-sections p {
+  margin: 0;
 }
 
 footer {
@@ -186,6 +313,28 @@ footer nav {
   .primary-navigation {
     justify-content: start;
     overflow-x: auto;
+  }
+
+  .section-heading {
+    align-items: start;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .promo-grid,
+  .story,
+  .store-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .store-sections article {
+    grid-template-columns: auto 1fr;
+  }
+
+  .store-sections article > a {
+    grid-column: 2;
   }
 }
 
