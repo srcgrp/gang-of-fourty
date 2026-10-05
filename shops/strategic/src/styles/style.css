@@ -1,6 +1,7 @@
 /* Amirhossein (Armin) Panahi */
 /* Week 1 - Strategic Supermarket */
 
+
 /* ========== Font (Vazirmatn) ========== */
 @font-face {
   font-family: "Vazirmatn";
@@ -9,6 +10,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 
 /* ========== Tokens ========== */
 :root {
@@ -37,6 +39,8 @@
   --ease: cubic-bezier(.2, .7, .2, 1);
 }
 
+
+/* ========== Dark Mode ========== */
 @media (prefers-color-scheme: dark) {
   :root {
     --brand-ink: #86d9a9;
@@ -52,7 +56,6 @@
     --t4: #204433; --t5: #382d4a; --t6: #4a2a2b;
   }
 }
-
 
 
 /* ========== Base ========== */
@@ -133,8 +136,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 
 
-
-/* ========== Icons (inline SVG sprite, colored via currentColor) ========== */
+/* ========== Icons & Svgs ========== */
 .sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
 
 .icon {
@@ -293,7 +295,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 
 
-
 /* ========== Menu Button Toggle (checkbox + label) ========== */
 .burger {
   display: grid;
@@ -341,7 +342,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
     transform: translateY(-6px) rotate(-45deg);
 }
 
-/* banner height / scroll position */
+/* ========== Banner Height & Scroll Position ========== */
 .scrim {
   position: absolute;
   inset-inline: 0;
@@ -413,7 +414,7 @@ body:has(#contact:target) .main-nav a[href="#contact"] {
 
 
 
-/* ========== Main ========== */
+/* ========== Wrapper (Container) ========== */
 .wrap {
     width: 100%;
     max-width: 75rem;
@@ -430,7 +431,6 @@ main > * + * { margin-top: 2rem; }
 /* ========== Hero ========== */
 .hero { display: grid; gap: 1rem; }
 
-/* Feature panel: fixed brand colors so it keeps its identity in dark mode too */
 .hero__feature {
   --hero-bg: #14532f;
   --hero-disc: #1d7448;
@@ -517,7 +517,6 @@ main > * + * { margin-top: 2rem; }
 .hero__item--strawberry { --x: 3%;  --y: 60%; --w: 23%; --r: -12deg; --z: 5; --d: .3s; }
 .hero__item--orange     { --x: 62%; --y: 58%; --w: 36%; --r: 8deg;   --z: 5; --d: .38s; }
 
-/* Price tag hanging on the tomato; links to the matching deal */
 .hero__tag {
   position: absolute;
   left: 25%;
@@ -570,7 +569,7 @@ main > * + * { margin-top: 2rem; }
   rotate: 8deg;
 }
 
-/* Promo panel */
+/* ========== Promo Panel ========== */
 .hero__promo {
   position: relative;
   overflow: hidden;
@@ -596,7 +595,7 @@ main > * + * { margin-top: 2rem; }
   height: auto;
 }
 
-/* Phones: shorter feature panel, one row of buttons */
+/* ========== Phones: shorter feature panel, one row of buttons ========== */
 @media (max-width: 39.99rem) {
   .hero__lead { display: none; }
   .hero__actions { flex-wrap: nowrap; margin-top: 1rem; }
@@ -613,7 +612,6 @@ main > * + * { margin-top: 2rem; }
   .hero__tag { top: 58%; }
 }
 
-/* One orchestrated entrance, only when motion is welcome */
 @media (prefers-reduced-motion: no-preference) {
   .hero__disc { animation: hero-grow .8s var(--ease) backwards; }
   .hero__item { animation: hero-rise .75s var(--ease) var(--d) backwards; }
@@ -686,12 +684,10 @@ main > * + * { margin-top: 2rem; }
 }
 
 
-
 /* ========== The Arrow Mirrors With The Page Direction ========== */
 .arr--end { --flip: -1; }
 .arr:dir(ltr) { --flip: -1; }
 .arr--end:dir(ltr) { --flip: 1; }
-
 
 
 /* ========== Soft Color Palette (icons and images) ========== */
@@ -732,18 +728,16 @@ main > * + * { margin-top: 2rem; }
   object-fit: contain;
 }
 
-/* Same artwork, smaller: next to shelf titles and in the mega menu */
 .cat__icon--head { width: 2rem; height: 2rem; flex: none; }
 
 .cat__icon--menu { width: 2rem; height: 2rem; flex: none; }
-
 
 
 .shelf:target h2:dir(ltr)::after, #categories:target h2:dir(ltr)::after {
   background-position: left .55rem center;
 }
 
-/* Carousel */
+/* ========== Carousel ========== */
 .rail {
   display: flex;
   gap: .75rem;
@@ -772,8 +766,7 @@ main > * + * { margin-top: 2rem; }
 }
 
 
-
-/* Shadow / Composite stage */
+/* ========== Shadow & Composite Stage ========== */
 .card::after {
   content: "";
   position: absolute;
@@ -826,9 +819,8 @@ main > * + * { margin-top: 2rem; }
 }
 
 .badge--out { background: var(--ink); color: var(--bg); }
+
 .card h3 {
-    /* Always two lines tall, text sits on the bottom edge: names, units and
-       prices line up across every card whatever the name length. */
     display: flex;
     flex-direction: column;
     justify-content: safe flex-end;
@@ -900,8 +892,7 @@ main > * + * { margin-top: 2rem; }
 .banners a:nth-child(2) { --t: var(--t6); }
 
 
-
-/* ========== Offers carousel (green box: intro panel + cards + "see all") ========== */
+/* ========== Offers Carousel ========== */
 .offers {
   --offers-pad: 1.5rem;
   --offers-intro-w: 8.75rem;
@@ -934,7 +925,8 @@ main > * + * { margin-top: 2rem; }
   .offers__scroller { scroll-behavior: smooth; }
 }
 
-/* Intro panel (scrolls away with the cards) */
+
+/* ========== Intro Panel ========== */
 .offers__intro {
   flex: 0 0 var(--offers-intro-w);
   display: flex;
@@ -957,7 +949,6 @@ main > * + * { margin-top: 2rem; }
 
 .offers__title span { display: block; }
 
-/* No "you are here" badge on this box: it would change the box height. */
 .offers:target .offers__title::after { content: none; }
 
 .offers__art {
@@ -978,7 +969,6 @@ main > * + * { margin-top: 2rem; }
 
 .offers__all:focus-visible { outline-color: #fff; }
 
-/* Cards: the regular .card, same size and structure as every other shelf */
 .offers__list { display: flex; gap: .75rem; }
 
 .offers .card {
@@ -988,7 +978,6 @@ main > * + * { margin-top: 2rem; }
 
 .offers .card:target { outline-color: #fff; }
 
-/* "See all" card at the end of the track */
 .card--all {
   align-items: center;
   justify-content: center;
@@ -1014,7 +1003,6 @@ main > * + * { margin-top: 2rem; }
 
 .offer-all__circle .icon { width: 1.5rem; height: 1.5rem; }
 
-/* Round arrow buttons over the track edges */
 .offers__nav {
   --flip: 1;
   position: absolute;
@@ -1051,8 +1039,6 @@ main > * + * { margin-top: 2rem; }
   box-shadow: 0 0 0 2px var(--surface);
 }
 
-/* Show only the arrow that still makes sense (needs scroll-driven animations;
-   without support both arrows simply stay visible). */
 @supports (animation-timeline: scroll()) {
   .offers__nav {
     animation: offers-nav linear both;
@@ -1087,6 +1073,7 @@ main > * + * { margin-top: 2rem; }
 
   .offers__nav { width: 3rem; height: 3rem; }
 }
+
 
 /* ========== Footer ========== */
 .site-footer {
@@ -1139,7 +1126,7 @@ main > * + * { margin-top: 2rem; }
   text-underline-offset: .4em;
 }
 
-/* Link states: text turns white, the underline and the icon take the accent */
+/* ========== Link States ========== */
 .site-footer li a:focus-visible,
 .site-footer address a:focus-visible {
   color: var(--foot-title);
@@ -1182,7 +1169,7 @@ main > * + * { margin-top: 2rem; }
 
 .site-footer bdi { white-space: nowrap; }
 
-/* Social links under the contact details */
+/* ========== Social links ========== */
 .foot-social__title {
   margin-block: .5rem 0;
   font-size: .875rem;
@@ -1356,4 +1343,4 @@ main > * + * { margin-top: 2rem; }
     animation: none !important;
     scroll-behavior: auto !important;
   }
-}
+}add .
