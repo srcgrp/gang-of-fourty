@@ -7,7 +7,7 @@
 
 :root {
   --color-text : rgb(17 24 17);
-  --color-text-muted : rgb(93 102 93);
+  --color-text-muted : rgb(121, 124, 121);
   --color-sale : rgb(204 70 34);
   --color-accent : rgb(246 195 67);
   --color-primary: rgb(69 123 83);
@@ -220,3 +220,63 @@ main {
   padding-inline: 10px;
   padding-block: 5px;
 }
+
+
+
+
+footer {
+  background-color: var(--color-footer-bg);
+  padding-inline: 1rem;
+  padding-block-start: 1.5rem;
+  padding-block-end: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+footer h2 {
+  font-size: 0.875rem;
+  margin: 0;
+  color: aliceblue;
+}
+
+footer p{
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  margin-block-start: 0.5rem;
+  line-height: 1.5;
+}
+
+footer address {
+  margin: 0;
+  font-style: normal;
+  color: var(--color-text-muted);
+  
+}
+
+footer a {
+  font-size: 0.75rem;
+  text-decoration: none;
+  display: block;
+  padding-block: 6px;
+  color: var(--color-text-muted);
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-bottom {
+  border-block-start: 1px solid rgb(208, 208, 202);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-bottom a {
+  color: var(--color-accent);
+}
+
