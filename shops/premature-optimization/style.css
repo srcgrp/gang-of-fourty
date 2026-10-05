@@ -58,7 +58,6 @@ header {
 
 .page-title {
   color: var(--navy);
-  font-size: 1.5rem;
   font-weight: 800;
   margin-bottom: 4px;
 }
@@ -163,13 +162,13 @@ header {
   color: white;
   font-size: 0.7rem;
   font-weight: 700;
-  transform: translate(50%,-80%);
+  transform: translateY(-80%);
 }
 
 /* ---------BODY------------- */
 
 body {
-  font-family: Vazirmatn, Tahoma, sans-serif;
+  
   color: var(--text);
 }
 
@@ -213,7 +212,7 @@ body {
   border: none;
   background-color: #b6570a;
   color: #fffbea;
-  font-weight: 600;
+  font-weight: 900;
 }
 
 .banner-button-sale {
@@ -231,9 +230,42 @@ body {
 .banner-icon-fruit,
 .banner-icon-sale {
   width: 120px;
-  height: auto;
+  height: 90px;
 }
 
+/* ---------Categories------------- */
+.categories-title {
+  margin: 20px 16px;
+  color: var(--navy);
+}
+
+.categories-section{
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, auto);
+  gap: 20px 4px;
+  margin:0 40px;
+}
+
+.categories-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.categories-name {
+  font-size: medium;
+}
+
+.categories-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50px;
+  background-color: var(--light-blue);
+  padding: 8px;
+}
 
 
 /* ---------MAIN------------- */
@@ -327,7 +359,7 @@ footer{
 .up-icon,
 .copyright-icon{
   width: 16px;
-  height: auto;
+  height: 20px;
   color: currentColor;
 }
 
