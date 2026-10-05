@@ -30,11 +30,41 @@ header {
   width: 100%;
   z-index: 1000;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 14px 4rem;
   background: var(--light-blue);
   border-bottom: 2px solid #89bfee;
+  
+}
+
+.announcement{
+  background-color: var(--navy);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-blue);
+  padding: 2px;
+  gap: 8px;
+}
+
+.announcement-icon {
+  width: 20px;
+  height: 20px;
+  color: currentColor;
+}
+
+.announcement p{
+  font-size: small;
+}
+
+.header-part{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 14px 4rem 14px 4rem;
 }
 
 .brand {
@@ -70,6 +100,9 @@ header {
 
 .search {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   flex: 1;
   max-width: 700px;
 }
@@ -168,8 +201,8 @@ header {
 /* ---------BODY------------- */
 
 body {
-  
   color: var(--text);
+  background-color: #fafcff;
 }
 
 /* ---------BANNER------------- */
@@ -178,7 +211,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
-  margin: 120px 40px 0 40px;
+  margin: 160px 40px 0 40px;
 }
 
 .banner-fruit,
@@ -197,6 +230,11 @@ body {
 .banner-sale{
   background-color: var(--navy);
   color: rgb(228, 243, 255);
+}
+
+.banner-title-fruit,
+.banner-title-sale {
+  font-size: x-large;
 }
 
 .banner-details-fruit,

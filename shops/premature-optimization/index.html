@@ -12,37 +12,46 @@
 </head>
 
 <body>
-  <header dir="rtl">
+  <header>
+
+    <article class="announcement">
+      <svg class="announcement-icon">
+        <use href="./svgs/announcement.svg"></use>
+      </svg>
+      <p>ارسال رایگان برای خریدهای بالای ۱ میلیون تومان</p>
+    </article>
 
     <!-- Logo & Title -->
-    <section class="brand">
-      <svg class="logo">
-        <use href="./svgs/logo.svg"></use>
-      </svg>
-      <section class="page-brand">
-        <h1 class="page-title">سوپرینو</h1>
-        <p class="page-description">سوپرمارکتی تازه و نو</p>
+    <section class="header-part">
+      <section class="brand">
+        <svg class="logo">
+          <use href="./svgs/logo.svg"></use>
+        </svg>
+        <section class="page-brand">
+          <h1 class="page-title">سوپرینو</h1>
+          <p class="page-description">سوپرمارکتی تازه و نو</p>
+        </section>
       </section>
+
+
+      <!-- Search -->
+      <section class="search">
+        <svg class="search-icon">
+          <use href="./svgs/search.svg"></use>
+        </svg>
+        <input class="search-entry" type="search" placeholder="جستجو در محصولات..." aria-label="جستجو در محصولات">
+      </section>
+
+
+      <!-- Cart Button -->
+      <button class="cart-button" type="button">
+        <svg class="cart-icon">
+          <use href="./svgs/cart.svg"></use>
+        </svg>
+        <span class="cart-text">سبد خرید</span>
+        <span class="cart-notification">0</span>
+      </button>
     </section>
-
-
-    <!-- Search -->
-    <section class="search">
-      <svg class="search-icon">
-        <use href="./svgs/search.svg"></use>
-      </svg>
-      <input class="search-entry" type="search" placeholder="جستجو در محصولات..." aria-label="جستجو در محصولات">
-    </section>
-
-
-    <!-- Cart Button -->
-    <button class="cart-button" type="button">
-      <svg class="cart-icon">
-        <use href="./svgs/cart.svg"></use>
-      </svg>
-      <span class="cart-text">سبد خرید</span>
-      <span class="cart-notification">0</span>
-    </button>
 
   </header>
 
