@@ -80,14 +80,15 @@
                 <h1>سوپرمارکت ترکیب</h1>
                 <span>تازه، نزدیک، به‌صرفه</span>
             </div>
-            <div class="search-div" role="search">
+            <form class="search-div" role="search" action="#" method="get">
                 <label for="site-search" class="visually-hidden">جستجو در کالاها</label>
                 <input type="search" id="site-search" name="q" class="search-input" placeholder="جستجو...">
                 <svg aria-hidden="true" class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="10.5" cy="10.5" r="7.5"/>
                     <path d="M16 16l5 5"/>
                 </svg>
-            </div>
+                <button type="submit" class="visually-hidden">جستجو</button>
+            </form>
             <button class="shopping-card-button" type="button" aria-label="سبد خرید، ۳ قلم کالا">
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M18 6H4l1.5 8h10.5L18 6z"/>
@@ -294,7 +295,7 @@
                     </a>
 
                     <!-- کانتینر اسکرول محصولات -->
-                    <div class="amazing-offer-list-div thin-scrollbar" tabindex="0" role="region" aria-label="لیست محصولات شگفت‌انگیز">
+                    <section class="amazing-offer-list-div thin-scrollbar" tabindex="0"  aria-label="لیست محصولات شگفت‌انگیز">
 
                         <!-- کارت ۱ -->
                         <div class="amazing-offer-box" id="offer-card-1">
@@ -482,7 +483,7 @@
                             </div>
                         </div>
 
-                    </div>
+                    </section>
 
                     <!-- دکمه رفتن به کارت آخر -->
                     <a href="#offer-card-6" class="carousel-nav-btn next-arrow-button" aria-label="رفتن به انتهای محصولات">
@@ -511,7 +512,7 @@
                             <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
                     </a>
-                    <div class="category-list-div thin-scrollbar" tabindex="0" role="region" aria-label="فهرست میوه و سبزیجات">
+                    <section class="category-list-div thin-scrollbar" tabindex="0" aria-label="فهرست میوه و سبزیجات">
                         <article class="product-box" id="fruit-card-1">
                             <div class="product-box-image">
                                 <img src="composition-images/benana.png" alt="موز ممتاز وارداتی تازه" loading="lazy" width="180" height="170">
@@ -638,7 +639,7 @@
                                 </button>
                             </div>
                         </article>
-                    </div>
+                    </section>
                     <a href="#fruit-card-6" class="carousel-nav-btn next-btn" aria-label="مشاهده محصولات بعدی میوه و سبزی">
                         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="15 18 9 12 15 6"></polyline>
@@ -665,7 +666,7 @@
                             <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
                     </a>
-                    <div class="category-list-div thin-scrollbar" tabindex="0" role="region" aria-label="فهرست محصولات لبنی">
+                    <section class="category-list-div thin-scrollbar" tabindex="0" aria-label="فهرست محصولات لبنی">
                         <article class="product-box" id="dairy-card-1">
                             <div class="product-box-image">
                                 <img src="composition-images/280x280.jpg" alt="شیر کم‌چرب پاستوریزه بطری ۱ لیتری" loading="lazy" width="180" height="170">
@@ -792,7 +793,7 @@
                                 </button>
                             </div>
                         </article>
-                    </div>
+                    </section>
                     <a href="#dairy-card-6" class="carousel-nav-btn next-btn" aria-label="مشاهده محصولات بعدی لبنیات">
                         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="15 18 9 12 15 6"></polyline>
@@ -819,7 +820,7 @@
                             <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
                     </a>
-                    <div class="category-list-div thin-scrollbar" tabindex="0" role="region" aria-label="فهرست نان و شیرینیجات">
+                    <section class="category-list-div thin-scrollbar" tabindex="0" aria-label="فهرست نان و شیرینیجات">
                         <article class="product-box" id="bakery-card-1">
                             <div class="product-box-image">
                                 <img src="composition-images/c1fe9b1f-7445-4a05-8e6d-94e5241b154d.jpg" alt="نان سنگک سنتی کنجدی دو رو" loading="lazy" width="180" height="170">
@@ -946,7 +947,7 @@
                                 </button>
                             </div>
                         </article>
-                    </div>
+                    </section>
                     <a href="#bakery-card-6" class="carousel-nav-btn next-btn" aria-label="مشاهده محصولات بعدی نان و شیرینی">
                         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="15 18 9 12 15 6"></polyline>
@@ -973,7 +974,7 @@
                             <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
                     </a>
-                    <div class="category-list-div thin-scrollbar" tabindex="0" role="region" aria-label="فهرست محصولات پروتئینی">
+                    <section class="category-list-div thin-scrollbar" tabindex="0" aria-label="فهرست محصولات پروتئینی">
                         <article class="product-box" id="protein-card-1">
                             <div class="product-box-image">
                                 <img src="composition-images/daqwd.jpg" alt="گوشت چرخ‌کرده مخلوط گوسفند و گوساله تازه" loading="lazy" width="180" height="170">
@@ -1100,7 +1101,7 @@
                                 </button>
                             </div>
                         </article>
-                    </div>
+                    </section>
                     <a href="#protein-card-6" class="carousel-nav-btn next-btn" aria-label="مشاهده محصولات بعدی پروتئینی">
                         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="15 18 9 12 15 6"></polyline>
@@ -1127,7 +1128,7 @@
                             <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
                     </a>
-                    <div class="category-list-div thin-scrollbar" tabindex="0" role="region" aria-label="فهرست نوشیدنی‌ها">
+                    <section class="category-list-div thin-scrollbar" tabindex="0" aria-label="فهرست نوشیدنی‌ها">
                         <article class="product-box" id="drinks-card-1">
                             <div class="product-box-image">
                                 <img src="composition-images/Dough-Nana-Pooneh-1.5.png" alt="دوغ سنتی نعناع و پونه بطری ۱.۵ لیتری" loading="lazy" width="180" height="170">
@@ -1254,7 +1255,7 @@
                                 </button>
                             </div>
                         </article>
-                    </div>
+                    </section>
                     <a href="#drinks-card-6" class="carousel-nav-btn next-btn" aria-label="مشاهده محصولات بعدی نوشیدنی">
                         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="15 18 9 12 15 6"></polyline>
@@ -1281,7 +1282,7 @@
                             <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
                     </a>
-                    <div class="category-list-div thin-scrollbar" tabindex="0" role="region" aria-label="فهرست تنقلات و خشکبار">
+                    <section class="category-list-div thin-scrollbar" tabindex="0" aria-label="فهرست تنقلات و خشکبار">
                         <article class="product-box" id="snacks-card-1">
                             <div class="product-box-image">
                                 <img src="composition-images/chips.png" alt="چیپس سیب‌زمینی برشته نمکی و ترد بسته بزرگ" loading="lazy" width="180" height="170">
@@ -1408,7 +1409,7 @@
                                 </button>
                             </div>
                         </article>
-                    </div>
+                    </section>
                     <a href="#snacks-card-6" class="carousel-nav-btn next-btn" aria-label="مشاهده محصولات بعدی تنقلات">
                         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="15 18 9 12 15 6"></polyline>
@@ -1429,7 +1430,7 @@
                 <span>از سال ۱۴۰۵ در کنار شما هستیم.</span>
                 <address class="footer-address">
                     <span>تهران، جردن، خیابان گلشهر</span>
-                    <a href="tel:021999888777" class="footer-phone" dir="ltr">۰۲۱-۹۹۹۸۸۸۷۷</a>
+                    <a href="tel:021999888777" class="footer-phone" dir="ltr">۰۲۱&#8209;۹۹۹۸۸۸۷۷</a>
                 </address>
             </div>
             <nav class="footer-div custom-col-12 custom-col-sm-6 custom-col-md-3" aria-label="پیوندهای دسته‌بندی فوتر">
