@@ -27,7 +27,7 @@
   --focus: #0a58ca;
   --t1: #fadbd5; --t2: #dce6fa; --t3: #fdeec9;
   --t4: #d6f0e3; --t5: #eadff6; --t6: #fbd9d9;
-  --foot: #15231b; --foot-ink: #e6eee8; --foot-mute: #b7c7bc;
+  --foot: #15231b; --foot-title: #ffffff; --foot-mute: #a3aea8; --foot-accent: #ffd166;
   --gutter: 1rem;
   --radius: 1.125rem;
   --card-w: 9.75rem;
@@ -1099,7 +1099,7 @@ main > * + * { margin-top: 2rem; }
 .site-footer h2 {
   margin-bottom: .5rem;
   font-size: 1rem;
-  color: var(--foot-ink);
+  color: var(--foot-title);
 }
 
 .site-footer address {
@@ -1126,10 +1126,72 @@ main > * + * { margin-top: 2rem; }
   align-items: center;
   gap: .4rem;
   min-height: 2.75rem;
-  color: var(--foot-ink);
+  color: var(--foot-mute);
+  text-decoration: underline 2px transparent;
+  text-underline-offset: .4em;
+}
+
+.foot-bar a {
+  text-decoration: underline 2px transparent;
+  text-underline-offset: .4em;
+}
+
+/* Link states: text turns white, the underline and the icon take the accent */
+.site-footer li a:focus-visible,
+.site-footer address a:focus-visible {
+  color: var(--foot-title);
+  text-decoration-color: var(--foot-accent);
+}
+
+.site-footer li a:focus-visible .icon,
+.site-footer address a:focus-visible .icon { color: var(--foot-accent); }
+
+.foot-bar a:focus-visible { text-decoration-color: currentColor; }
+
+@media (hover: hover) {
+  .site-footer li a:hover,
+  .site-footer address a:hover {
+    color: var(--foot-title);
+    text-decoration-color: var(--foot-accent);
+  }
+
+  .site-footer li a:hover .icon,
+  .site-footer address a:hover .icon { color: var(--foot-accent); }
+
+  .foot-bar a:hover { text-decoration-color: currentColor; }
+}
+
+.site-footer li a:active,
+.site-footer address a:active { color: var(--foot-accent); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .site-footer li a,
+  .site-footer address a,
+  .foot-bar a {
+    transition: color .2s var(--ease), text-decoration-color .2s var(--ease);
+  }
+
+  .site-footer .icon,
+  .foot-bar .icon { transition: color .2s var(--ease), translate .2s var(--ease); }
+
+  .foot-bar a:is(:hover, :focus-visible) .icon { translate: 0 -.2rem; }
 }
 
 .site-footer bdi { white-space: nowrap; }
+
+/* Social links under the contact details */
+.foot-social__title {
+  margin-block: .5rem 0;
+  font-size: .875rem;
+  font-weight: 700;
+  color: var(--foot-title);
+}
+
+.foot-social {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.25rem;
+}
 
 .foot-bar {
   display: flex;
