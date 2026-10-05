@@ -766,6 +766,12 @@ main > * + * { margin-top: 2rem; }
 }
 
 
+.card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
 /* ========== Shadow & Composite Stage ========== */
 .card::after {
   content: "";
@@ -1343,4 +1349,4 @@ main > * + * { margin-top: 2rem; }
     animation: none !important;
     scroll-behavior: auto !important;
   }
-}add .
+}
