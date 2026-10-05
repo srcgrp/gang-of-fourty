@@ -278,7 +278,8 @@ main {
   align-items: center;
   gap: 0.5rem;
   background-color: var(--color-surface);
-  padding: 2px;
+  padding-block: 0.5rem;
+  padding-inline: 0.5rem;
   color: inherit;
   border: 1px solid rgb(236, 230, 230);
   border-radius: 0.9rem;
@@ -290,7 +291,21 @@ main {
   margin: 0;
 }
 
+.category-item img {
+  width: 60px;
+  height: 60px;
+  padding: 8px;
+  background-color: var(--badge);;
+  border-radius: 50%;
+  object-fit: contain
+}
 
+.category-item:nth-child(1) { --badge: var(--tint-red); }
+.category-item:nth-child(2) { --badge: var(--tint-blue); }
+.category-item:nth-child(3) { --badge: var(--tint-yellow) }
+.category-item:nth-child(4) { --badge: var(--tint-pink) }
+.category-item:nth-child(5) { --badge: var(--tint-green) }
+.category-item:nth-child(6) { --badge: var(--tint-purple) }
 
 
 
