@@ -43,9 +43,15 @@ img {
   padding: 10px;
   position: absolute;
   top: 0.75rem;
-  right: 0.75rem;
+  inset-block-start: -3rem;
   border-radius: 0.5rem;
-  display: none;
+}
+
+.skip-link:focus-visible {
+  z-index: 1;
+  inset-block-start: 2rem;
+  inset-inline-start:1rem ;
+
 }
 
 .announcement {
