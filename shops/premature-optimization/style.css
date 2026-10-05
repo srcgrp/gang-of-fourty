@@ -3,8 +3,8 @@
 :root {
   --navy: #022571;
   --blue: #1F6FB2;
-  --light-blue: #c2e1ff;
-  --yellow: #F4C542;
+  --light-blue: #e3f0ff;
+  --yellow: #ffbf00;
   --red: #C9363E;
   --background: #ebf5ff;
   --white: #FFFFFF;
@@ -21,6 +21,8 @@
   box-sizing: border-box;
 }
 
+/* ---------HEADER------------- */
+
 header {
   position: fixed;
   top: 0;
@@ -30,7 +32,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
   padding: 14px 4rem;
   background: var(--light-blue);
   border-bottom: 2px solid #89bfee;
@@ -165,11 +166,77 @@ header {
   transform: translate(50%,-80%);
 }
 
+/* ---------BODY------------- */
+
 body {
   font-family: Vazirmatn, Tahoma, sans-serif;
   color: var(--text);
-  margin-top: 100px;
 }
+
+/* ---------BANNER------------- */
+
+.banner{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 120px 40px 0 40px;
+}
+
+.banner-fruit,
+.banner-sale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-radius: 12px;
+}
+
+.banner-fruit {
+  background-color: var(--yellow);
+}
+
+.banner-sale{
+  background-color: var(--navy);
+  color: rgb(228, 243, 255);
+}
+
+.banner-details-fruit,
+.banner-details-sale {
+  margin: 6px 0 12px 0;
+  opacity: 70%;
+}
+
+.banner-button-fruit,
+.banner-button-sale {
+  padding: 10px 16px;
+  border-radius: 24px;
+  border: none;
+  background-color: #b6570a;
+  color: #fffbea;
+  font-weight: 600;
+}
+
+.banner-button-sale {
+  background-color: rgb(228, 243, 255);
+  color: var(--navy);
+}
+
+.banner-content-fruit,
+.banner-content-sale {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.banner-icon-fruit,
+.banner-icon-sale {
+  width: 120px;
+  height: auto;
+}
+
+
+
+/* ---------MAIN------------- */
 
 main h2 {
   color: #003980;
@@ -209,6 +276,9 @@ main h2 {
 .item-description {
   color: #53575d;
 }
+
+
+/* ---------FOOTER------------- */
 
 footer{
   bottom: 0;
