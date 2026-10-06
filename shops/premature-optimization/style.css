@@ -31,10 +31,8 @@ header {
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  align-items: center;
   background: var(--light-blue);
-  border-bottom: 2px solid #89bfee;
-  
+  border-bottom: 2px solid rgba(31, 112, 178, 0.6);
 }
 
 .announcement{
@@ -65,6 +63,7 @@ header {
   width: 100%;
   justify-content: space-between;
   padding: 14px 4rem 14px 4rem;
+  border-bottom: 2px solid rgba(31, 112, 178, 0.6);
 }
 
 .brand {
@@ -198,11 +197,92 @@ header {
   transform: translateY(-80%);
 }
 
+nav{
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  padding: 10px 36px;
+  color: var(--navy);
+  background-color: #e3f0ff;
+  cursor: pointer;
+}
+
+.menu-categories-span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.menu-categories-icon{
+  width: 16px;
+  height: 16px;
+  color: currentColor;
+}
+
+.menu-categories{
+  position: relative;
+}
+
+.menu-categories:hover .hidden-content{
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-categories::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 16px;
+}
+
+
+.hidden-content{
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+  top: 100%;
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px 20px;
+  width: 500px;
+  background-color: var(--navy);
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.hidden-content-links{
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.left-icon {
+  color: currentColor;
+  width: 12px;
+  height: 12px;
+}
+
+.menu-texts {
+  text-decoration: none;
+  color: var(--navy);
+}
+
 /* ---------BODY------------- */
 
 body {
   color: var(--text);
   background-color: #fafcff;
+  margin-top: 180px;
 }
 
 /* ---------BANNER------------- */
@@ -211,7 +291,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
-  margin: 160px 40px 0 40px;
+  margin: 0 40px;
 }
 
 .banner-fruit,
@@ -219,7 +299,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 24px;
+  padding: 20px 28px;
   border-radius: 12px;
 }
 
@@ -291,6 +371,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 8px;
+  text-decoration: none;
+  color: var(--navy);
 }
 
 .categories-name {
