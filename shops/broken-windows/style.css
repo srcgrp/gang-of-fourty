@@ -131,11 +131,17 @@ opacity: 0;
   display: none;
 }
 .cart-count{
-    background-color: #085041;
+     background-color: #085041;
     color: #fff;
-    border-radius: 100%;
-    padding: 0 7px;
-  font-size: 11px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .cart:hover{
     background-color: #B93F67;
