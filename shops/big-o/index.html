@@ -136,61 +136,105 @@
         <li >
           <article   class="product-card">
             <img src="./assets/products/tomato.svg" alt=""/>
-            <span>۲۵٪</span>
-            <h3>گوجه فرنگی گلخانه ای</h3>
+            <span class="discount-badge"><span class="visually-hidden">تخفیف</span>۲۵٪</span>
+            <h3 id="tomato-id">گوجه فرنگی گلخانه ای</h3>
             <p>۱ کیلوگرم</p> 
-            <del>۶۰٬۰۰۰ تومان</del>
-            <strong>۴۵٬۰۰۰ تومان</strong>
-            <button>+</button>
+            <div class="card-footer">
+              <div class="price">
+                <del>۶۰٬۰۰۰ تومان</del>
+                <strong>۴۵٬۰۰۰ تومان</strong>
+              </div>
+              <button type="button" aria-describedby="tomato-id">
+                <span aria-hidden="true">&#43;</span>
+                <span class="visually-hidden">افزودن به سبد خرید</span>
+              </button>
+            </div>
           </article>
         </li>
         <li>
           <article   class="product-card">
             <img src="./assets/products/milk.svg" alt="" />
-            <span>۱۵٪</span>
-            <h3>شیر کم چرب</h3>
-            <p>۱ لیتر</p> 
-            <del>۴۰٬۰۰۰ تومان</del>
-            <strong>۳۴٬۰۰۰ تومان</strong>
-            <button>+</button>
+            <span class="discount-badge"><span class="visually-hidden">تخفیف</span>۱۵٪</span>
+            <h3 id="milk-id">شیر کم چرب</h3>
+            <p>۱ لیتر</p>
+            <div class="card-footer">
+              <div class="price">
+                <del>۴۰٬۰۰۰ تومان</del>
+                <strong>۳۴٬۰۰۰ تومان</strong>
+              </div>
+              <button type="button" aria-describedby="milk-id">
+                <span aria-hidden="true">&#43;</span>
+                <span class="visually-hidden">افزودن به سبد خرید</span>
+              </button>
+            </div> 
           </article>
         </li>
         <li>
           <article class="product-card">
               <img src="./assets/products/banana.svg" alt=""/>
-              <h3>موز اکوادور</h3>
+              <h3 id="banana-id">موز اکوادور</h3>
               <p>۱ کیلوگرم</p> 
-              <strong>۹۸٬۰۰۰ تومان</strong>
-              <button>+</button>
+              <div class="card-footer">
+                <div class="price">
+                  <strong>۹۸٬۰۰۰ تومان</strong>
+                </div>
+                <button type="button" aria-describedby="banana-id">
+                  <span aria-hidden="true">&#43;</span>
+                  <span class="visually-hidden">افزودن به سبد خرید</span>
+                </button>
+              </div>
+              
           </article>
         </li>
         <li>
           <article class="product-card">
             <img src="./assets/products/cucumber.svg" alt=""/>
-            <span>۳۰٪</span>
-            <h3> خیار سالادی</h3>
-            <p>۱ کیلوگرم</p> 
-            <del>۵۰٬۰۰۰ تومان</del>
-            <strong>۳۵٬۰۰۰ تومان</strong>
-            <button>+</button>
+            <span class="discount-badge"><span class="visually-hidden">تخفیف</span>۳۰٪</span>
+            <h3 id="cucumber-id"> خیار سالادی</h3>
+            <p>۱ کیلوگرم</p>
+            <div class="card-footer">
+              <div class="price">
+                <del>۵۰٬۰۰۰ تومان</del>
+                <strong>۳۵٬۰۰۰ تومان</strong>
+              </div>
+              <button type="button" aria-describedby="cucumber-id">
+                <span aria-hidden="true">&#43;</span>
+                <span class="visually-hidden">افزودن به سبد خرید</span>
+              </button>
+            </div> 
           </article>
         </li>
         <li>
           <article class="product-card">
             <img src="./assets/products/chicken.svg" alt="" />
-            <h3> ران مرغ</h3>
+            <h3 id="chicken-id"> ران مرغ</h3>
             <p>۹۰۰ گرم </p> 
-            <strong>۲۱۰٬۰۰۰ تومان</strong>
-            <button>+</button>
+            <div class="card-footer">
+              <div class="price">
+                <strong>۲۱۰٬۰۰۰ تومان</strong>
+              </div>
+              <button type="button" aria-describedby="chicken-id">
+                <span aria-hidden="true">&#43;</span>
+                <span class="visually-hidden">افزودن به سبد خرید</span>
+              </button>
+            </div>
           </article>
         </li>
         <li>
           <article class="product-card">
             <img src="./assets/products/watermelon.svg" alt="" />
-            <h3> هندوانه</h3>
+            <h3 id="watermelon-id"> هندوانه</h3>
             <p>۱ کیلوگرم</p> 
-            <strong>۱۲۰٬۰۰۰ تومان</strong>
-            <button>+</button>
+            <div class="card-footer">
+              <div class="price">
+                <strong>۱۲۰٬۰۰۰ تومان</strong>
+              </div>
+              <button type="button" aria-describedby="watermelon-id">
+                <span aria-hidden="true">&#43;</span>
+                <span class="visually-hidden">افزودن به سبد خرید</span>
+              </button>
+            </div>
+            
           </article>
         </li>
       </ul>
@@ -212,47 +256,98 @@
       <ul>
         <li>
           <article class="product-card">
-            <img src="./assets/products/egg.svg" alt="Egg image" />
-            <h3>تخم مرغ</h3>
+            <img src="./assets/products/egg.svg" alt="" />
+            <h3 id="egg-id">تخم مرغ</h3>
             <p>۱۲ عدد</p> 
-            <strong>۹۵٬۰۰۰ تومان</strong>
-            <button>+</button>
+            <div class="card-footer">
+              <div class="price">
+                <strong>۹۵٬۰۰۰ تومان</strong>
+              </div>
+              <button type="button" aria-describedby="egg-id">
+                <span aria-hidden="true">&#43;</span>
+                <span class="visually-hidden">افزودن به سبد خرید</span>
+              </button>
+            </div>
           </article>
         </li>
         <li>
           <article   class="product-card">
-            <img src="./assets/products/cheese.svg" alt="Cheese image" />
-            <h3>پنیر سفید</h3>
+            <img src="./assets/products/cheese.svg" alt="" />
+            <h3 id="cheese-id">پنیر سفید</h3>
             <p> ۲۰۰ گرم</p> 
-            <strong>۸۵٬۰۰۰ تومان</strong>
-            <button>+</button>
+            <div class="card-footer">
+              <div class="price">
+                <strong>۸۵٬۰۰۰ تومان</strong>
+              </div>
+              <button type="button" aria-describedby="cheese-id">
+                <span aria-hidden="true">&#43;</span>
+                <span class="visually-hidden">افزودن به سبد خرید</span>
+              </button>
+            </div>
           </article>
         </li>
         <li>
           <article   class="product-card">
-            <img src="./assets/products/butter.svg" alt="Butter image" />
-            <h3> کره حیوانی</h3>
+            <img src="./assets/products/butter.svg" alt="" />
+            <h3 id="butter-id"> کره حیوانی</h3>
             <p>۱۰۰ گرم</p>
-            <strong>۵۶٬۰۰۰ تومان</strong> 
-            <button>+</button>
+            <div class="card-footer">
+              <div class="price">
+                <strong>۵۶٬۰۰۰ تومان</strong>
+              </div> 
+              <button type="button" aria-describedby="butter-id">
+                <span aria-hidden="true">&#43;</span>
+                <span class="visually-hidden">افزودن به سبد خرید</span>
+              </button>
+            </div>
           </article>
         </li>
         <li>
           <article class="product-card">
-            <img src="./assets/products/yogurt.svg" alt="Full-fate yogurt image" />
-            <h3> ماست پر چرب</h3>
+            <img src="./assets/products/yogurt.svg" alt="" />
+            <h3 id="yogurt-id"> ماست پر چرب</h3>
             <p> ۹۰۰ گرم</p> 
-            <strong>۶۲٬۰۰۰ تومان</strong>
-            <button>+</button>
+            <div class="card-footer">
+              <div class="price">
+                <strong>۶۲٬۰۰۰ تومان</strong>
+              </div>
+              <button type="button" aria-describedby="yogurt-id">
+                <span aria-hidden="true">&#43;</span>
+                <span class="visually-hidden">افزودن به سبد خرید</span>
+              </button>
+            </div>
           </article>
         </li>
         <li>
           <article class="product-card">
-            <img src="./assets/products/icecream.svg" alt="Vanilla ice cream image" />
-            <h3>  بستنی وانیلی</h3>
+            <img src="./assets/products/icecream.svg" alt="" />
+            <h3 id="icecream-id">  بستنی وانیلی</h3>
             <p> ۱ لیتر </p> 
-            <strong>۱۱۰٬۰۰۰ تومان</strong>
-            <button>+</button>
+            <div class="card-footer">
+              <div class="price">
+                <strong>۱۱۰٬۰۰۰ تومان</strong>
+              </div>
+              <button type="button" aria-describedby="icecream-id">
+                <span aria-hidden="true">&#43;</span>
+                <span class="visually-hidden">افزودن به سبد خرید</span>
+              </button>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="product-card">
+            <img src="./assets/products/custard.svg" alt="" />
+            <h3 id="custard-id">پودینگ کاراملی</h3>
+            <p> ۱۱۰ گرم</p> 
+            <div class="card-footer">
+              <div class="price">
+                <strong>۲۰۰٬۰۰۰ تومان</strong>
+              </div>
+              <button type="button" aria-describedby="custard-id">
+                <span aria-hidden="true">&#43;</span>
+                <span class="visually-hidden">افزودن به سبد خرید</span>
+              </button>
+            </div>
           </article>
         </li>
       </ul>  

@@ -7,7 +7,8 @@
 
 :root {
   --color-text : rgb(17 24 17);
-  --color-text-muted : rgb(121, 124, 121);
+  --color-text-muted : rgb(93 102 93);
+  --color-text-footer : rgb(170 176 170);
   --color-sale : rgb(204 70 34);
   --color-accent : rgb(246 195 67);
   --color-primary: rgb(69 123 83);
@@ -282,7 +283,7 @@ main {
   padding-inline: 0.5rem;
   color: inherit;
   border: 1px solid rgb(236, 230, 230);
-  border-radius: 0.9rem;
+  border-radius: 0.5rem;
   height: 100%;
 }
 
@@ -295,9 +296,9 @@ main {
   width: 60px;
   height: 60px;
   padding: 8px;
-  background-color: var(--badge);;
+  background-color: var(--badge);
   border-radius: 50%;
-  object-fit: contain
+  object-fit: contain;
 }
 
 .category-item:nth-child(1) { --badge: var(--tint-red); }
@@ -320,13 +321,102 @@ main {
 
 .product-carousel ul li {
   flex-shrink: 0;
-  border: 1px solid red;
-  background-color: var(--color-surface);
   width: 11rem;
   scroll-snap-align: start;
-  overflow-x: auto;
+  
 }
 
+.product-card {
+  background-color: var(--color-surface);
+  border: 1px solid rgb(236, 230, 230);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  position: relative;
+  height: 100%;
+}
+
+.discount-badge {
+  position: absolute;
+  inset-block-start: 0.5rem;
+  inset-inline-start: 0.5rem;
+  border-radius: 30%;
+  color: white;
+  background-color: var(--color-sale);
+  padding: 0.2rem;
+  font-size: 0.75rem;
+}
+
+.product-card img{
+  aspect-ratio: 1/1;
+  width: 100%;
+  object-fit: contain;
+  padding: 1rem;
+  background-color: var(--cardBadge);
+  border-radius: 1rem;
+}
+
+.product-carousel li:nth-child(1) { --cardBadge: var(--tint-red); }
+.product-carousel li:nth-child(2) { --cardBadge: var(--tint-blue); }
+.product-carousel li:nth-child(3) { --cardBadge: var(--tint-yellow) }
+.product-carousel li:nth-child(4) { --cardBadge: var(--tint-pink) }
+.product-carousel li:nth-child(5) { --cardBadge: var(--tint-green) }
+.product-carousel li:nth-child(6) { --cardBadge: var(--tint-purple) }
+
+.product-card h3 {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.product-card p {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-block-start: auto;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  
+}
+.price del {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.price strong{
+  font-size: 0.8rem;
+}
+
+.card-footer button {
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 30%;
+  cursor: pointer;
+}
+
+.card-footer button:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
 
 footer {
   background-color: var(--color-footer-bg);
@@ -335,6 +425,7 @@ footer {
   padding-block-end: 1rem;
   display: grid;
   gap: 0.75rem;
+
 }
 
 footer h2 {
@@ -345,7 +436,7 @@ footer h2 {
 
 footer p{
   font-size: 0.75rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-footer);
   margin: 0;
   margin-block-start: 0.5rem;
   line-height: 1.5;
@@ -354,7 +445,7 @@ footer p{
 footer address {
   margin: 0;
   font-style: normal;
-  color: var(--color-text-muted);
+  color: var(--color-text-footer);
   
 }
 
@@ -363,7 +454,7 @@ footer a {
   text-decoration: none;
   display: block;
   padding-block: 6px;
-  color: var(--color-text-muted);
+  color: var(--color-text-footer);
 }
 
 footer ul {
