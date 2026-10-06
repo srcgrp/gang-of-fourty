@@ -1,23 +1,445 @@
 <!doctype html>
-<html lang="fa" dir="ltr">
+<html lang="fa" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>سوپرمارکت محدودیت نرخ</title>
-  <!-- Week 1: put YOUR name here to claim this shop. The landing page shows it. -->
-  <meta name="author" content="">
-  <meta name="description" content="به‌زودی: بهترین میوه و سبزی محله!">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>سوپرمارکت آفتاب</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <h1>welcome!</h1>
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMWEsAQBJZt3vranfFF4D9GEmNQ77oBSxy_dsq_XLNFMuD9TlQhJ9FTBAJ&s=10" >
-  <h2>red apples</h2>
-  <h3>fresh from damavand sweet and crunch </h3>
-  <span>45,000 تومان</span>
-  <button>add to cart</button>
+<body id="top">
+    <a href="#main-content" class="skip-link">
+        رفتن به محتوای اصلی
+    </a>
+    <header>
+        <div class="header-top">
+            <a href="#top"
+               class="logo"
+               aria-label="سوپرمارکت آفتاب">
+                <svg width="50"
+                     height="50"
+                     viewBox="0 0 50 50"
+                     aria-hidden="true">
+                    <circle
+                        cx="25"
+                        cy="25"
+                        r="20"
+                        fill="#4CAF50"/>
+                    <path
+                        d="M15 27 L22 34 L36 18"
+                        stroke="white"
+                        stroke-width="4"
+                        fill="none"/>
+                </svg>
+            </a>
+            <div class="store-info">
+                <h1>سوپرمارکت آفتاب</h1>
+                <p>تازه، سریع و مطمئن</p>
+            </div>
+            <div class="search">
+                <input
+                    type="search"
+                    placeholder="جستجوی محصول ..."
+                    aria-label="جستجوی محصول">
+            </div>
+            <a href="#"
+               class="cart"
+               aria-label="سبد خرید">
+                🛒 سبد خرید
+            </a>
+        </div>
+        <nav class="main-nav">
+            <a href="#categories">
+                دسته‌بندی‌ها
+            </a>
 
+            <a href="#products">
+                محصولات
+            </a>
 
-
+            <a href="#offers">
+                تخفیف‌ها
+            </a>
+        </nav>
+        <div class="all-categories">
+            <button type="button">
+                ☰ همه دسته‌بندی‌ها
+            </button>
+            <div class="categories-menu">
+                <a href="#dairy">
+                    🥛 لبنیات
+                </a>
+                <a href="#snacks">
+                    🍪 تنقلات
+                </a>
+                <a href="#drinks">
+                    🥤 نوشیدنی‌ها
+                </a>
+                <a href="#fruits">
+                    🍎 میوه و سبزیجات
+                </a>
+            </div>
+        </div>
+    </header>
+    <main id="main-content">
+        <section id="categories">
+            <h2>دسته‌بندی محصولات</h2>
+            <div class="categories-list">
+                <a href="#dairy" class="category">
+                    <span>🥛</span>
+                    <h3>لبنیات</h3>
+                </a>
+                <a href="#snacks" class="category">
+                    <span>🍪</span>
+                    <h3>تنقلات</h3>
+                </a>
+                <a href="#drinks" class="category">
+                    <span>🥤</span>
+                    <h3>نوشیدنی‌ها</h3>
+                </a>
+                <a href="#fruits" class="category">
+                    <span>🍎</span>
+                    <h3>میوه و سبزیجات</h3>
+                </a>
+            </div>
+        </section>
+        <div id="products">
+            <section id="dairy"
+                     class="products-section">
+                <h2>محصولات لبنی</h2>
+                <div class="products-list">
+                    <article id="dairy-start"
+                             class="product-card">
+                        <div class="discount">
+                            ٪۲۰ تخفیف
+                        </div>
+                        <div class="product-image">
+                            🥛
+                        </div>
+                        <h3>شیر کم‌چرب</h3>
+                        <p>۱ لیتر</p>
+                        <strong>
+                            ۶۵٬۰۰۰ تومان
+                        </strong>
+                        <button type="button">
+                            افزودن به سبد
+                        </button>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image">
+                            🧀
+                        </div>
+                        <h3>پنیر صبحانه</h3>
+                        <p>۴۰۰ گرم</p>
+                        <strong>
+                            ۸۵٬۰۰۰ تومان
+                        </strong>
+                        <button type="button">
+                            افزودن به سبد
+                        </button>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image">
+                            🥛
+                        </div>
+                        <h3>ماست پرچرب</h3>
+                        <p>۹۰۰ گرم</p>
+                        <strong>
+                            ۷۵٬۰۰۰ تومان
+                        </strong>
+                        <button type="button">
+                            افزودن به سبد
+                        </button>
+                    </article>
+                    <article id="dairy-end"
+                             class="product-card">
+                        <div class="product-image">
+                            🧈
+                        </div>
+                        <h3>کره</h3>
+                        <p>۱۰۰ گرم</p>
+                        <strong>
+                            ۵۵٬۰۰۰ تومان
+                        </strong>
+                        <button type="button">
+                            افزودن به سبد
+                        </button>
+                    </article>
+                </div>
+                <div class="carousel-controls">
+                    <a href="#dairy-start">
+                        ← ابتدای محصولات
+                    </a>
+                    <a href="#dairy-end">
+                        انتهای محصولات →
+                    </a>
+                </div>
+            </section>
+            <section id="snacks"
+                     class="products-section">
+                <h2>تنقلات</h2>
+                <div class="products-list">
+                    <article id="snacks-start"
+                             class="product-card">
+                        <div class="discount">
+                            ٪۱۵ تخفیف
+                        </div>
+                        <div class="product-image">
+                            🍪
+                        </div>
+                        <h3>بیسکویت شکلاتی</h3>
+                        <p>۲۰۰ گرم</p>
+                        <strong>
+                            ۵۵٬۰۰۰ تومان
+                        </strong>
+                        <button type="button">
+                            افزودن به سبد
+                        </button>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image">
+                            🍫
+                        </div>
+                        <h3>شکلات شیری</h3>
+                        <p>۱۰۰ گرم</p>
+                        <strong>
+                            ۷۰٬۰۰۰ تومان
+                        </strong>
+                        <button type="button">
+                            افزودن به سبد
+                        </button>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image">
+                            🍿
+                        </div>
+                        <h3>پاپ‌کورن</h3>
+                        <p>۱۵۰ گرم</p>
+                        <strong>
+                            ۴۵٬۰۰۰ تومان
+                        </strong>
+                        <button type="button">
+                            افزودن به سبد
+                        </button>
+                    </article>
+                    <article id="snacks-end"
+                             class="product-card">
+                        <div class="product-image">
+                            🥨
+                        </div>
+                        <h3>چوب‌شور</h3>
+                        <p>۱۰۰ گرم</p>
+                        <strong>
+                            ۴۰٬۰۰۰ تومان
+                        </strong>
+                        <button type="button">
+                            افزودن به سبد
+                        </button>
+                    </article>
+                </div>
+                <div class="carousel-controls">
+                    <a href="#snacks-start">
+                        ← ابتدای محصولات
+                    </a>
+                    <a href="#snacks-end">
+                        انتهای محصولات →
+                    </a>
+                </div>
+            </section>
+            <section id="drinks"
+                     class="products-section">
+                <h2>نوشیدنی‌ها</h2>
+                <div class="products-list">
+                    <article id="drinks-start"
+                             class="product-card">
+                        <div class="product-image">
+                            🥤
+                        </div>
+                        <h3>نوشابه</h3>
+                        <p>۱.۵ لیتر</p>
+                        <strong>
+                            ۴۵٬۰۰۰ تومان
+                        </strong>
+                        <button type="button">
+                            افزودن به سبد
+                        </button>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image">
+                            🧃
+                        </div>
+                        <h3>آبمیوه</h3>
+                        <p>۱ لیتر</p>
+                        <strong>
+                            ۶۰٬۰۰۰ تومان
+                        </strong>
+                        <button type="button">
+                            افزودن به سبد
+                        </button>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image">
+                            💧
+                        </div>
+                        <h3>آب معدنی</h3>
+                        <p>۱.۵ لیتر</p>
+                        <strong>
+                            ۲۰٬۰۰۰ تومان
+                        </strong>
+                        <button type="button">
+                            افزودن به سبد
+                        </button>
+                    </article>
+                    <article id="drinks-end"
+                             class="product-card">
+                        <div class="product-image">
+                            ☕
+                        </div>
+                        <h3>قهوه سرد</h3>
+                        <p>۳۰۰ میلی‌لیتر</p>
+                        <strong>
+                            ۸۰٬۰۰۰ تومان
+                        </strong>
+                        <button type="button">
+                            افزودن به سبد
+                        </button>
+                    </article>
+                </div>
+                <div class="carousel-controls">
+                    <a href="#drinks-start">
+                        ← ابتدای محصولات
+                    </a>
+                    <a href="#drinks-end">
+                        انتهای محصولات →
+                    </a>
+                </div>
+            </section>
+            <section id="fruits"
+                     class="products-section">
+                <h2>میوه و سبزیجات</h2>
+                <div class="products-list">
+                    <article id="fruits-start"
+                             class="product-card">
+                        <div class="discount">
+                            ٪۱۰ تخفیف
+                        </div>
+                        <div class="product-image">
+                            🍎
+                        </div>
+                        <h3>سیب</h3>
+                        <p>۱ کیلوگرم</p>
+                        <strong>
+                            ۹۰٬۰۰۰ تومان
+                        </strong>
+                        <button type="button">
+                            افزودن به سبد
+                        </button>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image">
+                            🍌
+                        </div>
+                        <h3>موز</h3>
+                        <p>۱ کیلوگرم</p>
+                        <strong>
+                            ۷۵٬۰۰۰ تومان
+                        </strong>
+                        <button type="button">
+                            افزودن به سبد
+                        </button>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image">
+                            🥒
+                        </div>
+                        <h3>خیار</h3>
+                        <p>۱ کیلوگرم</p>
+                        <strong>
+                            ۵۵٬۰۰۰ تومان
+                        </strong>
+                        <button type="button">
+                            افزودن به سبد
+                        </button>
+                    </article>
+                    <article id="fruits-end"
+                             class="product-card">
+                        <div class="product-image">
+                            🍅
+                        </div>
+                        <h3>گوجه‌فرنگی</h3>
+                        <p>۱ کیلوگرم</p>
+                        <strong>
+                            ۶۵٬۰۰۰ تومان
+                        </strong>
+                        <button type="button">
+                            افزودن به سبد
+                        </button>
+                    </article>
+                </div>
+                <div class="carousel-controls">
+                    <a href="#fruits-start">
+                        ← ابتدای محصولات
+                    </a>
+                    <a href="#fruits-end">
+                        انتهای محصولات →
+                    </a>
+                </div>
+            </section>
+        </div>
+        <section id="offers"
+                 class="products-section">
+            <h2>پیشنهادهای ویژه و تخفیف‌ها</h2>
+            <p>
+                محصولات منتخب با تخفیف ویژه را از دست ندهید.
+            </p>
+            <a href="#dairy">
+                مشاهده محصولات تخفیف‌دار
+            </a>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-about">
+            <h2>سوپرمارکت آفتاب</h2>
+            <p>
+                خرید آسان و سریع محصولات مورد نیاز شما.
+            </p>
+        </div>
+        <div class="footer-contact">
+            <h3>تماس با ما</h3>
+            <p>
+                تهران، خیابان آزادی
+            </p>
+            <p>
+                ۰۲۱-۱۲۳۴۵۶۷۸
+            </p>
+        </div>
+        <div class="footer-links">
+            <h3>دسته‌بندی‌ها</h3>
+            <a href="#dairy">
+                لبنیات
+            </a>
+            <a href="#snacks">
+                تنقلات
+            </a>
+            <a href="#drinks">
+                نوشیدنی‌ها
+            </a>
+            <a href="#fruits">
+                میوه و سبزیجات
+            </a>
+        </div>
+        <div class="footer-hours">
+            <h3>ساعات کاری</h3>
+            <p>
+                هر روز: ۸ صبح تا ۱۰ شب
+            </p>
+        </div>
+        <p class="copyright">
+            © ۱۴۰۵ سوپرمارکت آفتاب
+        </p>
+        <a href="#top"
+           class="back-to-top">
+            بازگشت به بالا ↑
+        </a>
+    </footer>
 </body>
 </html>
