@@ -308,6 +308,37 @@ main {
 .category-item:nth-child(5) { --badge: var(--tint-green) }
 .category-item:nth-child(6) { --badge: var(--tint-purple) }
 
+.carousel-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-header h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.carousel-arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.carousel-arrows a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-surface);
+}
+
+.carousel-arrows img {
+  width: 16px;
+}
 
 .product-carousel ul{
   list-style: none;
