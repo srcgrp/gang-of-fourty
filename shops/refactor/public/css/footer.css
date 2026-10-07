@@ -4,7 +4,7 @@
 
 .footer-inner {
     position: relative;
-    max-width: 1200px;
+    max-width: var(--container-max);
     margin: 0 auto;
     padding: 42px 40px 90px;
     border-radius: 28px;
@@ -27,7 +27,7 @@
 
 .footer-top {
     display: grid;
-    grid-template-columns: 96px 1fr;
+    grid-template-columns: auto 1fr;
     gap: 24px;
     align-items: start;
     padding-bottom: 34px;
@@ -89,7 +89,7 @@
     height: 20px;
     margin-top: -10px;
     border-radius: 4px;
-    background: #ff7a1a;
+    background: var(--orange);
 }
 
 .footer-col-list {
@@ -122,7 +122,7 @@
     height: 6px;
     margin-top: -3px;
     border-radius: 50%;
-    background: #ff7a1a;
+    background: var(--orange);
 }
 
 .footer-col-list a:hover {
@@ -291,7 +291,7 @@ a.footer-contact-value {
     min-height: var(--tap);
     padding: 16px;
     border-radius: 50%;
-    background: #ff7a1a;
+    background: var(--orange);
     color: var(--on-orange);
     box-shadow: 0 10px 24px rgba(255, 122, 26, 0.35);
     transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
@@ -304,7 +304,7 @@ a.footer-contact-value {
 }
 
 .footer-to-top:hover {
-    background: #e86a0c;
+    background: var(--orange-dark);
     transform: translateY(-3px);
     box-shadow: 0 14px 28px rgba(255, 122, 26, 0.45);
 }
