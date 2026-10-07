@@ -1,29 +1,471 @@
+
 <!doctype html>
 <html lang="fa" dir="rtl">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>سوپرمارکت کارگزار پیام</title>
+  <title>بیوتی</title>
   <!-- Week 1: put YOUR name here to claim this shop. The landing page shows it. -->
   <meta name="author" content="">
-  <meta name="description" content="به‌زودی: بهترین میوه و سبزی محله!">
+  <meta name="description" content="سایت برای خرید لوازم آرایشی ">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
-    <a href="../../index.html">→ بازگشت به دار و دسته چهل‌نفره</a>
-    <h1>📬 سلام دنیا!</h1>
-  </header>
-  <main>
-    <p>اینجا سوپرمارکت <strong>کارگزار پیام</strong> است. به‌زودی باز می‌شود.</p>
-    <section>
-      <h2>این اسم یعنی چه؟</h2>
-      <p><bdi>Message Broker</bdi> نرم‌افزاری مثل <bdi>RabbitMQ</bdi> یا <bdi>Kafka</bdi> است که بین سرویس‌ها می‌نشیند. فرستنده پیام را در صف می‌گذارد و منتظر نمی‌ماند؛ گیرنده هر وقت آماده بود برش می‌دارد. وقتی سفارشی ثبت شد، پیام «سفارش جدید» در صف می‌رود و انبار، ایمیل و حسابداری هر کدام جدا آن را برمی‌دارند. اگر یکی موقتاً خراب باشد، پیام گم نمی‌شود.</p>
-      <!-- Your turn: add what YOU found about this name, in your own words. -->
+  <header class="header" id="top">
+
+    <!-- نوار بالایی -->
+    <div class="top-bar">
+      <p>سلام، خوش آمدید</p>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+
+      <!-- Logo -->
+      <a href="#top" class="logo" aria-label="بازگشت به ابتدای صفحه">
+        <svg xmlns="http:/www.w3.org/2000/svg" width="300px" height="100" viewBox="-60 8 40 50">
+
+          <!-- beauty -->
+          <text x="0" y="45" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#B860B">
+            BEAUTY
+          </text>
+          <!-- مرکز گل -->
+          <g>
+            <path d="M9 10 C12 15 19 9 19 14 C19 19 13 21 10 17C8 15 9 13 9 13Z" fill="none" stroke="#B8860B"
+              stroke-width="1.5" />
+
+
+            <!-- ساقه -->
+            <path d="M13 20 C13 34 9 39 5 45" fill="none" stroke="#6B8E23" stroke-width="2" />
+
+            <!-- برگ -->
+            <path d="M11 33 C4 29 1 32 3 37 C7 37 10 36 11 33Z" fill="none" stroke="#6B8E23" stroke-width="1.5" />
+
+          </g>
+
+        </svg>
+      </a>
+
+      <!-- Search -->
+      <form class="search-box">
+
+        <input type="search" placeholder="جستجو در میان هزاران کالا" aria-label="جستجوی محصولات">
+
+        <button type="submit" aria-label="جستجو">
+          🔍
+        </button>
+
+      </form>
+
+      <!-- Cart -->
+      <div class="cart">
+
+        <button class="btn" type="button">
+          <span aria-hidden="true">🛍️</span>
+          سبد خرید
+        </button>
+
+        <b aria-label="۳ کالا در سبد خرید">۳</b>
+
+      </div>
+
+    </div>
+
+    <header class="header">
+
+      <!-- دکمه همبرگری مخصوص موبایل -->
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">
+        ☰
+      </label>
+
+      <!-- Navbar -->
+      <nav class="navbar">
+
+        <ul class="menu">
+
+          <!-- دسته بندی -->
+          <li class="has-submenu">
+            <a href="#categories">دسته‌بندی محصولات</a>
+
+            <ul class="submenu">
+              <li><a href="#">مراقبت از پوست</a></li>
+              <li><a href="#">آرایش صورت</a></li>
+              <li><a href="#">آرایش چشم</a></li>
+              <li><a href="#">آرایش لب</a></li>
+              <li><a href="#">مراقبت مو</a></li>
+              <li><a href="#">عطر و ادکلن</a></li>
+            </ul>
+          </li>
+
+          <!-- محصولات پرفروش -->
+          <li>
+            <a href="#Best-selling">محصولات پرفروش</a>
+          </li>
+
+          <!-- محصولات جدید -->
+          <li>
+            <a href="#new-products">محصولات جدید</a>
+          </li>
+
+          <!-- تماس با ما -->
+          <li>
+            <a href="#footer">تماس با ما</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </header>
+    <main>
+
+      <!-- Posters -->
+      <section class="posters" aria-label="پیشنهادهای ویژه">
+
+        <div class="poster poster-1">
+          <span>۱</span>
+        </div>
+
+        <div class="poster poster-2">
+          <span>۲</span>
+        </div>
+
+        <div class="poster poster-3">
+          <span>۳</span>
+        </div>
+
+        <div class="poster poster-4">
+          <span>۴</span>
+        </div>
+
+      </section>
+
+      <!-- Categories -->
+      <nav class="categories" id="categories" aria-label="دسته‌بندی محصولات">
+
+        <a href="#skincare" class="category">
+          <img src="image/category/ski" alt="مراقبت از پوست">
+          <span>مراقبت از پوست</span>
+        </a>
+
+
+        <a href="#face-makeup" class="category">
+          <img src="img/Category/makeup.jpg" alt="آرایش صورت">
+          <span>آرایش صورت</span>
+        </a>
+
+
+
+        <a href="#eye-makeup" class="category">
+          <img src="img/Category/eye-makeup.jpg" alt="آرایش چشم">
+          <span>آرایش چشم</span>
+        </a>
+
+
+        <a href="#lip-makeup" class="category">
+          <img src="img/Category/lip make up.jpg" alt="آرایش  لب">
+          <span>آرایش لب</span>
+        </a>
+
+
+        <a href="#hair-care" class="category">
+          <img src="img/Category/hair-care.jpg" alt="مراقبت از مو">
+          <span>مراقبت مو</span>
+        </a>
+
+
+        <a href="#perfume" class="category">
+          <img src="img/Category/perfume.jpg" alt="عطر و ادکلن">
+          <span>عطر و ادکلن</span>
+        </a>
+
+
+      </nav>
+
+    </main>
+    <!-- Products -->
+    <section class="products" id="Best-selling">
+      <h2>محصولات پر فروش</h2>
+      <div class="products-carousel">
+        <article class="product-card">
+          <div class="product-img">
+            <img src="img/Products/lip makeup.jpg" alt=" رژ لب قرمز">
+          </div>
+          <h3 class="product-title">رژ لب Maybelline</h3>
+          <div>
+            <span class="old-price">250,000 تومان</span>
+            <span class="price">150,000 تومان</span>
+          </div>
+          <span class="discount">10% تخفیف</span>
+          <button>Add</button>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img src="img/Products/Aftab.jpg" alt=" اسپری دیور">
+          </div>
+          <h3 class="product-title">اسپری Dior</h3>
+          <div>
+            <span class="old-price">500,000 تومان</span>
+            <span class="price">450,000 تومان</span>
+          </div>
+          <span class="discount"> 5% تخفیف</span>
+          <button>Add</button>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img src="img/Products/cream.jpg" alt="کرم نرم کننده">
+          </div>
+          <h3 class="product-title">گرم نرم کننده</h3>
+          <div>
+            <span class="old-price">450,000 تومان</span>
+            <span class="price">350,000 تومان</span>
+          </div>
+          <span class="discount">22% تخفیف</span>
+          <button>Add</button>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img src="img/Products/perfume.jpg" alt="عطر ">
+          </div>
+          <h3 class="product-title">عطر برند YSL</h3>
+          <div>
+            <span class="old-price">600,000 تومان</span>
+            <span class="price">450,000 تومان</span>
+          </div>
+          <span class="discount">15% تخفیف</span>
+          <button>Add</button>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img src="img/Products/Sayeh.jpg" alt="سایه">
+          </div>
+          <h3 class="product-title">سایه برند SHEGLAM</h3>
+          <div>
+            <span class="old-price">200,000 تومان</span>
+            <span class="price">130,000 تومان</span>
+          </div>
+          <span class="discount">7% تخفیف</span>
+          <button>Add</button>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img src="img/Products/خوش بو کننده بدن.jpg" alt="خوش بو کننده بدن">
+          </div>
+          <h3 class="product-title"> اسپری EASY BAKE</h3>
+          <div>
+            <span class="old-price">300,000 تومان</span>
+            <span class="price">200,000 تومان</span>
+          </div>
+          <span class="discount">10% تخفیف</span>
+          <button>Add</button>
+        </article>
+      </div>
+
     </section>
-  </main>
-  <footer>
-    <p dir="ltr">slug: <code>message-broker</code></p>
-  </footer>
+
+    <section class="product-section">
+      <h2 class="section-title" id="new-products">محصولات جدید</h2>
+      <div class="products-carousel">
+
+        <div class="products-track">
+          <article class="product-card">
+            <div class="product-img">
+              <img src="img/Products/خط جشم.jpg" alt="خط چشم">
+            </div>
+            <h3 class="product-title"> خط چشم Dior</h3>
+            <div>
+              <span class="old-price">250,000 تومان</span>
+              <span class="price">200,000 تومان</span>
+            </div>
+            <span class="discount">10% تخفیف</span>
+            <button>Add</button>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img">
+              <img src="img/Products/رژلب 2.jpg" alt="رژ لب">
+            </div>
+            <h3 class="product-title">رژ لب Maybelline</h3>
+            <div>
+              <span class="old-price">300,000 تومان</span>
+              <span class="price">150,000 تومان</span>
+            </div>
+            <span class="discount">15% تخفیف</span>
+            <button>Add</button>
+          </article>
+          <article class="product-card">
+            <div class="product-img">
+              <img src="img/Products/ریمل.jpg" alt="ریمل">
+            </div>
+            <h3 class="product-title"> ریمل Sky</h3>
+            <div>
+              <span class="old-price">350,000 تومان</span>
+              <span class="price">300,000 تومان</span>
+            </div>
+            <span class="discount">5% تخفیف</span>
+            <button>Add</button>
+          </article>
+          <article class="product-card">
+            <div class="product-img">
+              <img src="img/Products/سایه.jpg" alt="سایه">
+            </div>
+            <h3 class="product-title"> سایه Colorpop</h3>
+            <div>
+              <span class="old-price">500,000 تومان</span>
+              <span class="price">350,000 تومان</span>
+            </div>
+            <span class="discount">15% تخفیف</span>
+            <button>Add</button>
+          </article>
+          <article class="product-card">
+            <div class="product-img">
+              <img src="img/Products/رژلب.jpg" alt="رژ لب ژله ای">
+            </div>
+            <h3 class="product-title">رژ لب SHEGLAM</h3>
+            <div>
+              <span class="old-price">550,000 تومان</span>
+              <span class="price">450,000 تومان</span>
+            </div>
+            <span class="discount">10% تخفیف</span>
+            <button>Add</button>
+          </article>
+          <article class="product-card">
+            <div class="product-img">
+              <img src="img/Products/رژ گونه .jpg" alt="رژ گونه">
+            </div>
+            <h3 class="product-title">رژ گونه NYX</h3>
+            <div>
+              <span class="old-price">450,000 تومان</span>
+              <span class="price">350,000 تومان</span>
+            </div>
+            <span class="discount">22% تخفیف</span>
+            <button>Add</button>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img">
+              <img src="img/Products/خط جشم.jpg" alt="خط چشم">
+            </div>
+            <h3 class="product-title"> خط چشم Dior</h3>
+            <div>
+              <span class="old-price">250,000 تومان</span>
+              <span class="price">200,000 تومان</span>
+            </div>
+            <span class="discount">10% تخفیف</span>
+            <button>Add</button>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img">
+              <img src="img/Products/رژلب 2.jpg" alt="رژ لب">
+            </div>
+            <h3 class="product-title">رژ لب Maybelline</h3>
+            <div>
+              <span class="old-price">300,000 تومان</span>
+              <span class="price">150,000 تومان</span>
+            </div>
+            <span class="discount">15% تخفیف</span>
+            <button>Add</button>
+          </article>
+          <article class="product-card">
+            <div class="product-img">
+              <img src="img/Products/ریمل.jpg" alt="ریمل">
+            </div>
+            <h3 class="product-title"> ریمل Sky</h3>
+            <div>
+              <span class="old-price">350,000 تومان</span>
+              <span class="price">300,000 تومان</span>
+            </div>
+            <span class="discount">5% تخفیف</span>
+            <button>Add</button>
+          </article>
+          <article class="product-card">
+            <div class="product-img">
+              <img src="img/Products/سایه.jpg" alt="سایه">
+            </div>
+            <h3 class="product-title"> سایه Colorpop</h3>
+            <div>
+              <span class="old-price">500,000 تومان</span>
+              <span class="price">350,000 تومان</span>
+            </div>
+            <span class="discount">15% تخفیف</span>
+            <button>Add</button>
+          </article>
+          <article class="product-card">
+            <div class="product-img">
+              <img src="img/Products/رژلب.jpg" alt="رژ لب ژله ای">
+            </div>
+            <h3 class="product-title">رژ لب SHEGLAM</h3>
+            <div>
+              <span class="old-price">550,000 تومان</span>
+              <span class="price">450,000 تومان</span>
+            </div>
+            <span class="discount">10% تخفیف</span>
+            <button>Add</button>
+          </article>
+          <article class="product-card">
+            <div class="product-img">
+              <img src="img/Products/رژ گونه .jpg" alt="رژ گونه">
+            </div>
+            <h3 class="product-title">رژ گونه NYX</h3>
+            <div>
+              <span class="old-price">450,000 تومان</span>
+              <span class="price">350,000 تومان</span>
+            </div>
+            <span class="discount">22% تخفیف</span>
+            <button>Add</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>درباره ما</h3>
+          <p>فروشگاه آنلاین محصولات آرایشی و بهداشتی </p>
+        </div>
+        <div class="footer-column">
+          <h3>دسترسی سریع</h3>
+          <ul>
+            <li><a href="#Products">محصولات</a></li>
+            <li><a href="#categories">دسته بندی ها</a></li>
+            <li><a href="#new-produts">محصولات جدید</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>خدمات مشتریان</h3>
+          <ul>
+            <li><a href="#">تماس با ما</a></li>
+            <li><a href="#">پیگیری سفارش</a></li>
+            <li><a href="#">سوالات متداول</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>ارتباط با ما</h3>
+          <Address>
+            <p>تلفن: 0219724736</p>
+            <p>ایمیل: info@example.com</p>
+          </Address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy;تمامی حقوق این فروشگله محفوظ است</p>
+        <a href="#">بازگشت به بالا</a>
+      </div>
+    </footer>
+
+
 </body>
+
 </html>
