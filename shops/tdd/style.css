@@ -17,6 +17,8 @@
   --green: #155c45;
   --green-deep: #0d3f30;
   --green-soft: #dff0e5;
+  --green-nigh-hover: rgb(21, 169, 7);
+  --gree-night-hover: #159f67;
   --orange: #f29b38;
   --orange-soft: #fff0d8;
   --red: #df5438;
@@ -104,18 +106,28 @@ h3 {
 }
 
 .skip-link {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  position: fixed;
+  inset-block-start: .65rem;
+  inset-inline-start: .75rem;
   z-index: 1000;
   padding: .6rem 1rem;
   color: white;
   background: #101d18;
-  transform: translateY(-180%);
+  border-radius: .65rem;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 24%);
+  opacity: 0;
+  transform: translateY(calc(-100% - 1rem));
 }
 
-.skip-link:focus {
+.skip-link:focus,
+.skip-link:focus-visible {
+  opacity: 1;
   transform: translateY(0);
+}
+
+#main-content:focus {
+  outline: 3px solid var(--orange);
+  outline-offset: .35rem;
 }
 
 .site-header {
@@ -536,7 +548,7 @@ footer nav {
   border: 0;
   border-radius: .75rem;
   font: inherit;
-  color: #fff;
+  color: #ffffff;
   background: var(--green);
   cursor: pointer;
 }
@@ -1115,7 +1127,7 @@ footer:target {
 }
 
 .hero-primary-action:hover {
-  background: var(--green-deep);
+  background: var(--green-nigh-hover);
   box-shadow: 0 16px 32px rgb(21 92 69 / 28%);
   transform: translateY(-3px);
 }
@@ -1127,7 +1139,7 @@ footer:target {
 }
 
 .hero-secondary-action:hover {
-  background: white;
+  background: var(--green-nigh-hover);
   transform: translateY(-3px);
 }
 
@@ -1572,7 +1584,7 @@ footer:target {
 }
 
 .promo-primary a:hover {
-  background: rgb(255 255 255 / 24%);
+  background: rgba(255, 255, 255, 0.049);
 }
 
 .promo-secondary {
@@ -1588,6 +1600,10 @@ footer:target {
 .promo-secondary a {
   background: rgb(255 255 255 / 42%);
   border-color: rgb(85 52 14 / 12%);
+}
+
+.promo-secondary a:hover {
+  background: rgba(247, 245, 145, 0.195);
 }
 
 .promo > span {
@@ -1619,7 +1635,6 @@ footer:target {
 .product-carousel + .product-carousel {
   margin-block-start: 1rem;
   padding-inline: clamp(1rem, 3vw, 2rem);
-  background: linear-gradient(135deg, rgb(223 240 229 / 62%), rgb(255 240 216 / 45%));
   border: 1px solid rgb(21 92 69 / 9%);
   border-radius: var(--radius-lg);
 }
@@ -2006,7 +2021,7 @@ footer:target {
 }
 
 .story a:hover {
-  background: var(--green-deep);
+  background: var(--green-nigh-hover);
   transform: translateY(-2px);
 }
 
@@ -2343,6 +2358,7 @@ footer > p:last-child {
     --green: #52b98f;
     --green-deep: #d9f1e5;
     --green-soft: #193a2d;
+    --gree-night-hover: #159f67;
     --line: #294338;
     --line-strong: #3d5d50;
     --shadow-sm: 0 8px 24px rgb(0 0 0 / 22%);
@@ -2409,6 +2425,10 @@ footer > p:last-child {
   .cart strong {
     color: white;
     background: #167052;
+  }
+
+  .add-button:hover {
+    background: var(--gree-night-hover);
   }
 
   .hero-secondary-action,
@@ -2580,13 +2600,27 @@ footer { padding-block: clamp(2.5rem, 5vw, 4rem); }
 }
 
 @media (max-width: 38rem) {
-  :root { --header-offset: 9rem; }
+  :root { --header-offset: 11.5rem; }
   .announcement { font-size: .58rem; }
   .header-content { grid-template-columns: 1fr auto; }
   .brand-mark { width: 2.75rem; height: 2.75rem; }
   .brand strong { font-size: .92rem; }
-  .search { display: none; }
-  .cart { width: 2.75rem; min-height: 2.75rem; min-block-size: 2.75rem; padding: 0; font-size: 0; }
+  .search {
+    display: flex;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    min-width: 0;
+  }
+  .search input { min-width: 0; }
+  .search button { flex: 0 0 auto; }
+  .cart {
+    width: auto;
+    min-width: max-content;
+    min-height: 2.75rem;
+    min-block-size: 2.75rem;
+    padding-inline: .65rem;
+    font-size: .68rem;
+  }
   .hero { padding-block: 1.6rem 1rem; }
   .hero h1 { font-size: clamp(2.25rem, 12vw, 3.25rem); }
   .hero-visual { min-height: 15rem; }
@@ -2602,4 +2636,8 @@ footer { padding-block: clamp(2.5rem, 5vw, 4rem); }
   main > .store-sections article { min-height: 8rem; }
   #about { padding-block: 1.6rem; }
   #about > .store-sections article { min-height: auto; }
+}
+
+@media (max-width: 22rem) {
+  .brand small { display: none; }
 }
