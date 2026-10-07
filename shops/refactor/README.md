@@ -4,7 +4,7 @@
 
 ![اسکرین‌شات صفحه فروشگاه](./public/img/desktop.png)
 
-![اسکرین‌شات صفحه فروشگاه — حالت دوم](./public/img/mobile1.png)
+![اسکرین‌شات صفحه فروشگاه — حالت دوم](./public/img/mobile.png)
 
 ---
 
