@@ -2256,7 +2256,7 @@ footer nav a {
   width: fit-content;
   min-height: 2.4rem;
   color: #b8cec4;
-  font-size: .72rem;
+  font-size: 1.1rem;
   text-decoration: none;
   transition: color .2s ease, transform .2s ease;
 }
@@ -2265,6 +2265,36 @@ footer nav a:hover,
 footer nav a:focus-visible {
   color: white;
   transform: translateX(-3px);
+}
+
+.back-to-top {
+  grid-column: 1 / -1;
+  justify-self: end;
+  gap: .55rem;
+  min-height: 2.65rem;
+  margin-block-start: 1.5rem;
+  padding-inline: 1rem;
+  color: white;
+  background: rgb(255 255 255 / 9%);
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.back-to-top span {
+  color: #9bd7bc;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  background: rgb(255 255 255 / 15%);
+  border-color: rgb(255 255 255 / 28%);
+  transform: translateY(-2px);
 }
 
 footer > p:last-child {
@@ -2485,7 +2515,9 @@ footer > p:last-child {
   main > .store-sections article:hover,
   main > .store-sections article:focus-within,
   footer nav a:hover,
-  footer nav a:focus-visible {
+  footer nav a:focus-visible,
+  .back-to-top:hover,
+  .back-to-top:focus-visible {
     transform: none;
   }
 }
