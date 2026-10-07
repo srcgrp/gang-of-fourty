@@ -12,7 +12,7 @@
   <div id="top"></div>
   <a href="#main" class="skip">پرش به محتوای اصلی</a>
 
-  <header>
+  <header role="banner">
     <div class="top-bar">
       <p>ارسال رایگان برای سفارش‌های بالای ۷۰۰ هزار تومان</p>
       <span>•</span>
@@ -21,9 +21,9 @@
 
     <div class="header">
 
-      <input type="checkbox" id="menu" class="menu-input">
+      <input type="checkbox" id="menu" class="menu-input" role="button" aria-pressed="false">
 
-      <label for="menu" class="menu-btn" aria-label="منوی اصلی">
+      <label for="menu" class="menu-btn" role="button" tabindex="0" aria-label="منوی اصلی" aria-expanded="false">
         <i></i>
         <i></i>
         <i></i>
@@ -37,24 +37,24 @@
         </div>
       </a>
 
-      <div class="search-box">
-        <label for="search">جستجو</label>
-        <input id="search" type="search" placeholder="جستجو در اسپیس مارکت...">
+      <div class="search-box" role="search">
+        <label for="search" class="visually-hidden">جستجو در اسپیس مارکت</label>
+        <input id="search" type="search" placeholder="جستجو در اسپیس مارکت..." aria-label="جستجو در اسپیس مارکت">
         <span class="search-icon" aria-hidden="true">⌕</span>
       </div>
 
-      <a href="#cart" class="cart">
+      <a href="#cart" class="cart" role="button" aria-label="سبد خرید - ۳ محصول">
         <span class="cart-icon" aria-hidden="true">🛒</span>
         <span>سبد خرید</span>
-        <b>۳</b>
+        <b aria-hidden="true">۳</b>
       </a>
 
     </div>
 
-    <nav>
+    <nav role="navigation" aria-label="منوی اصلی">
       <div class="nav-inner">
         <div class="categories-menu">
-          <a class="active" href="#categories" aria-haspopup="true" aria-expanded="false">دسته‌بندی‌ها</a>
+          <button class="active" aria-haspopup="true" aria-expanded="false" type="button">دسته‌بندی‌ها</button>
           <div class="categories-dropdown" role="menu">
             <a href="#dairy" role="menuitem"><span aria-hidden="true">🥛</span> لبنیات و تخم‌مرغ</a>
             <a href="#vegtables" role="menuitem"><span aria-hidden="true">🥬</span> میوه و سبزیجات</a>
@@ -76,7 +76,7 @@
     </nav>
   </header>
 
-  <main id="main">
+  <main id="main" role="main">
 
     <!-- hero banner -->
     <div class="banner01">
@@ -100,7 +100,7 @@
 
       <h2 class="section-title">دسته‌بندی‌های پرطرفدار</h2>
 
-      <div class="popular-products" tabindex="0">
+      <div class="popular-products" tabindex="0" role="region" aria-label="دسته\u200cبندی\u200cهای پرطرفدار - اسکرول برای مشاهده بیشتر">
 
         <article class="popular-products-items">
           <a href="#milks">
@@ -205,7 +205,7 @@
         </div>
       </div>
 
-      <div class="products" tabindex="0">
+      <div class="products" tabindex="0" role="region" aria-label="لیست محصولات - اسکرول برای مشاهده بیشتر">
 
         <article class="product" id="offer-first">
           <div class="product-image pofak">
@@ -225,7 +225,7 @@
               <strong>۱۶۷،۰۰۰ <small>تومان</small></strong>
             </div>
 
-            <button aria-label="افزودن پفک">+</button>
+            <button type="button" aria-label="افزودن پفک به سبد خرید">+<</button>
           </div>
         </article>
 
@@ -247,7 +247,7 @@
               <strong>۱۸۲،۰۰۰ <small>تومان</small></strong>
             </div>
 
-            <button aria-label="افزودن رانی">+</button>
+            <button type="button" aria-label="افزودن رانی به سبد خرید">+<</button>
           </div>
         </article>
 
@@ -269,7 +269,7 @@
               <strong>۱۸۲،۰۰۰ <small>تومان</small></strong>
             </div>
 
-            <button aria-label="افزودن ویفر">+</button>
+            <button type="button" aria-label="افزودن ویفر به سبد خرید">+<</button>
           </div>
         </article>
 
@@ -291,7 +291,7 @@
               <strong>۱۸۲،۰۰۰ <small>تومان</small></strong>
             </div>
 
-            <button aria-label="افزودن چیپس">+</button>
+            <button type="button" aria-label="افزودن چیپس به سبد خرید">+<</button>
           </div>
         </article>
 
@@ -313,7 +313,7 @@
               <strong>۱۸۲،۰۰۰ <small>تومان</small></strong>
             </div>
 
-            <button aria-label="افزودن چیپس">+</button>
+            <button type="button" aria-label="افزودن چیپس به سبد خرید">+<</button>
           </div>
         </article>
 
@@ -335,7 +335,7 @@
               <strong>۱۸۲،۰۰۰ <small>تومان</small></strong>
             </div>
 
-            <button aria-label="افزودن چیپس">+</button>
+            <button type="button" aria-label="افزودن چیپس به سبد خرید">+<</button>
           </div>
         </article>
 
@@ -372,7 +372,7 @@
         </div>
       </div>
 
-      <div class="products" tabindex="0">
+      <div class="products" tabindex="0" role="region" aria-label="لیست محصولات - اسکرول برای مشاهده بیشتر">
 
         <article class="product" id="dairy-first">
           <div class="product-image maze">
@@ -390,7 +390,7 @@
               <strong>۶۹۳،۰۰۰ <small>تومان</small></strong>
             </div>
 
-            <button aria-label="افزودن پنیر">+</button>
+            <button type="button" aria-label="افزودن پنیر به سبد خرید">+<</button>
           </div>
         </article>
 
@@ -410,7 +410,7 @@
               <strong>۱۸۰،۰۰۰ <small>تومان</small></strong>
             </div>
 
-            <button aria-label="افزودن ماست">+</button>
+            <button type="button" aria-label="افزودن ماست به سبد خرید">+<</button>
           </div>
         </article>
 
@@ -430,7 +430,7 @@
               <strong>۱۸۰،۰۰۰ <small>تومان</small></strong>
             </div>
 
-            <button aria-label="افزودن موزرلا">+</button>
+            <button type="button" aria-label="افزودن موزرلا به سبد خرید">+<</button>
           </div>
         </article>
 
@@ -450,7 +450,7 @@
               <strong>۱۸۰،۰۰۰ <small>تومان</small></strong>
             </div>
 
-            <button aria-label="افزودن پنیر کبابی">+</button>
+            <button type="button" aria-label="افزودن پنیر کبابی به سبد خرید">+<</button>
           </div>
         </article>
 
@@ -470,7 +470,7 @@
               <strong>۱۸۰،۰۰۰ <small>تومان</small></strong>
             </div>
 
-            <button aria-label="افزودن ماست میوه‌ای">+</button>
+            <button type="button" aria-label="افزودن ماست میوه‌ای به سبد خرید">+<</button>
           </div>
         </article>
 
@@ -490,7 +490,7 @@
               <strong>۱۸۰،۰۰۰ <small>تومان</small></strong>
             </div>
 
-            <button aria-label="افزودن ماست سبو">+</button>
+            <button type="button" aria-label="افزودن ماست سبو به سبد خرید">+<</button>
           </div>
         </article>
 
@@ -501,11 +501,11 @@
 
   <!-- فوتر -->
 
-  <footer id="footer">
+  <footer id="footer" role="contentinfo">
 
     <img src="./src/images/footer.webp"
          class="footer-bg"
-         alt="">
+         alt="" role="presentation">
 
     <div class="footer-inner">
 

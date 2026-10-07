@@ -66,6 +66,18 @@ button {
   transform: translateY(0);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 :focus-visible {
   outline: 3px solid #e4ae2e;
   outline-offset: 3px;
@@ -469,9 +481,14 @@ nav {
 
 
 .popular-products{
-  display: inline-flex;
   justify-content: space-between;
   width: 100%;
+  display: flex;
+  gap: 13px;
+  overflow-x: auto;
+  padding: 3px 2px 15px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
 }
 
 .popular-products-cards{
