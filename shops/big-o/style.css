@@ -188,6 +188,9 @@ img {
 main {
   padding-inline: 0.75rem;
   padding-block: 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
 }
 
 .banner {
@@ -287,6 +290,7 @@ main {
 
 .categories h2 {
   font-size: 1rem;
+  margin-block: 0 0.75rem;
 }
 .categories ul{
   list-style: none;
@@ -338,6 +342,7 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-block-end: 0.75rem;
 }
 
 .carousel-header h2 {
@@ -359,6 +364,17 @@ main {
   height: 32px;
   border-radius: 50%;
   background-color: var(--color-surface);
+  border: 1px solid rgb(236, 230, 230);
+  transition: background-color 0.2s ease;
+}
+
+.carousel-arrows a:hover {
+  background-color: var(--color-primary-soft);
+}
+
+.carousel-arrows a:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
 }
 
 .carousel-arrows img {
