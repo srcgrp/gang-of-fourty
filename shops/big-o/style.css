@@ -127,7 +127,31 @@ img {
 
 .navbar {
   display: none;
-  
+  background-color: var(--color-surface);
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  display: block;
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+  color: var(--color-text);
+  text-decoration: none;
+  border-block-start: 1px solid rgb(236, 230, 230);
+}
+
+.all-categories > a {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.mega-menu {
+  display: none;
 }
 
 #hamburger-menu:checked ~ .navbar { display: block; }
