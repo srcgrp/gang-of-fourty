@@ -4,6 +4,7 @@
   --paper: #fffdf8;
   --green: #174b3a;
   --line: #dfe4dc;
+  --header-offset: 16rem;
 }
 
 * {
@@ -12,7 +13,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 10rem;
+  scroll-padding-block-start: var(--header-offset);
 }
 
 body {
@@ -34,7 +35,7 @@ svg {
 }
 
 :focus-visible {
-  outline: 3px solid #f0a340;
+  outline: 3px solid #174b3a;
   outline-offset: 4px;
 }
 
@@ -94,7 +95,8 @@ footer {
 }
 
 .brand-mark {
-  width: 3rem;
+  width: 4rem;
+  flex-shrink: 0;
 }
 
 .brand span {
@@ -246,8 +248,8 @@ main section {
 
 .story-image span {
   position: absolute;
-  right: 1rem;
-  bottom: 1rem;
+  inset-inline-start: 1rem;
+  inset-block-end: 1rem;
   padding: .4rem .8rem;
   color: white;
   background: var(--green);
@@ -295,7 +297,7 @@ footer nav {
   margin-block: 2rem;
 }
 
-@media (max-width: 45rem) {
+@media (max-width: 60rem) {
   .header-content {
     flex-wrap: wrap;
   }
@@ -388,9 +390,9 @@ footer nav {
   border-radius: 1rem;
   background: var(--paper);
   scroll-snap-align: start;
-  scroll-margin-block-start: 12rem;
+  scroll-margin-block-start: 1rem;
   overflow-wrap: anywhere;
-  transition: transform .2s ease, box-shadow .2s ease;
+  transition: transform .2s ease;
 }
 
 .product-card:hover,
@@ -474,7 +476,7 @@ footer nav {
   background: #103d2e;
 }
 
-@media (max-width: 45rem) {
+@media (max-width: 60rem) {
   .promo {
     flex-wrap: wrap;
     gap: 1rem;
@@ -488,7 +490,7 @@ footer nav {
 
   .product-card {
     flex-basis: min(16rem, 85%);
-    scroll-margin-block-start: 17rem;
+    scroll-margin-block-start: 1rem;
   }
 }
 
@@ -570,7 +572,7 @@ footer nav {
   display: none;
 }
 
-@media (max-width: 45rem) {
+@media (max-width: 60rem) {
   .desktop-navigation {
     display: none;
   }
@@ -630,6 +632,108 @@ footer nav {
 @media (prefers-reduced-motion: reduce) {
   .category-dropdown {
     transition: none;
+    transform: none;
+  }
+}
+
+/* Responsive and keyboard refinements. */
+.header-content > *,
+.section-heading > *,
+.story > *,
+.store-sections article > div {
+  min-inline-size: 0;
+}
+
+body {
+  overflow-wrap: break-word;
+}
+
+.search input {
+  min-inline-size: 0;
+  inline-size: clamp(10rem, 18vw, 20rem);
+}
+
+.hero > p:not(.eyebrow),
+#about > p {
+  max-inline-size: 70ch;
+}
+
+.hero > a,
+.promo a,
+.story a,
+.store-sections article > a,
+footer a,
+.cart {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 2.75rem;
+  padding-block: .35rem;
+}
+
+main section[id]:target,
+.store-sections article[id]:target,
+footer:target {
+  outline: 2px solid var(--green);
+  outline-offset: .25rem;
+  border-radius: .75rem;
+}
+
+/* Third animated interaction, alongside the dropdown and product cards. */
+.category-grid a {
+  transition: transform .2s ease;
+}
+
+.category-grid a:hover,
+.category-grid a:focus-visible {
+  transform: translateY(-.25rem);
+  border-color: var(--green);
+  background: #edf2e8;
+}
+
+.skip-link:focus-visible,
+.promo-primary a:focus-visible,
+.add-button:focus-visible {
+  outline-color: #fff;
+  box-shadow: 0 0 0 7px var(--green);
+}
+
+.store-sections h3 {
+  margin-block: 0 .5rem;
+}
+
+@media (max-width: 60rem) {
+  :root {
+    --header-offset: 22rem;
+  }
+
+  .section-heading {
+    flex-direction: column;
+    align-items: start;
+    gap: .75rem;
+  }
+
+  .promo-grid,
+  .story,
+  .store-sections {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .story {
+    gap: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .category-grid a {
+    transition: none;
+  }
+
+  .category-grid a:hover,
+  .category-grid a:focus-visible {
     transform: none;
   }
 }
