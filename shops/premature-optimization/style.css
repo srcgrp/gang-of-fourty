@@ -729,7 +729,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  font-size: smaller;
+  font-size: medium;
 }
 
 .address,
@@ -759,7 +759,7 @@ footer {
   grid-auto-flow: column;
   grid-template-rows: repeat(4, auto);
   gap: 4px 20px;
-  font-size: smaller;
+  font-size: medium;
 }
 
 .links-link a {
