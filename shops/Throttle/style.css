@@ -1,16 +1,9 @@
 * {
     box-sizing: border-box;
 }
-
-
-/* =========================
-   Base
-========================= */
-
 html {
     scroll-behavior: smooth;
 }
-
 body {
     margin: 0;
     font-family: sans-serif;
@@ -18,12 +11,6 @@ body {
     background-color: #ffffff;
     color: #222;
 }
-
-
-/* =========================
-   Accessibility
-========================= */
-
 .skip-link {
     position: fixed;
     top: -100px;
@@ -35,21 +22,13 @@ body {
     text-decoration: none;
     border-radius: 8px;
 }
-
 .skip-link:focus {
     top: 20px;
 }
-
 :focus-visible {
     outline: 3px solid #1976d2;
     outline-offset: 3px;
 }
-
-
-/* =========================
-   Header
-========================= */
-
 header {
     position: sticky;
     top: 0;
@@ -57,40 +36,28 @@ header {
     background-color: white;
     border-bottom: 1px solid #ddd;
 }
-
-
 .header-top {
     display: flex;
     align-items: center;
     gap: 20px;
     padding: 20px;
 }
-
-
 .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
     flex-shrink: 0;
 }
-
-
 .store-info h1 {
     margin: 0;
     font-size: 24px;
 }
-
-
 .store-info p {
     margin: 5px 0;
 }
-
-
 .search {
     flex: 1;
 }
-
-
 .search input {
     width: 100%;
     padding: 10px 12px;
@@ -98,19 +65,11 @@ header {
     border-radius: 8px;
     font: inherit;
 }
-
-
 .cart {
     text-decoration: none;
     font-weight: bold;
     white-space: nowrap;
 }
-
-
-/* =========================
-   Main Navigation
-========================= */
-
 .main-nav {
     display: flex;
     gap: 25px;
@@ -118,24 +77,14 @@ header {
     background-color: #f5f5f5;
     border-bottom: 1px solid #ddd;
 }
-
-
 .main-nav a {
     text-decoration: none;
     font-weight: bold;
 }
-
-
-/* =========================
-   All Categories Menu
-========================= */
-
 .all-categories {
     position: relative;
     padding: 10px 20px;
 }
-
-
 .all-categories > button {
     padding: 10px 15px;
     border: 1px solid #ccc;
@@ -144,8 +93,6 @@ header {
     font: inherit;
     cursor: pointer;
 }
-
-
 .categories-menu {
     position: absolute;
     top: 100%;
@@ -165,70 +112,42 @@ header {
         transform 0.2s ease,
         visibility 0.2s ease;
 }
-
-
 .all-categories:hover .categories-menu,
 .all-categories:focus-within .categories-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
-
-
 .categories-menu a {
     display: block;
     padding: 8px 10px;
     text-decoration: none;
     border-radius: 6px;
 }
-
-
 .categories-menu a:hover {
     background-color: #f5f5f5;
 }
-
-
-/* =========================
-   Sections
-========================= */
-
 section {
     scroll-margin-top: 180px;
 }
-
-
 section:target {
     outline: 3px solid #ddd;
     outline-offset: 5px;
 }
-
-
 #categories {
     padding: 30px 20px;
 }
-
-
 .products-section {
     padding: 30px 20px;
 }
-
-
 .products-section h2 {
     margin-bottom: 20px;
 }
-
-
-/* =========================
-   Categories
-========================= */
-
 .categories-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
 }
-
-
 .category {
     display: block;
     text-decoration: none;
@@ -240,28 +159,16 @@ section:target {
         transform 0.2s ease,
         box-shadow 0.2s ease;
 }
-
-
 .category:hover {
     transform: translateY(-4px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-
-
 .category span {
     font-size: 35px;
 }
-
-
 .category h3 {
     margin: 10px 0 0;
 }
-
-
-/* =========================
-   Product Carousel
-========================= */
-
 .products-list {
     display: flex;
     gap: 20px;
@@ -272,8 +179,6 @@ section:target {
 
     scrollbar-width: thin;
 }
-
-
 .product-card {
     flex: 0 0 240px;
     padding: 20px;
@@ -287,41 +192,25 @@ section:target {
         transform 0.2s ease,
         box-shadow 0.2s ease;
 }
-
-
 .product-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
-
-
 .product-image {
     font-size: 50px;
     margin-bottom: 10px;
 }
-
-
 .product-card h3 {
     margin: 10px 0;
 }
-
-
 .product-card p {
     margin: 8px 0;
 }
-
-
 .product-card strong {
     display: block;
     margin-bottom: 15px;
     font-size: 17px;
 }
-
-
-/* =========================
-   Discount
-========================= */
-
 .discount {
     display: inline-block;
     padding: 5px 8px;
@@ -331,12 +220,6 @@ section:target {
     font-size: 13px;
     font-weight: bold;
 }
-
-
-/* =========================
-   Product Buttons
-========================= */
-
 .product-card button {
     padding: 10px 15px;
     border: none;
@@ -349,31 +232,19 @@ section:target {
         transform 0.2s ease,
         opacity 0.2s ease;
 }
-
-
 .product-card button:hover {
     transform: translateY(-2px);
     opacity: 0.9;
 }
-
-
 .product-card button:active {
     transform: translateY(0);
 }
-
-
-/* =========================
-   Carousel Controls
-========================= */
-
 .carousel-controls {
     display: flex;
     justify-content: space-between;
     gap: 15px;
     margin-top: 10px;
 }
-
-
 .carousel-controls a {
     display: inline-block;
     padding: 8px 12px;
@@ -382,16 +253,9 @@ section:target {
     text-decoration: none;
     background-color: #f5f5f5;
 }
-
-
 .carousel-controls a:hover {
     background-color: #e9e9e9;
 }
-
-
-/* =========================
-   Offers
-========================= */
 
 #offers {
     margin: 20px;
@@ -400,8 +264,6 @@ section:target {
     border-radius: 12px;
     background-color: #f8f8f8;
 }
-
-
 #offers a {
     display: inline-block;
     margin-top: 10px;
@@ -411,12 +273,6 @@ section:target {
     color: white;
     text-decoration: none;
 }
-
-
-/* =========================
-   Footer
-========================= */
-
 footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -425,21 +281,15 @@ footer {
     padding: 30px 20px;
     background-color: #f5f5f5;
 }
-
-
 footer h2,
 footer h3 {
     margin-top: 0;
 }
-
-
 footer a {
     display: block;
     margin: 8px 0;
     text-decoration: none;
 }
-
-
 .copyright {
     grid-column: 1 / -1;
     margin: 10px 0 0;
@@ -451,12 +301,6 @@ footer a {
     width: fit-content;
     text-decoration: none;
 }
-
-
-/* =========================
-   Tablet
-========================= */
-
 @media (max-width: 900px) {
 
     .header-top {
@@ -574,9 +418,7 @@ footer a {
 }
 
 
-/* =========================
-   Small Phones
-========================= */
+
 
 @media (max-width: 400px) {
 
