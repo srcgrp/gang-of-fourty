@@ -1,0 +1,37 @@
+@media (min-width: 480px) and (max-width: 767px) {
+  .banner {
+    height: 17rem;
+  }
+  .dastebandi-div img{
+    width: 100px;
+  }
+  .dastebandi-section h2, .daily-suggestion h2 {
+    font-size: 1rem;
+  }
+  .dastebandi-div a {
+    font-size: 1rem;
+  }
+  .arrow {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+  .carousel-ds li {
+    width: 250px;
+  }
+  .card-img{
+    height: 11rem;
+  }
+  .add-item button {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+  .info {
+    grid-template-columns: 1fr 1fr;
+  }
+  .foot-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+}

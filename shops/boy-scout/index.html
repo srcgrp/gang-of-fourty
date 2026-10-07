@@ -5,28 +5,461 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>سوپرمارکت قانون پیشاهنگ</title>
   <!-- Week 1: put YOUR name here to claim this shop. The landing page shows it. -->
-  <meta name="author" content="">
+  <meta name="author" content="Mina Olianejad">
   <meta name="description" content="به‌زودی: بهترین میوه و سبزی محله!">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/phone.css">
+  <link rel="stylesheet" href="./css/tablet.css">
+  <link rel="stylesheet" href="./css/laptop.css">
+  <link rel="stylesheet" href="./css/desktop.css">
+
+
 </head>
 <body>
+
   <header>
-    <h1>به سوپرمارکت قانون پیشاهنگ خوش آمدید.</h1>
-    <img src="./download.webp" alt="logo">
-  </header>
-  <main>
-    <article>
-      <h2>نوشیدنی لبخند امپراطور</h2>
-      <p>   نوشیدنی معروف لبخند امپراطور ممنوع شده توسط لان وانگجی "ممنوعیت فروش این محصول توسط وی یینگ شکسته شد".</p>
-      <div>
-        <span>450.000 هزار تومن</span>
-        <button>اضافه شدن به سبد خرید</button>
+    <section class="free">
+        <svg class="send-box"  xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 -0.5 25 25" fill="none">
+          <path d="M13.05 12.082C13.05 11.6678 12.7142 11.332 12.3 11.332C11.8858 11.332 11.55 11.6678 11.55 12.082H13.05ZM12.3 19H11.55C11.55 19.249 11.6736 19.4818 11.8799 19.6213C12.0862 19.7608 12.3483 19.7888 12.5794 19.696L12.3 19ZM18.044 16.694L18.3234 17.39C18.6077 17.2759 18.794 17.0003 18.794 16.694H18.044ZM18.794 11.9C18.794 11.4858 18.4582 11.15 18.044 11.15C17.6298 11.15 17.294 11.4858 17.294 11.9H18.794ZM12.7554 11.4861C12.4263 11.2346 11.9556 11.2975 11.7041 11.6266C11.4526 11.9557 11.5155 12.4264 11.8446 12.6779L12.7554 11.4861ZM14.348 13.647L13.8926 14.2429C14.1156 14.4133 14.415 14.445 14.6687 14.325L14.348 13.647ZM18.3617 12.578C18.7361 12.4008 18.8961 11.9537 18.719 11.5793C18.5418 11.2049 18.0947 11.0449 17.7203 11.222L18.3617 12.578ZM12.0206 11.386C11.6362 11.5403 11.4497 11.977 11.604 12.3614C11.7583 12.7458 12.195 12.9323 12.5794 12.778L12.0206 11.386ZM18.3234 10.472C18.7078 10.3177 18.8943 9.88097 18.74 9.49658C18.5857 9.11219 18.149 8.92567 17.7646 9.07999L18.3234 10.472ZM17.7647 10.472C18.1491 10.6263 18.5858 10.4397 18.74 10.0553C18.8943 9.6709 18.7077 9.23421 18.3233 9.07995L17.7647 10.472ZM12.5793 6.77495C12.1949 6.62069 11.7582 6.80727 11.604 7.19168C11.4497 7.5761 11.6363 8.01279 12.0207 8.16705L12.5793 6.77495ZM18.4115 9.12322C18.0505 8.92024 17.5932 9.0484 17.3902 9.40947C17.1872 9.77054 17.3154 10.2278 17.6765 10.4308L18.4115 9.12322ZM20.095 10.93L20.4153 11.6082C20.669 11.4884 20.8346 11.237 20.8445 10.9566C20.8545 10.6762 20.7071 10.4137 20.4625 10.2762L20.095 10.93ZM17.7207 11.2218C17.3462 11.3987 17.1859 11.8457 17.3628 12.2203C17.5397 12.5948 17.9867 12.7551 18.3613 12.5782L17.7207 11.2218ZM17.4849 9.27273C17.207 9.57984 17.2306 10.0541 17.5377 10.3321C17.8448 10.61 18.3191 10.5864 18.5971 10.2793L17.4849 9.27273ZM20.5 7.059L21.0561 7.56227C21.2259 7.37459 21.2897 7.11388 21.2255 6.86901C21.1614 6.62413 20.9781 6.42812 20.738 6.34778L20.5 7.059ZM14.348 5L14.586 4.28878C14.2926 4.19056 13.9689 4.28268 13.7711 4.52071L14.348 5ZM11.7181 6.99171C11.4534 7.31031 11.4971 7.78317 11.8157 8.04787C12.1343 8.31258 12.6072 8.26889 12.8719 7.95029L11.7181 6.99171ZM6.27168 9.07995C5.88727 9.23421 5.70069 9.6709 5.85495 10.0553C6.00921 10.4397 6.4459 10.6263 6.83032 10.472L6.27168 9.07995ZM12.5743 8.16705C12.9587 8.01279 13.1453 7.5761 12.991 7.19168C12.8368 6.80727 12.4001 6.62069 12.0157 6.77495L12.5743 8.16705ZM6.91853 10.4298C7.2796 10.2268 7.40776 9.76954 7.20478 9.40847C7.00179 9.0474 6.54454 8.91924 6.18347 9.12222L6.91853 10.4298ZM4.5 10.929L4.13247 10.2752C3.88802 10.4126 3.74065 10.675 3.75046 10.9552C3.76027 11.2355 3.92561 11.4869 4.17908 11.6069L4.5 10.929ZM6.23008 12.5779C6.60445 12.7551 7.05163 12.5953 7.22887 12.2209C7.40611 11.8465 7.2463 11.3994 6.87192 11.2221L6.23008 12.5779ZM6.83042 9.07999C6.44603 8.92567 6.00931 9.11219 5.85499 9.49658C5.70067 9.88097 5.88719 10.3177 6.27158 10.472L6.83042 9.07999ZM12.0156 12.778C12.4 12.9323 12.8367 12.7458 12.991 12.3614C13.1453 11.977 12.9588 11.5403 12.5744 11.386L12.0156 12.778ZM5.9907 10.2746C6.26604 10.584 6.74011 10.6116 7.04956 10.3363C7.35901 10.061 7.38665 9.58689 7.1113 9.27744L5.9907 10.2746ZM4.5 7.471L4.20362 6.78205C3.98226 6.87727 3.82014 7.07305 3.76786 7.30828C3.71558 7.54351 3.77951 7.78954 3.9397 7.96956L4.5 7.471ZM10.244 5L10.8211 4.52099C10.6087 4.26508 10.2531 4.17962 9.94762 4.31105L10.244 5ZM11.7179 7.95001C11.9824 8.26874 12.4553 8.31265 12.774 8.0481C13.0927 7.78355 13.1367 7.31071 12.8721 6.99199L11.7179 7.95001ZM13.045 12.083C13.045 11.6688 12.7092 11.333 12.295 11.333C11.8808 11.333 11.545 11.6688 11.545 12.083H13.045ZM12.295 19L12.0156 19.696C12.2467 19.7888 12.5088 19.7608 12.7151 19.6213C12.9214 19.4818 13.045 19.249 13.045 19H12.295ZM6.551 16.694H5.801C5.801 17.0003 5.9873 17.2759 6.27158 17.39L6.551 16.694ZM7.301 11.9C7.301 11.4858 6.96521 11.15 6.551 11.15C6.13679 11.15 5.801 11.4858 5.801 11.9H7.301ZM12.75 12.6782C13.0793 12.427 13.1425 11.9563 12.8912 11.627C12.64 11.2977 12.1693 11.2345 11.84 11.4858L12.75 12.6782ZM10.244 13.647L9.92328 14.325C10.1768 14.4449 10.476 14.4134 10.699 14.2432L10.244 13.647ZM6.87172 11.222C6.49729 11.0449 6.05016 11.2049 5.87303 11.5793C5.6959 11.9537 5.85585 12.4008 6.23028 12.578L6.87172 11.222ZM11.55 12.082V19H13.05V12.082H11.55ZM12.5794 19.696L18.3234 17.39L17.7646 15.998L12.0206 18.304L12.5794 19.696ZM18.794 16.694V11.9H17.294V16.694H18.794ZM11.8446 12.6779L13.8926 14.2429L14.8034 13.0511L12.7554 11.4861L11.8446 12.6779ZM14.6687 14.325L18.3617 12.578L17.7203 11.222L14.0273 12.969L14.6687 14.325ZM12.5794 12.778L18.3234 10.472L17.7646 9.07999L12.0206 11.386L12.5794 12.778ZM18.3233 9.07995L12.5793 6.77495L12.0207 8.16705L17.7647 10.472L18.3233 9.07995ZM17.6765 10.4308L19.7275 11.5838L20.4625 10.2762L18.4115 9.12322L17.6765 10.4308ZM19.7747 10.2518L17.7207 11.2218L18.3613 12.5782L20.4153 11.6082L19.7747 10.2518ZM18.5971 10.2793L21.0561 7.56227L19.9439 6.55573L17.4849 9.27273L18.5971 10.2793ZM20.738 6.34778L14.586 4.28878L14.11 5.71122L20.262 7.77022L20.738 6.34778ZM13.7711 4.52071L11.7181 6.99171L12.8719 7.95029L14.9249 5.47929L13.7711 4.52071ZM6.83032 10.472L12.5743 8.16705L12.0157 6.77495L6.27168 9.07995L6.83032 10.472ZM6.18347 9.12222L4.13247 10.2752L4.86753 11.5828L6.91853 10.4298L6.18347 9.12222ZM4.17908 11.6069L6.23008 12.5779L6.87192 11.2221L4.82092 10.2511L4.17908 11.6069ZM6.27158 10.472L12.0156 12.778L12.5744 11.386L6.83042 9.07999L6.27158 10.472ZM7.1113 9.27744L5.0603 6.97244L3.9397 7.96956L5.9907 10.2746L7.1113 9.27744ZM4.79638 8.15995L10.5404 5.68895L9.94762 4.31105L4.20362 6.78205L4.79638 8.15995ZM9.6669 5.47901L11.7179 7.95001L12.8721 6.99199L10.8211 4.52099L9.6669 5.47901ZM11.545 12.083V19H13.045V12.083H11.545ZM12.5744 18.304L6.83042 15.998L6.27158 17.39L12.0156 19.696L12.5744 18.304ZM7.301 16.694V11.9H5.801V16.694H7.301ZM11.84 11.4858L9.78904 13.0508L10.699 14.2432L12.75 12.6782L11.84 11.4858ZM10.5647 12.969L6.87172 11.222L6.23028 12.578L9.92328 14.325L10.5647 12.969Z"/>
+<       </svg>
+        <p>ارسال رایگان با خرید بالای 999 هزار تومان!!</p>
+    </section>
+
+    <section>
+      <div class="toolbar">
+        <div class="logo-div">
+          <div class="div-for-logo">
+            <a href="#">
+              <svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#D83515" version="1.1" id="Capa_1" width="800px" height="800px" viewBox="0 0 46.334 46.334" xml:space="preserve">
+
+                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+
+                <g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M14.304,33.655c0.371,0.19,0.942,0.382,1.531,0.382c0.635,0,0.972-0.263,0.972-0.662c0-0.381-0.29-0.599-1.025-0.861 c-1.015-0.354-1.676-0.916-1.676-1.805c0-1.043,0.869-1.841,2.312-1.841c0.688,0,1.196,0.146,1.561,0.309l-0.31,1.115 c-0.244-0.117-0.68-0.29-1.277-0.29c-0.599,0-0.89,0.271-0.89,0.59c0,0.39,0.345,0.562,1.134,0.86 c1.078,0.398,1.588,0.962,1.588,1.822c0,1.024-0.79,1.896-2.468,1.896c-0.697,0-1.388-0.182-1.73-0.372L14.304,33.655z"/> <path d="M20.127,33.51l-0.435,1.568h-1.434l1.867-6.111h1.814l1.895,6.111H22.35l-0.473-1.568H20.127z M21.678,32.477 l-0.381-1.297c-0.108-0.361-0.218-0.816-0.308-1.179h-0.021c-0.09,0.362-0.181,0.825-0.28,1.179l-0.362,1.297H21.678z"/> <path d="M24.202,28.967h1.388v4.951h2.431v1.16h-3.818V28.967z"/> <path d="M32.021,32.496h-2.249v1.45h2.512v1.133h-3.898v-6.111h3.771v1.135h-2.385v1.27h2.249V32.496z"/> </g> <g> <path d="M42.989,6.007c-0.742-0.642-1.691-1.003-2.672-1.003H5.838c-0.996,0-1.959,0.373-2.705,1.033l-2.37,2.101 C0.589,8.293,0.528,8.54,0.611,8.757C0.694,8.976,0.902,9.12,1.135,9.12h43.937c0.234,0,0.443-0.146,0.524-0.365 c0.082-0.219,0.02-0.466-0.157-0.62L42.989,6.007z"/> <path d="M35.246,17.752l-1.873,1.364c-1.867,1.374-4.377,1.281-6.244-0.092l-1.827-1.317c-1.146-0.843-2.686-0.794-3.834,0.045 l-1.873,1.352c-1.866,1.374-4.377,1.268-6.243-0.106l-1.827-1.343c-1.146-0.843-2.687-0.847-3.833-0.007L4.337,20.16v17.116 c0,2.238,1.845,4.054,4.066,4.054l29.428-0.009c2.239,0,4.051-1.808,4.051-4.045V19.712l-2.804-2.005 C37.936,16.864,36.395,16.914,35.246,17.752z M37.864,34.333c0,1.09-0.915,1.974-2.004,1.974H10.526 c-1.089,0-1.985-0.884-1.985-1.974v-6.585h29.323V34.333z M37.864,25.241H8.541v-1.282c0-1.09,0.896-1.98,1.984-1.98h25.334 c1.09,0,2.004,0.891,2.004,1.98L37.864,25.241L37.864,25.241z"/> <path d="M1.41,16.424c0.176,0.634,0.654,1.141,1.277,1.354c0.624,0.212,1.312,0.104,1.838-0.291l1.972-1.477 c1.865-1.36,4.368-1.355,6.229,0.012l1.825,1.344c1.149,0.845,2.694,0.844,3.845,0l1.846-1.358 c1.634-1.202,3.772-1.346,5.533-0.436c0.015,0.008,0.028,0.019,0.044,0.027c0.212,0.112,0.421,0.231,0.62,0.374l2.237,1.607 c1.102,0.615,2.458,0.547,3.496-0.215l1.848-1.359c1.634-1.203,3.771-1.347,5.531-0.438c0.016,0.009,0.029,0.015,0.046,0.023 c0.211,0.112,0.42,0.224,0.618,0.367l2.064,1.473c0.553,0.396,1.268,0.48,1.897,0.229c0.631-0.252,1.09-0.808,1.218-1.475 l0.919-4.78c0.062-0.319-0.023-0.649-0.229-0.899c-0.207-0.25-0.515-0.396-0.839-0.396H1.089c-0.34,0-0.661,0.159-0.866,0.43 c-0.206,0.271-0.273,0.623-0.184,0.95L1.41,16.424z"/> </g> </g> </g> </g>
+
+              </svg>
+            </a>
+          </div>
+          <div class="market-name">
+            <span class="name">پیشاهنگ مارکت</span>
+            <span class="tagline">همیشه آماده، همیشه تازه</span>
+          </div>
+        </div>
+
+        <div class="search-box">
+          <form action="#">
+            <input type="search" placeholder="🔍 جست و جو در میان کالا ها">
+          </form>
+        </div>
+        <div class="basket-hamburger">
+          <div class="basket">
+            <img src="./img/basket-alt-3-svgrepo-com (1).svg" alt="backet">
+            <div>
+              <span>3</span>
+            </div>
+          </div>
+
+          <div class="hamburger-menu">
+
+            <input type="checkbox" id="menu">
+
+            <label for="menu" class="hamburger-menu-label">
+              <img class="hamburger-menu-img" src="./img/hamburger-menu-more-2-svgrepo-com.svg" alt="hamburger menu">
+            </label>
+
+            <nav class="open-menu">
+              <label for="menu" class="closed-button">X</label>
+              <a href="" id="hamburger-in-hamburger" class="open-menu-a">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Glyph" version="1.1" xml:space="preserve" stroke="#103725" stroke-width="0.544">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.32"/>
+
+                  <g id="SVGRepo_iconCarrier">
+
+                  <path d="M26,16c0,1.104-0.896,2-2,2H8c-1.104,0-2-0.896-2-2s0.896-2,2-2h16C25.104,14,26,14.896,26,16z" id="XMLID_314_"/>
+
+                  <path d="M26,8c0,1.104-0.896,2-2,2H8c-1.104,0-2-0.896-2-2s0.896-2,2-2h16C25.104,6,26,6.896,26,8z" id="XMLID_315_"/>
+
+                  <path d="M26,24c0,1.104-0.896,2-2,2H8c-1.104,0-2-0.896-2-2s0.896-2,2-2h16C25.104,22,26,22.896,26,24z" id="XMLID_316_"/>
+
+                  </g>
+
+                </svg>
+                <span>همه دسته ها</span> 
+              </a> 
+              <a href="#pishnehadvije" class="open-menu-a">پیشنهاد ویژه</a> 
+              <a href="#labaniyat" class="open-menu-a">لبنیات</a>
+              <a href="#nantaze" class="open-menu-a">نان تازه</a>
+              <a href="#mive" class="open-menu-a">میوه و سبزی</a>
+              <a href="#phone" class="open-menu-a">تماس با ما</a>
+            </nav>
+          </div>
+        </div>
       </div>
-     
-    </article>
+      <div class="search">
+        <form action="#">
+          <input type="search" placeholder="🔍 جست و جو در میان کالا ها">
+        </form>
+      </div>
+    </section>
+
+    <section class="nav-section">
+      <nav>
+        <ul class="nav-list">
+          <li  id="li-hamburger-menu">
+            <a href="#hamedasteha" id="" class="">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Glyph" version="1.1" xml:space="preserve" stroke="#103725" stroke-width="0.544">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.32"/>
+                <g id="SVGRepo_iconCarrier">
+                <path d="M26,16c0,1.104-0.896,2-2,2H8c-1.104,0-2-0.896-2-2s0.896-2,2-2h16C25.104,14,26,14.896,26,16z" id="XMLID_314_"/>
+                <path d="M26,8c0,1.104-0.896,2-2,2H8c-1.104,0-2-0.896-2-2s0.896-2,2-2h16C25.104,6,26,6.896,26,8z" id="XMLID_315_"/>
+                <path d="M26,24c0,1.104-0.896,2-2,2H8c-1.104,0-2-0.896-2-2s0.896-2,2-2h16C25.104,22,26,22.896,26,24z" id="XMLID_316_"/>
+                </g>
+
+              </svg>
+              <span>همه دسته ها</span> 
+            </a>
+            <div class="dropdown">
+              <a href="#">🍓 میوه و سبزی</a>
+              <a href="#">🥛 لبنیات</a>
+              <a href="#">🍩 نان و شیرینی</a>
+              <a href="#">🍗 پروتئین</a>
+              <a href="#">🍹 نوشیدنی</a>
+              <a href="#">🥐 تنقلات</a>
+            </div>
+          </li> 
+            <li><a href="#pishnehadvije" class="">پیشنهاد ویژه</a></li> 
+            <li><a href="#labaniyat" class="">لبنیات</a></li>
+            <li><a href="#nantaze" class="">نان تازه</a></li>
+            <li><a href="#mive" class="">میوه و سبزی</a></li>
+            <li><a href="#phone" class="">تماس با ما</a></li>
+        </ul>
+        
+      </nav>
+    </section>
+
+  </header>
+
+  <main>
+
+    <section class="banner">
+     <img src="./img/banner.png" alt="banner">
+    </section>
+
+    <section class="dastebandi-section">
+      <h2>دسته بندی ها</h2>
+      <div class="dastebandi">
+        
+        <div class="dastebandi-div">
+          <img src="./img/lemon.png" alt="fruit image">
+          <a href="#sabzijat">میوه و سبزی</a>
+        </div>
+
+        <div class="dastebandi-div">
+          <img src="./img/milk.png" alt="milk image">
+          <a href="#labaniat">لبنیات</a>
+        </div>
+
+        <div class="dastebandi-div">
+          <img src="./img/cake.png" alt="bread image">
+          <a href="#shirini">نان و شیرینی</a>
+        </div>
+
+        <div class="dastebandi-div">
+          <img src="./img/meat.png" alt="meat image">
+          <a href="#protein">پروتئین</a>
+        </div>
+
+        <div class="dastebandi-div">
+          <img src="./img/juice.png" alt="juice image">
+          <a href="#noshidani">نوشیدنی</a>
+        </div>
+
+        <div class="dastebandi-div">
+          <img src="./img/biscuit.png" alt="biscuit image">
+          <a href="#biscuit">تنقلات</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+
+      <section class="daily-suggestion">
+        <div>
+          <h2> 🔥تخفیفات شگفت انگیز </h2>
+        </div>
+        <div class="arrows">
+          <a class="arrow" href="#p1">‹</a>
+          <a class="arrow" href="#p6">›</a>
+        </div>
+      </section>
+
+      <ul class="carousel-ds">
+        <li id="p1">
+          <article class="card">
+            <div class="card-img">
+              <img src="./img/keraker.png" alt="کراکر ماهی">
+              <span class="badge">25% تخفیف</span> 
+            </div>
+            <h3>کراکر ماهی</h3>
+            <p class="amount">350 گرم</p>
+              <del>100,000 هزار تومان</del>
+              <div class="add-item">
+                <span>75,000 هزار تومان</span>
+                <button type="button" >+</button>
+              </div>
+          </article>
+        </li>
+
+        <li id="p2">
+          <article class="card">
+            <div class="card-img">
+              <img src="./img/calin.png" alt="کالین">
+              <span class="badge">20% تخفیف</span> 
+            </div>
+            <h3>پنیر دیپ گودا</h3>
+            <p class="amount">200 گرم</p>
+              <del>200,000 هزار تومان</del>
+              <div class="add-item">
+                <span>160,000 هزار تومان</span>
+                <button type="button" >+</button>
+              </div>
+          </article>
+        </li>
+
+        <li id="p3">
+          <article class="card">
+            <div class="card-img">
+              <img src="./img/egg.png" alt="تخم مرغ">
+              <span class="badge">50% تخفیف</span> 
+            </div>
+            <h3>تخم مرغ</h3>
+            <p class="amount">15 عدد</p>
+              <del>500,000 هزار تومان</del>
+              <div class="add-item">
+                <span>250,000 هزار تومان</span>
+                <button type="button" >+</button>
+              </div>
+          </article>
+        </li>
+
+        <li id="p4">
+          <article class="card">
+            <div class="card-img">
+              <img src="./img/keranjhi.png" alt="کرانچی">
+              <span class="badge">10% تخفیف</span> 
+            </div>
+            <h3>کرانچی</h3>
+            <p class="amount">150 گرم</p>
+              <del>120,000 هزار تومان</del>
+              <div class="add-item">
+                <span>108,000 هزار تومان</span>
+                <button type="button" >+</button>
+              </div>
+          </article>
+        </li>
+
+        <li id="p5">
+          <article class="card">
+            <div class="card-img">
+              <img src="./img/britona.png" alt="BRITONA">
+              <span class="badge">25% تخفیف</span> 
+            </div>
+            <h3>بیسکوئیت بریتونا</h3>
+            <p class="amount">90 گرم</p>
+              <del>200,000 هزار تومان</del>
+              <div class="add-item">
+                <span>150,000 هزار تومان</span>
+                <button type="button" >+</button>
+              </div>
+          </article>
+        </li>
+
+        <li id="p6">
+          <article class="card">
+            <div class="card-img">
+              <img src="./img/pechpech.png" alt="پچ پچ">
+              <span class="badge">5% تخفیف</span> 
+            </div>
+            <h3>پچ پچ</h3>
+            <p class="amount">80 گرم</p>
+              <del>80,000 هزار تومان</del>
+              <div class="add-item">
+                <span>76,000 هزار تومان</span>
+                <button type="button" >+</button>
+              </div>
+          </article>
+        </li>
+      </ul>
+
+    </section>
+
+    <section class="advertising-section">
+      <a href="#" class="advertising breakfast">
+        <span>سبد صبحانه خانواده</span>
+        <span class="advertising-icon">🍳</span>
+      </a>
+      <a href="#" class="advertising bakery">
+        <span>نان داغ هر روز ساعت 7</span>
+        <span class="advertising-icon">🥐</span>
+      </a>
+    </section>
+
+    <section>
+
+      <section class="daily-suggestion">
+        <div>
+          <h2>لبنیات و میوه و صیفی جات </h2>
+        </div>
+        <div class="arrows">
+          <a class="arrow" href="#p7">‹</a>
+          <a class="arrow" href="#p12">›</a>
+        </div>
+      </section>
+
+      <ul class="carousel-ds">
+        <li id="p7">
+          <article class="card">
+            <div class="card-img">
+              <img src="./img/milk.png" alt="شیر">
+            </div>
+            <h3>شیر</h3>
+            <p class="amount">500 گرم</p>
+              <div class="add-item">
+                <span>75,000 هزار تومان</span>
+                <button type="button" >+</button>
+              </div>
+          </article>
+        </li>
+
+        <li id="p8">
+          <article class="card">
+            <div class="card-img">
+              <img src="./img/shir.png" alt="شیر">
+            </div>
+            <h3>شیر ماهشام</h3>
+            <p class="amount">1 لیتر</p>
+              <div class="add-item">
+                <span>160,000 هزار تومان</span>
+                <button type="button" >+</button>
+              </div>
+          </article>
+        </li>
+
+        <li id="p9">
+          <article class="card">
+            <div class="card-img">
+              <img src="./img/goje.png" alt="گوجه فرنگی">
+            </div>
+            <h3>گوجه فرنگی</h3>
+            <p class="amount">15 عدد</p>
+              <div class="add-item">
+                <span>250,000 هزار تومان</span>
+                <button type="button" >+</button>
+              </div>
+          </article>
+        </li>
+
+        <li id="p10">
+          <article class="card">
+            <div class="card-img">
+              <img src="./img/hulo.png" alt="هلو">
+            </div>
+            <h3>هلو</h3>
+            <p class="amount">150 گرم</p>
+              <div class="add-item">
+                <span>108,000 هزار تومان</span>
+                <button type="button" >+</button>
+              </div>
+          </article>
+        </li>
+
+        <li id="p11">
+          <article class="card">
+            <div class="card-img">
+              <img src="./img/kivi.png" alt="کیوی">
+            </div>
+            <h3>کیوی</h3>
+            <p class="amount">90 گرم</p>
+              <div class="add-item">
+                <span>150,000 هزار تومان</span>
+                <button type="button" >+</button>
+              </div>
+          </article>
+        </li>
+
+        <li id="p12">
+          <article class="card">
+            <div class="card-img">
+              <img src="./img/lemon.png" alt="پرتقال">
+            </div>
+            <h3>پرتقال</h3>
+            <p class="amount">3 عدد</p>
+              <div class="add-item">
+                <span>76,000 هزار تومان</span>
+                <button type="button" >+</button>
+              </div>
+          </article>
+        </li>
+      </ul>
+
+    </section>
+
   </main>
-  <footer>
+
+  <footer class="footer">
+
+    <section class="info">
+
+      <div>
+        <span>سوپرمارکت پیشاهنگ</span>
+        <ul>
+          <li>از سال 1405 کنار شما هستیم، کالای تازه با قیمت منصفانه</li>
+          <li>تهران، خیابان پیشاهنگ</li>
+          <li id="phone">021-77777777</li>
+        </ul>
+      </div>
+
+      <div>
+        <span>دسته ها</span>
+        <ul>
+          <li><a href="#">میوه و سبزی</a></li>
+          <li><a href="#">لبنیات</a></li>
+          <li><a href="#">نان و شیرینی</a></li>
+          <li><a href="#">پروتئین</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span>راهنما</span>
+        <ul>
+          <li><a href="#">شیوه ارسال</a></li>
+          <li><a href="#">بازگشت کالا</a></li>
+          <li><a href="#">پرسش های پرتکرار</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span>ساعت کاری</span>
+        <ul>
+          <li>شنبه تا پنج شنبه: 8 تا 22</li>
+          <li>جمعه: 9 تا 14</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="foot-bottom">
+      <p>سوپرمارکت پیشاهنگ، عضو دار و دسته چهل نفره</p>
+      <a href="#top">↑ بازگشت به ابتدای صفحه</a>
+    </section>
 
   </footer>
+<a href=""></a>
 </body>
 </html>
