@@ -131,10 +131,17 @@
     </section>
     
     <section  class="product-carousel" id="special-products">
-      <h2>پیشنهاد ویژه امروز</h2>
+      <div class="carousel-header">
+        <h2>پیشنهاد ویژه امروز</h2>
+        <div class="carousel-arrows">
+          <a href="#first-recommend"><img src="./assets/icons/arrow-right.svg" aria-hidden="true"/><span class="visually-hidden">اولین محصول پیشنهادی</span></a>
+          <a href="#last-recommend"><img src="./assets/icons/arrow-left.svg" aria-hidden="true"/><span class="visually-hidden">آخرین محصول پیشنهادی</span></a>
+        </div>
+      </div>
+      
       <ul>
         <li >
-          <article   class="product-card">
+          <article  id="first-recommend" class="product-card">
             <img src="./assets/products/tomato.svg" alt=""/>
             <span class="discount-badge"><span class="visually-hidden">تخفیف</span>۲۵٪</span>
             <h3 id="tomato-id">گوجه فرنگی گلخانه ای</h3>
@@ -221,7 +228,7 @@
           </article>
         </li>
         <li>
-          <article class="product-card">
+          <article id="last-recommend" class="product-card">
             <img src="./assets/products/watermelon.svg" alt="" />
             <h3 id="watermelon-id"> هندوانه</h3>
             <p>۱ کیلوگرم</p> 
@@ -252,10 +259,16 @@
     </div>
     
     <section class="product-carousel" id="dairy">
-      <h2>لبنیات</h2>
+      <div class="carousel-header">
+        <h2>لبنیات</h2>
+        <div class="carousel-arrows">
+          <a href="#first-dairy"><img src="./assets/icons/arrow-right.svg" aria-hidden="true"/><span class="visually-hidden">اولین محصول لبنیات</span></a>
+          <a href="#last-dairy"><img src="./assets/icons/arrow-left.svg" aria-hidden="true"/><span class="visually-hidden">آخرین محصول لبنیات</span></a>
+        </div>
+      </div>
       <ul>
         <li>
-          <article class="product-card">
+          <article id="first-dairy" class="product-card">
             <img src="./assets/products/egg.svg" alt="" />
             <h3 id="egg-id">تخم مرغ</h3>
             <p>۱۲ عدد</p> 
@@ -335,7 +348,7 @@
           </article>
         </li>
         <li>
-          <article class="product-card">
+          <article id="last-dairy" class="product-card">
             <img src="./assets/products/custard.svg" alt="" />
             <h3 id="custard-id">پودینگ کاراملی</h3>
             <p> ۱۱۰ گرم</p> 
