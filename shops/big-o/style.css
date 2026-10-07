@@ -490,6 +490,32 @@ main {
   outline-offset: 2px;
 }
 
+.ads {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.ads aside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+  border-radius: 1rem;
+}
+
+.ads aside:nth-child(1) { background-color: var(--tint-green); }
+.ads aside:nth-child(2) { background-color: var(--tint-pink); }
+
+.ads h2 {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.ads img {
+  width: 48px;
+}
+
 footer {
   background-color: var(--color-footer-bg);
   padding-inline: 1rem;
