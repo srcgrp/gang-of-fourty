@@ -2686,6 +2686,23 @@ footer { padding-block: clamp(2.5rem, 5vw, 4rem); }
   main > .store-sections article { min-height: 8rem; }
   #about { padding-block: 1.6rem; }
   #about > .store-sections article { min-height: auto; }
+
+  .search button,
+  .carousel-controls a,
+  .promo a,
+  .add-button,
+  .story a,
+  .back-to-top,
+  main > .store-sections article > a,
+  footer nav a {
+    min-height: 2.75rem;
+  }
+
+  footer nav a {
+    min-width: 2.75rem;
+    justify-content: center;
+    padding-inline: .5rem;
+  }
 }
 
 @media (max-width: 22rem) {
