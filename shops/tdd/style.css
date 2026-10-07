@@ -2641,3 +2641,70 @@ footer { padding-block: clamp(2.5rem, 5vw, 4rem); }
 @media (max-width: 22rem) {
   .brand small { display: none; }
 }
+
+/* Unavailable products remain understandable without appearing purchasable. */
+.product-card.is-unavailable {
+  opacity: .68;
+  filter: saturate(.35);
+}
+
+.product-card.is-unavailable:hover,
+.product-card.is-unavailable:focus-within {
+  border-color: var(--line);
+  box-shadow: 0 8px 24px rgb(21 72 54 / 6%);
+  transform: none;
+}
+
+.product-card.is-unavailable:hover .product-icon,
+.product-card.is-unavailable:focus-within .product-icon {
+  transform: none;
+}
+
+.stock-badge {
+  position: absolute;
+  inset-block-start: .7rem;
+  inset-inline-start: .7rem;
+  z-index: 2;
+  padding: .3rem .65rem;
+  color: #fff;
+  background: #69746f;
+  border-radius: 999px;
+  font-size: .62rem;
+  font-weight: 700;
+}
+
+.stock-status {
+  margin-block: .25rem;
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.add-button:disabled,
+.add-button:disabled:hover,
+.add-button:disabled:active {
+  color: #f5f7f6;
+  background: #7b8983;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.add-button:disabled span {
+  color: #65716c;
+  background: #edf1ef;
+}
+
+@media (prefers-color-scheme: dark) {
+  .product-card.is-unavailable:hover,
+  .product-card.is-unavailable:focus-within {
+    border-color: var(--line);
+    box-shadow: 0 8px 24px rgb(0 0 0 / 22%);
+  }
+
+  .add-button:disabled,
+  .add-button:disabled:hover,
+  .add-button:disabled:active {
+    color: #d8e1dd;
+    background: #46564f;
+  }
+}
