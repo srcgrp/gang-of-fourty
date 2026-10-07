@@ -71,6 +71,14 @@ button {
   outline-offset: 3px;
 }
 
+  
+header{
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 10;
+}
+
 .top-bar {
   height: 34px;
   background: var(--sky);
@@ -94,6 +102,7 @@ button {
 .logo {
   display: flex;
 }
+
 
 .logo strong {
   display: block;
@@ -185,6 +194,7 @@ nav {
   border-top: 1px solid #f0f1ef;
   border-bottom: 1px solid var(--border);
   background: rgba(255,255,255,.85);
+
 }
 .categories-menu {
   position: relative;
@@ -209,11 +219,9 @@ nav {
   border: 1px solid var(--border);
   border-radius: 0 0 12px 12px;
   box-shadow: 0 12px 30px rgba(0,0,0,.12);
-
   display: none;
   flex-direction: column;
   gap: 3px;
-
   z-index: 50;
 }
 
@@ -231,9 +239,11 @@ nav {
 }
 
 .categories-menu:hover .categories-dropdown,
-.categories-menu:focus-within .categories-dropdown {
+.categories-menu:focus-within .categories-dropdown,
+.categories-menu.active .categories-dropdown {
   display: flex;
 }
+
 .nav-inner{
   display: flex;
   justify-content: center;
@@ -420,6 +430,7 @@ nav {
 
 
 #banner01{
+  margin-top: 15vh;
   display: flex;
   width: 100%;
   height: 45vh;
@@ -877,11 +888,12 @@ footer {
 .footer-inner h3 {
   margin: 2px 0 12px;
   font-size: 12px;
+  color: #e0e0e0;
 }
 
 .footer-inner p,
 .footer-inner a {
-  color: #9eaaa2;
+  color: #c5c5c5;
   font-size: 10px;
 }
 
@@ -902,7 +914,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #89958e;
+  color: #b8b8b8;
   font-size: 9px;
 }
 
@@ -998,10 +1010,6 @@ footer {
     right: 10px;
   }
 
-  .cart {
-    font-size: 0;
-    padding: 0 8px;
-  }
 
   .menu-input {
     display: none;
@@ -1315,35 +1323,6 @@ img {
 }
 
 
-/* Small Mobile Adjustments */
-
-@media (max-width: 400px) {
-  .banner01 img {
-    height: 35vh;
-  }
-
-  .banner01-content {
-    font-size: 4px;
-  }
-
-  .banner01-sub {
-    font-size: 12px;
-  }
-
-  .section {
-    width: calc(100% - 20px);
-  }
-
-  .advertisment {
-    width: calc(100% - 20px);
-  }
-
-  .footer-inner {
-    width: calc(100% - 20px);
-  }
-}
-
-
 /* Fixed Responsive Adjustments */
 
 @media (max-width: 950px) {
@@ -1368,7 +1347,7 @@ img {
   }
 
   .banner01-content {
-    font-size: 40px;
+    font-size: 60px;
     right: 10%;
   }
 
@@ -1418,7 +1397,7 @@ img {
   }
 
   .banner01-content {
-    font-size: 28px;
+    font-size: 48px;
     top: 15vh;
   }
 
@@ -1439,37 +1418,6 @@ img {
   }
 }
 
-@media (max-width: 400px) {
-  .section {
-    padding: 0 10px;
-  }
-
-  .popular-products-cards {
-    flex: 0 0 120px;
-    min-width: 120px;
-    height: 130px;
-  }
-
-  .product {
-    min-width: 140px;
-  }
-
-  .banner01-content {
-    font-size: 22px;
-  }
-
-  .banner01-sub {
-    font-size: 12px;
-  }
-
-  .advertisment {
-    padding: 0 10px;
-  }
-
-  .footer-inner {
-    padding: 20px 15px;
-  }
-}
 
 
 /* Search Bar Responsive Fixes */
@@ -1547,16 +1495,7 @@ img {
   }
 }
 
-@media (max-width: 400px) {
-  .search-box input {
-    height: 36px;
-    font-size: 11px;
-  }
 
-  .logo img {
-    width: 35px;
-  }
-}
 
 
 /* Image Responsive Fixes */
@@ -1617,21 +1556,6 @@ img {
   }
 }
 
-@media (max-width: 400px) {
-  .popular-products-cards img {
-    width: 40px;
-    height: 60px;
-  }
-
-  .product-image img {
-    max-width: 70px;
-    max-height: 70px;
-  }
-
-  .logo img {
-    max-width: 35px;
-  }
-}
 
 
 /* Hero Section Mobile Fixes */
@@ -1704,21 +1628,94 @@ img {
   }
 }
 
+
+/* Small Mobile */
+
 @media (max-width: 400px) {
+
+  .cart b {
+    font-size: 12px;
+    padding: 4px;
+  }
+  
+  .banner01 img {
+    height: 35vh;
+  }
+
+
+  .section {
+    width: calc(100% - 20px);
+  }
+
+  .advertisment {
+    width: calc(100% - 20px);
+  }
+
+  .footer-inner {
+    width: calc(100% - 20px);
+  }
+  
+  .product {
+    min-width: 140px;
+  }
+
+
+  .advertisment {
+    padding: 0 10px;
+  }
+
+  .footer-inner {
+    padding: 20px 15px;
+  }
+
+  .search-box input {
+    height: 36px;
+    font-size: 11px;
+  }
+
+  .popular-products-cards {
+    flex: 0 0 120px;
+    min-width: 120px;
+    height: 130px;
+  }
+
+  .popular-products-cards img {
+    width: 40px;
+    height: 60px;
+  }
+
+  .product-image img {
+    max-width: 70px;
+    max-height: 70px;
+  }
+
+
   .banner01 img {
     height: 30vh;
     min-height: 220px;
   }
 
   .banner01-content {
-    font-size: 54px;
+    font-size: 36px !important;
     text-align: center;
+
   }
 
   .banner01-sub {
-    font-size: 11px !important;
-    top: 55%;
+    font-size: 24px !important;
+    top: 48%;
     right: 5%;
     max-width: 85%;
   }
+
+  .footer-bottom{
+    align-items: center;
+    display: flex;
+    width: 100%;
+  }
+  .go-top{
+    margin-top: 10px;
+
+  }
 }
+

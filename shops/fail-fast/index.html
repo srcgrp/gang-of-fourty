@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <div id="top"></div>
   <a href="#main" class="skip">پرش به محتوای اصلی</a>
 
   <header>
@@ -28,7 +29,7 @@
         <i></i>
       </label>
 
-      <a href="#top" class="logo" id="top">
+      <a href="#top" class="logo">
         <img src="./src/images/space-market-logo.svg" width="120" height="50" alt="اسپیس مارکت">
         <div>
           <strong>اسپیس مارکت</strong>
@@ -39,11 +40,11 @@
       <div class="search-box">
         <label for="search">جستجو</label>
         <input id="search" type="search" placeholder="جستجو در اسپیس مارکت...">
-        <span class="search-icon">⌕</span>
+        <span class="search-icon" aria-hidden="true">⌕</span>
       </div>
 
       <a href="#cart" class="cart">
-        <span class="cart-icon">🛒</span>
+        <span class="cart-icon" aria-hidden="true">🛒</span>
         <span>سبد خرید</span>
         <b>۳</b>
       </a>
@@ -53,16 +54,18 @@
     <nav>
       <div class="nav-inner">
         <div class="categories-menu">
-          <a class="active" href="#categories">دسته‌بندی‌ها</a>
-          <div class="categories-dropdown">
-            <a href="#dairy">🥛 لبنیات و تخم‌مرغ</a>
-            <a href="#vegtables">🥬 میوه و سبزیجات</a>
-            <a href="#bread">🍞 نان و غلات</a>
-            <a href="#snacks">🍪 تنقلات و شیرینی</a>
-            <a href="#drinks">🥤 نوشیدنی‌ها</a>
-            <a href="#cosmetics">🧴 آرایشی و بهداشتی</a>
+          <a class="active" href="#categories" aria-haspopup="true" aria-expanded="false">دسته‌بندی‌ها</a>
+          <div class="categories-dropdown" role="menu">
+            <a href="#dairy" role="menuitem"><span aria-hidden="true">🥛</span> لبنیات و تخم‌مرغ</a>
+            <a href="#vegtables" role="menuitem"><span aria-hidden="true">🥬</span> میوه و سبزیجات</a>
+            <a href="#bread" role="menuitem"><span aria-hidden="true">🍞</span> نان و غلات</a>
+            <a href="#snacks" role="menuitem"><span aria-hidden="true">🍪</span> تنقلات و شیرینی</a>
+            <a href="#drinks" role="menuitem"><span aria-hidden="true">🥤</span> نوشیدنی‌ها</a>
+            <a href="#cosmetics" role="menuitem"><span aria-hidden="true">🧴</span> آرایشی و بهداشتی</a>
           </div>
-        </div>        <a href="#offers">پیشنهادهای امروز</a>
+
+        </div>        
+        <a href="#offers">پیشنهادهای امروز</a>
         <a href="#sales">تخفیف‌دار ها</a>
         <a href="#dairy">لبنیات</a>
         <a href="#snacks">تنقلات</a>
@@ -78,7 +81,7 @@
     <!-- hero banner -->
     <div class="banner01">
       <img id="banner01"
-           src="./src/images/banner01.png"
+           src="./src/images/banner01.webp"
            alt="بنر اسپیس مارکت"
            width="1920"
            height="600">
@@ -181,11 +184,11 @@
 
     <!-- بنر تخفیف -->
     <section class="banner02" id="sales">
-      <img src="./src/images/banner05.png" alt="تخفیف‌های اسپیس مارکت">
+      <img src="./src/images/banner05.webp" alt="تخفیف‌های اسپیس مارکت">
     </section>
 
     <section class="banner02-res">
-      <img src="./src/images/banner-02-res.png" alt="تخفیف‌های اسپیس مارکت">
+      <img src="./src/images/banner-02-res.webp" alt="تخفیف‌های اسپیس مارکت">
     </section>
 
     <!-- پیشنهاد روز -->
@@ -193,7 +196,7 @@
 
       <div class="section-title">
         <div>
-          <h2>🔥پیشنهاد ویژه امروز</h2>
+          <h2><span aria-hidden="true"></span>🔥</span>پیشنهاد ویژه امروز</h2>
         </div>
 
         <div class="arrows">
@@ -341,14 +344,17 @@
 
     <!-- بنر تبلیغاتی -->
     <section class="advertisment">
+      <a href="#mazmaz">
+        <img src="./src/images/banner07.webp"
+            class="advertisment-banner"
+            alt="بنر تبلیغاتی مزمز">
+      </a>
+      <a href="#rani">
+        <img src="./src/images/banner08.webp"
+            class="advertisment-banner"
+            alt="بنر تبلیغاتی رانی">
+      </a>
 
-      <img src="./src/images/banner07.png"
-           class="advertisment-banner"
-           alt="بنر تبلیغاتی اسپیس مارکت">
-
-      <img src="./src/images/banner08.png"
-           class="advertisment-banner"
-           alt="بنر تبلیغاتی اسپیس مارکت">
 
     </section>
 
@@ -497,7 +503,7 @@
 
   <footer id="footer">
 
-    <img src="./src/images/footer.PNG"
+    <img src="./src/images/footer.webp"
          class="footer-bg"
          alt="">
 
