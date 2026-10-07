@@ -392,6 +392,10 @@ main {
   width: 16px;
 }
 
+html[dir="ltr"] .carousel-arrows img {
+  transform: scaleX(-1);
+}
+
 .product-carousel:target h2::after {
   content: "اینجا هستید";
   margin-inline-start: 0.5rem;
