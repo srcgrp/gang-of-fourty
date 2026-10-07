@@ -18,7 +18,7 @@ body {
 .skip-link {
   position: absolute;
   top: -100px;
-  right: 16px;
+  inset-inline-start: 16px;
   background: #2F3A26;
   color: #F5EFE3;
   padding: 12px 20px;
@@ -125,6 +125,8 @@ header {
     position: relative;
     width: 100%;
     max-width: 400px;
+    flex: 1 1 auto;
+    min-width: 0;
 }
 #search-box{
     width: 100%;
@@ -134,7 +136,6 @@ header {
     border-radius: 30px;
     font-size: 17px;
     font-family: inherit;
-    outline: none;
     padding-inline-start: 45px; 
     padding-inline-end: 15px;
     transition: border-color 0.2s, box-shadow 0.2s;
@@ -145,7 +146,6 @@ header {
 .search-btn{
      position:absolute;
     color: #2F3A26;
-    right: 8px;
     top: 50%;
     inset-inline-start: 8px;
     transform: translateY(-50%);
@@ -168,7 +168,6 @@ header {
     justify-content: space-between;
     border-radius: 20px;
     border: none;
-    outline: none;
     padding: 8px 10px;
     background-color: #4F5B2A;
     font-weight: bold;
@@ -228,7 +227,7 @@ header {
 .dropdown-menu {
     position: absolute;
     top: 100%; 
-    right: 0; 
+    inset-inline-start: 0; 
     background-color: #D8C9A8;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 8px;
@@ -311,6 +310,15 @@ header {
     opacity: 0.92;
 }
 
+/* وقتی جهت صفحه ltr بشه، فلش و حرکت دکمه هم برعکس می‌شن */
+.Hero button:dir(ltr):hover {
+    transform: translateX(4px);
+}
+
+.Hero button svg:dir(ltr) {
+    transform: scaleX(-1);
+}
+
 .btn-light {
     background-color: #F3E6C4;
     color: #2F3A26;
@@ -349,6 +357,18 @@ header {
         linear-gradient(to left, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.2) 55%, rgba(0, 0, 0, 0) 80%),
         url("images/banner-tent.webp");
 }
+
+.banner1:dir(ltr) {
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.2) 55%, rgba(0, 0, 0, 0) 80%),
+        url("images/banner-sleeping-bag.webp");
+}
+
+.banner2:dir(ltr) {
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.2) 55%, rgba(0, 0, 0, 0) 80%),
+        url("images/banner-tent.webp");
+}
 .offer{
     margin: 20px 10px 30px 10px;
     color: #2F3A26;
@@ -359,9 +379,9 @@ header {
 .carousel {
     display: flex; 
     gap: 15px; 
-    overflow-x: auto; 
-    scroll-snap-type: mandatory;
-    padding-bottom: 15px; 
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    padding-bottom: 15px;
 }
 .product,
 .tent-article {
@@ -385,7 +405,7 @@ header {
 .discount-badge {
     position: absolute;
     top: 20px;
-    right: 20px;           
+    inset-inline-start: 20px;
     width: 40px;
     height: 40px;
     background-color: #9f291c;  
@@ -512,6 +532,56 @@ header {
 #koole{
     filter: brightness(0);
 }
+section:target h2::after {
+    content: " — اینجا هستید";
+    font-size: 0.85rem;
+    color: #9f291c;
+    margin-inline-start: 10px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.section-header h2 {
+    margin: 0;
+}
+
+.carousel-nav {
+    display: flex;
+    gap: 8px;
+}
+
+.carousel-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid #C9C3AF;
+    background-color: #F5EFE3;
+    color: #2F3A26;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.carousel-btn:hover {
+    background-color: #D8C9A8;
+    transform: translateY(-2px);
+}
+
+.carousel {
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; 
+}
 .tent-article{
     position: relative;
     flex-shrink: 0;
@@ -534,12 +604,12 @@ header {
     padding: 0 15px;
 
 }
-.offer, .category, .tent {
+.offer, .category, .tents {
     margin: 20px 10px 30px 10px;
-    color: #2F3A26; 
+    color: #2F3A26;
 }
 
-.offer h2, .titels {
+.offer h2, .titels, .titles {
     margin: 20px 0;
 }
 .tent-article:hover{
@@ -686,11 +756,49 @@ section[id] {
     height: 28px;
     display: block;
 }
+section[id]:target h2::after,
+div[id]:target h2::after {
+    content: " — اینجا هستید";
+    font-size: 0.85rem;
+    font-weight: normal;
+    color: #9f291c;
+    background-color: rgba(159, 41, 28, 0.1);
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-inline-start: 10px;
+}
+[id] {
+    scroll-margin-top: 160px;
+}
+/*mobile area*/
 @media (max-width: 768px) {
 
+    body {
+        background-attachment: scroll;
+    }
+
+    .info-nav {
+        height: auto;
+        min-height: 44px;
+        padding: 8px 12px;
+        gap: 8px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .gift-icon {
+        width: 22px;
+        height: 22px;
+    }
+
     .logo-container {
-        padding: 12px 16px;
+        padding: 10px 16px;
         gap: 12px;
+    }
+
+    .logo {
+        gap: 8px;
+        min-width: 0;
     }
 
     .logo-text {
@@ -707,8 +815,9 @@ section[id] {
     }
 
     .search {
+        flex: 0 0 auto;
         width: auto;
-        flex-grow: 0;
+        margin-inline-start: auto;
     }
 
     .search-btn {
@@ -717,13 +826,42 @@ section[id] {
         background-color: #f1c40f;
         color: #4F5B2A;
         border-radius: 50%;
-        width: 40px;
-        height: 40px;
     }
 
-    .cart .btn-text,
-    .cart .cart-count {
+    .header-actions {
+        gap: 8px;
+    }
+
+    .cart-wrap {
+        padding-inline-start: 0;
+        border-inline-start: none;
+        height: auto;
+    }
+
+    .cart {
+        position: relative;
+        justify-content: center;
+        padding: 0;
+        border-radius: 50%;
+    }
+
+    .cart .btn-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .cart .btn-text {
         display: none;
+    }
+
+    .cart-count {
+        position: absolute;
+        top: -4px;
+        inset-inline-end: -4px;
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        color: #2F3A26;
     }
 
     .cart,
@@ -735,50 +873,44 @@ section[id] {
         min-height: 44px;
     }
 
-    .add-to-cart {
-        width: 44px;
-        height: 44px;
-        font-size: 20px;
-    }
-
     .hamburger-btn {
-        display: flex ;
+        display: flex;
         align-items: center;
         justify-content: center;
-        height: 44px;
-        width: 44px;
-        min-width: 44px;
-        min-height: 44px;
+        padding: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .mobile-menu[open] .hamburger-btn {
+        background-color: #b4a97c;
     }
 
     .main-nav {
-        display: none !important;
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-        padding: 0;
-        background-color: #D8C9A8;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        z-index: 999;
-        
+        display: none;
     }
+
     .mobile-nav-links {
         display: flex;
         flex-direction: column;
         background-color: #D8C9A8;
         position: absolute;
         top: 100%;
-        right: 0;
-        left: 0;
+        inset-inline: 0;
+        max-height: calc(100vh - 140px);
+        overflow-y: auto;
         box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         z-index: 999;
+        animation: slideDown 0.2s ease;
     }
+
     .mobile-nav-links a {
-        padding: 16px 24px;
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 12px 24px;
         text-decoration: none;
         color: #4F5B2A;
         font-weight: bold;
@@ -789,44 +921,58 @@ section[id] {
         background-color: #b4a97c;
     }
 
-    .main-nav a,
-    .dropdown-trigger {
-        width: 100%;
-        padding: 16px 24px;
-        border-bottom: 1px solid rgba(47, 58, 38, 0.12);
-        box-sizing: border-box;
-        justify-content: flex-start;
-    }
-
-    .dropdown-menu {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        background-color: #c9be9a;
-        border-radius: 0;
-        display: none;
-    }
-
-
-
     .Hero {
         flex-direction: column;
-        margin: 12px 8px 24px;
+        margin: 12px 10px 24px;
         gap: 12px;
     }
 
     .banner1,
     .banner2 {
         width: 100%;
-        height: 260px;
+        height: auto;
+        min-height: 220px;
         padding: 24px 20px;
     }
 
-    .banners {
-        flex-direction: column;
-        gap: 12px;
+    .Hero h2 {
+        font-size: 1.35rem;
+    }
+
+    /* دسته‌بندی‌ها در موبایل: دو ردیف سه‌تایی به جای کاروسل */
+    .category .carousel {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        overflow: visible;
+        padding-bottom: 0;
+    }
+
+    .Categories {
+        width: 100%;
+        min-height: 120px;
+        padding: 12px 6px;
+    }
+
+    .category img {
+        width: 64px;
+        height: 64px;
+        padding: 0;
+    }
+
+    .Categories h3 {
+        font-size: 0.95rem;
+        margin-top: 8px;
+    }
+
+    .section-header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .carousel-btn {
+        width: 44px;
+        height: 44px;
     }
 
     .product,
@@ -834,27 +980,113 @@ section[id] {
         width: 200px;
     }
 
-    .Categories {
-        width: 150px;
-    }
-    .mobile-menu{display: block;}
-    .mobile-nav-links a {
-        padding: 16px 24px;
-        text-decoration: none;
-        color: #4F5B2A;
-        font-weight: bold;
-        border-bottom: 1px solid rgba(47, 58, 38, 0.12);
+    .product div,
+    .tent-article div {
+        justify-content: space-between;
+        gap: 8px;
+        padding: 0 4px;
     }
 
-    .mobile-nav-links a:hover {
-        background-color: #b4a97c;
-    }
     .prouduct-pic {
         width: 100%;
         max-width: 100%;
         height: auto;
         aspect-ratio: 1 / 1;
         object-fit: contain;
+    }
+
+    .add-to-cart {
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+    }
+
+    .banners {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .banners div {
+        padding: 20px 24px;
+    }
+
+    .banner-title {
+        font-size: 1.2rem;
+    }
+
+    .footer-section {
+        flex-basis: 100%;
+        min-width: 0;
+    }
+
+    .footer-section.links li {
+        margin-bottom: 0;
+    }
+
+    .footer-section.links a,
+    .back-to-top {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/*small phones (320px - 480px)*/
+@media (max-width: 480px) {
+    .info-nav {
+        font-size: 13px;
+    }
+
+    .logo-container {
+        padding: 10px;
+        gap: 6px;
+    }
+
+    /* اگر جا خیلی تنگ شد، اسم فروشگاه به جای بیرون زدن دو خطی می‌شود */
+    .logo {
+        gap: 4px;
+        flex-shrink: 1;
+    }
+
+    .logo-mark {
+        width: 34px;
+        height: 24px;
+        flex-shrink: 0;
+    }
+
+    .logo-text {
+        font-size: clamp(13px, 4.2vw, 16px);
+        letter-spacing: 0.5px;
+    }
+
+    .logo-sub {
+        display: none;
+    }
+
+    .header-actions {
+        gap: 6px;
+    }
+
+    .banner1,
+    .banner2 {
+        min-height: 200px;
+        padding: 20px 16px;
+    }
+
+    .product,
+    .tent-article {
+        width: 180px;
+    }
+
+    .product div p,
+    .tent-article div p {
+        font-size: 14px;
     }
 }
 /*tablet area*/
@@ -931,4 +1163,23 @@ section[id] {
 .banners div:hover{
     transform: translateY(-3px);
     opacity: 96%;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #2F3A26;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }

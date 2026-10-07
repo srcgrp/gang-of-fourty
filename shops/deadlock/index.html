@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./Style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <a href="#main-content" class="skip-link">پرش به محتوای اصلی</a>
@@ -35,10 +35,10 @@
                     <polygon points="2,66 38,14 74,66" class="mountain-back" />
                     <polygon points="30,66 62,22 98,66" class="mountain-front" />
                 </svg>
-                <span class="logo-words">
+                <div class="logo-words">
                     <h1 class="logo-text">HERMAN SHOP</h1>
                     <span class="logo-sub">GEAR FOR A WILDER LIFE</span>
-                </span>
+                </div>
             </a>
 
             <div class="search">
@@ -77,7 +77,7 @@
                     </svg>
                     </summary>
                     <nav class="mobile-nav-links">
-                        <a href="#special-offers">همه دسته ها</a>
+                        <a href="#categories">همه دسته ها</a>
                         <a href="#special-offers">پیشنهاد ویژه</a>
                         <a href="#sleeping-bags">کیسه خواب</a>
                         <a href="#fire-gear">لوازم آتش</a>
@@ -116,7 +116,7 @@
     </header>
     
     <section class="Hero" id="main-content">
-        <div class="banner1">
+        <div class="banner1" id="sleeping-bags">
             <h2>کیسه خواب<br>با بهترین قیمت</h2>
             <p>اجناس وارداتی با تضمین کیفیت</p>
             <button class="btn-light">
@@ -124,6 +124,7 @@
                 <svg viewBox="0 0 32 32" fill="none">
                     <path d="M20 7l-9 9 9 9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
+            </button>
         </div>
         <div class="banner2">
             <h2>چادر مسافرتی<br>با بهترین قیمت</h2>
@@ -162,12 +163,22 @@
                 <img src="images/camping-backpack-svgrepo-com.svg" alt="کوله پشتی" id="koole">
                 <h3>کوله پشتی</h3>
             </div>
+            <a href="#coffee-gear" class="Categories">
+                <img src="images/spiral-32-svgrepo-com.svg" alt="آیکون دسته‌بندی قهوه‌ساز سفری">
+                <h3>قهوه‌ساز</h3>
+            </a>
         </div>
     </section>
     <section class="offer" id="special-offers">
-        <h2>پیشنهاد ویژه امروز🔥</h2>
+        <div class="section-header">
+            <h2>پیشنهاد ویژه امروز🔥</h2>
+            <div class="carousel-nav">
+                <a href="#offer-first" class="carousel-btn" aria-label="رفتن به ابتدای کاروسل پیشنهاد ویژه">❯</a>
+                <a href="#offer-last" class="carousel-btn" aria-label="رفتن به انتهای کاروسل پیشنهاد ویژه">❮</a>
+            </div>
+        </div>
         <div class="carousel">
-             <article class="product">
+             <article class="product" id="offer-first">
             <span class="discount-badge">۱۵٪</span>
             <img src="images/mug.webp" alt="prouduct-pic" class="prouduct-pic">
             <h3>تراول ماگ</h3>
@@ -175,7 +186,7 @@
             <p class="discount-price">۲,۵۰۰,۰۰۰</p>
             <div>
                 <p>تومان ۲,۰۰۰,۰۰۰</p>
-                <button class="add-to-cart">+</button>
+                <button class="add-to-cart" aria-label="افزودن به سبد خرید">+</button>
             </div>
             
         </article>
@@ -187,7 +198,7 @@
             <p class="discount-price">۱۰,۵۰۰,۰۰۰</p>
             <div>
                 <p>تومان ۹,۰۰۰,۰۰۰</p>
-                <button class="add-to-cart">+</button>
+                <button class="add-to-cart" aria-label="افزودن به سبد خرید">+</button>
             </div>
             
         </article>
@@ -227,7 +238,7 @@
             </div>
             
         </article>
-        <article class="product">
+        <article class="product" id="offer-last">
             <span class="discount-badge">۱۵٪</span>
             <img src="images/chagho.webp" alt="prouduct-pic" class="prouduct-pic">
             <h3>چاقو</h3>
@@ -239,6 +250,7 @@
             </div>
             
         </article>
+        
         </div>
     </section>
 
@@ -257,55 +269,66 @@
     <section class="tents" id="tents">
         <h2 class="titles">چادر⛺️</h2>
         <div class="carousel">
-            <article class="tent-article">
-                <img src="./images/1.jpeg" alt="" class="prouduct-pic">
-                <h3></h3>
+            <article class="tent-article" id="tent-first">
+                <img src="./images/1.jpeg" alt="چادر کوهنوردی حرفه‌ای تکپوش قرمزرنگ" class="prouduct-pic">
+                <h3>چادر کوهنوردی اورست</h3>
                 <p></p>
                 <p></p>
                 <div>
                 <p>تومان ۸,۹۰۰,۰۰۰</p>
-                <button class="add-to-cart">+</button>
+                <button class="add-to-cart" aria-label="افزودن به سبد خرید">+</button>
             </div>
             </article>
             <article class="tent-article">
                 <span class="discount-badge">۱۰٪</span>
-                <img src="./images/2.webp" alt="" class="prouduct-pic">
-                <h3></h3>
+                <img src="./images/2.webp" alt="چادر کوهنوردی حرفه‌ای تکپوش سفید" class="prouduct-pic">
+                <h3>چادر کوهنوردی اورست</h3>
                 <p>۲ نفره</p>
                 <p class="discount-price">۳,۳۳۰,۰۰۰</p>
                 <div>
                 <p>تومان ۲,۰۹۰,۰۰۰</p>
-                <button class="add-to-cart">+</button>
+                <button class="add-to-cart" aria-label="افزودن به سبد خرید">+</button>
             </div>
             </article>
             <article class="tent-article">
-                <img src="./images/3.jpeg" alt="" class="prouduct-pic">
-                <h3></h3>
+                <img src="./images/3.jpeg" alt="چادر کوهنوردی حرفه‌ای تکپوش آبی" class="prouduct-pic">
+                <h3>چادر کوهنوردی اورست</h3>
                 <p>۵ نفره</p>
                 <div>
                 <p>تومان ۶,۰۹۰,۰۰۰</p>
-                <button class="add-to-cart">+</button>
+                <button class="add-to-cart" aria-label="افزودن به سبد خرید">+</button>
             </div>
             </article>
             <article class="tent-article">
-                <img src="./images/4.webp" alt="" class="prouduct-pic">
-                <h3></h3>
+                <img src="./images/4.webp" alt="چادر کوهنوردی حرفه‌ای تکپوش سبز" class="prouduct-pic">
+                <h3>چادر کوهنوردی اورست</h3>
                 <p>۱۰ نفره</p>
                 
                 <div>
                 <p>تومان ۱۲,۰۰۰,۰۰۰</p>
-                <button class="add-to-cart">+</button>
+                <button class="add-to-cart" aria-label="افزودن به سبد خرید">+</button>
             </div>
             </article>
             <article class="tent-article">
                 <span class="discount-badge">۱۲٪</span>
-                <img src="./images/5.webp" alt="" class="prouduct-pic">
-                <h3></h3>
+                <img src="./images/5.webp" alt="چادر کوهنوردی حرفه‌ای تکپوش قرمز" class="prouduct-pic">
+                <h3>چادر کوهنوردی اورست</h3>
                 <p>۶ نفره</p>
                 <p class="discount-price">۹,۰۰۰,۰۰۰</p>
                 <div>
                 <p>تومان ۵,۰۹۰,۰۰۰</p>
                 <button class="add-to-cart">+</button>
+            </div>
+            </article>
+            <article class="tent-article">
+                <span class="discount-badge">۴۲٪</span>
+                <img src="./images/tent4.jpeg" alt="" class="prouduct-pic">
+                <h3>چادر کوهنوردی اورست</h3>
+                <p>۶ نفره</p>
+                <p class="discount-price">۹,۰۰۰,۰۰۰</p>
+                <div>
+                <p>تومان ۵,۰۹۰,۰۰۰</p>
+                <button class="add-to-cart" aria-label="افزودن به سبد خرید">+</button>
             </div>
             </article>
         </div>
