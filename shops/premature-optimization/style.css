@@ -447,6 +447,10 @@ body {
   padding: 16px;
 }
 
+.product-item:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 
 .product-discount {
   position: absolute;
