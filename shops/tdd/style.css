@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("fonts/Vazirmatn.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   color-scheme: light;
   --ink: #18382f;
@@ -43,7 +51,7 @@ body {
     radial-gradient(circle at 8% 3%, rgb(242 155 56 / 9%), transparent 23rem),
     radial-gradient(circle at 94% 22%, rgb(21 92 69 / 7%), transparent 28rem),
     var(--paper);
-  font-family: Tahoma, "Segoe UI", Arial, sans-serif;
+  font-family: "Vazirmatn", Tahoma, "Segoe UI", Arial, sans-serif;
   font-size: clamp(.95rem, .35vw + .86rem, 1.05rem);
   line-height: 1.9;
   text-rendering: optimizeLegibility;
@@ -2460,4 +2468,138 @@ footer > p:last-child {
   footer nav a:focus-visible {
     transform: none;
   }
+}
+
+/* Density pass: keep complete sections visible and the sticky header unobtrusive. */
+:root {
+  --section-space: clamp(2.75rem, 5vw, 4.5rem);
+  --header-offset: 9.5rem;
+}
+
+body { font-size: clamp(.88rem, .25vw + .82rem, .98rem); line-height: 1.75; }
+.announcement { padding-block: .25rem; font-size: .66rem; }
+.header-content { min-height: 4.35rem; padding-block: .35rem; }
+.brand-mark { width: 3.15rem; height: 3.15rem; border-radius: .85rem; }
+.brand strong { font-size: 1.02rem; }
+.brand small { font-size: .6rem; }
+.search input,
+.search button { min-height: 2.3rem; }
+.search input { padding-inline: .9rem; }
+.search button { padding-inline: 1rem; font-size: .74rem; }
+.cart { min-height: 2.5rem; padding-block: .3rem; font-size: .75rem; }
+.primary-navigation { min-height: 2.55rem; }
+.primary-navigation > a,
+.category-trigger { min-height: 2.45rem; font-size: .75rem; }
+
+main { padding-block: 1rem clamp(3.5rem, 7vw, 5.5rem); }
+main section { padding-block: calc(var(--section-space) / 2); }
+.section-heading { margin-bottom: clamp(1rem, 2vw, 1.5rem); }
+.section-heading h2,
+.story h2 { font-size: clamp(1.65rem, 2.5vw, 2.35rem); }
+.section-heading > p { font-size: .76rem; }
+.eyebrow { font-size: .7rem; }
+
+.hero {
+  min-height: clamp(28rem, 58vh, 34rem);
+  margin-block-start: .75rem;
+  padding: clamp(1.75rem, 4.5vw, 4rem);
+}
+.hero h1 { margin-block: .4rem .9rem; font-size: clamp(2.55rem, 5vw, 4.35rem); }
+.hero-copy > p:not(.eyebrow) { max-width: 56ch; line-height: 1.85; }
+.hero-actions { margin-block-start: 1.3rem; }
+.hero-actions a { min-height: 2.8rem; font-size: .74rem; }
+.hero-benefits { margin-block-start: 1.15rem; font-size: .67rem; }
+.hero-visual { min-height: 23rem; }
+.freshness-card { padding: .7rem .9rem; }
+.tdd-orbit span { min-width: 3rem; min-height: 3rem; font-size: .58rem; }
+
+.category-grid a { min-height: 9.25rem; padding-block: .85rem; }
+.category-grid span { width: 4.1rem; height: 4.1rem; margin-block-end: .45rem; border-radius: 1.2rem; font-size: 1.9rem; }
+.category-grid strong { font-size: .8rem; }
+.category-grid small { font-size: .61rem; }
+
+.promo-grid { padding-block: calc(var(--section-space) / 2); }
+.promo { min-height: 11.5rem; padding: clamp(1.35rem, 3vw, 2.2rem); }
+.promo h2 { font-size: clamp(1.4rem, 2.5vw, 2.05rem); }
+.promo > span { width: clamp(5.75rem, 10vw, 8.5rem); height: clamp(5.75rem, 10vw, 8.5rem); font-size: clamp(3.2rem, 6vw, 5.2rem); }
+.promo a { min-height: 2.45rem; font-size: .68rem; }
+
+.product-carousel { padding-block: calc(var(--section-space) / 2); }
+.carousel-controls { margin-block: -.65rem .75rem; }
+.carousel-controls a { min-height: 2.35rem; font-size: .64rem; }
+.product-card { flex-basis: clamp(13rem, 20vw, 15.5rem); padding: .55rem .55rem .8rem; }
+.product-image { min-height: 8.75rem; }
+.product-icon { font-size: 4rem; }
+.product-card h3 { min-height: 2.55rem; margin-block-start: .7rem; font-size: .88rem; }
+.product-amount { margin-block-end: .55rem; font-size: .62rem; }
+.product-prices { min-height: 3.45rem; }
+.current-price strong { font-size: .9rem; }
+.add-button { min-height: 2.5rem; margin-block-start: .45rem; font-size: .66rem; }
+.add-button span { width: 1.35rem; height: 1.35rem; font-size: 1rem; }
+
+.story { min-height: 27rem; margin-block: calc(var(--section-space) / 2); }
+.story-image,
+.story-image img { min-height: 21rem; }
+.story h2 { font-size: clamp(2rem, 3.6vw, 3.4rem); }
+.story > div:last-child > p:not(.eyebrow) { font-size: .82rem; line-height: 1.85; }
+.story a { min-height: 2.6rem; }
+
+main > .store-sections { padding-block: calc(var(--section-space) / 2); }
+main > .store-sections article { min-height: 9.5rem; padding: 1rem; }
+main > .store-sections article > span { width: 3rem; height: 3rem; font-size: 1.45rem; }
+
+#about { margin-block-start: calc(var(--section-space) / 2); padding: clamp(1.75rem, 4vw, 3.5rem); }
+#about > h2 { font-size: clamp(1.8rem, 3vw, 2.85rem); }
+#about > p { font-size: .82rem; line-height: 1.85; }
+#about > .store-sections { margin-block-start: 1.4rem; }
+#about > .store-sections article { min-height: 10rem; padding: 1rem; }
+footer { padding-block: clamp(2.5rem, 5vw, 4rem); }
+
+@media (max-width: 60rem) {
+  :root { --header-offset: 9rem; }
+  .header-content {
+    grid-template-columns: auto minmax(11rem, 1fr) auto;
+    gap: .55rem;
+    min-height: 3.9rem;
+    padding-block: .25rem;
+  }
+  .search {
+    grid-column: auto;
+    grid-row: auto;
+    width: 100%;
+  }
+  .cart { min-block-size: 2.5rem; }
+  .mobile-menu { padding-block: .15rem; }
+  .mobile-menu > summary { min-height: 2.75rem; min-block-size: 2.75rem; padding-block: .2rem; font-size: .7rem; }
+  .hero { gap: 1rem; }
+  .hero-visual { min-height: 20rem; }
+  .category-grid a { min-height: 8.75rem; }
+  .product-card { flex-basis: min(15rem, 75vw); }
+  .story-image,
+  .story-image img { min-height: 18rem; }
+}
+
+@media (max-width: 38rem) {
+  :root { --header-offset: 9rem; }
+  .announcement { font-size: .58rem; }
+  .header-content { grid-template-columns: 1fr auto; }
+  .brand-mark { width: 2.75rem; height: 2.75rem; }
+  .brand strong { font-size: .92rem; }
+  .search { display: none; }
+  .cart { width: 2.75rem; min-height: 2.75rem; min-block-size: 2.75rem; padding: 0; font-size: 0; }
+  .hero { padding-block: 1.6rem 1rem; }
+  .hero h1 { font-size: clamp(2.25rem, 12vw, 3.25rem); }
+  .hero-visual { min-height: 15rem; }
+  .freshness-card { max-width: 10.5rem; font-size: .66rem; }
+  .tdd-orbit span { min-width: 2.55rem; min-height: 2.55rem; }
+  .category-grid a { min-height: 7.25rem; padding-block: .55rem; }
+  .category-grid span { width: 3.6rem; height: 3.6rem; font-size: 1.65rem; }
+  .promo { min-height: 10rem; }
+  .product-card { flex-basis: min(14.5rem, 78vw); }
+  .story-image,
+  .story-image img { min-height: 14rem; }
+  .story h2 { font-size: 2rem; }
+  main > .store-sections article { min-height: 8rem; }
+  #about { padding-block: 1.6rem; }
+  #about > .store-sections article { min-height: auto; }
 }
