@@ -52,12 +52,49 @@
       </a>
     </div>
 
-    <nav class="primary-navigation" aria-label="منوی اصلی">
+    <nav class="primary-navigation desktop-navigation" aria-label="منوی اصلی">
       <a href="#special-offers">پیشنهادهای ویژه</a>
-      <a href="#categories">دسته‌بندی‌ها</a>
+      <div class="category-menu">
+        <a class="category-trigger" href="#categories">دسته‌بندی‌ها <span aria-hidden="true">⌄</span></a>
+        <div class="category-dropdown">
+            <a href="#fruit">میوه</a>
+            <a href="#herbs">سبزی و صیفی‌جات</a>
+            <a href="#proteins">پروتئین</a>
+            <a href="#dairy">لبنیات</a>
+            <a href="#bakery">نان و صبحانه</a>
+            <a href="#sweets">شیرینی</a>
+            <a href="#snacks">خواربار و تنقلات</a>
+            <a href="#drinks">نوشیدنی</a>
+        </div>
+      </div>
+      <a href="#daily-essentials">سبد روزمره</a>
       <a href="#about">داستان سام مارکت</a>
       <a href="#contact">تماس با ما</a>
     </nav>
+
+    <details class="mobile-menu">
+      <summary><span aria-hidden="true">☰</span> منوی فروشگاه</summary>
+      <nav class="mobile-navigation" aria-label="منوی اصلی موبایل">
+        <a href="#special-offers">پیشنهادهای ویژه</a>
+        <a href="#daily-essentials">سبد روزمره</a>
+        <details class="mobile-categories">
+          <summary>دسته‌بندی محصولات</summary>
+          <div class="mobile-category-links">
+            <a href="#categories">همهٔ دسته‌بندی‌ها</a>
+            <a href="#fruit">میوه</a>
+            <a href="#herbs">سبزی و صیفی‌جات</a>
+            <a href="#proteins">پروتئین</a>
+            <a href="#dairy">لبنیات</a>
+            <a href="#bakery">نان و صبحانه</a>
+            <a href="#sweets">شیرینی</a>
+            <a href="#snacks">خواربار و تنقلات</a>
+            <a href="#drinks">نوشیدنی</a>
+          </div>
+        </details>
+        <a href="#about">داستان سام مارکت</a>
+        <a href="#contact">تماس با ما</a>
+      </nav>
+    </details>
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -153,7 +190,7 @@
             <span class="product-icon" aria-hidden="true">🥚</span>
           </div>
           <h3 id="offers-product-3-name">تخم‌مرغ</h3>
-          <p class="product-amount">بستهٔ ۶ عددی</p>
+          <p class="product-amount">بسته ۶ عددی</p>
           <div class="product-prices">
             <p class="current-price">قیمت: <strong>۷۲٬۰۰۰</strong> تومان</p>
           </div>
@@ -215,7 +252,7 @@
             <span class="product-icon" aria-hidden="true">🥖</span>
           </div>
           <h3 id="daily-first-name">نان باگت</h3>
-          <p class="product-amount">بستهٔ ۲ عددی</p>
+          <p class="product-amount">بسته ۲ عددی</p>
           <div class="product-prices">
             <p class="current-price">قیمت: <strong>۳۰٬۰۰۰</strong> تومان</p>
           </div>
@@ -237,13 +274,13 @@
             <span class="product-icon" aria-hidden="true">🍗</span>
             <span class="discount-badge">۱۰٪ تخفیف</span>
           </div>
-          <h3 id="daily-product-3-name">فیلهٔ مرغ</h3>
+          <h3 id="daily-product-3-name">فیله مرغ</h3>
           <p class="product-amount">۵۰۰ گرم</p>
           <div class="product-prices">
             <p class="previous-price">قیمت قبلی: <del>۱۶۰٬۰۰۰ تومان</del></p>
             <p class="current-price">قیمت با تخفیف: <strong>۱۴۴٬۰۰۰</strong> تومان</p>
           </div>
-          <button class="add-button" type="button" aria-label="افزودن فیلهٔ مرغ به سبد خرید">افزودن به سبد <span aria-hidden="true">+</span></button>
+          <button class="add-button" type="button" aria-label="افزودن فیله مرغ به سبد خرید">افزودن به سبد <span aria-hidden="true">+</span></button>
         </article>
         <article class="product-card" id="daily-product-4" aria-labelledby="daily-product-4-name">
           <div class="product-image">
