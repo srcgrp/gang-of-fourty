@@ -31,6 +31,7 @@
 
 html {
   scroll-behavior: smooth;
+   scroll-padding-top: 120px;
   font-family: var(--font-family);
   background-color: var(--bg-page);
   color: var(--text-main);
@@ -316,7 +317,7 @@ body {
   background-image: url('banner-dairy.png');
 }
 
-/* لایه شیب‌رنگ روی تصویر جهت خوانایی عالی متن فارسی */
+/* لایه شیب‌رنگ روی تصویر جهت خوانایی متن فارسی */
 .banner-fruit .banner-overlay {
   position: absolute;
   inset: 0;
@@ -557,6 +558,7 @@ body {
   display: flex;
   gap: 1.25rem;
   overflow-x: auto;
+   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   padding: 0.75rem 0.25rem 1.25rem;
@@ -576,6 +578,8 @@ body {
 .product-card {
   flex: 0 0 220px;
   scroll-snap-align: start;
+  scroll-margin-top: 140px;
+  scroll-margin-bottom: 0; 
   background: #ffffff;
   border: 1.5px solid var(--border-color);
   border-radius: var(--radius-md);
