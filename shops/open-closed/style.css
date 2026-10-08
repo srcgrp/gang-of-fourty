@@ -324,6 +324,23 @@ main:focus { outline: none; }
 }
 .search input::placeholder { color: var(--muted); opacity: 1; }
 
+/* دکمه ثبت جستجو: معمولاً پنهان (فقط برای صفحه‌خوان و Enter)، با فوکوس کیبورد دیده می‌شود */
+.search button.sr-only:focus-visible {
+    inset-block-start: 50%;
+    inset-inline-end: 8px;
+    translate: 0 -50%;
+    inline-size: auto;
+    block-size: 36px;
+    margin: 0;
+    padding-inline: 14px;
+    overflow: visible;
+    clip-path: none;
+    border-radius: 999px;
+    background: var(--brand-dark);
+    color: #fff;
+    font-weight: 700;
+}
+
 /* منوی اصلی */
 .main-nav a {
     display: flex;
