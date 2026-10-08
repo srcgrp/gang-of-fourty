@@ -13,7 +13,6 @@
     color: var(--on-orange);
     max-width: calc(var(--container) - var(--gutter) * 2);
     overflow: hidden;
-    background-color: var(--orange);
 }
 
 .offer::before {
@@ -147,6 +146,27 @@
     }
 }
 
+
+/* حالت سه‌ستونه: آیتم‌های ردیف آخر کل عرض ردیف را پر می‌کنند */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .cat-list {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+    .cat-list>* {
+        grid-column: span 2;
+    }
+    /* ردیف آخر دو آیتمی */
+    .cat-list> :last-child:nth-child(3n + 2),
+    .cat-list> :nth-last-child(2):nth-child(3n + 1) {
+        grid-column: span 3;
+    }
+    /* ردیف آخر تک‌آیتمی */
+    .cat-list> :last-child:nth-child(3n + 1) {
+        grid-column: span 6;
+    }
+}
+
 @media (min-width: 768px) {
      :root {
         --gutter: 24px;
@@ -158,6 +178,9 @@
     }
     .section-title {
         font-size: 1.5rem;
+    }
+    .cat-list {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
     .season-promo {
         padding: 28px 28px 70px;
@@ -180,7 +203,7 @@
         --sticky-offset: 180px;
     }
     .cat-list {
-        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-columns: repeat(5, minmax(0, 1fr));
     }
     .features-list {
         grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -320,7 +343,8 @@
         min-width: 0;
     }
     .season .products-track {
-        --pv: 2;
+        /* --pv: 2; */
+        --pv: 3;
     }
     .site-header--mobile {
         display: none;
