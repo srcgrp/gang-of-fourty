@@ -1,5 +1,5 @@
 @media (min-width: 1024px) and (max-width: 1580px) {
-    .free {
+  .free {
     font-size: 1rem;
     padding: 8px;
   }
@@ -29,82 +29,21 @@
   .hamburger-menu {
     display: none;
   }
-  
-  .search-box form {
-    width: 100%;
-    display: flex;
-    align-items: center;
-  }
-
   .search-box input{
-    width: 100%;
     height: 3rem;
-    border: 1px solid var(--primary);
-    border-radius: 25px;
-    padding: 1rem;
   } 
   .nav-section {
-    display: block;
-    padding: 0.5rem 1.5rem 1rem;
     font-size: 1rem;
-    background-color: var(--background);
-  }
-  .nav-list {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-  }
-  .nav-list li {
-    list-style: none;
   }
   .nav-list svg {
      width: 25px;
     height: 25px;
-    fill: var(--primary);
   }
-  #li-hamburger-menu a {
-    display: flex;
-    align-items: center;
-    position: relative;
+  .carousel-ds li {
+    height: 345px;
+    width: 300px;
   }
-
-    .dropdown {
-    position: absolute;
-    top: 90%;
-    right: 10;
-    background-color: var(--background);
-    display: none;
-    padding: 10px 0;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0 ,0.15);
-    z-index: 100;
-    }
-
-    .dropdown a {
-    display: block;
-    padding: 10px 15px;
-    color: var(--text-primary);
-    text-decoration: none;
-    margin: 5px;
-    }
-
-    .dropdown a:hover {
-    background-color: var(--text-primary);
-    color: var(--White);
-    border-radius: 25px;
-    }
-
-    #li-hamburger-menu:hover .dropdown {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    }
-
-    .nav-section a{
-        text-decoration: none;
-        color: var(--primary);
-    }
-    .basket img {
+  .basket img {
     width: 1.7rem;
   }
   .basket div span {
@@ -116,7 +55,6 @@
     padding: 0.3rem 0.7rem;
     border-radius: 25px;
   }
-
   .advertising-section {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: none;
@@ -137,15 +75,11 @@
   .dastebandi-div img{
     width: 120px;
   }
-   .dastebandi-div a {
+  .dastebandi-div a {
     font-size: 1.1rem;
   }
-    .dastebandi-section h2, .daily-suggestion h2 {
+  .dastebandi-section h2, .daily-suggestion h2 {
     font-size: 1.2rem;
-  }
-  
-   .carousel-ds li {
-    width: 300px;
   }
   .arrow {
     width: 45px;
@@ -169,6 +103,10 @@
   .foot-bottom {
     flex-direction: row;
     justify-content: space-between;
+  }
+  .carousel2-ds li {
+    height: 330px;
+    width: 300px;
   }
 
 }
