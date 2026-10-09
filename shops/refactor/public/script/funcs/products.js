@@ -4,7 +4,7 @@ import { BASEURL } from '../config.js';
 const toFa = (n) =>
     String(n).replace(/[0-9]/g, (d) => '۰۱۲۳۴۵۶۷۸۹' [d]);
 
-const formatPrice = (n) => toFa(n.toLocaleString('en-US'));
+const formatPrice = (n) => new Intl.NumberFormat('fa-IR').format(n);
 
 const el = (tag, className, text) => {
     const node = document.createElement(tag);
@@ -124,8 +124,8 @@ const getAndShowProducts = async() => {
     const track = document.querySelector('.products-track-off');
     if (!track) return;
 
-    const renderSkeletons = (container, count = 5) =>
-        container.replaceChildren(
+    const renderSkeletons = (container, count = 1) =>
+        container.append(
             ...Array.from({ length: count }, () => makeSkeleton())
         );
 
