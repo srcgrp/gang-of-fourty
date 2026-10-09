@@ -416,6 +416,15 @@
 }
 
 @media (max-width: 576px) {
+    .cat-list {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .cat-list>* {
+        grid-column: span 2;
+    }
+    .cat-list> :last-child:nth-child(odd) {
+        grid-column: span 4;
+    }
     .site-footer {
         padding: 20px 10px 30px;
         margin-top: 32px;

@@ -53,12 +53,19 @@ const makeCard = (p) => {
     }
 
     const pair = el('div', 'act-pair');
-    pair.append(
-        makeButton('act-btn', `افزودن ${p.name} به علاقه‌مندی‌ها`, 'i-heart'),
-        makeButton('act-btn act-cart', `افزودن ${p.name} به سبد خرید`, 'i-cart', 'افزودن')
-    );
+    const favBtn = makeButton('act-btn', `افزودن ${p.name} به علاقه‌مندی‌ها`, 'i-heart');
+    const cartBtn = makeButton('act-btn act-cart', `افزودن ${p.name} به سبد خرید`, 'i-cart', 'افزودن');
+
+
+    if (p.stock === 0) {
+        const chipOut = el('span', 'chip-out', 'ناموجود');
+        card.classList.add('card--out');
+        cartBtn.disabled = true;
+        media.append(chipOut);
+    }
 
     const actions = el('div', 'card-actions');
+    pair.append(favBtn, cartBtn);
     actions.append(price, pair);
 
     card.append(top, media, body, actions);

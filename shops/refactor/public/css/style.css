@@ -519,7 +519,7 @@ main>section+section {
 }
 
 .card-media {
-    display: block;
+    display: relative;
     padding: 10px 10px 0;
     border-radius: var(--radius) var(--radius) 0 0;
 }
@@ -764,15 +764,6 @@ main>section+section {
     width: 60%;
 }
 
-@keyframes sk {
-    0% {
-        background-position: 200% 0;
-    }
-    100% {
-        background-position: -200% 0;
-    }
-}
-
 .error-msg {
     width: 100%;
     padding: 32px 16px;
@@ -783,6 +774,33 @@ main>section+section {
     border-radius: var(--radius);
 }
 
+.card--out {
+    opacity: 0.55;
+    filter: grayscale(40%);
+    pointer-events: none;
+}
+
+.chip-out {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.act-cart:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
 
 /* ---------- cat-list---------- */
 
@@ -790,36 +808,9 @@ main>section+section {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--gap);
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: var(--gap); */
-}
-
-
-/* حالت دو‌ستونه (موبایل): آیتم تنهای ردیف آخر کل عرض ردیف را پر می‌کند */
-
-@media (max-width: 575.98px) {
-    .cat-list {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-    .cat-list>* {
-        grid-column: span 2;
-    }
-    .cat-list> :last-child:nth-child(odd) {
-        grid-column: span 4;
-    }
 }
 
 .cat {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-    height: 100%;
-    padding: 12px 8px;
-    border-radius: var(--radius);
-    background: var(--bg);
-    text-align: center; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -832,11 +823,6 @@ main>section+section {
 }
 
 .cat-img {
-    /* width: 100%;
-    max-width: 120px;
-    aspect-ratio: 4 / 3;
-    object-fit: contain;.0
-    margin-bottom: 4px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1017,5 +1003,14 @@ main>section+section {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes sk {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
     }
 }
