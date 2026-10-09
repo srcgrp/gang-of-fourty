@@ -1,1 +1,1 @@
-{ "name": "this file is broken on purpose", "items": [1, 2, 3, 4, 5]}
+{ "name": "this file is broken on purpose", "items": [1, 2, 3,, }
