@@ -997,3 +997,15 @@ footer address a {
   height: 1em;
   vertical-align: -0.125em;
 }
+
+/* emoji */
+.carousel .emoji,
+.strip .emoji {
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: calc(var(--radius) - var(--space-s));
+  background: var(--color-soft);
+}
