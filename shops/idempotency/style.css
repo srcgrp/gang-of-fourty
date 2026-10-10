@@ -1,13 +1,92 @@
-/* Your shop's styles. Week 1: make it yours! */
 body {
-  font-family: Vazirmatn, Tahoma, sans-serif;
-  margin: 0;
-  padding: 1rem;
-  line-height: 1.8;
+  font-family: Arial, Helvetica, sans-serif;
   background: #f7faf5;
-  color: #1f2a1c;
 }
-
-h1 {
-  color: #2e7d32;
+.category{
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.badge{
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  display: inline-block;
+  background-color: rgb(209, 8, 8);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 500px;
+}
+.card{
+  position: relative;
+  padding: 20px 20px;
+  border:1px solid rgb(150, 189, 222) ;
+  background-color:rgb(150, 189, 222) ;
+  border-radius: 6px;
+  width: 300px;
+  box-shadow: 4px 4px 3px rgb(177, 173, 173);
+}
+.image{
+  size: cover;
+  width: 300px;
+  height: 150px;
+  margin-top: 35px;
+}
+.description{
+   color: #303844;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 6px;
+  margin-bottom: 8px;
+}
+.card h2{
+   color: #102813;
+  margin: 2px 0 4px;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.rating{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.stars{
+  color: #f5de76;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.reviews{
+   color: #666;
+  font-size: 14px;
+}
+.add-button{
+  padding: 8px 16px;
+  background-color: #0a2c0c;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 0;
+}
+.add-button:hover{
+    background-color: #27532a;
+}
+.product{
+  background-color: #dbeaf5; 
+  margin: -20px -20px 0;
+  padding: 20px 20px 16px;
+  border-radius: 6px 6px 0 0;
+}
+.card-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
 }
