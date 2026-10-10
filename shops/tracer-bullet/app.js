@@ -31,8 +31,7 @@ function createCard(product) {
   return li;
 }
 
-const testProduct = { id: 1, categoryId: 2, name: "شیر", emoji: "🥛", unit: "۱ لیتر", price: 38000, tags: [] };
-document.querySelector(".carousel").append(createCard(testProduct));
+
 
 /* loadProducts */
 async function loadProducts() {
