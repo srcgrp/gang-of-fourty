@@ -3,7 +3,7 @@
   --ink: #1f2a1c;
   --muted: #5f6b5a;
   --green: #2e7d32;
-  --green-soft: #e3f1e0;
+  --pink-soft: #e3f1e0;
   --orange: #ef6c00;
   --card: #ffffff;
   --line: #e7e1d3;
@@ -37,7 +37,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 3rem) 3rem
 .hero h1 { font-size: clamp(1.8rem, 5vw, 3rem); line-height: 1.4; margin: 0 0 0.5rem; }
 .hero h1 span { color: var(--orange); }
 .hero p { max-width: 60ch; color: var(--muted); margin: 0 0 0.5rem; }
-.stats { display: inline-block; background: var(--green-soft); color: var(--green); font-weight: 700; padding: 0.3rem 0.9rem; border-radius: 999px; }
+.stats { display: inline-block; background: var(--pink-soft); color: var(--green); font-weight: 700; padding: 0.3rem 0.9rem; border-radius: 999px; }
 
 .shops-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
 .shops-head h2 { margin: 0; }
