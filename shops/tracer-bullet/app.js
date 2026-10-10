@@ -33,19 +33,26 @@ function createCard(product) {
   return li;
 }
 
-
+/* replace everything in the carousel with one message */
+function showMessage(carousel, text) {
+    carousel.replaceChildren();        
+    const li = document.createElement("li");
+    li.textContent = text;
+    carousel.append(li);
+}
 
 /* loadProducts */
 async function loadProducts() {
+  const carousel = document.querySelector("#new-items .carousel");
+  showMessage(carousel, "لطفا کمی صبر کنید")
   try {
     const res = await fetch("../../api/products.json");
     if (!res.ok) {
       throw new Error(`Request failed: ${res.status}`);
     }
     const products = await res.json();
-    const carousel = document.querySelector("#new-items .carousel")
     const items = products.filter(p => p.categoryId === CATEGORY_ID);
-
+    carousel.replaceChildren();
     items.forEach((product, index) => {
         const card = createCard(product);
         if (index === 0){
@@ -59,6 +66,7 @@ async function loadProducts() {
     });
   } catch (error) {
     console.error(error);
+    showMessage(carousel,"دسترسی به اینترنت را بررسی و صفحه را دوباره بارگذاری کنید")
     }
 }
 loadProducts();
