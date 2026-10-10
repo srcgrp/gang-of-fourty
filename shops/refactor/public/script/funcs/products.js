@@ -62,8 +62,8 @@ const getAndShowOfferProducts = async() => {
 
 const getAndShowAllProducts = () => {
     const productsTrackLatest = document.querySelector('.products-track-latest');
-    renderSkeletons(productsTrackLatest);
     if (!productsTrackLatest) return;
+    renderSkeletons(productsTrackLatest);
 
     Promise.all([
             fetch(`${BASEURL}/products.json`),
@@ -104,5 +104,9 @@ const getAndShowAllProducts = () => {
 
     })
 }
+
+
+
+
 
 export { getAndShowOfferProducts, getAndShowAllProducts };
