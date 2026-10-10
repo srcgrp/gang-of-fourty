@@ -1,7 +1,6 @@
 import { BASEURL } from '../config.js';
 import { el } from '../utils/dom.js';
-
-
+import { showError } from '../components/skeleton.js';
 
 const makeCategory = (category) => {
     const li = el("li")
@@ -26,7 +25,6 @@ const makeSubMenu = (category) => {
     const a = el("a")
     a.setAttribute("href", `#${category.slug}`)
     a.textContent = category.name
-
     li.append(a)
     return li
 }
@@ -44,16 +42,22 @@ const renderCategoriesInto = async(selector, builder) => {
     const categoryLists = document.querySelectorAll(selector);
     if (!categoryLists.length) return;
 
+    categoryLists.forEach((list) =>
+        showError(list, 'در حال بارگیری ...')
+    );
+
     try {
         const categories = await fetchCategories();
-        const cards = categories.map(builder);
-
         categoryLists.forEach((categoryList) => {
             categoryList.textContent = '';
-            cards.forEach((card) => categoryList.append(card));
+            categories
+                .map(builder)
+                .forEach((card) => categoryList.append(card));
         });
     } catch (error) {
-        throw new Error('Error fetching categories', { cause: error });
+        categoryLists.forEach((list) =>
+            showError(list, 'خطا در دریافت دسته‌بندی‌ها. لطفاً دوباره تلاش کنید.')
+        );
     }
 };
 

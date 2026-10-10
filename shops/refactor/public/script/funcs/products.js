@@ -43,9 +43,9 @@ const getAndShowOfferProducts = async() => {
     if (!track) return;
 
     renderSkeletons(track);
+    showError(track, 'در حال بارگیری ...');
 
     try {
-
         const products = await getProductsWithDetails()
         const filtered = products.filter((p) => p.categoryId === 2);
         if (filtered.length === 0) {
@@ -64,13 +64,15 @@ const getAndShowAllProducts = () => {
     const productsTrackLatest = document.querySelector('.products-track-latest');
     if (!productsTrackLatest) return;
     renderSkeletons(productsTrackLatest);
+    showError(productsTrackLatest, 'در حال بارگیری ...');
 
     Promise.all([
-            fetch(`${BASEURL}/products.json`),
-            fetch(`${BASEURL}/stock.json`),
-            fetch(`${BASEURL}/offers.json`),
-        ])
-        .then(responses => {
+        fetch(`${BASEURL}/products.json`),
+        fetch(`${BASEURL}/stock.json`),
+        fetch(`${BASEURL}/offers.json`),
+    ])
+
+    .then(responses => {
             responses.forEach(response => {
                 if (!response.ok) {
                     showError(productsTrackLatest, 'خطا در دریافت محصولات. لطفاً دوباره تلاش کنید.');
