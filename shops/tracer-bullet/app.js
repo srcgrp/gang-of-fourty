@@ -1,3 +1,5 @@
+const CATEGORY_ID = 1;
+
 function formatPrice(price) {
   const farsiPrice = new Intl.NumberFormat('fa-IR').format(price)
   return `${farsiPrice} تومان`;
@@ -36,13 +38,27 @@ function createCard(product) {
 /* loadProducts */
 async function loadProducts() {
   try {
-    const res = await fetch("../../api/nope.json");
+    const res = await fetch("../../api/products.json");
     if (!res.ok) {
       throw new Error(`Request failed: ${res.status}`);
     }
     const products = await res.json();
+    const carousel = document.querySelector("#new-items .carousel")
+    const items = products.filter(p => p.categoryId === CATEGORY_ID);
+
+    items.forEach((product, index) => {
+        const card = createCard(product);
+        if (index === 0){
+            card.id = "new-items-first"
+        }
+        if (index === items.length - 1){
+            card.id = "new-items-last"
+        }
+
+        carousel.append(card);
+    });
   } catch (error) {
     console.error(error);
-  }
+    }
 }
 loadProducts();
