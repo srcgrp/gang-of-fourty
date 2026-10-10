@@ -98,7 +98,7 @@ async function renderProducts(categoryId, containerSelector) {
       (product) => product.categoryId === categoryId
     );
 
-    // Remove skeletons before rendering products
+    // Remove skeletons
     container.replaceChildren();
 
     filteredProducts.forEach((product) => {
@@ -109,18 +109,6 @@ async function renderProducts(categoryId, containerSelector) {
       // Thumbnail
       const thumb = document.createElement("div");
       thumb.classList.add("product-thumb");
-
-      if (product.oldPrice > product.price) {
-        const discount = document.createElement("span");
-        discount.classList.add("badge-discount");
-
-        const percentage = Math.round(
-          ((product.oldPrice - product.price) / product.oldPrice) * 100
-        );
-
-        discount.textContent = `${percentage.toLocaleString("fa-IR")}٪`;
-        thumb.append(discount);
-      }
 
       const emoji = document.createElement("span");
       emoji.classList.add("product-emoji");
@@ -151,25 +139,16 @@ async function renderProducts(categoryId, containerSelector) {
       const pricing = document.createElement("div");
       pricing.classList.add("product-pricing");
 
-      if (product.oldPrice > product.price) {
-        const oldPrice = document.createElement("span");
-        oldPrice.classList.add("old-price");
-        oldPrice.textContent = product.oldPrice.toLocaleString("fa-IR");
-
-        pricing.append(oldPrice);
-      }
-
       const currentPrice = document.createElement("span");
       currentPrice.classList.add("current-price");
-      currentPrice.textContent =
-        `${product.price.toLocaleString("fa-IR")} تومان`;
+      currentPrice.textContent = `${product.price.toLocaleString("fa-IR")} تومان`;
 
       pricing.append(currentPrice);
 
       const button = document.createElement("button");
       button.classList.add("add-btn");
       button.type = "button";
-      button.setAttribute("aria-label", "افزودن به سبد");
+      button.setAttribute("aria-label", `افزودن ${product.name} به سبد`);
       button.textContent = "+";
 
       footer.append(pricing, button);
@@ -177,38 +156,38 @@ async function renderProducts(categoryId, containerSelector) {
       // Assemble the card
       card.append(thumb, info, footer);
 
-      // Add card to the container
+      // Add card to container
       container.append(card);
     });
   } catch (error) {
+    console.error("Error loading products:", error);
+
     container.replaceChildren();
 
+    const errorMessage = document.createElement("div");
+    errorMessage.classList.add("product-error");
 
-const errorMessage = document.createElement("div");
-errorMessage.classList.add("product-error");
+    const icon = document.createElement("span");
+    icon.classList.add("product-error__icon");
+    icon.textContent = "⚠️";
+    icon.setAttribute("aria-hidden", "true");
 
-const icon = document.createElement("span");
-icon.classList.add("product-error__icon");
-icon.textContent = "⚠️";
-icon.setAttribute("aria-hidden", "true");
+    const message = document.createElement("p");
+    message.classList.add("product-error__message");
+    message.textContent = "بارگذاری محصولات ناموفق بود";
 
-const message = document.createElement("p");
-message.classList.add("product-error__message");
-message.textContent = "بارگذاری محصولات ناموفق بود";
+    const retryButton = document.createElement("button");
+    retryButton.classList.add("product-error__retry");
+    retryButton.type = "button";
+    retryButton.textContent = "تلاش مجدد";
 
-const retryButton = document.createElement("button");
-retryButton.classList.add("product-error__retry");
-retryButton.type = "button";
-retryButton.textContent = "تلاش مجدد";
+    retryButton.addEventListener("click", () => {
+      renderProducts(categoryId, containerSelector);
+    });
 
-retryButton.addEventListener("click", () => {
-  renderProducts(categoryId, containerSelector);
-});
-
-errorMessage.append(icon, message, retryButton);
-container.replaceChildren(errorMessage);
-
-}
+    errorMessage.append(icon, message, retryButton);
+    container.append(errorMessage);
+  }
 }
 
 renderProducts(1, ".fruitsVegetablesProducts");
