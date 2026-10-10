@@ -27,15 +27,16 @@
 
   user-select: none;
 }
-.product-thumb img {
+
+ .product-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  display: block;
-  object-fit: contain;
-  padding: 5px;
-  transition: transform 0.25s ease;
+  font-size: 4rem;
 }
-.product-card:hover .product-thumb img {
+.product-card:hover .product-thumb .product-emoji {
   transform: scale(1.06);
 } /* ======================================== Discount Badge ======================================== */
 .badge-discount {
@@ -58,7 +59,7 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 16px 16px 10px;
+  padding: 0px 16px 10px;
   direction: rtl;
 }
 .product-name {
@@ -132,9 +133,7 @@
   .product-card {
     flex-basis: 200px;
   }
-  .product-thumb {
-    height: 180px;
-  }
+
   .product-thumb img {
     padding: 15px;
   }
@@ -143,15 +142,11 @@
   .product-card {
     flex-basis: 150px;
   }
-  .product-thumb {
-    height: 140px;
-  }
+
   .product-thumb img {
     padding: 12px;
   }
-  .product-info {
-    padding: 12px 12px 8px;
-  }
+
   .product-name {
     font-size: 0.7rem;
   }
@@ -177,9 +172,7 @@
   .product-card {
     flex-basis: 150px;
   }
-  .product-thumb {
-    height: 140px;
-  }
+
   .product-thumb img {
     padding: 10px;
   }
