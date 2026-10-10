@@ -40,21 +40,22 @@ const fetchCategories = async() => {
     return response.json();
 };
 
-const renderCategoriesInto = async(selector) => {
-    const categoryList = document.querySelector(selector);
-    if (!categoryList) return;
+const renderCategoriesInto = async(selector, builder) => {
+    const categoryLists = document.querySelectorAll(selector);
+    if (!categoryLists.length) return;
 
     try {
         const categories = await fetchCategories();
         const cards = categories.map(builder);
-        categoryList.textContent = '';
-        cards.forEach((card) => categoryList.append(card));
 
+        categoryLists.forEach((categoryList) => {
+            categoryList.textContent = '';
+            cards.forEach((card) => categoryList.append(card));
+        });
     } catch (error) {
-        throw new Error('Error fetching categories', error);
+        throw new Error('Error fetching categories', { cause: error });
     }
 };
-
 
 const getAndShowCategories = () => renderCategoriesInto('.cat-list', makeCategory);
 const getAndShowSubMenus = () => renderCategoriesInto('.sub-menu', makeSubMenu);
