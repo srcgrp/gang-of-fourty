@@ -1,29 +1,142 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>سوپرمارکت YAGNI</title>
-  <!-- Week 1: put YOUR name here to claim this shop. The landing page shows it. -->
-  <meta name="author" content="">
-  <meta name="description" content="به‌زودی: بهترین میوه و سبزی محله!">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <a href="../../index.html">→ بازگشت به دار و دسته چهل‌نفره</a>
-    <h1>✂️ سلام دنیا!</h1>
-  </header>
-  <main>
-    <p>اینجا سوپرمارکت <strong>YAGNI</strong> است. به‌زودی باز می‌شود.</p>
-    <section>
-      <h2>این اسم یعنی چه؟</h2>
-      <p><bdi>You Aren't Gonna Need It</bdi> یعنی «لازمش نخواهی داشت». این اصل از <bdi>Extreme Programming</bdi> (کنت بک و ران جفریز) می‌آید: چیزی را که امروز لازم نیست، به امید «شاید بعداً» نساز. کد اضافه هم باید نوشته شود، هم تست شود، هم نگهداری شود.</p>
-      <!-- Your turn: add what YOU found about this name, in your own words. -->
-    </section>
-  </main>
-  <footer>
-    <p dir="ltr">slug: <code>yagni</code></p>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__container">
+        <!-- Brand -->
+        <a href="/" class="header__logo">
+          <span class="header__logo-mark">
+            <svg>
+              <use href="./sprite.svg#logo"></use>
+            </svg>
+          </span>
+
+          <span class="header__brand">
+            <strong>یانگی</strong>
+            <small>خرید تازه، زندگی بهتر</small>
+          </span>
+        </a>
+
+        <!-- Search -->
+        <form class="header__search">
+          <span class="header__search-label">جستجو</span>
+
+          <input
+            type="search"
+            placeholder="چی می‌خوای بخری؟"
+            aria-label="جستجوی محصولات"
+          />
+
+          <button
+            type="submit"
+            class="header__search-button"
+            aria-label="جستجو"
+          >
+            <svg class="header__search-icon">
+              <use href="./sprite.svg#search"></use>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Header Actions -->
+        <div>
+          <!-- Cart -->
+          <a href="/cart" class="header__cart">
+            <span class="header__cart-icon">
+              <svg>
+                <use href="./sprite.svg#basket"></use>
+              </svg>
+
+              <span class="header__cart-count">۲</span>
+            </span>
+
+            <span class="header__cart-content">
+              <small>سبد خرید</small>
+              <strong>۲۴۵,۰۰۰ تومان</strong>
+            </span>
+          </a>
+        </div>
+      </div>
+    </header>
+    .
+    <!-- Footer -->
+    <footer class="site-footer" dir="rtl">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <!-- Brand & About -->
+          <div class="footer-col brand-col">
+            <h3 class="footer-heading brand-title">سوپرمارکت نمونه</h3>
+            <p class="brand-description">
+              از سال ۱۴۰۵ کنار شما هستیم؛ کالای تازه با قیمت منصفانه.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <svg>
+                  <use href="./sprite.svg#location"></use>
+                </svg>
+                <span>تهران، خیابان نمونه، پلاک ۴۰</span>
+              </li>
+              <li>
+                <svg>
+                  <use href="./sprite.svg#call"></use>
+                </svg>
+                <span dir="ltr">۰۲۱-۱۲۳۴۵۶۷۸</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Categories -->
+          <div class="footer-col">
+            <h4 class="footer-heading">دسته‌ها</h4>
+            <ul class="footer-links">
+              <li><a href="#">میوه و سبزی</a></li>
+              <li><a href="#">لبنیات</a></li>
+              <li><a href="#">نان و شیرینی</a></li>
+              <li><a href="#">پروتئین</a></li>
+            </ul>
+          </div>
+
+          <!-- Help & Links -->
+          <div class="footer-col">
+            <h4 class="footer-heading">راهنما</h4>
+            <ul class="footer-links">
+              <li><a href="#">شیوه ارسال</a></li>
+              <li><a href="#">بازگشت کالا</a></li>
+              <li><a href="#">پرسش‌های متداول</a></li>
+            </ul>
+          </div>
+
+          <!-- Working Hours -->
+          <div class="footer-col">
+            <h4 class="footer-heading">ساعت کاری</h4>
+            <div class="hours-info">
+              <p><strong>شنبه تا پنجشنبه:</strong> <span>۸ تا ۲۲</span></p>
+              <p><strong>جمعه:</strong> <span>۹ تا ۱۴</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; ۱۴۰۵ سوپرمارکت یانگی - تمامی حقوق محفوظ است
+          </p>
+          <a href="#top" class="back-to-top">
+            <span>بازگشت به بالا</span>
+
+            <svg>
+              <use href="./sprite.svg#up"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
