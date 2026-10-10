@@ -17,6 +17,9 @@ const makeSkeleton = () => {
     return li;
 };
 
+const renderSkeletons = (container, count = 4) =>
+    container.append(
+        ...Array.from({ length: count }, () => makeSkeleton())
+    );
 
-
-export { makeSkeleton, showError };
+export { showError, renderSkeletons };

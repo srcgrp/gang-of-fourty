@@ -1,5 +1,5 @@
 import { BASEURL } from '../config.js';
-import { makeSkeleton, showError } from '../components/skeleton.js';
+import { showError, renderSkeletons } from '../components/skeleton.js';
 import { makeCard } from '../components/productcard.js';
 
 
@@ -10,24 +10,38 @@ const toFa = (n) =>
 const getAndShowOfferProducts = async() => {
     const track = document.querySelector('.products-track-off');
     if (!track) return;
-
-    const renderSkeletons = (container, count = 1) =>
-        container.append(
-            ...Array.from({ length: count }, () => makeSkeleton())
-        );
-
     renderSkeletons(track);
 
     try {
-        const res = await fetch(`${BASEURL}/products.json`);
-        if (!res.ok) {
+        const products = await fetch(`${BASEURL}/products.json`);
+        const stocks = await fetch(`${BASEURL}/stock.json`);
+        const offers = await fetch(`${BASEURL}/offers.json`);
+
+
+        if (!products.ok || !stocks.ok || !offers.ok) {
             showError(track, 'خطا در دریافت محصولات. لطفاً دوباره تلاش کنید.');
             return;
         }
 
-        const products = await res.json();
-        const filtered = products.filter((p) => p.categoryId === 3);
+        const product = await products.json();
+        const stock = await stocks.json();
+        const offer = await offers.json();
 
+
+        const finalProduct = product.map((p) => {
+            const offerItem = offer.find((o) => o.productId == p.id)
+            const stokeItem = stock.items[p.id] || 0
+            return {
+                ...p,
+                off: offerItem ? offerItem.percent : undefined,
+                stock: stokeItem,
+                oldPrice: offerItem ?
+                    Math.round(p.price / (1 - offerItem.percent / 100)) : undefined
+
+            }
+        })
+
+        const filtered = finalProduct.filter((p) => p.categoryId === 2);
         if (filtered.length === 0) {
             showError(track, 'محصولی برای نمایش وجود ندارد.');
             return;
@@ -35,8 +49,6 @@ const getAndShowOfferProducts = async() => {
         const cards = filtered.map(makeCard);
         track.textContent = '';
         cards.forEach((card) => track.append(card));
-
-
     } catch {
         showError(track, 'اتصال اینترنت برقرار نیست.');
     }
@@ -44,6 +56,10 @@ const getAndShowOfferProducts = async() => {
 
 
 const getAndShowAllProducts = () => {
+    const productsTrackLatest = document.querySelector('.products-track-latest');
+    renderSkeletons(productsTrackLatest);
+    if (!productsTrackLatest) return;
+
     Promise.all([
             fetch(`${BASEURL}/products.json`),
             fetch(`${BASEURL}/stock.json`),
@@ -52,7 +68,7 @@ const getAndShowAllProducts = () => {
         .then(responses => {
             responses.forEach(response => {
                 if (!response.ok) {
-                    showError('خطا در دریافت محصولات. لطفاً دوباره تلاش کنید.');
+                    showError(productsTrackLatest, 'خطا در دریافت محصولات. لطفاً دوباره تلاش کنید.');
                 }
             });
             return Promise.all(responses.map(response => response.json()));
@@ -69,20 +85,17 @@ const getAndShowAllProducts = () => {
                     oldPrice: offerItem ?
                         Math.round(p.price / (1 - offerItem.percent / 100)) : undefined,
                 }
+
             })
 
             const filteredProducts = enriched.filter(product => offerList.includes(product.id));
-            const productsTrackLatest = document.querySelector('.products-track-latest');
-            if (!productsTrackLatest) return;
-
             const cards = filteredProducts.map(makeCard);
             productsTrackLatest.textContent = '';
             cards.forEach((card) => productsTrackLatest.append(card));
-            console.log(filteredProducts);
         })
 
     .catch((error) => {
-        showError('اتصال اینترنت برقرار نیست.');
+        showError(productsTrackLatest, 'اتصال اینترنت برقرار نیست.');
 
     })
 }
