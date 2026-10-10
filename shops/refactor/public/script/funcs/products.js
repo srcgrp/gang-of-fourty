@@ -7,41 +7,47 @@ const toFa = (n) =>
     String(n).replace(/[0-9]/g, (d) => '۰۱۲۳۴۵۶۷۸۹' [d]);
 
 
+const getProductsWithDetails = async() => {
+    const responses = await Promise.all([
+        fetch(`${BASEURL}/products.json`).then(r => r.json()),
+        fetch(`${BASEURL}/stock.json`).then(r => r.json()),
+        fetch(`${BASEURL}/offers.json`).then(r => r.json()),
+    ])
+
+    if (responses.some(r => !r.ok)) {
+        throw new Error('fetch failed')
+    }
+
+    const [products, stocks, offers] = await Promise.all(
+        responses.map(r => r.json())
+    )
+
+    const finalProduct = products.map((p) => {
+        const offerItem = offers.find((o) => o.productId == p.id)
+        const stokeItem = stocks.items[p.id] || 0
+        return {
+            ...p,
+            off: offerItem ? offerItem.percent : undefined,
+            stock: stokeItem,
+            oldPrice: offerItem ?
+                Math.round(p.price / (1 - offerItem.percent / 100)) : undefined
+
+        }
+    })
+    return finalProduct
+}
+
+
 const getAndShowOfferProducts = async() => {
     const track = document.querySelector('.products-track-off');
     if (!track) return;
+
     renderSkeletons(track);
 
     try {
-        const products = await fetch(`${BASEURL}/products.json`);
-        const stocks = await fetch(`${BASEURL}/stock.json`);
-        const offers = await fetch(`${BASEURL}/offers.json`);
 
-
-        if (!products.ok || !stocks.ok || !offers.ok) {
-            showError(track, 'خطا در دریافت محصولات. لطفاً دوباره تلاش کنید.');
-            return;
-        }
-
-        const product = await products.json();
-        const stock = await stocks.json();
-        const offer = await offers.json();
-
-
-        const finalProduct = product.map((p) => {
-            const offerItem = offer.find((o) => o.productId == p.id)
-            const stokeItem = stock.items[p.id] || 0
-            return {
-                ...p,
-                off: offerItem ? offerItem.percent : undefined,
-                stock: stokeItem,
-                oldPrice: offerItem ?
-                    Math.round(p.price / (1 - offerItem.percent / 100)) : undefined
-
-            }
-        })
-
-        const filtered = finalProduct.filter((p) => p.categoryId === 2);
+        const products = await getProductsWithDetails()
+        const filtered = products.filter((p) => p.categoryId === 2);
         if (filtered.length === 0) {
             showError(track, 'محصولی برای نمایش وجود ندارد.');
             return;
@@ -52,8 +58,7 @@ const getAndShowOfferProducts = async() => {
     } catch {
         showError(track, 'اتصال اینترنت برقرار نیست.');
     }
-};
-
+}
 
 const getAndShowAllProducts = () => {
     const productsTrackLatest = document.querySelector('.products-track-latest');
