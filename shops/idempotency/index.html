@@ -401,67 +401,12 @@
       <span class="target-location" aria-hidden="true">
         اینجا هستید
       </span>
-      <div class="product-track" tabindex="0">
-        <article class="product-card">
-          <img src="./asset/day-offer/milk.png" alt="شیر تازه">
-          <h3>شیر تازه</h3>
-          <p class="product-meta">۱ لیتر</p>
-          <p class="product-price">۱۱۰٬۰۰۰ تومان</p>
-          <button type="button">افزودن به سبد</button>
-        </article>
-        <article class="product-card">
-          <img src="./asset/day-offer/butter.png" alt="کره">
-          <h3>کره</h3>
-          <p class="product-meta">۲۰۰ گرم</p>
-          <p class="product-price">۲۴۰٬۰۰۰ تومان</p>
-          <button type="button">افزودن به سبد</button>
-        </article>
-
-        <article class="product-card">
-          <img src="./asset/best-sellers/cheese.png" alt="پنیر">
-          <h3>پنیر</h3>
-          <p class="product-meta">۵۰۰ گرم</p>
-          <p class="product-price">۳۴۸٬۰۰۰ تومان</p>
-          <button type="button">افزودن به سبد</button>
-        </article>
-        <article class="product-card">
-          <img src="./asset/categories/honey.png" alt="عسل">
-          <h3>عسل</h3>
-          <p class="product-meta">کیلویی</p>
-          <p class="product-price">۶۳۰٬۰۰۰ تومان</p>
-          <button type="button">افزودن به سبد</button>
-        </article>
-        <article class="product-card product-card-discount">
-          <span class="discount-badge">٪۱۵</span>
-          <img src="./asset/categories/cream.png" alt="خامه">
-          <h3>خامه</h3>
-          <p class="product-meta">۱۲۰ گرم</p>
-          <p class="old-price">۱۵۰٬۰۰۰ تومان</p>
-          <p class="product-price">۱۲۸٬۰۰۰ تومان</p>
-          <button type="button">افزودن به سبد</button>
-        </article>
-        <article class="product-card">
-          <img src="./asset/categories/eggs.png" alt="تخم مرغ">
-          <h3>تخم مرغ</h3>
-          <p class="product-meta">یک شانه </p>
-          <p class="product-price">۷۰۰٬۰۰۰ تومان</p>
-          <button type="button">افزودن به سبد</button>
-        </article>
-        <article class="product-card product-card-unavailable">
-          <span class="unavailable-badge">ناموجود</span>
-          <img src="./asset/categories/yogurt.png" alt="ماست">
-          <h3>ماست</h3>
-          <p class="product-meta">۵۰۰ گرم</p>
-          <p class="product-price">۴۳۰٬۰۰۰ تومان</p>
-          <button type="button" disabled>ناموجود</button>
-        </article>
-        <article class="product-card">
-          <img src="./asset/categories/strawberry-jam.png" alt="مربا توت فرنگی">
-          <h3>مربا توت فرنگی</h3>
-          <p class="product-meta">۱۲۰ گرم</p>
-          <p class="product-price">۶۷۰٬۰۰۰ تومان</p>
-          <button type="button">افزودن به سبد</button>
-        </article>
+      <div class="product-track" id="dairy-products" tabindex="0" aria-label="محصولات لبنیات و صبحانه" aria-busy="true">
+        <p class="loading-message" role="status">در حال بارگذاری محصولات ...</p>
+      </div>
+      <div class="carousel-controls">
+        <button type="button" class="carousel-arrow carousel-arrow-start" id="dairy-scroll-start" aria-label="رفتن به ابتدای محصولات لبنیات">→</button>
+          <button type="button" class="carousel-arrow carousel-arrow-end" id="dairy-scroll-end" aria-label="رفتن به انتهای محصولات لبنیات">←</button>
       </div>
     </section>
     <section id="fruits-vegetables" class="product-section" aria-labelledby="fruits-vegetables-title">
@@ -888,6 +833,6 @@
   <div class="cart-toast" role="status" aria-live="polite">
     محصول به سبد خرید اضافه شد ✓
   </div>
+  <script src="./app.js"></script>
 </body>
-
 </html>

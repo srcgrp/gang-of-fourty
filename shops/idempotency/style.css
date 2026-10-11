@@ -778,7 +778,13 @@ body {
   font-size: 22px;
   font-weight: 700;
 }
-
+.carousel-arrow {
+    font-family: inherit;
+    cursor: pointer;
+}
+#dairy-products {
+    scroll-behavior: smooth;
+}
 .carousel-anchor {
   flex: 0 0 1px;
   width: 1px;
@@ -1187,6 +1193,38 @@ html:has(#theme-dark:checked) .mobile-nav summary {
   color: #F7EEDC;
   border-color: #F7EEDC;
   background-color: rgba(247, 238, 220, 0.06);
+}
+/* Dynamic Product Cards */
+
+.loading-message,
+.error-message {
+    flex: 1 0 100%;
+
+    padding: 48px 20px;
+
+    text-align: center;
+    color: var(--color-text);
+
+    font-size: 16px;
+}
+
+.error-message {
+    color: #b42318;
+}
+/* Dynamic product images */
+
+.product-image {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+@media (max-width: 600px) {
+    .product-emoji {
+        height: 140px;
+        font-size: 60px;
+    }
 }
 /*Reduced Motion */
 
